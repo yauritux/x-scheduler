@@ -1,0 +1,87 @@
+<configuration scan="true" scanPeriod="1 minutes">
+
+  <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <pattern>[%X{key}]%date{"yyyy-MM-dd'T'HH:mm:ss,SSSXXX", UTC} %-5level %logger{35} - %msg %n</pattern>
+    </encoder>
+  </appender>
+
+  <appender name="spring" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <file>${catalina.home:-.}/logs/x/x-scheduler/spring.log</file>
+    <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+      <fileNamePattern>${catalina.home:-.}/logs/x/archive/x-scheduler/spring.%d{yyyy-MM-dd}.old.log</fileNamePattern>
+    </rollingPolicy>
+    <encoder>
+      <pattern>[%X{key}]%date{"yyyy-MM-dd'T'HH:mm:ss,SSSXXX", UTC} %-5level %logger{35} - %msg %n</pattern>
+    </encoder>
+  </appender>
+
+  <appender name="all" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <file>${catalina.home:-.}/logs/x/x-scheduler/all.log</file>
+    <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+      <fileNamePattern>${catalina.home:-.}/logs/x/archive/x-scheduler/all.%d{yyyy-MM-dd}.old.log</fileNamePattern>
+    </rollingPolicy>
+    <encoder>
+      <pattern>[%X{key}]%date{"yyyy-MM-dd'T'HH:mm:ss,SSSXXX", UTC} %-5level %logger{35} - %msg %n</pattern>
+    </encoder>
+  </appender>
+
+  <appender name="app" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <file>${catalina.home:-.}/logs/x/x-scheduler/app.log</file>
+    <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+      <fileNamePattern>${catalina.home:-.}/logs/x/archive/x-scheduler/app.%d{yyyy-MM-dd}.old.log</fileNamePattern>
+    </rollingPolicy>
+    <encoder>
+      <pattern>[%X{key}]%date{"yyyy-MM-dd'T'HH:mm:ss,SSSXXX", UTC} %-5level %logger{35} - %msg %n</pattern>
+    </encoder>
+  </appender>
+
+  <appender name="orm" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <file>${catalina.home:-.}/logs/x/x-scheduler/orm.log</file>
+    <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+      <fileNamePattern>${catalina.home:-.}/logs/x/archive/x-scheduler/orm.%d{yyyy-MM-dd}.old.log</fileNamePattern>
+    </rollingPolicy>
+    <encoder>
+      <pattern>[%X{key}]%date{"yyyy-MM-dd'T'HH:mm:ss,SSSXXX", UTC} %-5level %logger{35} - %msg %n</pattern>
+    </encoder>
+  </appender>
+
+  <appender name="cache" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <file>${catalina.home:-.}/logs/x/x-scheduler/cache.log</file>
+    <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+      <fileNamePattern>${catalina.home:-.}/logs/x/archive/x-scheduler/cache.%d{yyyy-MM-dd}.old.log</fileNamePattern>
+    </rollingPolicy>
+    <encoder>
+      <pattern>[%X{key}]%date{"yyyy-MM-dd'T'HH:mm:ss,SSSXXX", UTC} %-5level %logger{35} - %msg %n</pattern>
+    </encoder>
+  </appender>
+
+  <logger name="org.springframework" level="debug" additivity="false">
+    <appender-ref ref="spring" />
+  </logger>
+
+  <logger name="org.springframework.cache" level="debug" additivity="false">
+    <appender-ref ref="cache" />
+  </logger>
+
+  <logger name="org.springframework.data.redis" level="debug" additivity="false">
+    <appender-ref ref="cache" />
+  </logger>
+
+  <logger name="redis.clients.jedis" level="debug" additivity="false">
+    <appender-ref ref="cache" />
+  </logger>
+
+  <logger name="com.gdn" level="debug" additivity="false">
+    <appender-ref ref="app" />
+  </logger>
+
+  <logger name="org.hibernate" level="debug" additivity="false">
+    <appender-ref ref="orm" />
+  </logger>
+
+  <root level="info">
+    <appender-ref ref="stdout" />
+    <appender-ref ref="all" />
+  </root>
+</configuration>

@@ -1,0 +1,35 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.gdn.x</groupId>
+		<artifactId>x-scheduler</artifactId>
+		<version>1.0.0.RC1</version>
+	</parent>
+
+	<artifactId>x-scheduler-rest-web-model</artifactId>
+	<packaging>jar</packaging>
+	<name>${project.groupId}-${project.artifactId}</name>
+
+	<properties>
+	</properties>
+
+	<build>
+		<finalName>${project.name}</finalName>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>javax.validation</groupId>
+			<artifactId>validation-api</artifactId>
+			<version>1.1.0.Final</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>5.1.2.Final</version>
+		</dependency>
+	</dependencies>
+
+</project>

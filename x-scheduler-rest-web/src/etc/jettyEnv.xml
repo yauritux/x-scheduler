@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE Configure PUBLIC "-//Mort Bay Consulting//DTD Configure//EN" "http://jetty.mortbay.org/configure.dtd">
+<Configure class="org.eclipse.jetty.webapp.WebAppContext">
+  <New id="xScheduler" class="org.eclipse.jetty.plus.jndi.Resource">
+    <Arg></Arg>
+    <Arg>jdbc/x/scheduler</Arg>
+    <Arg>
+      <New class="com.jolbox.bonecp.BoneCPDataSource">
+        <Set name="driverClass">org.postgresql.Driver</Set>
+        <Set name="jdbcUrl">jdbc:postgresql://172.16.201.28:5432/xwfs</Set>
+        <Set name="username">xwfs</Set>
+        <Set name="password">xwfs12345</Set>
+        <Set name="minConnectionsPerPartition">2</Set>
+        <Set name="maxConnectionsPerPartition">4</Set>
+        <Set name="partitionCount">3</Set>
+        <Set name="idleConnectionTestPeriodInSeconds">60</Set>
+      </New>
+    </Arg>
+  </New>
+</Configure>

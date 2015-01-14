@@ -1,0 +1,84 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.gdn.x</groupId>
+		<artifactId>x-scheduler</artifactId>
+		<version>1.0.0.RC1</version>
+	</parent>
+
+	<artifactId>x-scheduler-service-impl</artifactId>
+	<packaging>jar</packaging>
+	<name>${project.groupId}-${project.artifactId}</name>
+
+	<build>
+		<finalName>${project.name}</finalName>
+	</build>
+
+	<repositories>
+		<repository>
+			<id>local-artifactory</id>
+			<name>Local Artifactory</name>
+			<url>http://172.16.247.66:8081/artifactory/gdnRepo</url>
+			<layout>default</layout>
+		</repository>
+	</repositories>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+		</dependency>
+
+		<!-- Java Mail API -->
+		<dependency>
+			<groupId>javax.mail</groupId>
+			<artifactId>mail</artifactId>
+			<version>1.4.5</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.velocity</groupId>
+			<artifactId>velocity</artifactId>
+			<version>1.6.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.gdn.geneva.data.provider</groupId>
+			<artifactId>data-provider-java-sdk</artifactId>
+			<version>1.0.0</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.apache.httpcomponents</groupId>
+					<artifactId>httpclient</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<dependency>
+			<groupId>com.jolbox</groupId>
+			<artifactId>bonecp</artifactId>
+			<version>0.8.0.RELEASE</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.gdn.x</groupId>
+			<artifactId>x-scheduler-model</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.gdn.x</groupId>
+			<artifactId>x-scheduler-service-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>commons-logging</groupId>
+					<artifactId>commons-logging</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+	</dependencies>
+</project>

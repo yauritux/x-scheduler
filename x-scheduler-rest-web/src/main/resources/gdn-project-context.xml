@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jpa="http://www.springframework.org/schema/data/jpa" xmlns:cache="http://www.springframework.org/schema/cache"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
+        http://www.springframework.org/schema/cache http://www.springframework.org/schema/cache/spring-cache.xsd">
+        
+	<context:property-placeholder
+		location="file:///${X_CONF_DIR}/x-scheduler/db.properties"
+		properties-ref="applicationDefaultProperties" 
+		ignore-resource-not-found="true"
+		ignore-unresolvable="true" />
+
+	<util:properties 
+		location="file:///${X_CONF_DIR}/x-scheduler/db.properties"
+		id="xSchedulerCacheProperties" />
+
+	<import resource="classpath*:gdn-jpa-configuration.xml" />
+
+	<jpa:repositories base-package="com.gdn.x.scheduler.dao" />
+
+	<context:component-scan base-package="com.gdn.x.scheduler" />
+
+	<bean id="dataProviderClient" class="com.gdn.geneva.data.provider.client.DataProviderClient">
+		<constructor-arg ref="clientConfiguration" />
+	</bean>
+
+	<bean id="clientConfiguration" class="com.gdn.geneva.data.provider.client.ClientConfiguration">
+		<constructor-arg value="${geneva.uri.location}" />
+	</bean>
+
+	<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+		<property name="host" value="${mail.smtp.host}" />
+		<property name="port" value="${mail.smtp.port}" />
+		<property name="username" value="${mail.username}" />
+		<property name="password" value="${mail.password}" />
+	</bean>
+
+	<bean id="velocityEngine"
+		class="org.springframework.ui.velocity.VelocityEngineFactoryBean">
+		<property name="velocityProperties">
+			<value>
+				resource.loader=class
+				class.resource.loader.class=org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+			</value>
+		</property>
+	</bean>
+
+
+</beans>
