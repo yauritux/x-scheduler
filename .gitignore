@@ -1,0 +1,8 @@
+/logs
+/target
+.settings
+.classpath
+.project
+/Server
+.metadata/
+/**/*.class

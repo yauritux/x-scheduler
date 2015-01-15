@@ -25,7 +25,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableJpaRepositories(basePackages = { "com.gdn.x.scheduler.dao" })
 @EnableJpaAuditing
 @EnableTransactionManagement
-@ComponentScan(basePackages = { "com.gdn.x.scheduler.test" })
+@ComponentScan(basePackages = { "com.gdn.x.scheduler" })
 public class ConfigurationTesting {
 
 	@Bean
@@ -64,5 +64,4 @@ public class ConfigurationTesting {
 		jpaTransactionManager.setJpaDialect(this.jpaDialect());
 		return jpaTransactionManager;
 	}
-
 }
