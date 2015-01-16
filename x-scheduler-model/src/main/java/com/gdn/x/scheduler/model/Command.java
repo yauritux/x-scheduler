@@ -26,6 +26,9 @@ public class Command extends GdnBaseEntity {
 	@Column(name = "parameters", nullable = true)
 	private String parameters;
 	
+	@Column(name = "contents", nullable = true)
+	private String contents;
+	
 	@Enumerated(EnumType.STRING)
 	@Column(name = "command_type", nullable = false)
 	private CommandType commandType = CommandType.WEB_SERVICE;
@@ -47,13 +50,35 @@ public class Command extends GdnBaseEntity {
 	public void setCommand(String command) {
 		this.command = command;
 	}	
-	
+
+	/**
+	 * Parameters are various, depend on the command type.
+	 * e.g. parameter for WEB_SERVICE will be query parameters those are supplied 
+	 * along with the URL of the endpoint service. And for CLIENT_SDK or SHELL_SCRIPT, 
+	 * parameter will be arguments of the command that is being executed.
+	 * 
+	 * @return parameters in string
+	 */
 	public String getParameters() {
 		return parameters;
 	}
 	
 	public void setParameters(String parameters) {
 		this.parameters = parameters;
+	}
+	
+	/**
+	 * contents merely applied for WEB_SERVICE command. 
+	 * contents will be supplied in the format of JSON.
+	 * 
+	 * @return JSON string, represents the data being sent as a content.
+	 */
+	public String getContents() {
+		return contents;
+	}
+	
+	public void setContents(String contents) {
+		this.contents = contents;
 	}
 	
 	public CommandType getCommandType() {
