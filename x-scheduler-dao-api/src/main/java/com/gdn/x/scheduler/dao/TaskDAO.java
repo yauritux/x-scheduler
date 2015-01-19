@@ -24,12 +24,30 @@ public interface TaskDAO extends CrudRepository<Task, String> {
 		= "FROM Task t WHERE t.markForDelete = false AND t.taskName = :taskName ORDER BY createdDate DESC";
     public static final String FIND_BY_TASK_NAME_LIKE
     	= "FROM Task t WHERE t.taskName like :taskName ORDER BY createdDate DESC";
+    public static final String FIND_BY_ID_EXCL_DELETE
+    	= "FROM Task t WHERE t.id = :id AND t.markForDelete = false";
+    public static final String COUNT_RECORDS_EXCL_DELETE
+    	= "SELECT count(t) FROM Task t WHERE t.markForDelete = false";
 
 	public Task findById(String id);
 	
+	@Query(FIND_BY_ID_EXCL_DELETE)
+	public Task findByIdExclDelete(@Param("id") String id);	
+	
+	public List<Task> findAll();
+	
+	public Page<Task> findAll(Pageable pageable);
+	
+	public boolean exists(String id);
+	
+	public long count();
+	
+	@Query(COUNT_RECORDS_EXCL_DELETE)
+	public long countExclDelete();
+	
 	@Query(FETCH_ALL)
 	public List<Task> fetchAll();
-	
+		
 	@Query(FETCH_ALL)
 	public Page<Task> fetchAll(Pageable pageable);
 
@@ -48,4 +66,8 @@ public interface TaskDAO extends CrudRepository<Task, String> {
 	@Modifying
 	@Query(value = "UPDATE Task t SET markForDelete = true WHERE id = :id")
 	public int deleteTask(@Param("id") String id);	
+	
+	@Modifying
+	@Query(value = "UPDATE Task t SET markForDelete = false WHERE id = :id")
+	public int restoreTask(@Param("id") String id);
 }

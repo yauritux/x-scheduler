@@ -14,9 +14,15 @@ import com.gdn.x.scheduler.rest.web.model.TaskResponse;
  */
 public interface TaskQueryService {
 
+	public List<Task> findAll();
+	public Page<Task> findAll(int pageNumber, int pageSize);
 	public List<Task> fetchAll();
 	public Page<Task> fetchAll(int pageNumber, int pageSize);
 	public Task findById(String id);
+	public Task findByIdExcl(String id);
+	public boolean exists(String id);
+	public long count();
+	public long countExclDelete();
 	public List<Task> findByTaskName(String taskName);
 	public Page<Task> findByTaskName(String taskName, int pageNumber, int pageSize);
 	public List<Task> findByTaskNameLike(String taskName);

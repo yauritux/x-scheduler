@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.gdn.x.scheduler.dao.TaskDAO;
@@ -19,7 +20,7 @@ import com.gdn.x.scheduler.service.TaskQueryService;
  *
  */
 @Service
-@Transactional(readOnly = true)
+@Transactional(readOnly = true, propagation = Propagation.SUPPORTS)
 public class TaskQueryServiceImpl implements TaskQueryService {
 	
 	private TaskDAO taskDAO;
@@ -90,5 +91,35 @@ public class TaskQueryServiceImpl implements TaskQueryService {
 		taskResponse.setUpdatedDate(task.getUpdatedDate());
 		
 		return taskResponse;
+	}
+
+	@Override
+	public List<Task> findAll() {
+		return taskDAO.findAll();
+	}
+
+	@Override
+	public Page<Task> findAll(int pageNumber, int pageSize) {
+		return taskDAO.findAll(new PageRequest(pageNumber, pageSize));
+	}
+
+	@Override
+	public Task findByIdExcl(String id) {
+		return taskDAO.findByIdExclDelete(id);
+	}
+
+	@Override
+	public boolean exists(String id) {
+		return taskDAO.exists(id);
+	}
+
+	@Override
+	public long count() {
+		return taskDAO.count();
+	}
+
+	@Override
+	public long countExclDelete() {
+		return taskDAO.countExclDelete();
 	}
 }

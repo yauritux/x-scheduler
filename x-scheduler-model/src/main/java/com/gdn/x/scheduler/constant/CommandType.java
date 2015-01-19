@@ -7,5 +7,5 @@ package com.gdn.x.scheduler.constant;
  */
 public enum CommandType {
 
-	WEB_SERVICE, CLIENT_SDK, COMMAND_SCRIPT;
+	WEB_SERVICE, CLIENT_SDK, SHELL_SCRIPT;
 }

@@ -22,15 +22,31 @@ public interface WorkflowScheduleDAO extends CrudRepository<WorkflowSchedule, St
 	public static final String FETCH_ALL 
 		= "FROM WorkflowSchedule ws WHERE ws.markForDelete = false ORDER BY createdDate DESC";
 	public static final String FIND_BY_WORKFLOW 
-		= "FROM WorkflowSchedule ws WHERE ws.workflow = :workflow AND ws.markForDelete = false ORDER BY createddate DESC";
+		= "SELECT ws, w FROM WorkflowSchedule ws INNER JOIN ws.workflow w WHERE ws.workflow = :workflow AND ws.markForDelete = false ORDER BY ws.createdDate DESC";
+	public static final String FIND_BY_ID_EXCL_DELETE
+		= "FROM WorkflowSchedule ws WHERE ws.id = :id AND ws.markForDelete = false";
 			
 	public WorkflowSchedule findById(String id);
+	
+	public boolean exists(String id);
+	
+	@Query(FIND_BY_ID_EXCL_DELETE)
+	public WorkflowSchedule findByIdExcl(@Param("id") String id);
 	
 	@Query(FETCH_ALL)
 	public List<WorkflowSchedule> fetchAll();
 	
 	@Query(FETCH_ALL)
 	public Page<WorkflowSchedule> fetchAll(Pageable pageable);
+	
+	public List<WorkflowSchedule> findAll();
+	
+	public Page<WorkflowSchedule> findAll(Pageable pageable);
+	
+	public long count();
+	
+	@Query("SELECT count(ws) FROM WorkflowSchedule ws WHERE ws.markForDelete = false")
+	public long countExclDelete();
 	
 	@Query(FIND_BY_WORKFLOW)
 	public Page<WorkflowSchedule> findByWorkflow(@Param("workflow") Workflow workflow, Pageable pageable);
@@ -41,4 +57,8 @@ public interface WorkflowScheduleDAO extends CrudRepository<WorkflowSchedule, St
 	@Modifying
 	@Query("UPDATE WorkflowSchedule ws SET ws.markForDelete = true WHERE ws.id = :id")
 	public int deleteWorkflowSchedule(@Param("id") String id);
+	
+	@Modifying
+	@Query("UPDATE WorkflowSchedule ws SET ws.markForDelete = false WHERE ws.id = :id")
+	public int restoreWorkflowSchedule(@Param("id") String id);
 }

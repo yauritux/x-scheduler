@@ -9,7 +9,7 @@ create table command(
  optlock bigint,
  command character varying(255) not null,
  parameters character varying(255),
- command_type character varying(100) check (command_type in ('WEB_SERVICE', 'JAR_API', 'COMMAND_SCRIPT'))
+ command_type character varying(100) check (command_type in ('WEB_SERVICE', 'CLIENT_SDK', 'SHELL_SCRIPT'))
 );
 
 alter table command add primary key(id);

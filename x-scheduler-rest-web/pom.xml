@@ -196,7 +196,7 @@
 					<systemProperties>
 						<systemProperty>
 							<name>X_CONF_DIR</name>
-							<value>/opt/app/config</value>
+							<value>/home/centos/Projects/X-Scheduler/x-scheduler/x-scheduler-config/db</value>
 						</systemProperty>
 					</systemProperties>
 					<webAppConfig>

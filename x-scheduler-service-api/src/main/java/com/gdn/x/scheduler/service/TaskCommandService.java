@@ -9,4 +9,5 @@ package com.gdn.x.scheduler.service;
 public interface TaskCommandService {
 
 	public int deleteTask(String id);
+	public int restoreTask(String id);
 }

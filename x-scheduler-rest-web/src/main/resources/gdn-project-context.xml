@@ -10,13 +10,13 @@
         http://www.springframework.org/schema/cache http://www.springframework.org/schema/cache/spring-cache.xsd">
         
 	<context:property-placeholder
-		location="file:///${X_CONF_DIR}/x-scheduler/db.properties"
+		location="file:///${X_CONF_DIR}/db.properties"
 		properties-ref="applicationDefaultProperties" 
 		ignore-resource-not-found="true"
 		ignore-unresolvable="true" />
 
 	<util:properties 
-		location="file:///${X_CONF_DIR}/x-scheduler/db.properties"
+		location="file:///${X_CONF_DIR}/db.properties"
 		id="xSchedulerCacheProperties" />
 
 	<import resource="classpath*:gdn-jpa-configuration.xml" />

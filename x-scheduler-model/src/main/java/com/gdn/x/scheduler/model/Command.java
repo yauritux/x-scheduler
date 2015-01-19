@@ -38,7 +38,7 @@ public class Command extends GdnBaseEntity {
 	/**
 	 * retrieve command that will be executed by task object.
 	 * The command will be representing in JSON string which will be different 
-	 * between each CommandType (i.e. WEB_SERVICE, JAR_API, COMMAND_SCRIPT).
+	 * between each CommandType (i.e. WEB_SERVICE, CLIENT_SDK, SHELL_SCRIPT).
 	 * e.g. for WEB_SERVICE, the JSON string will contain some keys such as URL, WS method, etc.
 	 *  
 	 * @return command in JSON string.

@@ -1,0 +1,42 @@
+[]2015-01-19T01:31:22,865Z INFO  c.m.s.plugin.SwaggerPluginAdapter - Context refreshed 
+[]2015-01-19T01:31:22,866Z INFO  c.m.s.plugin.SwaggerPluginAdapter - Found custom SwaggerSpringMvcPlugins 
+[]2015-01-19T01:31:22,866Z INFO  c.m.s.plugin.SwaggerPluginAdapter - initializing plugin bean customImplementation 
+[]2015-01-19T01:31:22,871Z INFO  c.m.s.s.ApiListingReferenceScanner - Scanning for api listing references 
+[]2015-01-19T01:31:22,873Z INFO  c.m.s.s.ApiListingReferenceScanner - Request mapping: getTask belongs to groups: [[ResourceGroup{groupName='task'}]]  
+[]2015-01-19T01:31:22,873Z INFO  c.m.s.s.ApiListingReferenceScanner - Adding resource to group:ResourceGroup{groupName='task'} with description:task for handler method:getTask 
+[]2015-01-19T01:31:22,874Z INFO  c.m.s.s.ApiListingReferenceScanner - Request mapping: getWSCommand belongs to groups: [[ResourceGroup{groupName='command'}]]  
+[]2015-01-19T01:31:22,874Z INFO  c.m.s.s.ApiListingReferenceScanner - Adding resource to group:ResourceGroup{groupName='command'} with description:command for handler method:getWSCommand 
+[]2015-01-19T01:31:22,874Z INFO  c.m.s.s.ApiListingReferenceScanner - Excluding method as it contains the excluded annotation: interface com.mangofactory.swagger.annotations.ApiIgnore 
+[]2015-01-19T01:31:22,874Z INFO  c.m.s.s.ApiListingReferenceScanner - Excluding method as it contains the excluded annotation: interface com.mangofactory.swagger.annotations.ApiIgnore 
+[]2015-01-19T01:31:22,878Z INFO  c.m.s.s.ApiListingReferenceScanner - Created resource listing Path: http://localhost:8080/api-docs/default/task Description: task Position: 0 
+[]2015-01-19T01:31:22,878Z INFO  c.m.s.s.ApiListingReferenceScanner - Created resource listing Path: http://localhost:8080/api-docs/default/command Description: command Position: 0 
+[]2015-01-19T01:31:23,054Z INFO  c.m.s.c.SwaggerApiResourceListing - Added a resource listing with (2) api resources:  
+[]2015-01-19T01:31:23,055Z INFO  c.m.s.c.SwaggerApiResourceListing -   command at location: /api-docshttp://localhost:8080/api-docs/default/command 
+[]2015-01-19T01:31:23,055Z INFO  c.m.s.c.SwaggerApiResourceListing -   task at location: /api-docshttp://localhost:8080/api-docs/default/task 
+[]2015-01-19T01:32:58,622Z INFO  java.sql.DatabaseMetaData - HHH000262: Table not found: WORKFLOW 
+[]2015-01-19T01:32:58,624Z INFO  java.sql.DatabaseMetaData - HHH000262: Table not found: WORKFLOW_SCHEDULE 
+[]2015-01-19T01:32:58,625Z INFO  java.sql.DatabaseMetaData - HHH000262: Table not found: WORKFLOW_TASKS 
+[]2015-01-19T01:32:58,627Z INFO  java.sql.DatabaseMetaData - HHH000262: Table not found: activity_log 
+[]2015-01-19T01:32:58,744Z INFO  java.sql.DatabaseMetaData - HHH000262: Table not found: WORKFLOW 
+[]2015-01-19T01:32:58,744Z INFO  java.sql.DatabaseMetaData - HHH000262: Table not found: WORKFLOW_SCHEDULE 
+[]2015-01-19T01:32:58,745Z INFO  java.sql.DatabaseMetaData - HHH000262: Table not found: WORKFLOW_TASKS 
+[]2015-01-19T01:32:58,746Z INFO  java.sql.DatabaseMetaData - HHH000262: Table not found: activity_log 
+[]2015-01-19T01:32:58,747Z INFO  java.sql.DatabaseMetaData - HHH000262: Table not found: WORKFLOW 
+[]2015-01-19T01:32:58,748Z INFO  java.sql.DatabaseMetaData - HHH000262: Table not found: WORKFLOW_SCHEDULE 
+[]2015-01-19T01:32:58,749Z INFO  java.sql.DatabaseMetaData - HHH000262: Table not found: WORKFLOW_TASKS 
+[]2015-01-19T01:32:58,749Z INFO  java.sql.DatabaseMetaData - HHH000262: Table not found: activity_log 
+[]2015-01-19T01:33:00,948Z INFO  c.m.s.plugin.SwaggerPluginAdapter - Context refreshed 
+[]2015-01-19T01:33:00,949Z INFO  c.m.s.plugin.SwaggerPluginAdapter - Found custom SwaggerSpringMvcPlugins 
+[]2015-01-19T01:33:00,949Z INFO  c.m.s.plugin.SwaggerPluginAdapter - initializing plugin bean customImplementation 
+[]2015-01-19T01:33:00,955Z INFO  c.m.s.s.ApiListingReferenceScanner - Scanning for api listing references 
+[]2015-01-19T01:33:00,957Z INFO  c.m.s.s.ApiListingReferenceScanner - Request mapping: getTask belongs to groups: [[ResourceGroup{groupName='task'}]]  
+[]2015-01-19T01:33:00,957Z INFO  c.m.s.s.ApiListingReferenceScanner - Adding resource to group:ResourceGroup{groupName='task'} with description:task for handler method:getTask 
+[]2015-01-19T01:33:00,957Z INFO  c.m.s.s.ApiListingReferenceScanner - Request mapping: getWSCommand belongs to groups: [[ResourceGroup{groupName='command'}]]  
+[]2015-01-19T01:33:00,957Z INFO  c.m.s.s.ApiListingReferenceScanner - Adding resource to group:ResourceGroup{groupName='command'} with description:command for handler method:getWSCommand 
+[]2015-01-19T01:33:00,958Z INFO  c.m.s.s.ApiListingReferenceScanner - Excluding method as it contains the excluded annotation: interface com.mangofactory.swagger.annotations.ApiIgnore 
+[]2015-01-19T01:33:00,958Z INFO  c.m.s.s.ApiListingReferenceScanner - Excluding method as it contains the excluded annotation: interface com.mangofactory.swagger.annotations.ApiIgnore 
+[]2015-01-19T01:33:00,962Z INFO  c.m.s.s.ApiListingReferenceScanner - Created resource listing Path: http://localhost:8080/api-docs/default/task Description: task Position: 0 
+[]2015-01-19T01:33:00,963Z INFO  c.m.s.s.ApiListingReferenceScanner - Created resource listing Path: http://localhost:8080/api-docs/default/command Description: command Position: 0 
+[]2015-01-19T01:33:01,135Z INFO  c.m.s.c.SwaggerApiResourceListing - Added a resource listing with (2) api resources:  
+[]2015-01-19T01:33:01,135Z INFO  c.m.s.c.SwaggerApiResourceListing -   command at location: /api-docshttp://localhost:8080/api-docs/default/command 
+[]2015-01-19T01:33:01,135Z INFO  c.m.s.c.SwaggerApiResourceListing -   task at location: /api-docshttp://localhost:8080/api-docs/default/task 
