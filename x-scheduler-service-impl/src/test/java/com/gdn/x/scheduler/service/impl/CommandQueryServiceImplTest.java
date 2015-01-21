@@ -25,8 +25,10 @@ import com.gdn.x.scheduler.service.CommandQueryService;
 
 /**
  * 
- * @author yauritux
- *
+ * @author yauritux (yauritux@gmail.com)
+ * @version 1.0.0.RC1
+ * @since 1.0.0.RC1
+ * 
  */
 @RunWith(PowerMockRunner.class)
 @PowerMockIgnore("org.slf4j.Logger")
