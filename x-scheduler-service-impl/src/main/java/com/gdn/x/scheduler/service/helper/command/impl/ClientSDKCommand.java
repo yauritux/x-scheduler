@@ -13,6 +13,12 @@ import com.gdn.x.scheduler.service.helper.receiver.CommandReceiver;
  * @version 1.0.0.RC1
  * @since 1.0.0.RC1
  *
+ * @see <a href="http://en.wikipedia.org/wiki/Command_pattern">Command Pattern</a>.
+ * @see {@link com.gdn.x.scheduler.rest.web.model.CommandResponse}
+ * @see {@link com.gdn.x.scheduler.rest.web.model.CSCommandResponse}
+ * @see {@link com.gdn.x.scheduler.service.helper.receiver.CommandReceiver}
+ * 
+ * This command service bound to ClientSDK type of command.
  */
 public class ClientSDKCommand implements Command {
 	
@@ -20,10 +26,23 @@ public class ClientSDKCommand implements Command {
 	
 	private CommandReceiver receiver;
 	
+	/**
+	 * The default constructor that receives CommandReceiver as the parameter.
+	 * 
+	 * @param receiver
+	 */	
 	public ClientSDKCommand(CommandReceiver receiver) {
 		this.receiver = receiver;
 	}
 
+	/**
+	 * Build and return CommandResponse object.
+	 * The process will be handled by particular receiver that has already been 
+	 * passed via the default constructor earlier.
+	 * This method will return CSCommandResponse (one of the CommandResponse subclass). 
+	 *  
+	 * @return instance of CSCommandResponse.
+	 */	
 	@Override
 	public CommandResponse buildCommandResponse() {
 		CommandResponse commandResponse = null;

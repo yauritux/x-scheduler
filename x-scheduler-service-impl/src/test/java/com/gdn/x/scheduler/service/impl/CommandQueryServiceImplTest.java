@@ -16,6 +16,7 @@ import org.powermock.core.classloader.annotations.PowerMockIgnore;
 import org.powermock.core.classloader.annotations.SuppressStaticInitializationFor;
 import org.powermock.modules.junit4.PowerMockRunner;
 
+import com.gdn.x.scheduler.constant.CommandType;
 import com.gdn.x.scheduler.dao.CommandDAO;
 import com.gdn.x.scheduler.model.Command;
 import com.gdn.x.scheduler.model.WebServiceCommand;
@@ -79,16 +80,14 @@ public class CommandQueryServiceImplTest {
 	}
 		
 	private Command buildWSCommand() {
-		//Command command = buildCommand();
 		WebServiceCommand command = new WebServiceCommand();
 		command.setCommand("{\"url\":\"http://www.google.com\", \"method\":\"GET\"}");
-		//command.setCommandType(CommandType.WEB_SERVICE);
+		command.setCommandType(CommandType.WEB_SERVICE);
 		command.setContents("");
 		return command;
 	}
 	
 	private Command buildBadWSCommand() {
-		//Command command = buildCommand();
 		WebServiceCommand command = new WebServiceCommand();
 		command.setId("1");
 		command.setCommand("{\"url\": \"http://www.google.com\"");		
@@ -96,15 +95,5 @@ public class CommandQueryServiceImplTest {
 		command.setParameters("");
 		command.setStoreId("store-123");
 		return command;
-	}
-	
-	/*
-	private Command buildCommand() {
-		Command command = new Command();
-		command.setId("1");	
-		command.setParameters("");	
-		command.setStoreId("store-123");	
-		return command;
-	}
-	*/
+	}	
 }

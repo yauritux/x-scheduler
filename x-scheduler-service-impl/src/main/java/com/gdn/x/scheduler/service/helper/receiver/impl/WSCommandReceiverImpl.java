@@ -20,16 +20,31 @@ import com.gdn.x.scheduler.service.helper.receiver.CommandReceiver;
  * @author yauritux (yauritux@gmail.com)
  * @version 1.0.0.RC1
  * @since 1.0.0.RC1
+ * 
+ * Receiver class for WebServiceCommand.
+ * (see <a href="http://en.wikipedia.org/wiki/Command_pattern">Command Pattern</a>)  
  *
  */
 public class WSCommandReceiverImpl implements CommandReceiver {
 	
 	private Command command;
 	
+	/**
+	 * The default constructor for this class that 
+	 * receives command entity as the parameter.
+	 * 
+	 * @param command
+	 */
 	public WSCommandReceiverImpl(Command command) {
 		this.command = command;
 	}
 
+	/**
+	 * build and return CommandResponse object based on the given command type.
+	 * 
+	 * @return instance of CommandResponse.
+	 * @throws Exception
+	 */
 	@Override
 	public CommandResponse wrapCommand() throws Exception {
 		WSCommandResponse wsCommandResponse = new WSCommandResponse();

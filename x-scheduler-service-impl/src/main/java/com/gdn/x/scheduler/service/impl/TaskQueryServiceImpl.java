@@ -166,7 +166,6 @@ public class TaskQueryServiceImpl implements TaskQueryService {
 		taskResponse.setCommandId(task.getCommand().getId());
 		taskResponse.setCommand(task.getCommand().getCommand());
 		taskResponse.setParameters(task.getCommand().getParameters());
-		taskResponse.setContents(task.getCommand().getContents());
 		taskResponse.setCommandType(task.getCommand().getCommandType().name());
 		taskResponse.setCreatedBy(task.getCreatedBy());
 		taskResponse.setCreatedDate(task.getCreatedDate());
