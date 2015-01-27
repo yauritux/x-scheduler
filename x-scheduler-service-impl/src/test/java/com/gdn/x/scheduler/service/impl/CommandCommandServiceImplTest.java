@@ -2,14 +2,17 @@ package com.gdn.x.scheduler.service.impl;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
-
+import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.withSettings;
 import static org.powermock.api.mockito.PowerMockito.mock;
 import static org.powermock.api.mockito.PowerMockito.spy;
 import static org.powermock.api.mockito.PowerMockito.when;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -131,6 +134,35 @@ public class CommandCommandServiceImplTest {
 		assertTrue(commandService.restore(command));
 	}
 	
+	@Test(timeout = 1000)
+	public void deleteBatch_nullList_zeroIsReturned() {
+		assertEquals(0, commandService.batchDelete(null));
+	}
+	
+	@Test(timeout = 1000)
+	public void deleteBatch_emptyList_zeroIsReturned() {
+		assertEquals(0, commandService.batchDelete(new ArrayList<Command>()));
+	}
+	
+	@Test(timeout = 1000)
+	public void deleteBatch_allEntitiesAlreadyMarkedAsDelete_zeroIsReturned() {
+		assertEquals(0, commandService.batchDelete(populateDeletedSampleCommand()));
+	}
+	
+	@Test(timeout = 1000)
+	public void deleteBatch_allEntitiesAreNonDeletedCommand_numOfAffectedEqualsToTotalEntities() {
+		List<Command> commands = populateNonDeletedSampleCommand();
+		when(mockCommandDAO.deleteCommand(any(String.class))).thenReturn(1);
+		assertEquals(commands.size(), commandService.batchDelete(commands));
+	}
+	
+	@Test(timeout = 1000)
+	public void deleteBatch_mixEntities_numOfAffectedLessThanTotalEntities() {
+		List<Command> commands = populateMixSampleCommand();
+		when(mockCommandDAO.deleteCommand(any(String.class))).thenReturn(1);
+		assertTrue(commandService.batchDelete(commands) < commands.size());
+	}
+	
 	private Command buildSampleCommand(String id) {
 		Command command = new WebServiceCommand();
 		command.setId(id);
@@ -146,5 +178,33 @@ public class CommandCommandServiceImplTest {
 		command.setCommandType(CommandType.WEB_SERVICE);
 		command.setMarkForDelete(true);
 		return command;
+	}
+	
+	private List<Command> populateDeletedSampleCommand() {
+		List<Command> commands = new ArrayList<Command>();
+		for (int i = 1; i < 9; i++) {
+			commands.add(buildDeletedSampleCommand(Integer.toString(i)));
+		}
+		return commands;
+	}
+	
+	private List<Command> populateNonDeletedSampleCommand() {
+		List<Command> commands = new ArrayList<Command>();
+		for (int i = 1; i < 9; i++) {
+			commands.add(buildSampleCommand(Integer.toString(i)));
+		}		
+		return commands;
+	}
+	
+	private List<Command> populateMixSampleCommand() {
+		List<Command> commands = new ArrayList<Command>();
+		for (int i = 1; i < 9; i++) {
+			if (i >= 6) {
+				commands.add(buildSampleCommand(Integer.toString(i)));
+				continue;
+			} 
+			commands.add(buildDeletedSampleCommand(Integer.toString(i)));			
+		}		
+		return commands;
 	}
 }
