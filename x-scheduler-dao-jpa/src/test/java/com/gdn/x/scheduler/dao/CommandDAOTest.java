@@ -1,17 +1,17 @@
 package com.gdn.x.scheduler.dao;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
+import static org.junit.Assert.assertTrue;
+
 import java.util.List;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNull;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
 
 import com.gdn.x.scheduler.constant.CommandType;
 import com.gdn.x.scheduler.model.Command;
@@ -93,7 +93,7 @@ public class CommandDAOTest extends BaseDAOTest {
 	public void findByCommandType_oneRecordExist_commandReturned() {
 		List<Command> commands = commandDAO.findByCommandType(CommandType.WEB_SERVICE);
 		assertNotNull(commands.get(0).getCommand());
-	}
+	}	
 	
 	@Test(timeout = 1000)
 	public void deleteCommand_nonExistingRecord_noAffectedRows() {

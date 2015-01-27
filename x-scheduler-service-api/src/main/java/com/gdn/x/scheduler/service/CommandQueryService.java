@@ -19,8 +19,8 @@ public interface CommandQueryService {
 
 	public Command findById(String id);
 	public List<Command> fetchAll();
-	public Page<Command> fetchAll(int pageNumber, int pageSize);
+	public Page<Command> fetchAll(int pageNumber, int pageSize);	
 	public List<Command> findByCommandType(CommandType commandType); 
-	public Page<Command> findByCommandType(CommandType commandType, int pageNumber, int pageSize);
+	public Page<Command> findByCommandType(CommandType commandType, int pageNumber, int pageSize);	
 	public CommandResponse wrapCommand(Command command) throws JsonParseException, IOException;
 }

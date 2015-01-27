@@ -21,9 +21,9 @@ public interface CommandDAO extends CrudRepository<Command, String> {
 	
 	public static final String FETCH_ALL 
 		= "FROM Command c WHERE c.markForDelete = false ORDER BY createdDate DESC";
-	
+		
 	public static final String FETCH_BY_COMMAND_TYPE 
-		= "FROM Command c WHERE c.markForDelete = false AND c.commandType = :commandType ORDER BY createdDate DESC";
+		= "FROM Command c WHERE c.markForDelete = false AND c.commandType = :commandType ORDER BY createdDate DESC";	
 	
 	public static final String FIND_BY_ID_EXCL_DELETE
 		= "FROM Command c WHERE c.id = :id AND c.markForDelete = false";
@@ -57,7 +57,7 @@ public interface CommandDAO extends CrudRepository<Command, String> {
 	public List<Command> findByCommandType(@Param("commandType") CommandType commandType);
 	
 	@Query(FETCH_BY_COMMAND_TYPE)
-	public Page<Command> findByCommandType(@Param("commandType") CommandType commandType, Pageable pageable);
+	public Page<Command> findByCommandType(@Param("commandType") CommandType commandType, Pageable pageable);	
 	
 	@Modifying
 	@Query("UPDATE Command c SET c.markForDelete = true WHERE c.id = :id")

@@ -17,19 +17,10 @@ public class CommandResponse extends BaseResponse {
 
 	private static final long serialVersionUID = -3799436865860072318L;
 
-	private String commandId;
 	private String commandType;
 	
 	public CommandResponse() {
 		super();
-	}
-	
-	public String getCommandId() {
-		return commandId;
-	}
-	
-	public void setCommandId(String commandId) {
-		this.commandId = commandId;
 	}
 	
 	public String getCommandType() {

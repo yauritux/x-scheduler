@@ -1,9 +1,13 @@
 package com.gdn.x.scheduler.model;
 
 import javax.persistence.Column;
+import javax.persistence.DiscriminatorColumn;
+import javax.persistence.DiscriminatorType;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
 import javax.persistence.Table;
 
 import com.gdn.common.base.entity.GdnBaseEntity;
@@ -16,7 +20,9 @@ import com.gdn.x.scheduler.constant.CommandType;
  */
 @Entity
 @Table(name = "command")
-public class Command extends GdnBaseEntity {
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name = "command_type", discriminatorType = DiscriminatorType.STRING)
+public abstract class Command extends GdnBaseEntity {
 
 	private static final long serialVersionUID = 6629422350366619513L;
 
@@ -25,13 +31,10 @@ public class Command extends GdnBaseEntity {
 	
 	@Column(name = "parameters", nullable = true)
 	private String parameters;
-	
-	@Column(name = "contents", nullable = true)
-	private String contents;
-	
+		
 	@Enumerated(EnumType.STRING)
-	@Column(name = "command_type", nullable = false)
-	private CommandType commandType = CommandType.WEB_SERVICE;
+	@Column(name = "command_type", nullable = false, insertable = false, updatable = false)
+	private CommandType commandType = CommandType.WEB_SERVICE;	
 	
 	public Command() {}
 	
@@ -66,26 +69,12 @@ public class Command extends GdnBaseEntity {
 	public void setParameters(String parameters) {
 		this.parameters = parameters;
 	}
-	
-	/**
-	 * contents merely applied for WEB_SERVICE command. 
-	 * contents will be supplied in the format of JSON.
-	 * 
-	 * @return JSON string, represents the data being sent as a content.
-	 */
-	public String getContents() {
-		return contents;
-	}
-	
-	public void setContents(String contents) {
-		this.contents = contents;
-	}
-	
+		
 	public CommandType getCommandType() {
 		return commandType;
 	}
 	
 	public void setCommandType(CommandType commandType) {
 		this.commandType = commandType;
-	}
+	}	
 }

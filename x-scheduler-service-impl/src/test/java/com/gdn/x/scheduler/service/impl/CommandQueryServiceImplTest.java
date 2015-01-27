@@ -16,9 +16,9 @@ import org.powermock.core.classloader.annotations.PowerMockIgnore;
 import org.powermock.core.classloader.annotations.SuppressStaticInitializationFor;
 import org.powermock.modules.junit4.PowerMockRunner;
 
-import com.gdn.x.scheduler.constant.CommandType;
 import com.gdn.x.scheduler.dao.CommandDAO;
 import com.gdn.x.scheduler.model.Command;
+import com.gdn.x.scheduler.model.WebServiceCommand;
 import com.gdn.x.scheduler.rest.web.model.CommandResponse;
 import com.gdn.x.scheduler.rest.web.model.WSCommandResponse;
 import com.gdn.x.scheduler.service.CommandQueryService;
@@ -56,7 +56,7 @@ public class CommandQueryServiceImplTest {
 	
 	@Test(timeout = 1000)
 	public void findById_existingId_commandReturned() {
-		when(mockCommandDAO.findById("1")).thenReturn(new Command());
+		when(mockCommandDAO.findById("1")).thenReturn(new WebServiceCommand());
 		Command command = commandQueryService.findById("1");
 		assertNotNull(command);
 	}
@@ -79,21 +79,26 @@ public class CommandQueryServiceImplTest {
 	}
 		
 	private Command buildWSCommand() {
-		Command command = buildCommand();
+		//Command command = buildCommand();
+		WebServiceCommand command = new WebServiceCommand();
 		command.setCommand("{\"url\":\"http://www.google.com\", \"method\":\"GET\"}");
-		command.setCommandType(CommandType.WEB_SERVICE);
+		//command.setCommandType(CommandType.WEB_SERVICE);
 		command.setContents("");
 		return command;
 	}
 	
 	private Command buildBadWSCommand() {
-		Command command = buildCommand();
+		//Command command = buildCommand();
+		WebServiceCommand command = new WebServiceCommand();
 		command.setId("1");
-		command.setCommand("{\"url\": \"http://www.google.com\"");
+		command.setCommand("{\"url\": \"http://www.google.com\"");		
 		command.setContents("");
+		command.setParameters("");
+		command.setStoreId("store-123");
 		return command;
 	}
 	
+	/*
 	private Command buildCommand() {
 		Command command = new Command();
 		command.setId("1");	
@@ -101,4 +106,5 @@ public class CommandQueryServiceImplTest {
 		command.setStoreId("store-123");	
 		return command;
 	}
+	*/
 }
