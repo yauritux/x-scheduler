@@ -195,6 +195,7 @@
 		<junit-version>4.11</junit-version>
 		<hamcrest-version>1.3</hamcrest-version>
 		<mockito-version>1.9.5</mockito-version>
+		<powermock.version>1.5.6</powermock.version>
 		<maven-war-plugin-version>2.4</maven-war-plugin-version>
 		<maven-compiler-plugin-version>3.1</maven-compiler-plugin-version>
 		<jpa-api-hibernate-version>1.0.0.Final</jpa-api-hibernate-version>
@@ -470,11 +471,26 @@
 				<artifactId>httpclient</artifactId>
 				<version>${httpclient-version}</version>
 			</dependency>
+			<dependency>
+				<groupId>org.powermock</groupId>
+				<artifactId>powermock-core</artifactId>
+				<version>${powermock.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.powermock</groupId>
+				<artifactId>powermock-api-mockito</artifactId>
+				<version>${powermock.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.powermock</groupId>
+				<artifactId>powermock-module-junit4</artifactId>
+				<version>${powermock.version}</version>
+			</dependency>
+					
 		</dependencies>
 	</dependencyManagement>
+	
 	<dependencies>
-
-
 
 		<dependency>
 			<groupId>joda-time</groupId>
@@ -553,5 +569,23 @@
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-entitymanager</artifactId>
 		</dependency>
+		
+		<dependency>
+			<groupId>org.powermock</groupId>
+			<artifactId>powermock-core</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.powermock</groupId>
+			<artifactId>powermock-api-mockito</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.powermock</groupId>
+			<artifactId>powermock-module-junit4</artifactId>
+			<scope>test</scope>
+		</dependency>
+		
 	</dependencies>
+	
 </project>

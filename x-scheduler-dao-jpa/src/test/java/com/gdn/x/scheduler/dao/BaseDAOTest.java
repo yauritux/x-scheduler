@@ -36,13 +36,15 @@ DependencyInjectionTestExecutionListener.class, //
 })
 @Transactional(readOnly = false)
 public class BaseDAOTest {
+	
+	private static final String URL = "http://www.google.com";
 
 	public static final Operation DELETE_ALL = deleteAllFrom("workflow_schedule", "workflow_tasks", "workflow", "task", "command");
 
 	public static final Operation INSERT_COMMAND =
 		insertInto("COMMAND")
 			.columns("ID", "COMMAND", "PARAMETERS", "CONTENTS", "ENTRY_POINT", "COMMAND_TYPE", "CREATED_BY", "CREATED_DATE", "STORE_ID", "MARK_FOR_DELETE", "OPTLOCK")
-			.values("1", "{\"" + WSRequestHeader.URL.label() + "\":\"http://www.google.com\",\"" + WSRequestHeader.METHOD.label() + "\":\""+ WSMethod.GET.name() + "\"}", "", "", "", CommandType.WEB_SERVICE.name(), "yauritux", "2015-01-01", "store-123", false, 0)
+			.values("1", "{\"" + WSRequestHeader.URL.label() + "\":\"" + URL + "\",\"" + WSRequestHeader.METHOD.label() + "\":\""+ WSMethod.GET.name() + "\"}", "", "", "", CommandType.WEB_SERVICE.name(), "yauritux", "2015-01-01", "store-123", false, 0)
 			.values("2", "{\"class\":\"OrderManagementService\",\"method\":\"createOrder\"}", "1,2015-01-01,100000,100000,CASH", "", "", CommandType.CLIENT_SDK.name(), "yauritux", "2015-01-01", "store-123", false, 0)
 			.values("3", "{\"scriptName\":\"cleaner.sh\", \"type\":\"shell-script\", \"path\": \".\"}", "", "", "", CommandType.SHELL_SCRIPT.name(), "yauritux", "2015-01-01", "store-123", false, 0)
 			.build();

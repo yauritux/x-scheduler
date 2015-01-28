@@ -134,33 +134,74 @@ public class CommandCommandServiceImplTest {
 		assertTrue(commandService.restore(command));
 	}
 	
-	@Test(timeout = 1000)
-	public void deleteBatch_nullList_zeroIsReturned() {
+	@Test(timeout = 100)
+	public void batchDelete_nullList_zeroIsReturned() {
 		assertEquals(0, commandService.batchDelete(null));
 	}
 	
-	@Test(timeout = 1000)
-	public void deleteBatch_emptyList_zeroIsReturned() {
+	@Test(timeout = 100)
+	public void batchDelete_emptyList_zeroIsReturned() {
 		assertEquals(0, commandService.batchDelete(new ArrayList<Command>()));
 	}
 	
 	@Test(timeout = 1000)
-	public void deleteBatch_allEntitiesAlreadyMarkedAsDelete_zeroIsReturned() {
+	public void batchDelete_allEntitiesAlreadyMarkedAsDelete_zeroIsReturned() {
 		assertEquals(0, commandService.batchDelete(populateDeletedSampleCommand()));
 	}
 	
 	@Test(timeout = 1000)
-	public void deleteBatch_allEntitiesAreNonDeletedCommand_numOfAffectedEqualsToTotalEntities() {
+	public void batchDelete_allEntitiesAreNonDeletedCommand_numOfAffectedEqualsToTotalEntities() {
 		List<Command> commands = populateNonDeletedSampleCommand();
 		when(mockCommandDAO.deleteCommand(any(String.class))).thenReturn(1);
 		assertEquals(commands.size(), commandService.batchDelete(commands));
 	}
 	
 	@Test(timeout = 1000)
-	public void deleteBatch_mixEntities_numOfAffectedLessThanTotalEntities() {
+	public void batchDelete_mixEntities_numOfAffectedLessThanTotalEntities() {
 		List<Command> commands = populateMixSampleCommand();
 		when(mockCommandDAO.deleteCommand(any(String.class))).thenReturn(1);
 		assertTrue(commandService.batchDelete(commands) < commands.size());
+	}
+	
+	@Test(timeout = 1000, expected = Exception.class)
+	public void batchDelete_exceptionRaisedOnDBDeletion_exceptionIsThrown() {
+		when(mockCommandDAO.deleteCommand(any(String.class))).thenThrow(new Exception("Exception raised during database deletion."));
+		commandService.batchDelete(populateNonDeletedSampleCommand());
+	}
+	
+	@Test(timeout = 100)
+	public void batchRestore_nullList_zeroIsReturned() {
+		assertEquals(0, commandService.batchRestore(null));
+	}
+	
+	@Test(timeout = 100)
+	public void batchRestore_emptyList_zeroIsReturned() {
+		assertEquals(0, commandService.batchRestore(new ArrayList<Command>()));
+	}
+	
+	@Test(timeout = 1000)
+	public void batchRestore_allEntitiesArenonDeletedCommand_zeroIsReturned() {
+		assertEquals(0, commandService.batchRestore(populateNonDeletedSampleCommand()));
+	}
+	
+	@Test(timeout = 1000)
+	public void batchRestore_allEntitiesAreMarkedAsDelete_numOfAffectedEqualsToTotalEntities() {
+		List<Command> commands = populateDeletedSampleCommand();
+		when(mockCommandDAO.restoreCommand(any(String.class))).thenReturn(1);
+		assertEquals(commands.size(), commandService.batchRestore(commands));
+	}
+	
+	@Test(timeout = 1000)
+	public void batchRestore_mixEntities_numOfAffectedLessThanTotalEntities() {
+		List<Command> commands = populateMixSampleCommand();
+		when(mockCommandDAO.restoreCommand(any(String.class))).thenReturn(1);
+		assertTrue(commandService.batchRestore(commands) < commands.size());
+	}
+	
+	@Test(timeout = 1000, expected = Exception.class)
+	public void batchRestore_exceptionRaisedOnDBOperation_exceptionIsThrown() {
+		when(mockCommandDAO.restoreCommand(any(String.class))).thenThrow(new Exception("Exception raised during restore operation"));
+		commandService.batchRestore(populateDeletedSampleCommand());
 	}
 	
 	private Command buildSampleCommand(String id) {
