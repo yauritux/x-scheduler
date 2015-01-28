@@ -7,3 +7,4 @@
 .metadata/
 /**/*.class
 /**/*.log
+/x-scheduler-rest-web/logs/**/*.log
