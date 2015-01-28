@@ -6,3 +6,4 @@
 /Server
 .metadata/
 /**/*.class
+/**/*.log
