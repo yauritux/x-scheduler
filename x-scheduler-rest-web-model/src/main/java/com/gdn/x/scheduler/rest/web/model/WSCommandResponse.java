@@ -2,7 +2,11 @@ package com.gdn.x.scheduler.rest.web.model;
 
 /**
  * 
- * @author yauritux
+ * @author yauritux (yauritux@gmail.com)
+ * @version 1.0.0.RC1
+ * @since 1.0.0.RC1
+ * 
+ * Wrapper class (in REST response) for WebService command.  
  *
  */
 public class WSCommandResponse extends CommandResponse {

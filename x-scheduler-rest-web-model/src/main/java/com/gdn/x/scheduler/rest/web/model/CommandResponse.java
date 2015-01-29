@@ -7,7 +7,7 @@ import com.gdn.common.web.base.BaseResponse;
  * @author yauritux
  * 
  * This class will be representing as a parent for all command's response.
- * every each command (could be WEB_SERVICE, SHELL_SCRIPT, etc) that is intended to be returned 
+ * every command (could be WEB_SERVICE, SHELL_SCRIPT, etc) that is intended to be returned 
  * as a command should extend this class. 
  * Please do not use this class directly as a response object, instead you can use 
  * class that extends this particular class.
