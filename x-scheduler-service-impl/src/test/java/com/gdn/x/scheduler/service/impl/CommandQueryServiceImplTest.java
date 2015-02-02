@@ -8,7 +8,6 @@ import static org.powermock.api.mockito.PowerMockito.mock;
 import static org.powermock.api.mockito.PowerMockito.spy;
 import static org.powermock.api.mockito.PowerMockito.when;
 
-import org.codehaus.jackson.JsonParseException;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -74,9 +73,9 @@ public class CommandQueryServiceImplTest {
 		assertTrue(commandResponse instanceof WSCommandResponse);
 	}
 	
-	@Test(timeout = 1000, expected = JsonParseException.class)
-	public void wrapCommand_commandBadJsonFormat_JsonParseExceptionCaught() throws Exception {
-		commandQueryService.wrapCommand(buildBadWSCommand());
+	@Test(timeout = 1000)
+	public void wrapCommand_commandBadJsonFormat_nullIsReturned() throws Exception {
+		assertNull(commandQueryService.wrapCommand(buildBadWSCommand()));
 	}
 		
 	private Command buildWSCommand() {
