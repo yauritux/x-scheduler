@@ -1,6 +1,7 @@
 package com.gdn.x.scheduler.service;
 
 import com.gdn.x.scheduler.model.Command;
+import com.gdn.x.scheduler.rest.web.model.CommandRequest;
 import com.gdn.x.scheduler.service.base.BaseCommandService;
 
 /**
@@ -11,4 +12,6 @@ import com.gdn.x.scheduler.service.base.BaseCommandService;
  *
  */
 public interface CommandCommandService extends BaseCommandService<Command> {
+	
+	public Command buildCommandFromRequest(CommandRequest request);
 }

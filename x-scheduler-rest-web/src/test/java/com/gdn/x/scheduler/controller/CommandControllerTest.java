@@ -287,7 +287,10 @@ public class CommandControllerTest {
 	
 	private WSCommandRequest buildWSCommandRequest(Command command) {
 		WSCommandRequest request = new WSCommandRequest();
-		request.setCommand(command.getCommand());
+		request.setEndpoint(URL[0]);
+		request.setWsMethod(WSMethod.GET.name());
+		request.setSubmittedBy("yauritux");
+		request.setSubmittedOn(new Date());
 		request.setCommandType(command.getCommandType().name());
 		request.setContents(((WebServiceCommand) command).getContents());
 		request.setId(command.getId());

@@ -1,6 +1,7 @@
 package com.gdn.x.scheduler.service.helper.invoker.impl;
 
 import com.gdn.x.scheduler.model.Command;
+import com.gdn.x.scheduler.rest.web.model.CommandRequest;
 import com.gdn.x.scheduler.rest.web.model.CommandResponse;
 import com.gdn.x.scheduler.service.helper.factory.impl.CommandFactory;
 import com.gdn.x.scheduler.service.helper.invoker.CommandInvoker;
@@ -23,7 +24,14 @@ public class CommandInvokerImpl implements CommandInvoker {
 	private Command command;
 	
 	/**
-	 * The default constructor which receives command entity as a parameter.
+	 * The default constructor
+	 */
+	public CommandInvokerImpl() {
+		super();
+	}
+	
+	/**
+	 * constructor which receives command entity as a parameter.
 	 *  
 	 * @param command
 	 */
@@ -41,5 +49,12 @@ public class CommandInvokerImpl implements CommandInvoker {
 		com.gdn.x.scheduler.service.helper.command.Command schedulerCommand
 			= CommandFactory.getCommandFromEntity(command);
 		return schedulerCommand.buildCommandResponse();
+	}
+
+	@Override
+	public Command buildFromCommandRequest(CommandRequest request) {
+		com.gdn.x.scheduler.service.helper.command.Command schedulerCommand
+			= CommandFactory.getCommandFromEntity(request);
+		return schedulerCommand.buildFromCommandRequest(request);
 	}
 }

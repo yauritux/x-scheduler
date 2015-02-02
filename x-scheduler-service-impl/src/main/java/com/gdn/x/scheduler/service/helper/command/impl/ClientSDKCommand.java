@@ -3,6 +3,7 @@ package com.gdn.x.scheduler.service.helper.command.impl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.gdn.x.scheduler.rest.web.model.CommandRequest;
 import com.gdn.x.scheduler.rest.web.model.CommandResponse;
 import com.gdn.x.scheduler.service.helper.command.Command;
 import com.gdn.x.scheduler.service.helper.receiver.CommandReceiver;
@@ -52,5 +53,12 @@ public class ClientSDKCommand implements Command {
 			LOG.error(e.getMessage(), e);
 		}
 		return commandResponse;
+	}
+
+	@Override
+	public com.gdn.x.scheduler.model.Command buildFromCommandRequest(
+			CommandRequest request) {
+		//TODO
+		throw new UnsupportedOperationException("This version doesn't support this type of command. Please upgrade the version.");
 	}
 }

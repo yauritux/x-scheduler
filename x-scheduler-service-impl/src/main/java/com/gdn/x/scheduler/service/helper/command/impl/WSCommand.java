@@ -3,6 +3,7 @@ package com.gdn.x.scheduler.service.helper.command.impl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.gdn.x.scheduler.rest.web.model.CommandRequest;
 import com.gdn.x.scheduler.rest.web.model.CommandResponse;
 import com.gdn.x.scheduler.service.helper.command.Command;
 import com.gdn.x.scheduler.service.helper.receiver.CommandReceiver;
@@ -52,5 +53,16 @@ public class WSCommand implements Command {
 			LOG.error(e.getMessage(), e);
 		}
 		return commandResponse;		
+	}
+
+	@Override
+	public com.gdn.x.scheduler.model.Command buildFromCommandRequest(CommandRequest request) {
+		com.gdn.x.scheduler.model.Command command = null;
+		try {
+			command = receiver.convertToCommand(request);
+		} catch (Exception e) {
+			LOG.error(e.getMessage(), e);
+		}
+		return command;
 	}	
 }

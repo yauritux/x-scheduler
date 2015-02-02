@@ -1,6 +1,7 @@
 package com.gdn.x.scheduler.service.helper.factory.impl;
 
 import com.gdn.x.scheduler.constant.CommandType;
+import com.gdn.x.scheduler.rest.web.model.CommandRequest;
 import com.gdn.x.scheduler.service.helper.command.Command;
 import com.gdn.x.scheduler.service.helper.command.impl.ClientSDKCommand;
 import com.gdn.x.scheduler.service.helper.command.impl.WSCommand;
@@ -13,16 +14,45 @@ import com.gdn.x.scheduler.service.helper.receiver.impl.WSCommandReceiverImpl;
  * @version 1.0.0.RC1
  * @since 1.0.0.RC1
  *
+ * Collection of Command's factory.
  */
 public class CommandFactory {
 
+	/**
+	 * Build specific command object (i.e. WebService, ClientSDK, or ShellScript) 
+	 * based on the command provided in the method argument.
+	 * 
+	 * @param command
+	 * @return specific command object 
+	 */
 	public static final Command getCommandFromEntity(
-			com.gdn.x.scheduler.model.Command command) {
-		if (command.getCommandType() == CommandType.WEB_SERVICE) {
-			return new WSCommand(new WSCommandReceiverImpl(command));
-		} else if (command.getCommandType() == CommandType.CLIENT_SDK) {
-			return new ClientSDKCommand(new CSCommandReceiverImpl(command));
-		}
+			com.gdn.x.scheduler.model.Command command) {		
+		try {
+			if (command.getCommandType() == CommandType.WEB_SERVICE) {
+				return new WSCommand(new WSCommandReceiverImpl(command));
+			} else if (command.getCommandType() == CommandType.CLIENT_SDK) {
+				return new ClientSDKCommand(new CSCommandReceiverImpl(command));
+			}
+		} catch (NullPointerException ignored) {}
+		
+		return null;
+	}
+	
+	/**
+	 * Build specific command object (i.e. WebService, ClientSDK, or ShellScript) 
+	 * based on the CommandRequest object.
+	 * 
+	 * @param request
+	 * @return specific command object
+	 */
+	public static final Command getCommandFromEntity(CommandRequest request) {
+		try {
+			if (request.getCommandType().equalsIgnoreCase(CommandType.WEB_SERVICE.name())) {
+				return new WSCommand(new WSCommandReceiverImpl());
+			} else if (request.getCommandType().equalsIgnoreCase(CommandType.CLIENT_SDK.name())) {
+				//TODO
+			}
+		} catch (NullPointerException ignored) {}
 		
 		return null;
 	}

@@ -1,6 +1,5 @@
 package com.gdn.x.scheduler.rest.web.model;
 
-import org.hibernate.validator.constraints.NotEmpty;
 
 /**
  * 
@@ -15,21 +14,29 @@ public class WSCommandRequest extends CommandRequest {
 
 	private static final long serialVersionUID = -3269042672628652056L;
 
-	@NotEmpty(message = "command cannot be empty!")
-	private String command;
+	private String endpoint;
+	private String wsMethod;
 	private String parameters;
 	private String contents;
 	
 	public WSCommandRequest() {
 		super();
 	}
-
-	public String getCommand() {
-		return command;
+	
+	public String getEndpoint() {
+		return endpoint;
 	}
-
-	public void setCommand(String command) {
-		this.command = command;
+	
+	public void setEndpoint(String endpoint) {
+		this.endpoint = endpoint;
+	}
+	
+	public String getWsMethod() {
+		return wsMethod;
+	}
+	
+	public void setWsMethod(String wsMethod) {
+		this.wsMethod = wsMethod;
 	}
 
 	public String getParameters() {

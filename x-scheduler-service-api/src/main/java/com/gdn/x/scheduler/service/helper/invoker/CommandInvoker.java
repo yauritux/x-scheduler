@@ -1,5 +1,7 @@
 package com.gdn.x.scheduler.service.helper.invoker;
 
+import com.gdn.x.scheduler.model.Command;
+import com.gdn.x.scheduler.rest.web.model.CommandRequest;
 import com.gdn.x.scheduler.rest.web.model.CommandResponse;
 
 
@@ -13,4 +15,5 @@ import com.gdn.x.scheduler.rest.web.model.CommandResponse;
 public interface CommandInvoker {
 
 	public CommandResponse getCommandResponse();
+	public Command buildFromCommandRequest(CommandRequest request);
 }

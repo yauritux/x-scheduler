@@ -12,6 +12,7 @@ import com.gdn.x.scheduler.constant.ClientSDKRequestField;
 import com.gdn.x.scheduler.constant.CommandType;
 import com.gdn.x.scheduler.model.Command;
 import com.gdn.x.scheduler.rest.web.model.CSCommandResponse;
+import com.gdn.x.scheduler.rest.web.model.CommandRequest;
 import com.gdn.x.scheduler.rest.web.model.CommandResponse;
 import com.gdn.x.scheduler.service.helper.receiver.CommandReceiver;
 
@@ -72,5 +73,12 @@ public class CSCommandReceiverImpl implements CommandReceiver {
 		}
 		
 		return commandResponse;
+	}
+
+	@Override
+	public Command convertToCommand(CommandRequest commandRequest)
+			throws Exception {
+		// TODO
+		throw new UnsupportedOperationException("Not supported on this version");
 	}
 }

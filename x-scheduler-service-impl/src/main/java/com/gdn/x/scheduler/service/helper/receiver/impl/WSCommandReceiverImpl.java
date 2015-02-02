@@ -9,9 +9,13 @@ import org.codehaus.jackson.JsonParser;
 import org.codehaus.jackson.map.ObjectMapper;
 
 import com.gdn.x.scheduler.constant.CommandType;
+import com.gdn.x.scheduler.constant.WSMethod;
 import com.gdn.x.scheduler.constant.WSRequestHeader;
 import com.gdn.x.scheduler.model.Command;
+import com.gdn.x.scheduler.model.WebServiceCommand;
+import com.gdn.x.scheduler.rest.web.model.CommandRequest;
 import com.gdn.x.scheduler.rest.web.model.CommandResponse;
+import com.gdn.x.scheduler.rest.web.model.WSCommandRequest;
 import com.gdn.x.scheduler.rest.web.model.WSCommandResponse;
 import com.gdn.x.scheduler.service.helper.receiver.CommandReceiver;
 
@@ -30,7 +34,14 @@ public class WSCommandReceiverImpl implements CommandReceiver {
 	private Command command;
 	
 	/**
-	 * The default constructor for this class that 
+	 * default constructor
+	 */
+	public WSCommandReceiverImpl() {
+		super();
+	}
+	
+	/**
+	 * constructor for this class that 
 	 * receives command entity as the parameter.
 	 * 
 	 * @param command
@@ -71,5 +82,31 @@ public class WSCommandReceiverImpl implements CommandReceiver {
 		}
 			
 		return wsCommandResponse;
+	}
+
+	/**
+	 * convert CommandRequest to Command object, in order to be persisted 
+	 * into the DB.
+	 * @param command request object
+	 * @return command 
+	 */
+	@Override
+	public Command convertToCommand(CommandRequest commandRequest)
+			throws Exception {
+		WebServiceCommand wsCommand = new WebServiceCommand();
+		wsCommand.setId(((commandRequest.getId() != null && !commandRequest.getId().isEmpty())
+				? commandRequest.getId() : null));
+		WSCommandRequest wsCommandRequest = (WSCommandRequest) commandRequest;
+		wsCommand.setCommand("{\"" + WSRequestHeader.URL.label() + "\":\"" 
+				+ wsCommandRequest.getEndpoint() + "\",\"" + WSRequestHeader.METHOD.label() 
+				+ "\":\""+ WSMethod.GET.name() + "\"}");
+		wsCommand.setCommandType(CommandType.WEB_SERVICE);
+		wsCommand.setContents(wsCommandRequest.getContents());
+		wsCommand.setParameters(wsCommandRequest.getParameters());		
+		wsCommand.setCreatedBy(wsCommandRequest.getSubmittedBy());
+		wsCommand.setCreatedDate(wsCommandRequest.getSubmittedOn());
+		wsCommand.setMarkForDelete(false);
+		
+		return wsCommand;
 	}
 }

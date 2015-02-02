@@ -1,5 +1,7 @@
 package com.gdn.x.scheduler.rest.web.model;
 
+import java.util.Date;
+
 import org.hibernate.validator.constraints.NotEmpty;
 
 import com.gdn.common.web.wrapper.request.SimpleRequestHolder;
@@ -11,17 +13,19 @@ import com.gdn.common.web.wrapper.request.SimpleRequestHolder;
  * @since 1.0.0.RC1
  *
  * This class will be representing as a parent for all command's request.
- * every command (could be WEB_SERVICE, SHELL_SCRIPT, etc) that is intended to be passed
- * as a request should extend this class. 
- * Please do not use this class directly as a request object, instead you can use 
- * class that extends this particular class.
+ * Please do not use this class directly as a request object. Instead of this, 
+ * you can use class that directly extends this class.
  */
 public class CommandRequest extends SimpleRequestHolder {
 
 	private static final long serialVersionUID = -7259600644142262832L;
 
-	@NotEmpty(message = "command type should not be empty")
+	@NotEmpty(message = "command type cannot be empty")
 	private String commandType;
+	@NotEmpty(message = "store id cannot be empty")
+	private String storeId;
+	private String submittedBy;
+	private Date submittedOn;
 	
 	public CommandRequest() {
 		super();
@@ -33,5 +37,29 @@ public class CommandRequest extends SimpleRequestHolder {
 	
 	public void setCommandType(String commandType) {
 		this.commandType = commandType;
+	}
+	
+	public String getStoreId() {
+		return storeId;
+	}
+	
+	public void setStoreId(String storeId) {
+		this.storeId = storeId;
+	}	
+	
+	public String getSubmittedBy() {
+		return submittedBy;
+	}
+	
+	public void setSubmittedBy(String submittedBy) {
+		this.submittedBy = submittedBy;
+	}
+	
+	public Date getSubmittedOn() {
+		return submittedOn;
+	}
+	
+	public void setSubmittedOn(Date submittedOn) {
+		this.submittedOn = submittedOn;
 	}
 }

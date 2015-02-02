@@ -2,7 +2,6 @@ package com.gdn.x.scheduler.controller;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 import javax.validation.Valid;
@@ -138,17 +137,10 @@ public class CommandController {
 		if (result.hasErrors()) {
 			return errorValidation(result);
 		}		
-		
-		WebServiceCommand wsCommand = new WebServiceCommand();
-		if (wsCommandRequest.getId() != null) {
-			wsCommand.setId(wsCommandRequest.getId());
-		}
-		wsCommand.setStoreId(storeId);
-		wsCommand.setCreatedDate(new Date());
-		wsCommand.setCommand(wsCommandRequest.getCommand());
-		wsCommand.setCommandType(CommandType.WEB_SERVICE);
-		wsCommand.setMarkForDelete(false);
+
+		WebServiceCommand wsCommand = (WebServiceCommand) commandActionService.buildCommandFromRequest(wsCommandRequest);
 		wsCommand.setParameters(wsCommandRequest.getParameters());
+		wsCommand.setContents(wsCommandRequest.getContents());
 		
 		commandActionService.save(wsCommand);
 		

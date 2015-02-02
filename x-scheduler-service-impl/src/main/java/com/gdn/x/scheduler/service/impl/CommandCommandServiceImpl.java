@@ -11,7 +11,10 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.gdn.x.scheduler.dao.CommandDAO;
 import com.gdn.x.scheduler.model.Command;
+import com.gdn.x.scheduler.rest.web.model.CommandRequest;
 import com.gdn.x.scheduler.service.CommandCommandService;
+import com.gdn.x.scheduler.service.helper.invoker.CommandInvoker;
+import com.gdn.x.scheduler.service.helper.invoker.impl.CommandInvokerImpl;
 
 /**
  * 
@@ -20,7 +23,7 @@ import com.gdn.x.scheduler.service.CommandCommandService;
  * @since 1.0.0.RC1
  * 
  * Service class that contains all logics to manipulate the Command data.
- * Basically, this class represents command layer service of CQRS pattern.
+ * Basically, this class represents command layer service in term of CQRS pattern.
  */
 @Service
 @Transactional(readOnly = false, propagation = Propagation.REQUIRED)
@@ -149,5 +152,23 @@ public class CommandCommandServiceImpl implements CommandCommandService {
 			return 0;
 		}
 		return affected;
+	}
+
+	/**
+	 * build Command specific object (i.e. WebService, ClientSDK, or ShellScript) 
+	 * based on the command JSON request.
+	 * 
+	 * @param commandRequest
+	 * @return specific command object.
+	 */
+	@Override
+	public Command buildCommandFromRequest(CommandRequest commandRequest) {
+		if (commandRequest == null) {
+			return null;
+		}
+		CommandInvoker invoker = new CommandInvokerImpl();
+		Command command = invoker.buildFromCommandRequest(commandRequest);
+		
+		return command;
 	}
 }

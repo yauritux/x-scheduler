@@ -1,5 +1,7 @@
 package com.gdn.x.scheduler.service.helper.receiver;
 
+import com.gdn.x.scheduler.model.Command;
+import com.gdn.x.scheduler.rest.web.model.CommandRequest;
 import com.gdn.x.scheduler.rest.web.model.CommandResponse;
 
 /**
@@ -12,4 +14,5 @@ import com.gdn.x.scheduler.rest.web.model.CommandResponse;
 public interface CommandReceiver {
 
 	public CommandResponse wrapCommand() throws Exception;
+	public Command convertToCommand(CommandRequest commandRequest) throws Exception;
 }

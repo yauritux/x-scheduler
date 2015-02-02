@@ -6,10 +6,14 @@ import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 import static org.mockito.Matchers.any;
+import static org.mockito.Mockito.atLeastOnce;
+import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.withSettings;
 import static org.powermock.api.mockito.PowerMockito.mock;
 import static org.powermock.api.mockito.PowerMockito.spy;
+import static org.powermock.api.mockito.PowerMockito.verifyNew;
 import static org.powermock.api.mockito.PowerMockito.when;
+import static org.powermock.api.mockito.PowerMockito.whenNew;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,6 +22,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.powermock.core.classloader.annotations.PowerMockIgnore;
+import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.core.classloader.annotations.SuppressStaticInitializationFor;
 import org.powermock.modules.junit4.PowerMockRunner;
 
@@ -25,7 +30,12 @@ import com.gdn.x.scheduler.constant.CommandType;
 import com.gdn.x.scheduler.dao.CommandDAO;
 import com.gdn.x.scheduler.model.Command;
 import com.gdn.x.scheduler.model.WebServiceCommand;
+import com.gdn.x.scheduler.rest.web.model.CommandRequest;
+import com.gdn.x.scheduler.rest.web.model.WSCommandRequest;
 import com.gdn.x.scheduler.service.CommandCommandService;
+import com.gdn.x.scheduler.service.helper.factory.impl.CommandFactory;
+import com.gdn.x.scheduler.service.helper.invoker.CommandInvoker;
+import com.gdn.x.scheduler.service.helper.invoker.impl.CommandInvokerImpl;
 
 /**
  * 
@@ -35,6 +45,7 @@ import com.gdn.x.scheduler.service.CommandCommandService;
  *
  */
 @RunWith(PowerMockRunner.class)
+@PrepareForTest({CommandFactory.class, CommandInvokerImpl.class})
 @PowerMockIgnore("org.slf4j.Logger")
 @SuppressStaticInitializationFor("org.slf4j.Logger")
 public class CommandCommandServiceImplTest {
@@ -48,7 +59,7 @@ public class CommandCommandServiceImplTest {
 	@Before
 	public void setup() throws Exception {
 		mockCommandDAO = mock(CommandDAO.class, withSettings().name("Command DAO").verboseLogging());
-		commandService = spy(new CommandCommandServiceImpl(mockCommandDAO));		
+		commandService = spy(new CommandCommandServiceImpl(mockCommandDAO));	
 	}
 	
 	@Test(timeout = 1000)
@@ -204,6 +215,33 @@ public class CommandCommandServiceImplTest {
 		commandService.batchRestore(populateDeletedSampleCommand());
 	}
 	
+	@Test(timeout = 1000)
+	public void buildCommandFromRequest_nullCommandRequest_nullIsReturned() {
+		assertNull(commandService.buildCommandFromRequest(null));
+	}
+	
+	@Test(timeout = 1000)
+	public void buildCommandFromRequest_everythingNormal_commandInvokerImplConstructorGetCalled() 
+		throws Exception {	
+		/*
+		mockStatic(CommandFactory.class);
+		verifyStatic();
+		*/
+		CommandInvokerImpl mockCommandInvoker = mock(CommandInvokerImpl.class);
+		whenNew(CommandInvokerImpl.class).withNoArguments().thenReturn(mockCommandInvoker);
+		//CommandFactory.getCommandFromEntity(buildCommandRequestSavingExample());
+		verifyNew(CommandInvokerImpl.class, atLeastOnce());
+	}
+	
+	@Test(timeout = 1000)
+	public void buildCommandFromRequest_everythingNormal_producesCommand() 
+		throws Exception {
+		CommandInvokerImpl mockCommandInvoker = mock(CommandInvokerImpl.class);
+		whenNew(CommandInvokerImpl.class).withNoArguments().thenReturn(mockCommandInvoker);
+		when(mockCommandInvoker.buildFromCommandRequest(any(CommandRequest.class))).thenReturn(buildSampleCommand("1"));
+		assertNotNull(commandService.buildCommandFromRequest(buildCommandRequestSavingExample()));
+	}
+	
 	private Command buildSampleCommand(String id) {
 		Command command = new WebServiceCommand();
 		command.setId(id);
@@ -219,6 +257,14 @@ public class CommandCommandServiceImplTest {
 		command.setCommandType(CommandType.WEB_SERVICE);
 		command.setMarkForDelete(true);
 		return command;
+	}
+	
+	private WSCommandRequest buildCommandRequestSavingExample() {
+		WSCommandRequest wsCommandRequest = new WSCommandRequest();
+		wsCommandRequest.setCommandType(CommandType.WEB_SERVICE.name());
+		wsCommandRequest.setStoreId("store-123");
+		
+		return wsCommandRequest;
 	}
 	
 	private List<Command> populateDeletedSampleCommand() {
