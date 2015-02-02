@@ -139,8 +139,6 @@ public class CommandController {
 		}		
 
 		WebServiceCommand wsCommand = (WebServiceCommand) commandActionService.buildCommandFromRequest(wsCommandRequest);
-		wsCommand.setParameters(wsCommandRequest.getParameters());
-		wsCommand.setContents(wsCommandRequest.getContents());
 		
 		commandActionService.save(wsCommand);
 		

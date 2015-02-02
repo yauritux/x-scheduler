@@ -217,7 +217,6 @@ public class CommandControllerTest {
 	public void submitCommand_everythingNormal_successIsTrue() throws Exception {
 		Command command = buildWSCommand("1", URL[0]);
 		WSCommandRequest request = buildWSCommandRequest(command);
-		//when(commandActionService.save(command)).thenReturn(command);
 				
 		//@formatter:off
 		mockMvc.perform(post("/command/ws")
@@ -246,7 +245,7 @@ public class CommandControllerTest {
 		).andDo(print());
 		//@formatter:on
 		
-		verify(commandActionService).save(command);
+		verify(commandActionService).save(any(Command.class));
 	}
 	
 	@Test(timeout = 1000)

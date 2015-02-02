@@ -7,7 +7,6 @@ import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.atLeastOnce;
-import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.withSettings;
 import static org.powermock.api.mockito.PowerMockito.mock;
 import static org.powermock.api.mockito.PowerMockito.spy;
@@ -34,7 +33,6 @@ import com.gdn.x.scheduler.rest.web.model.CommandRequest;
 import com.gdn.x.scheduler.rest.web.model.WSCommandRequest;
 import com.gdn.x.scheduler.service.CommandCommandService;
 import com.gdn.x.scheduler.service.helper.factory.impl.CommandFactory;
-import com.gdn.x.scheduler.service.helper.invoker.CommandInvoker;
 import com.gdn.x.scheduler.service.helper.invoker.impl.CommandInvokerImpl;
 
 /**
@@ -223,13 +221,8 @@ public class CommandCommandServiceImplTest {
 	@Test(timeout = 1000)
 	public void buildCommandFromRequest_everythingNormal_commandInvokerImplConstructorGetCalled() 
 		throws Exception {	
-		/*
-		mockStatic(CommandFactory.class);
-		verifyStatic();
-		*/
 		CommandInvokerImpl mockCommandInvoker = mock(CommandInvokerImpl.class);
 		whenNew(CommandInvokerImpl.class).withNoArguments().thenReturn(mockCommandInvoker);
-		//CommandFactory.getCommandFromEntity(buildCommandRequestSavingExample());
 		verifyNew(CommandInvokerImpl.class, atLeastOnce());
 	}
 	
