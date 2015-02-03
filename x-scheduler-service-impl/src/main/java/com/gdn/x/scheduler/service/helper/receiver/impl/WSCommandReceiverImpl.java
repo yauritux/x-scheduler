@@ -61,6 +61,7 @@ public class WSCommandReceiverImpl implements CommandReceiver {
 		WSCommandResponse wsCommandResponse = new WSCommandResponse();
 		wsCommandResponse.setId(command.getId());
 		wsCommandResponse.setCommandType(CommandType.WEB_SERVICE.name());
+		wsCommandResponse.setStoreId(command.getStoreId());
 		wsCommandResponse.setCreatedBy(command.getCreatedBy());
 		wsCommandResponse.setCreatedDate(command.getCreatedDate());
 		

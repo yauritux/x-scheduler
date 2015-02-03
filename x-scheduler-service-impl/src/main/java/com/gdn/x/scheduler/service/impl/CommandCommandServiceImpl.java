@@ -39,10 +39,10 @@ public class CommandCommandServiceImpl implements CommandCommandService {
 	}
 		
 	/**
-	 * Save/Persist entity into the database.
+	 * Save/Persist command into the database.
 	 * 
-	 * @param entity Command object to be saved.
-	 * @return the saved entity
+	 * @param Command to be saved.
+	 * @return the saved command
 	 */
 	@Override
 	public Command save(Command entity) {

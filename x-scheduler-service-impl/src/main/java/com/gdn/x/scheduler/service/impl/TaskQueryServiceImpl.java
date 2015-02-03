@@ -123,7 +123,7 @@ public class TaskQueryServiceImpl implements TaskQueryService {
 		if (taskName == null || taskName.trim().length() == 0) {
 			return fetchAll();
 		}
-		return taskDAO.findByTaskName("%" + taskName.trim() + "%");
+		return taskDAO.findByTaskNameLike("%" + taskName.trim() + "%");
 	}
 
 	/**

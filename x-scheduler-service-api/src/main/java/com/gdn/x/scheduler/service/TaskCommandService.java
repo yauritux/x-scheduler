@@ -1,5 +1,12 @@
 package com.gdn.x.scheduler.service;
 
+import org.quartz.JobExecutionContext;
+import org.quartz.JobExecutionException;
+
+import com.gdn.x.scheduler.model.Task;
+import com.gdn.x.scheduler.rest.web.model.TaskRequest;
+import com.gdn.x.scheduler.service.base.BaseCommandService;
+
 
 /**
  * 
@@ -8,8 +15,9 @@ package com.gdn.x.scheduler.service;
  * @since 1.0.0.RC1
  *
  */
-public interface TaskCommandService {
-
-	public int deleteTask(String id);
-	public int restoreTask(String id);
+public interface TaskCommandService extends BaseCommandService<Task> {
+	
+	public Task buildTaskFromRequest(TaskRequest request);
+	public void execute(JobExecutionContext context) throws JobExecutionException;
+	public void executeTask(Task task) throws Exception;
 }
