@@ -1,5 +1,6 @@
 package com.gdn.x.scheduler.service.impl;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertNotNull;
 import static org.mockito.Mockito.atLeastOnce;
@@ -76,6 +77,23 @@ public class TaskQueryServiceImplTest {
 	public void findByTaskNameLike_taskNameNotEmpty_fetchAllShouldNeverGetCalled() {
 		taskService.findByTaskNameLike("WS");
 		verify(taskDAO, never()).fetchAll();
+	}
+	
+	@Test(timeout = 100)
+	public void wrapTask_nullTask_nullIsReturned() {
+		assertNull(taskService.wrapTask(null));
+	}
+	
+	@Test(timeout = 1000)
+	public void wrapTask_taskNotNull_taskResponseIdEqualsToTaskId() {
+		Task task = buildTaskSample("3");
+		assertEquals(task.getId(), taskService.wrapTask(task).getId());
+	}
+	
+	@Test(timeout = 1000)
+	public void findAll_everythingNormal_taskDAOFindAllShouldGetCalled() {
+		taskService.findAll();
+		verify(taskDAO, atLeastOnce()).findAll();
 	}
 	
 	private Task buildTaskSample(String id) {

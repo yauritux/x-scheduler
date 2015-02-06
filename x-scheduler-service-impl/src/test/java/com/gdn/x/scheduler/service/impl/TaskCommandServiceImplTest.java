@@ -20,15 +20,19 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.powermock.core.classloader.annotations.PowerMockIgnore;
+import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.core.classloader.annotations.SuppressStaticInitializationFor;
 import org.powermock.modules.junit4.PowerMockRunner;
 
 import com.gdn.x.scheduler.constant.CommandType;
+import com.gdn.x.scheduler.constant.SchedulerIntervalUnit;
+import com.gdn.x.scheduler.constant.ThreadRunningPolicy;
 import com.gdn.x.scheduler.constant.WSMethod;
 import com.gdn.x.scheduler.constant.WSRequestHeader;
 import com.gdn.x.scheduler.dao.TaskDAO;
 import com.gdn.x.scheduler.model.Task;
 import com.gdn.x.scheduler.model.WebServiceCommand;
+import com.gdn.x.scheduler.rest.web.model.TaskRequest;
 import com.gdn.x.scheduler.service.CommandQueryService;
 import com.gdn.x.scheduler.service.TaskCommandService;
 
@@ -42,6 +46,7 @@ import com.gdn.x.scheduler.service.TaskCommandService;
 @RunWith(PowerMockRunner.class)
 @PowerMockIgnore("org.slf4j.Logger")
 @SuppressStaticInitializationFor("org.slf4j.Logger")
+@PrepareForTest(TaskCommandService.class)
 public class TaskCommandServiceImplTest {
 	
 	private static final String URL = "http://md5.jsontest.com/?text=yauritux";
@@ -248,6 +253,14 @@ public class TaskCommandServiceImplTest {
 		Task task = new Task();
 		task.setId(id);
 		task.setCommand(buildWSCommandSample(id));
+		task.setSeconds("0/15");
+		task.setMinutes("*");
+		task.setHours("?");
+		task.setDayOfMonth("*");
+		task.setMonth("*");
+		task.setDayOfWeek("L");
+		task.setYear("*");
+		//task.setThreadRunningPolicy(ThreadRunningPolicy.SERIAL);
 		task.setCreatedBy("yauritux");
 		task.setCreatedDate(new Date());
 		task.setMarkForDelete(false);
@@ -256,6 +269,28 @@ public class TaskCommandServiceImplTest {
 		task.setUpdatedBy("yauritux");
 		task.setUpdatedDate(new Date());
 		return task;
+	}
+	
+	private TaskRequest buildTaskRequestSample(Task task) {
+		TaskRequest taskRequest = new TaskRequest();
+		taskRequest.setCommandId(task.getCommand().getId());
+		taskRequest.setId(task.getId());
+		String[] attrValues = task.getSeconds().split("/");
+		taskRequest.setInterval(attrValues[1]);
+		taskRequest.setIntervalUnit(SchedulerIntervalUnit.SECONDS.name());
+		taskRequest.setSeconds(attrValues[0]);
+		taskRequest.setMinutes(task.getMinutes());
+		taskRequest.setHour(task.getHours());
+		taskRequest.setDayOfMonth(task.getDayOfMonth());
+		taskRequest.setMonth(task.getMonth());
+		taskRequest.setDayOfWeek(task.getDayOfWeek());
+		taskRequest.setYear(task.getYear());
+		//taskRequest.setThreadRunningPolicy(task.getThreadRunningPolicy().name());
+		taskRequest.setStoreId(task.getStoreId());
+		taskRequest.setSubmittedBy(task.getCreatedBy());
+		taskRequest.setSubmittedOn(new Date());
+		taskRequest.setTaskName(task.getTaskName());
+		return taskRequest;
 	}
 	
 	private WebServiceCommand buildWSCommandSample(String id) {

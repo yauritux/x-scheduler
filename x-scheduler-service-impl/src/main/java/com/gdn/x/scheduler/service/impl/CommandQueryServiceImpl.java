@@ -28,7 +28,7 @@ import com.gdn.x.scheduler.service.helper.invoker.impl.CommandInvokerImpl;
  * Service Class that contains queries for the Command data.
  * Basically, this class represents Query layer service of CQRS pattern.
  */
-@Service
+@Service("commandQueryService")
 @Transactional(readOnly = true, propagation = Propagation.REQUIRES_NEW)
 public class CommandQueryServiceImpl implements CommandQueryService {
 

@@ -1,8 +1,5 @@
 package com.gdn.x.scheduler.service;
 
-import org.quartz.JobExecutionContext;
-import org.quartz.JobExecutionException;
-
 import com.gdn.x.scheduler.model.Task;
 import com.gdn.x.scheduler.rest.web.model.TaskRequest;
 import com.gdn.x.scheduler.service.base.BaseCommandService;
@@ -18,6 +15,5 @@ import com.gdn.x.scheduler.service.base.BaseCommandService;
 public interface TaskCommandService extends BaseCommandService<Task> {
 	
 	public Task buildTaskFromRequest(TaskRequest request);
-	public void execute(JobExecutionContext context) throws JobExecutionException;
 	public void executeTask(Task task) throws Exception;
 }

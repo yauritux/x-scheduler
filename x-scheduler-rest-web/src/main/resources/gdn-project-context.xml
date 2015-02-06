@@ -33,7 +33,8 @@
 		<constructor-arg value="${geneva.uri.location}" />
 	</bean>
 	
-	<!-- Scheduler Bean for Quartz -->
+	<!-- Scheduler Bean for Quartz --> 
+	<!-- 
 	<bean id="scheduler" class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
 		<property name="quartzProperties">
 			<props>
@@ -42,11 +43,64 @@
 				<prop key="org.quartz.threadPool.threadCount">20</prop>
 			</props>
 		</property>
-		<property name="autoStartup">
-			<value>true</value>
-		</property>
+		<property name="schedulerName" value="cronScheduler"/>		
+		<property name="autoStartup" value="true"/>
 	</bean>
-
+	-->
+	
+	<!-- sample -->
+	<bean id="taskExecutor" class="org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor">
+		<property name="corePoolSize" value="5"/>
+		<property name="maxPoolSize" value="10"/>
+		<property name="waitForTasksToCompleteOnShutdown" value="true"/>
+	</bean>
+	
+	<bean name="complexJobDetail" class="org.springframework.scheduling.quartz.JobDetailFactoryBean">
+		<property name="jobClass" value="com.gdn.x.scheduler.service.WSJob"/> 
+		<property name="jobDataMap">
+			<map>
+			    <entry key="commandQueryService" value-ref="commandQueryService"/>
+				<entry key="taskCommandService" value-ref="taskCommandService"/>
+				<entry key="taskExecutionCommandService" value-ref="taskExecutionCommandService"/>
+				<entry key="taskQueryService" value-ref="taskQueryService"/>
+				<entry key="taskExecutionQueryService" value-ref="taskExecutionQueryService" />
+				<entry key="taskExecutorObject" value-ref="taskExecutor" />
+			</map>
+		</property>
+		<property name="durability" value="true"/>
+    </bean>
+    
+    <bean id="simpleTrigger" class="org.springframework.scheduling.quartz.SimpleTriggerFactoryBean">
+    	<property name="jobDetail" ref="complexJobDetail"/>
+    	<property name="startDelay" value="1000"/>
+    	<property name="repeatInterval" value="8000"/>
+    </bean>
+    
+    <bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="quartzProperties">
+			<props>
+				<prop key="org.quartz.jobStore.class">org.quartz.simpl.RAMJobStore</prop>
+				<prop key="org.quartz.threadPool.class">org.quartz.simpl.SimpleThreadPool</prop>
+				<prop key="org.quartz.threadPool.threadCount">20</prop>
+			</props>
+		</property>
+		<property name="schedulerName" value="xScheduler"/>		
+		<property name="autoStartup" value="true"/>
+    
+    	<property name="jobDetails">
+    		<list>
+    			<ref bean="complexJobDetail"/>
+    		</list>
+    	</property>
+    	<property name="triggers">
+    		<list>
+    			<ref bean="simpleTrigger"/>
+    		</list>
+    	</property>
+    </bean>
+    <!-- sample -->
+    
+    
 	<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
 		<property name="host" value="${mail.smtp.host}" />
 		<property name="port" value="${mail.smtp.port}" />

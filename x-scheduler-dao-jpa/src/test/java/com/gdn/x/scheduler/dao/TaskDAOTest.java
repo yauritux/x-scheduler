@@ -17,7 +17,9 @@ import com.gdn.x.scheduler.model.Task;
 
 /**
  * 
- * @author yauritux
+ * @author yauritux (yauritux@gmail.com)
+ * @version 1.0.0.RC1
+ * @since 1.0.0.RC1
  *
  */
 @RunWith(SpringJUnit4ClassRunner.class)

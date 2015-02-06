@@ -23,7 +23,7 @@ import com.gdn.x.scheduler.service.TaskQueryService;
  * Service Class that contains queries for the Task data.
  * Basically, this class represents Query layer service of CQRS pattern.
  */
-@Service
+@Service("taskQueryService")
 @Transactional(readOnly = true, propagation = Propagation.REQUIRES_NEW)
 public class TaskQueryServiceImpl implements TaskQueryService {
 	
@@ -162,7 +162,7 @@ public class TaskQueryServiceImpl implements TaskQueryService {
 		}
 		
 		TaskResponse taskResponse = new TaskResponse();
-		taskResponse.setTaskId(task.getId());
+		taskResponse.setId(task.getId());
 		taskResponse.setCommandId(task.getCommand().getId());
 		taskResponse.setCommand(task.getCommand().getCommand());
 		taskResponse.setParameters(task.getCommand().getParameters());
@@ -197,7 +197,7 @@ public class TaskQueryServiceImpl implements TaskQueryService {
 	 * 
 	 * @param pageNumber number of current page.
 	 * @param pageSize total number of page found.
-	 * @return Page page object contains all tasks in the database (exclusive markForDelete).
+	 * @return Page page object contains all tasks in the database (inclusive markForDelete).
 	 */
 	@Override
 	public Page<Task> findAll(int pageNumber, int pageSize) {

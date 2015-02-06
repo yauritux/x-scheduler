@@ -3,9 +3,6 @@ package com.gdn.x.scheduler.service.impl;
 import java.util.Date;
 import java.util.List;
 
-import org.quartz.Job;
-import org.quartz.JobExecutionContext;
-import org.quartz.JobExecutionException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +14,8 @@ import com.gdn.common.base.shade.org.apache.http.HttpResponse;
 import com.gdn.common.base.shade.org.apache.http.client.methods.HttpGet;
 import com.gdn.common.base.shade.org.apache.http.impl.client.DefaultHttpClient;
 import com.gdn.x.scheduler.constant.CommandType;
+import com.gdn.x.scheduler.constant.SchedulerIntervalUnit;
+import com.gdn.x.scheduler.constant.ThreadRunningPolicy;
 import com.gdn.x.scheduler.constant.WSMethod;
 import com.gdn.x.scheduler.dao.TaskDAO;
 import com.gdn.x.scheduler.model.Task;
@@ -36,9 +35,9 @@ import com.gdn.x.scheduler.service.TaskCommandService;
  * Basically, this class represents command layer service of CQRS pattern.
  *
  */
-@Service
+@Service("taskCommandService")
 @Transactional(readOnly = false, propagation = Propagation.REQUIRED)
-public class TaskCommandServiceImpl implements TaskCommandService, Job {
+public class TaskCommandServiceImpl implements TaskCommandService {
 	
 	private static final Logger LOG = LoggerFactory.getLogger(TaskCommandServiceImpl.class);
 	
@@ -177,6 +176,46 @@ public class TaskCommandServiceImpl implements TaskCommandService, Job {
 		Task task = new Task();
 		task.setTaskName(request.getTaskName());
 		task.setCommand(commandQueryService.findById(request.getCommandId()));
+		
+		//TODO: use decorator pattern later
+		if (request.getIntervalUnit().equalsIgnoreCase(SchedulerIntervalUnit.SECONDS.name())) {
+			task.setSeconds(request.getSeconds() + "/" + request.getInterval());
+		} else {
+			task.setSeconds(request.getSeconds());
+		}
+		if (request.getIntervalUnit().equalsIgnoreCase(SchedulerIntervalUnit.MINUTES.name())) {
+			task.setMinutes(request.getMinutes() + "/" + request.getInterval());
+		} else {
+			task.setMinutes(request.getMinutes());
+		}
+		if (request.getIntervalUnit().equalsIgnoreCase(SchedulerIntervalUnit.HOUR.name())) {
+			task.setHours(request.getHour() + "/" + request.getInterval());
+		} else {
+			task.setHours(request.getHour());
+		}		
+		if (request.getIntervalUnit().equalsIgnoreCase(SchedulerIntervalUnit.DAY_OF_MONTH.name())) {
+			task.setDayOfMonth(request.getDayOfMonth() + "/" + request.getInterval());
+		} else {
+			task.setDayOfMonth(request.getDayOfMonth());
+		}				
+		if (request.getIntervalUnit().equalsIgnoreCase(SchedulerIntervalUnit.MONTH.name())) {
+			task.setMonth(request.getMonth() + "/" + request.getInterval());
+		} else {
+			task.setMonth(request.getMonth());
+		}						
+		if (request.getIntervalUnit().equalsIgnoreCase(SchedulerIntervalUnit.DAY_OF_WEEK.name())) {
+			task.setDayOfWeek(request.getDayOfWeek() + "/" + request.getInterval());
+		} else {
+			task.setDayOfWeek(request.getDayOfWeek());
+		}						
+		if (request.getIntervalUnit().equalsIgnoreCase(SchedulerIntervalUnit.YEAR.name())) {
+			task.setYear(request.getYear() + "/" + request.getInterval());
+		} else {
+			task.setYear(request.getYear());
+		}						
+		//end of TODO
+		
+		//task.setThreadRunningPolicy(ThreadRunningPolicy.valueOf(request.getThreadRunningPolicy()));
 		task.setCreatedBy(request.getSubmittedBy());
 		task.setCreatedDate(request.getSubmittedOn() == null ? new Date() : request.getSubmittedOn());
 		task.setMarkForDelete(false);
@@ -184,16 +223,6 @@ public class TaskCommandServiceImpl implements TaskCommandService, Job {
 		return task;
 	}
 	
-	@Override
-	public void execute(JobExecutionContext context) throws JobExecutionException {
-		Task task = (Task) context.getJobDetail().getJobDataMap().get("task");
-		try {
-			executeTask(task);
-		} catch (Exception e) {
-			throw new JobExecutionException(e.getMessage());
-		}
-	}
-
 	@SuppressWarnings("deprecation")
 	@Override
 	public void executeTask(Task task) throws Exception {
@@ -219,6 +248,8 @@ public class TaskCommandServiceImpl implements TaskCommandService, Job {
 				
 				response = httpClient.execute(getRequest);
 				
+				System.out.println("Response Code = " + response.getStatusLine().getStatusCode());
+				
 				if (response.getStatusLine().getStatusCode() != 200) {
 					throw new RuntimeException("Failed to execute WS. Status Code: "
 							+ response.getStatusLine().getStatusCode());
@@ -226,5 +257,5 @@ public class TaskCommandServiceImpl implements TaskCommandService, Job {
 			}
 			httpClient.getConnectionManager().shutdown();
 		}
-	}	
+	}
 }

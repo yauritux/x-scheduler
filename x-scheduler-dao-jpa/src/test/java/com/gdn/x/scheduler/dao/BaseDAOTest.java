@@ -39,7 +39,7 @@ public class BaseDAOTest {
 	
 	private static final String URL = "http://www.google.com";
 
-	public static final Operation DELETE_ALL = deleteAllFrom("workflow_schedule", "workflow_tasks", "workflow", "task", "command");
+	public static final Operation DELETE_ALL = deleteAllFrom("task", "command");
 
 	public static final Operation INSERT_COMMAND =
 		insertInto("COMMAND")
@@ -51,43 +51,21 @@ public class BaseDAOTest {
 	
 	public static final Operation INSERT_TASK = 
         insertInto("TASK")
-            .columns("ID", "TASK_NAME", "COMMAND_ID", "CREATED_BY", "CREATED_DATE","STORE_ID","MARK_FOR_DELETE","OPTLOCK")
-            .values("1", "task1", "1", "yauritux", "2015-01-01", "store-123", false, 0)
-            .values("2", "task2", "2", "yauritux", "2015-01-02", "store-123", false, 0)
-            .values("3", "task3", "3", "yauritux", "2015-01-03", "store-123", false, 0)
-            .values("4", "task4", "3", "yauritux", "2015-01-04", "store-123", false, 0)
-            .values("5", "task5", "2", "yauritux", "2015-01-05", "store-123", false, 0)
-            .values("6", "task6", "1", "yauritux", "2015-01-06", "store-123", false, 0)
+            .columns("ID", "TASK_NAME", "COMMAND_ID", "SECS", "MINS", "HRS", "DAY_OF_MONTH", "MTH", "DAY_OF_WEEK", "YR", "CREATED_BY", "CREATED_DATE","STORE_ID","MARK_FOR_DELETE","OPTLOCK")
+            .values("1", "task1", "1", "0/55", "*", "*", "*", "*", "*", null, "yauritux", "2015-01-01", "store-123", false, 0)
+            .values("2", "task2", "2", "0", "0", "12", "*", "*", "?", null, "yauritux", "2015-01-02", "store-123", false, 0)
+            .values("3", "task3", "3", "0", "15", "10", "*", "*", "?", "2017", "yauritux", "2015-01-03", "store-123", false, 0)
+            .values("4", "task4", "3", "0", "10,44", "14", "?", "3", "WED", null, "yauritux", "2015-01-04", "store-123", false, 0)
+            .values("5", "task5", "2", "0", "15", "10", "?", "*", "6L", "2015-2017", "yauritux", "2015-01-05", "store-123", false, 0)
+            .values("6", "task6", "1", "0", "15", "10", "?", "*", "6#3", null, "yauritux", "2015-01-06", "store-123", false, 0)
             .build();
-	
-	public static final Operation INSERT_WORKFLOW =
-        insertInto("WORKFLOW")
-            .columns("ID", "WORKFLOW_NAME", "CREATED_BY", "CREATED_DATE","STORE_ID","MARK_FOR_DELETE","OPTLOCK")
-            .values("1", "Workflow-1", "yauritux", "2015-03-01", "store-123", false, 0)
-            .values("2", "Workflow-2", "yauritux", "2015-03-03", "store-123", false, 0)
-            .build();
-	
-	public static final Operation INSERT_WORKFLOW_TASKS = 
-		insertInto("WORKFLOW_TASKS")
-			.columns("WORKFLOW_ID", "TASK_ID")
-			.values("1", "1")
-			.values("1", "3")
-			.values("1", "5")
-			.build();
-	
-	public static final Operation INSERT_WORKFLOW_SCHEDULE = 
-		insertInto("WORKFLOW_SCHEDULE")
-			.columns("ID", "WORKFLOW_ID", "MINUTES", "HOURS", "DAY_OF_MONTH", "MONTHS", "DAY_OF_WEEK", 
-					 "CREATED_BY", "CREATED_DATE", "STORE_ID", "MARK_FOR_DELETE", "OPTLOCK")
-			.values("1", "1", 60, 2, 0, 0, 0, "yauritux", "2015-03-01", "store-123", false, 0)
-			.build();
-	
+		
 	@Autowired
 	private DataSource dataSource;
 
 	@Before
 	public void prepare() {
-		Operation operation = sequenceOf(DELETE_ALL, INSERT_COMMAND, INSERT_TASK, INSERT_WORKFLOW, INSERT_WORKFLOW_SCHEDULE);
+		Operation operation = sequenceOf(DELETE_ALL, INSERT_COMMAND, INSERT_TASK);
 		DbSetup dbSetup = new DbSetup(new DataSourceDestination(dataSource), operation);
 		dbSetup.launch();
 	}
