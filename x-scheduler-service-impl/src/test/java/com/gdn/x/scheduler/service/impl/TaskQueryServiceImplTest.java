@@ -49,7 +49,7 @@ public class TaskQueryServiceImplTest {
 		taskService = spy(new TaskQueryServiceImpl(taskDAO));
 	}
 	
-	@Test(timeout = 100)
+	@Test(timeout = 1000)
 	public void findById_idIsNull_nullIsReturned() {
 		assertNull(taskService.findById(null));
 	}

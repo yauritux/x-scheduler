@@ -3208,7 +3208,7 @@ org.codehaus.jackson.JsonParseException: Unexpected character ('\' (code 92)): w
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) [spring-aop-4.1.0.RELEASE.jar:4.1.0.RELEASE]
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:207) [spring-aop-4.1.0.RELEASE.jar:4.1.0.RELEASE]
 	at com.sun.proxy.$Proxy87.wrapCommand(Unknown Source) [na:na]
-	at com.gdn.x.scheduler.service.TaskExecutor.run(TaskExecutor.java:54) [x-scheduler-service-impl-1.0.0.RC1.jar:na]
+	at com.gdn.x.scheduler.service.helper.schedengine.impl.TaskExecutorImpl.run(TaskExecutor.java:54) [x-scheduler-service-impl-1.0.0.RC1.jar:na]
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [na:1.7.0_71]
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [na:1.7.0_71]
 	at java.lang.Thread.run(Thread.java:745) [na:1.7.0_71]
@@ -3244,7 +3244,7 @@ org.codehaus.jackson.JsonParseException: Unexpected character ('\' (code 92)): w
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) [spring-aop-4.1.0.RELEASE.jar:4.1.0.RELEASE]
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:207) [spring-aop-4.1.0.RELEASE.jar:4.1.0.RELEASE]
 	at com.sun.proxy.$Proxy87.wrapCommand(Unknown Source) [na:na]
-	at com.gdn.x.scheduler.service.TaskExecutor.run(TaskExecutor.java:54) [x-scheduler-service-impl-1.0.0.RC1.jar:na]
+	at com.gdn.x.scheduler.service.helper.schedengine.impl.TaskExecutorImpl.run(TaskExecutor.java:54) [x-scheduler-service-impl-1.0.0.RC1.jar:na]
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [na:1.7.0_71]
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [na:1.7.0_71]
 	at java.lang.Thread.run(Thread.java:745) [na:1.7.0_71]
@@ -3280,7 +3280,7 @@ org.codehaus.jackson.JsonParseException: Unexpected character ('\' (code 92)): w
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) [spring-aop-4.1.0.RELEASE.jar:4.1.0.RELEASE]
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:207) [spring-aop-4.1.0.RELEASE.jar:4.1.0.RELEASE]
 	at com.sun.proxy.$Proxy87.wrapCommand(Unknown Source) [na:na]
-	at com.gdn.x.scheduler.service.TaskExecutor.run(TaskExecutor.java:54) [x-scheduler-service-impl-1.0.0.RC1.jar:na]
+	at com.gdn.x.scheduler.service.helper.schedengine.impl.TaskExecutorImpl.run(TaskExecutor.java:54) [x-scheduler-service-impl-1.0.0.RC1.jar:na]
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [na:1.7.0_71]
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [na:1.7.0_71]
 	at java.lang.Thread.run(Thread.java:745) [na:1.7.0_71]
@@ -3316,7 +3316,7 @@ org.codehaus.jackson.JsonParseException: Unexpected character ('\' (code 92)): w
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) [spring-aop-4.1.0.RELEASE.jar:4.1.0.RELEASE]
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:207) [spring-aop-4.1.0.RELEASE.jar:4.1.0.RELEASE]
 	at com.sun.proxy.$Proxy87.wrapCommand(Unknown Source) [na:na]
-	at com.gdn.x.scheduler.service.TaskExecutor.run(TaskExecutor.java:54) [x-scheduler-service-impl-1.0.0.RC1.jar:na]
+	at com.gdn.x.scheduler.service.helper.schedengine.impl.TaskExecutorImpl.run(TaskExecutor.java:54) [x-scheduler-service-impl-1.0.0.RC1.jar:na]
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [na:1.7.0_71]
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [na:1.7.0_71]
 	at java.lang.Thread.run(Thread.java:745) [na:1.7.0_71]
@@ -3352,7 +3352,7 @@ org.codehaus.jackson.JsonParseException: Unexpected character ('\' (code 92)): w
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) [spring-aop-4.1.0.RELEASE.jar:4.1.0.RELEASE]
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:207) [spring-aop-4.1.0.RELEASE.jar:4.1.0.RELEASE]
 	at com.sun.proxy.$Proxy87.wrapCommand(Unknown Source) [na:na]
-	at com.gdn.x.scheduler.service.TaskExecutor.run(TaskExecutor.java:54) [x-scheduler-service-impl-1.0.0.RC1.jar:na]
+	at com.gdn.x.scheduler.service.helper.schedengine.impl.TaskExecutorImpl.run(TaskExecutor.java:54) [x-scheduler-service-impl-1.0.0.RC1.jar:na]
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [na:1.7.0_71]
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [na:1.7.0_71]
 	at java.lang.Thread.run(Thread.java:745) [na:1.7.0_71]
@@ -3388,7 +3388,7 @@ org.codehaus.jackson.JsonParseException: Unexpected character ('\' (code 92)): w
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) [spring-aop-4.1.0.RELEASE.jar:4.1.0.RELEASE]
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:207) [spring-aop-4.1.0.RELEASE.jar:4.1.0.RELEASE]
 	at com.sun.proxy.$Proxy87.wrapCommand(Unknown Source) [na:na]
-	at com.gdn.x.scheduler.service.TaskExecutor.run(TaskExecutor.java:54) [x-scheduler-service-impl-1.0.0.RC1.jar:na]
+	at com.gdn.x.scheduler.service.helper.schedengine.impl.TaskExecutorImpl.run(TaskExecutor.java:54) [x-scheduler-service-impl-1.0.0.RC1.jar:na]
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [na:1.7.0_71]
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [na:1.7.0_71]
 	at java.lang.Thread.run(Thread.java:745) [na:1.7.0_71]
@@ -3424,7 +3424,7 @@ org.codehaus.jackson.JsonParseException: Unexpected character ('\' (code 92)): w
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) [spring-aop-4.1.0.RELEASE.jar:4.1.0.RELEASE]
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:207) [spring-aop-4.1.0.RELEASE.jar:4.1.0.RELEASE]
 	at com.sun.proxy.$Proxy87.wrapCommand(Unknown Source) [na:na]
-	at com.gdn.x.scheduler.service.TaskExecutor.run(TaskExecutor.java:54) [x-scheduler-service-impl-1.0.0.RC1.jar:na]
+	at com.gdn.x.scheduler.service.helper.schedengine.impl.TaskExecutorImpl.run(TaskExecutor.java:54) [x-scheduler-service-impl-1.0.0.RC1.jar:na]
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [na:1.7.0_71]
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [na:1.7.0_71]
 	at java.lang.Thread.run(Thread.java:745) [na:1.7.0_71]
@@ -19098,3 +19098,1088 @@ java.lang.NullPointerException: null
 []2015-02-12T09:49:30,238Z DEBUG c.g.c.b.s.o.a.h.c.p.ResponseProcessCookies - Cookie accepted [NID="67=ehQyV9ujiRAMsvTY3HlD74MHpbO_ZtXpPGEmjbicS6qwyZNU8PDJpty7uO9TA_02e84BtgGFDlkKMjFOh_T_2gK3czVFpyRE8...", version:0, domain:.google.com, path:/, expiry:Fri Aug 14 16:49:30 WIT 2015] 
 []2015-02-12T09:49:30,238Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultHttpClient - Connection can be kept alive indefinitely 
 []2015-02-12T09:49:30,239Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultClientConnection - Connection 0.0.0.0:53118<->114.4.42.95:80 closed 
+[]2015-02-12T17:55:27,203Z ERROR c.g.x.s.c.CommandController - null 
+java.lang.NullPointerException: null
+	at com.gdn.x.scheduler.controller.CommandController.getWSCommands(CommandController.java:108) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.7.0_40]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57) ~[na:1.7.0_40]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.7.0_40]
+	at java.lang.reflect.Method.invoke(Method.java:606) ~[na:1.7.0_40]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:215) [spring-web-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:132) [spring-web-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104) [spring-webmvc-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandleMethod(RequestMappingHandlerAdapter.java:781) [spring-webmvc-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:721) [spring-webmvc-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:83) [spring-webmvc-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:943) [spring-webmvc-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:877) [spring-webmvc-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:961) [spring-webmvc-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:852) [spring-webmvc-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687) [javax.servlet-api-3.1.0.jar:3.1.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:837) [spring-webmvc-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.test.web.servlet.TestDispatcherServlet.service(TestDispatcherServlet.java:62) [spring-test-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790) [javax.servlet-api-3.1.0.jar:3.1.0]
+	at org.springframework.mock.web.MockFilterChain$ServletFilterProxy.doFilter(MockFilterChain.java:170) [spring-test-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:137) [spring-test-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.test.web.servlet.MockMvc.perform(MockMvc.java:145) [spring-test-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at com.gdn.x.scheduler.controller.CommandControllerTest.getWSCommands_nullRecords_NPERaised(CommandControllerTest.java:208) [test-classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.7.0_40]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57) ~[na:1.7.0_40]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.7.0_40]
+	at java.lang.reflect.Method.invoke(Method.java:606) ~[na:1.7.0_40]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47) [junit-4.11.jar:na]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.11.jar:na]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44) [junit-4.11.jar:na]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) [junit-4.11.jar:na]
+	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:19) [junit-4.11.jar:na]
+	at org.junit.internal.runners.statements.FailOnTimeout$StatementThread.run(FailOnTimeout.java:74) [junit-4.11.jar:na]
+[]2015-02-12T17:55:28,278Z DEBUG c.g.x.s.c.CommandController - total commands found: 2 
+[]2015-02-12T17:55:28,400Z DEBUG c.g.x.s.c.CommandController - total commands found: 2 
+[]2015-02-12T17:55:28,502Z DEBUG c.g.x.s.c.CommandController - total commands found: 0 
+[]2015-02-12T17:55:28,948Z ERROR c.g.x.s.controller.TaskController - null 
+java.lang.NullPointerException: null
+	at com.gdn.x.scheduler.controller.TaskController.fetchTasks(TaskController.java:88) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.7.0_40]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57) ~[na:1.7.0_40]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.7.0_40]
+	at java.lang.reflect.Method.invoke(Method.java:606) ~[na:1.7.0_40]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:215) [spring-web-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:132) [spring-web-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104) [spring-webmvc-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandleMethod(RequestMappingHandlerAdapter.java:781) [spring-webmvc-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:721) [spring-webmvc-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:83) [spring-webmvc-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:943) [spring-webmvc-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:877) [spring-webmvc-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:961) [spring-webmvc-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:852) [spring-webmvc-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687) [javax.servlet-api-3.1.0.jar:3.1.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:837) [spring-webmvc-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.test.web.servlet.TestDispatcherServlet.service(TestDispatcherServlet.java:62) [spring-test-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790) [javax.servlet-api-3.1.0.jar:3.1.0]
+	at org.springframework.mock.web.MockFilterChain$ServletFilterProxy.doFilter(MockFilterChain.java:170) [spring-test-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:137) [spring-test-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at org.springframework.test.web.servlet.MockMvc.perform(MockMvc.java:145) [spring-test-4.1.0.RELEASE.jar:4.1.0.RELEASE]
+	at com.gdn.x.scheduler.controller.TaskControllerTest.fetchTasks_nullRecords_NPERaised(TaskControllerTest.java:117) [test-classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.7.0_40]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57) ~[na:1.7.0_40]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.7.0_40]
+	at java.lang.reflect.Method.invoke(Method.java:606) ~[na:1.7.0_40]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47) [junit-4.11.jar:na]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.11.jar:na]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44) [junit-4.11.jar:na]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) [junit-4.11.jar:na]
+	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:19) [junit-4.11.jar:na]
+	at org.junit.internal.runners.statements.FailOnTimeout$StatementThread.run(FailOnTimeout.java:74) [junit-4.11.jar:na]
+[]2015-02-12T17:55:29,082Z DEBUG c.g.x.s.controller.TaskController - total tasks found: 0 
+[30e28503-f480-46ba-ab06-d5aed4993a4b|store-123|||111]2015-02-12T18:00:30,074Z DEBUG c.g.x.s.s.h.s.impl.TaskExecutorImpl - Creating TaskExecutorImpl... 
+[30e28503-f480-46ba-ab06-d5aed4993a4b|store-123|||111]2015-02-12T18:00:30,091Z DEBUG c.g.x.s.s.h.s.impl.TaskExecutorImpl - TaskExecutorImpl successfully created. 
+[30e28503-f480-46ba-ab06-d5aed4993a4b|store-123|||111]2015-02-12T18:00:30,095Z DEBUG c.g.x.s.s.h.s.impl.TaskExecutorImpl - Assigning task Google Fetcher to TaskExecutor... 
+[30e28503-f480-46ba-ab06-d5aed4993a4b|store-123|||111]2015-02-12T18:00:30,095Z DEBUG c.g.x.s.s.h.s.impl.TaskExecutorImpl - Successfully assigned. 
+[]2015-02-12T18:00:36,069Z DEBUG c.g.x.s.s.h.s.impl.TaskExecutorImpl - Running Task Google Fetcher 
+[]2015-02-12T18:00:36,987Z DEBUG c.g.c.b.s.o.a.h.i.c.BasicClientConnectionManager - Get connection for route {}->http://www.google.com 
+[]2015-02-12T18:00:37,098Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultClientConnectionOperator - Connecting to www.google.com:80 
+[]2015-02-12T18:00:37,170Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestAddCookies - CookieSpec selected: best-match 
+[]2015-02-12T18:00:37,184Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestAuthCache - Auth cache not set in the context 
+[]2015-02-12T18:00:37,184Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestTargetAuthentication - Target auth state: UNCHALLENGED 
+[]2015-02-12T18:00:37,185Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED 
+[]2015-02-12T18:00:37,185Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultHttpClient - Attempt 1 to execute request 
+[]2015-02-12T18:00:37,185Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultClientConnection - Sending request: GET / HTTP/1.1 
+[]2015-02-12T18:00:37,186Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "GET / HTTP/1.1[\r][\n]" 
+[]2015-02-12T18:00:37,187Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "accept: application/json[\r][\n]" 
+[]2015-02-12T18:00:37,187Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "Host: www.google.com[\r][\n]" 
+[]2015-02-12T18:00:37,187Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]" 
+[]2015-02-12T18:00:37,187Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.3.5 (java 1.5)[\r][\n]" 
+[]2015-02-12T18:00:37,187Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "[\r][\n]" 
+[]2015-02-12T18:00:37,187Z DEBUG c.g.c.b.s.org.apache.http.headers - >> GET / HTTP/1.1 
+[]2015-02-12T18:00:37,187Z DEBUG c.g.c.b.s.org.apache.http.headers - >> accept: application/json 
+[]2015-02-12T18:00:37,187Z DEBUG c.g.c.b.s.org.apache.http.headers - >> Host: www.google.com 
+[]2015-02-12T18:00:37,187Z DEBUG c.g.c.b.s.org.apache.http.headers - >> Connection: Keep-Alive 
+[]2015-02-12T18:00:37,187Z DEBUG c.g.c.b.s.org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.3.5 (java 1.5) 
+[]2015-02-12T18:00:37,292Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "HTTP/1.1 200 OK[\r][\n]" 
+[]2015-02-12T18:00:37,294Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Date: Thu, 12 Feb 2015 18:00:37 GMT[\r][\n]" 
+[]2015-02-12T18:00:37,294Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Expires: -1[\r][\n]" 
+[]2015-02-12T18:00:37,294Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Cache-Control: private, max-age=0[\r][\n]" 
+[]2015-02-12T18:00:37,295Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Content-Type: text/html; charset=ISO-8859-1[\r][\n]" 
+[]2015-02-12T18:00:37,295Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "P3P: CP="This is not a P3P policy! See http://www.google.com/support/accounts/bin/answer.py?hl=en&answer=151657 for more info."[\r][\n]" 
+[]2015-02-12T18:00:37,295Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Server: gws[\r][\n]" 
+[]2015-02-12T18:00:37,295Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "X-XSS-Protection: 1; mode=block[\r][\n]" 
+[]2015-02-12T18:00:37,295Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "X-Frame-Options: SAMEORIGIN[\r][\n]" 
+[]2015-02-12T18:00:37,295Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Alternate-Protocol: 80:quic,p=0.08[\r][\n]" 
+[]2015-02-12T18:00:37,295Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Accept-Ranges: none[\r][\n]" 
+[]2015-02-12T18:00:37,295Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Vary: Accept-Encoding[\r][\n]" 
+[]2015-02-12T18:00:37,295Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Transfer-Encoding: chunked[\r][\n]" 
+[]2015-02-12T18:00:37,295Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Connection: Keep-Alive[\r][\n]" 
+[]2015-02-12T18:00:37,295Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Set-Cookie: PREF=ID=e4bcc2c9b19678d3:FF=0:TM=1423764037:LM=1423764037:S=rVGyZH1bgtctx3vw; expires=Sat, 11-Feb-2017 18:00:37 GMT; path=/; domain=.google.com[\r][\n]" 
+[]2015-02-12T18:00:37,295Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Set-Cookie: NID=67=kgZURKdbOl8V7QDcJc-GcxHmiyqrCF7vRPhhgESDG3RPNHJgQea51rCptNUhErqKmPb3adlf5olYcZaaSWeAiCkhAMMssBRUe-yBABF9KhJgXSHV5FtSomdGXYOZo0GW; expires=Fri, 14-Aug-2015 18:00:37 GMT; path=/; domain=.google.com; HttpOnly[\r][\n]" 
+[]2015-02-12T18:00:37,295Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "[\r][\n]" 
+[]2015-02-12T18:00:37,296Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultClientConnection - Receiving response: HTTP/1.1 200 OK 
+[]2015-02-12T18:00:37,296Z DEBUG c.g.c.b.s.org.apache.http.headers - << HTTP/1.1 200 OK 
+[]2015-02-12T18:00:37,296Z DEBUG c.g.c.b.s.org.apache.http.headers - << Date: Thu, 12 Feb 2015 18:00:37 GMT 
+[]2015-02-12T18:00:37,296Z DEBUG c.g.c.b.s.org.apache.http.headers - << Expires: -1 
+[]2015-02-12T18:00:37,296Z DEBUG c.g.c.b.s.org.apache.http.headers - << Cache-Control: private, max-age=0 
+[]2015-02-12T18:00:37,296Z DEBUG c.g.c.b.s.org.apache.http.headers - << Content-Type: text/html; charset=ISO-8859-1 
+[]2015-02-12T18:00:37,296Z DEBUG c.g.c.b.s.org.apache.http.headers - << P3P: CP="This is not a P3P policy! See http://www.google.com/support/accounts/bin/answer.py?hl=en&answer=151657 for more info." 
+[]2015-02-12T18:00:37,296Z DEBUG c.g.c.b.s.org.apache.http.headers - << Server: gws 
+[]2015-02-12T18:00:37,296Z DEBUG c.g.c.b.s.org.apache.http.headers - << X-XSS-Protection: 1; mode=block 
+[]2015-02-12T18:00:37,296Z DEBUG c.g.c.b.s.org.apache.http.headers - << X-Frame-Options: SAMEORIGIN 
+[]2015-02-12T18:00:37,296Z DEBUG c.g.c.b.s.org.apache.http.headers - << Alternate-Protocol: 80:quic,p=0.08 
+[]2015-02-12T18:00:37,296Z DEBUG c.g.c.b.s.org.apache.http.headers - << Accept-Ranges: none 
+[]2015-02-12T18:00:37,296Z DEBUG c.g.c.b.s.org.apache.http.headers - << Vary: Accept-Encoding 
+[]2015-02-12T18:00:37,296Z DEBUG c.g.c.b.s.org.apache.http.headers - << Transfer-Encoding: chunked 
+[]2015-02-12T18:00:37,296Z DEBUG c.g.c.b.s.org.apache.http.headers - << Connection: Keep-Alive 
+[]2015-02-12T18:00:37,296Z DEBUG c.g.c.b.s.org.apache.http.headers - << Set-Cookie: PREF=ID=e4bcc2c9b19678d3:FF=0:TM=1423764037:LM=1423764037:S=rVGyZH1bgtctx3vw; expires=Sat, 11-Feb-2017 18:00:37 GMT; path=/; domain=.google.com 
+[]2015-02-12T18:00:37,296Z DEBUG c.g.c.b.s.org.apache.http.headers - << Set-Cookie: NID=67=kgZURKdbOl8V7QDcJc-GcxHmiyqrCF7vRPhhgESDG3RPNHJgQea51rCptNUhErqKmPb3adlf5olYcZaaSWeAiCkhAMMssBRUe-yBABF9KhJgXSHV5FtSomdGXYOZo0GW; expires=Fri, 14-Aug-2015 18:00:37 GMT; path=/; domain=.google.com; HttpOnly 
+[]2015-02-12T18:00:37,332Z DEBUG c.g.c.b.s.o.a.h.c.p.ResponseProcessCookies - Cookie accepted [PREF="ID=e4bcc2c9b19678d3:FF=0:TM=1423764037:LM=1423764037:S=rVGyZH1bgtctx3vw", version:0, domain:.google.com, path:/, expiry:Sun Feb 12 01:00:37 WIT 2017] 
+[]2015-02-12T18:00:37,332Z DEBUG c.g.c.b.s.o.a.h.c.p.ResponseProcessCookies - Cookie accepted [NID="67=kgZURKdbOl8V7QDcJc-GcxHmiyqrCF7vRPhhgESDG3RPNHJgQea51rCptNUhErqKmPb3adlf5olYcZaaSWeAiCkhAMMssBRUe...", version:0, domain:.google.com, path:/, expiry:Sat Aug 15 01:00:37 WIT 2015] 
+[]2015-02-12T18:00:37,333Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultHttpClient - Connection can be kept alive indefinitely 
+[]2015-02-12T18:00:37,341Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultClientConnection - Connection 0.0.0.0:54196<->119.110.118.113:80 closed 
+[]2015-02-12T18:00:45,002Z DEBUG c.g.x.s.s.h.s.impl.TaskExecutorImpl - Running Task Google Fetcher 
+[]2015-02-12T18:00:45,045Z DEBUG c.g.c.b.s.o.a.h.i.c.BasicClientConnectionManager - Get connection for route {}->http://www.google.com 
+[]2015-02-12T18:00:45,045Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultClientConnectionOperator - Connecting to www.google.com:80 
+[]2015-02-12T18:00:45,099Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestAddCookies - CookieSpec selected: best-match 
+[]2015-02-12T18:00:45,099Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestAuthCache - Auth cache not set in the context 
+[]2015-02-12T18:00:45,099Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestTargetAuthentication - Target auth state: UNCHALLENGED 
+[]2015-02-12T18:00:45,099Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED 
+[]2015-02-12T18:00:45,099Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultHttpClient - Attempt 1 to execute request 
+[]2015-02-12T18:00:45,099Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultClientConnection - Sending request: GET / HTTP/1.1 
+[]2015-02-12T18:00:45,100Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "GET / HTTP/1.1[\r][\n]" 
+[]2015-02-12T18:00:45,100Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "accept: application/json[\r][\n]" 
+[]2015-02-12T18:00:45,100Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "Host: www.google.com[\r][\n]" 
+[]2015-02-12T18:00:45,100Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]" 
+[]2015-02-12T18:00:45,100Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.3.5 (java 1.5)[\r][\n]" 
+[]2015-02-12T18:00:45,100Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "[\r][\n]" 
+[]2015-02-12T18:00:45,100Z DEBUG c.g.c.b.s.org.apache.http.headers - >> GET / HTTP/1.1 
+[]2015-02-12T18:00:45,100Z DEBUG c.g.c.b.s.org.apache.http.headers - >> accept: application/json 
+[]2015-02-12T18:00:45,100Z DEBUG c.g.c.b.s.org.apache.http.headers - >> Host: www.google.com 
+[]2015-02-12T18:00:45,100Z DEBUG c.g.c.b.s.org.apache.http.headers - >> Connection: Keep-Alive 
+[]2015-02-12T18:00:45,100Z DEBUG c.g.c.b.s.org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.3.5 (java 1.5) 
+[]2015-02-12T18:00:45,189Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "HTTP/1.1 200 OK[\r][\n]" 
+[]2015-02-12T18:00:45,189Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Date: Thu, 12 Feb 2015 18:00:45 GMT[\r][\n]" 
+[]2015-02-12T18:00:45,190Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Expires: -1[\r][\n]" 
+[]2015-02-12T18:00:45,190Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Cache-Control: private, max-age=0[\r][\n]" 
+[]2015-02-12T18:00:45,190Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Content-Type: text/html; charset=ISO-8859-1[\r][\n]" 
+[]2015-02-12T18:00:45,190Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "P3P: CP="This is not a P3P policy! See http://www.google.com/support/accounts/bin/answer.py?hl=en&answer=151657 for more info."[\r][\n]" 
+[]2015-02-12T18:00:45,190Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Server: gws[\r][\n]" 
+[]2015-02-12T18:00:45,190Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "X-XSS-Protection: 1; mode=block[\r][\n]" 
+[]2015-02-12T18:00:45,190Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "X-Frame-Options: SAMEORIGIN[\r][\n]" 
+[]2015-02-12T18:00:45,190Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Alternate-Protocol: 80:quic,p=0.08[\r][\n]" 
+[]2015-02-12T18:00:45,190Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Accept-Ranges: none[\r][\n]" 
+[]2015-02-12T18:00:45,190Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Vary: Accept-Encoding[\r][\n]" 
+[]2015-02-12T18:00:45,190Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Transfer-Encoding: chunked[\r][\n]" 
+[]2015-02-12T18:00:45,190Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Connection: Keep-Alive[\r][\n]" 
+[]2015-02-12T18:00:45,191Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Set-Cookie: PREF=ID=4b28b89fd45edc8d:FF=0:TM=1423764045:LM=1423764045:S=2Rd_tF1Wu_sPtiJ_; expires=Sat, 11-Feb-2017 18:00:45 GMT; path=/; domain=.google.com[\r][\n]" 
+[]2015-02-12T18:00:45,191Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Set-Cookie: NID=67=JWICIPpNG75K7TX-vvDAah_Fc_zt0nCX6hINsE0cqqVkQxaF8AqRlppPqzkGk_JHOhFTcfm4J1TQZC8xtUYTAjlQUpYDeTRtHSYypkSGzh6B2uUi_ET-cPj8FA-kyhYo; expires=Fri, 14-Aug-2015 18:00:45 GMT; path=/; domain=.google.com; HttpOnly[\r][\n]" 
+[]2015-02-12T18:00:45,191Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "[\r][\n]" 
+[]2015-02-12T18:00:45,191Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultClientConnection - Receiving response: HTTP/1.1 200 OK 
+[]2015-02-12T18:00:45,191Z DEBUG c.g.c.b.s.org.apache.http.headers - << HTTP/1.1 200 OK 
+[]2015-02-12T18:00:45,191Z DEBUG c.g.c.b.s.org.apache.http.headers - << Date: Thu, 12 Feb 2015 18:00:45 GMT 
+[]2015-02-12T18:00:45,191Z DEBUG c.g.c.b.s.org.apache.http.headers - << Expires: -1 
+[]2015-02-12T18:00:45,191Z DEBUG c.g.c.b.s.org.apache.http.headers - << Cache-Control: private, max-age=0 
+[]2015-02-12T18:00:45,191Z DEBUG c.g.c.b.s.org.apache.http.headers - << Content-Type: text/html; charset=ISO-8859-1 
+[]2015-02-12T18:00:45,191Z DEBUG c.g.c.b.s.org.apache.http.headers - << P3P: CP="This is not a P3P policy! See http://www.google.com/support/accounts/bin/answer.py?hl=en&answer=151657 for more info." 
+[]2015-02-12T18:00:45,191Z DEBUG c.g.c.b.s.org.apache.http.headers - << Server: gws 
+[]2015-02-12T18:00:45,191Z DEBUG c.g.c.b.s.org.apache.http.headers - << X-XSS-Protection: 1; mode=block 
+[]2015-02-12T18:00:45,191Z DEBUG c.g.c.b.s.org.apache.http.headers - << X-Frame-Options: SAMEORIGIN 
+[]2015-02-12T18:00:45,191Z DEBUG c.g.c.b.s.org.apache.http.headers - << Alternate-Protocol: 80:quic,p=0.08 
+[]2015-02-12T18:00:45,191Z DEBUG c.g.c.b.s.org.apache.http.headers - << Accept-Ranges: none 
+[]2015-02-12T18:00:45,191Z DEBUG c.g.c.b.s.org.apache.http.headers - << Vary: Accept-Encoding 
+[]2015-02-12T18:00:45,191Z DEBUG c.g.c.b.s.org.apache.http.headers - << Transfer-Encoding: chunked 
+[]2015-02-12T18:00:45,191Z DEBUG c.g.c.b.s.org.apache.http.headers - << Connection: Keep-Alive 
+[]2015-02-12T18:00:45,191Z DEBUG c.g.c.b.s.org.apache.http.headers - << Set-Cookie: PREF=ID=4b28b89fd45edc8d:FF=0:TM=1423764045:LM=1423764045:S=2Rd_tF1Wu_sPtiJ_; expires=Sat, 11-Feb-2017 18:00:45 GMT; path=/; domain=.google.com 
+[]2015-02-12T18:00:45,191Z DEBUG c.g.c.b.s.org.apache.http.headers - << Set-Cookie: NID=67=JWICIPpNG75K7TX-vvDAah_Fc_zt0nCX6hINsE0cqqVkQxaF8AqRlppPqzkGk_JHOhFTcfm4J1TQZC8xtUYTAjlQUpYDeTRtHSYypkSGzh6B2uUi_ET-cPj8FA-kyhYo; expires=Fri, 14-Aug-2015 18:00:45 GMT; path=/; domain=.google.com; HttpOnly 
+[]2015-02-12T18:00:45,192Z DEBUG c.g.c.b.s.o.a.h.c.p.ResponseProcessCookies - Cookie accepted [PREF="ID=4b28b89fd45edc8d:FF=0:TM=1423764045:LM=1423764045:S=2Rd_tF1Wu_sPtiJ_", version:0, domain:.google.com, path:/, expiry:Sun Feb 12 01:00:45 WIT 2017] 
+[]2015-02-12T18:00:45,193Z DEBUG c.g.c.b.s.o.a.h.c.p.ResponseProcessCookies - Cookie accepted [NID="67=JWICIPpNG75K7TX-vvDAah_Fc_zt0nCX6hINsE0cqqVkQxaF8AqRlppPqzkGk_JHOhFTcfm4J1TQZC8xtUYTAjlQUpYDeTRtH...", version:0, domain:.google.com, path:/, expiry:Sat Aug 15 01:00:45 WIT 2015] 
+[]2015-02-12T18:00:45,193Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultHttpClient - Connection can be kept alive indefinitely 
+[]2015-02-12T18:00:45,193Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultClientConnection - Connection 0.0.0.0:54197<->119.110.118.113:80 closed 
+[]2015-02-12T18:00:54,002Z DEBUG c.g.x.s.s.h.s.impl.TaskExecutorImpl - Running Task Google Fetcher 
+[]2015-02-12T18:00:54,030Z DEBUG c.g.c.b.s.o.a.h.i.c.BasicClientConnectionManager - Get connection for route {}->http://www.google.com 
+[]2015-02-12T18:00:54,030Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultClientConnectionOperator - Connecting to www.google.com:80 
+[]2015-02-12T18:00:54,079Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestAddCookies - CookieSpec selected: best-match 
+[]2015-02-12T18:00:54,079Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestAuthCache - Auth cache not set in the context 
+[]2015-02-12T18:00:54,079Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestTargetAuthentication - Target auth state: UNCHALLENGED 
+[]2015-02-12T18:00:54,079Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED 
+[]2015-02-12T18:00:54,079Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultHttpClient - Attempt 1 to execute request 
+[]2015-02-12T18:00:54,079Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultClientConnection - Sending request: GET / HTTP/1.1 
+[]2015-02-12T18:00:54,079Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "GET / HTTP/1.1[\r][\n]" 
+[]2015-02-12T18:00:54,079Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "accept: application/json[\r][\n]" 
+[]2015-02-12T18:00:54,079Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "Host: www.google.com[\r][\n]" 
+[]2015-02-12T18:00:54,079Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]" 
+[]2015-02-12T18:00:54,079Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.3.5 (java 1.5)[\r][\n]" 
+[]2015-02-12T18:00:54,079Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "[\r][\n]" 
+[]2015-02-12T18:00:54,079Z DEBUG c.g.c.b.s.org.apache.http.headers - >> GET / HTTP/1.1 
+[]2015-02-12T18:00:54,079Z DEBUG c.g.c.b.s.org.apache.http.headers - >> accept: application/json 
+[]2015-02-12T18:00:54,079Z DEBUG c.g.c.b.s.org.apache.http.headers - >> Host: www.google.com 
+[]2015-02-12T18:00:54,079Z DEBUG c.g.c.b.s.org.apache.http.headers - >> Connection: Keep-Alive 
+[]2015-02-12T18:00:54,079Z DEBUG c.g.c.b.s.org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.3.5 (java 1.5) 
+[]2015-02-12T18:00:54,269Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "HTTP/1.1 200 OK[\r][\n]" 
+[]2015-02-12T18:00:54,269Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Date: Thu, 12 Feb 2015 18:00:54 GMT[\r][\n]" 
+[]2015-02-12T18:00:54,269Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Expires: -1[\r][\n]" 
+[]2015-02-12T18:00:54,269Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Cache-Control: private, max-age=0[\r][\n]" 
+[]2015-02-12T18:00:54,269Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Content-Type: text/html; charset=ISO-8859-1[\r][\n]" 
+[]2015-02-12T18:00:54,270Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "P3P: CP="This is not a P3P policy! See http://www.google.com/support/accounts/bin/answer.py?hl=en&answer=151657 for more info."[\r][\n]" 
+[]2015-02-12T18:00:54,270Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Server: gws[\r][\n]" 
+[]2015-02-12T18:00:54,270Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "X-XSS-Protection: 1; mode=block[\r][\n]" 
+[]2015-02-12T18:00:54,270Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "X-Frame-Options: SAMEORIGIN[\r][\n]" 
+[]2015-02-12T18:00:54,270Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Alternate-Protocol: 80:quic,p=0.08[\r][\n]" 
+[]2015-02-12T18:00:54,270Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Accept-Ranges: none[\r][\n]" 
+[]2015-02-12T18:00:54,270Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Vary: Accept-Encoding[\r][\n]" 
+[]2015-02-12T18:00:54,270Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Transfer-Encoding: chunked[\r][\n]" 
+[]2015-02-12T18:00:54,270Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Connection: Keep-Alive[\r][\n]" 
+[]2015-02-12T18:00:54,270Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Set-Cookie: PREF=ID=3d68dde5dbd98740:FF=0:TM=1423764054:LM=1423764054:S=v3ZMv5Enw2BAmme2; expires=Sat, 11-Feb-2017 18:00:54 GMT; path=/; domain=.google.com[\r][\n]" 
+[]2015-02-12T18:00:54,270Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Set-Cookie: NID=67=OFZlJhRSEUwPOQmaqpv7u_0_ldamU-4HTOIGsbk6JH2k9uPth3PXSWQh8KYLMrbraPtN_b_fThOnZ9dnNVqsUeRwps-8EGoiWZtTJahJYOgTVMDTV2WMAx3LDjIvvJ3-; expires=Fri, 14-Aug-2015 18:00:54 GMT; path=/; domain=.google.com; HttpOnly[\r][\n]" 
+[]2015-02-12T18:00:54,270Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "[\r][\n]" 
+[]2015-02-12T18:00:54,270Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultClientConnection - Receiving response: HTTP/1.1 200 OK 
+[]2015-02-12T18:00:54,270Z DEBUG c.g.c.b.s.org.apache.http.headers - << HTTP/1.1 200 OK 
+[]2015-02-12T18:00:54,270Z DEBUG c.g.c.b.s.org.apache.http.headers - << Date: Thu, 12 Feb 2015 18:00:54 GMT 
+[]2015-02-12T18:00:54,270Z DEBUG c.g.c.b.s.org.apache.http.headers - << Expires: -1 
+[]2015-02-12T18:00:54,270Z DEBUG c.g.c.b.s.org.apache.http.headers - << Cache-Control: private, max-age=0 
+[]2015-02-12T18:00:54,270Z DEBUG c.g.c.b.s.org.apache.http.headers - << Content-Type: text/html; charset=ISO-8859-1 
+[]2015-02-12T18:00:54,270Z DEBUG c.g.c.b.s.org.apache.http.headers - << P3P: CP="This is not a P3P policy! See http://www.google.com/support/accounts/bin/answer.py?hl=en&answer=151657 for more info." 
+[]2015-02-12T18:00:54,270Z DEBUG c.g.c.b.s.org.apache.http.headers - << Server: gws 
+[]2015-02-12T18:00:54,270Z DEBUG c.g.c.b.s.org.apache.http.headers - << X-XSS-Protection: 1; mode=block 
+[]2015-02-12T18:00:54,270Z DEBUG c.g.c.b.s.org.apache.http.headers - << X-Frame-Options: SAMEORIGIN 
+[]2015-02-12T18:00:54,270Z DEBUG c.g.c.b.s.org.apache.http.headers - << Alternate-Protocol: 80:quic,p=0.08 
+[]2015-02-12T18:00:54,270Z DEBUG c.g.c.b.s.org.apache.http.headers - << Accept-Ranges: none 
+[]2015-02-12T18:00:54,270Z DEBUG c.g.c.b.s.org.apache.http.headers - << Vary: Accept-Encoding 
+[]2015-02-12T18:00:54,270Z DEBUG c.g.c.b.s.org.apache.http.headers - << Transfer-Encoding: chunked 
+[]2015-02-12T18:00:54,271Z DEBUG c.g.c.b.s.org.apache.http.headers - << Connection: Keep-Alive 
+[]2015-02-12T18:00:54,271Z DEBUG c.g.c.b.s.org.apache.http.headers - << Set-Cookie: PREF=ID=3d68dde5dbd98740:FF=0:TM=1423764054:LM=1423764054:S=v3ZMv5Enw2BAmme2; expires=Sat, 11-Feb-2017 18:00:54 GMT; path=/; domain=.google.com 
+[]2015-02-12T18:00:54,271Z DEBUG c.g.c.b.s.org.apache.http.headers - << Set-Cookie: NID=67=OFZlJhRSEUwPOQmaqpv7u_0_ldamU-4HTOIGsbk6JH2k9uPth3PXSWQh8KYLMrbraPtN_b_fThOnZ9dnNVqsUeRwps-8EGoiWZtTJahJYOgTVMDTV2WMAx3LDjIvvJ3-; expires=Fri, 14-Aug-2015 18:00:54 GMT; path=/; domain=.google.com; HttpOnly 
+[]2015-02-12T18:00:54,271Z DEBUG c.g.c.b.s.o.a.h.c.p.ResponseProcessCookies - Cookie accepted [PREF="ID=3d68dde5dbd98740:FF=0:TM=1423764054:LM=1423764054:S=v3ZMv5Enw2BAmme2", version:0, domain:.google.com, path:/, expiry:Sun Feb 12 01:00:54 WIT 2017] 
+[]2015-02-12T18:00:54,272Z DEBUG c.g.c.b.s.o.a.h.c.p.ResponseProcessCookies - Cookie accepted [NID="67=OFZlJhRSEUwPOQmaqpv7u_0_ldamU-4HTOIGsbk6JH2k9uPth3PXSWQh8KYLMrbraPtN_b_fThOnZ9dnNVqsUeRwps-8EGoiW...", version:0, domain:.google.com, path:/, expiry:Sat Aug 15 01:00:54 WIT 2015] 
+[]2015-02-12T18:00:54,272Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultHttpClient - Connection can be kept alive indefinitely 
+[]2015-02-12T18:00:54,272Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultClientConnection - Connection 0.0.0.0:54199<->119.110.118.113:80 closed 
+[3b238481-5f2b-43cf-a858-cc3f1af4adf6|store-123|||222]2015-02-12T18:00:55,737Z DEBUG c.g.x.s.s.h.s.impl.TaskExecutorImpl - Creating TaskExecutorImpl... 
+[3b238481-5f2b-43cf-a858-cc3f1af4adf6|store-123|||222]2015-02-12T18:00:55,737Z DEBUG c.g.x.s.s.h.s.impl.TaskExecutorImpl - TaskExecutorImpl successfully created. 
+[3b238481-5f2b-43cf-a858-cc3f1af4adf6|store-123|||222]2015-02-12T18:00:55,738Z DEBUG c.g.x.s.s.h.s.impl.TaskExecutorImpl - Assigning task Yahoo Fetcher to TaskExecutor... 
+[3b238481-5f2b-43cf-a858-cc3f1af4adf6|store-123|||222]2015-02-12T18:00:55,738Z DEBUG c.g.x.s.s.h.s.impl.TaskExecutorImpl - Successfully assigned. 
+[]2015-02-12T18:00:55,751Z DEBUG c.g.x.s.s.h.s.impl.TaskExecutorImpl - Running Task Yahoo Fetcher 
+[]2015-02-12T18:00:55,830Z DEBUG c.g.c.b.s.o.a.h.i.c.BasicClientConnectionManager - Get connection for route {s}->https://www.yahoo.com 
+[]2015-02-12T18:00:56,932Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultClientConnectionOperator - Connecting to www.yahoo.com:443 
+[]2015-02-12T18:00:57,470Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestAddCookies - CookieSpec selected: best-match 
+[]2015-02-12T18:00:57,471Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestAuthCache - Auth cache not set in the context 
+[]2015-02-12T18:00:57,471Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestTargetAuthentication - Target auth state: UNCHALLENGED 
+[]2015-02-12T18:00:57,471Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED 
+[]2015-02-12T18:00:57,471Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultHttpClient - Attempt 1 to execute request 
+[]2015-02-12T18:00:57,471Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultClientConnection - Sending request: GET / HTTP/1.1 
+[]2015-02-12T18:00:57,471Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "GET / HTTP/1.1[\r][\n]" 
+[]2015-02-12T18:00:57,471Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "accept: application/json[\r][\n]" 
+[]2015-02-12T18:00:57,471Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "Host: www.yahoo.com[\r][\n]" 
+[]2015-02-12T18:00:57,471Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]" 
+[]2015-02-12T18:00:57,471Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.3.5 (java 1.5)[\r][\n]" 
+[]2015-02-12T18:00:57,471Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "[\r][\n]" 
+[]2015-02-12T18:00:57,471Z DEBUG c.g.c.b.s.org.apache.http.headers - >> GET / HTTP/1.1 
+[]2015-02-12T18:00:57,471Z DEBUG c.g.c.b.s.org.apache.http.headers - >> accept: application/json 
+[]2015-02-12T18:00:57,471Z DEBUG c.g.c.b.s.org.apache.http.headers - >> Host: www.yahoo.com 
+[]2015-02-12T18:00:57,471Z DEBUG c.g.c.b.s.org.apache.http.headers - >> Connection: Keep-Alive 
+[]2015-02-12T18:00:57,471Z DEBUG c.g.c.b.s.org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.3.5 (java 1.5) 
+[]2015-02-12T18:00:58,083Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "HTTP/1.1 302 Found[\r][\n]" 
+[]2015-02-12T18:00:58,083Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Date: Thu, 12 Feb 2015 18:00:57 GMT[\r][\n]" 
+[]2015-02-12T18:00:58,083Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "P3P: policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"[\r][\n]" 
+[]2015-02-12T18:00:58,083Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Cache-Control: private[\r][\n]" 
+[]2015-02-12T18:00:58,083Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "X-Frame-Options: DENY[\r][\n]" 
+[]2015-02-12T18:00:58,083Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Strict-Transport-Security: max-age=2592000[\r][\n]" 
+[]2015-02-12T18:00:58,083Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Set-Cookie: DNR=deleted; expires=Wed, 12-Feb-2014 18:00:56 GMT; path=/; domain=.www.yahoo.com[\r][\n]" 
+[]2015-02-12T18:00:58,083Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Set-Cookie: DNR=deleted; expires=Wed, 12-Feb-2014 18:00:56 GMT; path=/; domain=.www.yahoo.com[\r][\n]" 
+[]2015-02-12T18:00:58,083Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Set-Cookie: hpc=d=QYQs9KAjxcv4GXzk.7gBHSR3DX0Q5Qx1nceGB.Zlz_08vlhpxpRAtRI5u4BfzFzJaQljpSDPs3YMk4bTsIPefeqcxZ7s6NmMCzHKcoafcGBNt2TsSrvlwVQKlejInGyhiqU8zNSm0Zg0RnKNjN08iaQc29EcbeiafUi7ZcG0uFvw77wk_dTU93sYQyiRJ6VZTRu.FQQ-&v=2; expires=Fri, 12-Feb-2016 18:00:57 GMT; path=/; domain=www.yahoo.com[\r][\n]" 
+[]2015-02-12T18:00:58,083Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Location: https://id.yahoo.com/?p=us[\r][\n]" 
+[]2015-02-12T18:00:58,083Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Vary: Accept-Encoding[\r][\n]" 
+[]2015-02-12T18:00:58,084Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Content-Type: text/html; charset=utf-8[\r][\n]" 
+[]2015-02-12T18:00:58,084Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Age: 0[\r][\n]" 
+[]2015-02-12T18:00:58,084Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Via: http/1.1 usproxy3.fp.gq1.yahoo.com (ApacheTrafficServer), http/1.1 ir15.fp.sg3.yahoo.com (ApacheTrafficServer)[\r][\n]" 
+[]2015-02-12T18:00:58,084Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Server: ATS[\r][\n]" 
+[]2015-02-12T18:00:58,084Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Transfer-Encoding: chunked[\r][\n]" 
+[]2015-02-12T18:00:58,084Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Connection: keep-alive[\r][\n]" 
+[]2015-02-12T18:00:58,084Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "[\r][\n]" 
+[]2015-02-12T18:00:58,084Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultClientConnection - Receiving response: HTTP/1.1 302 Found 
+[]2015-02-12T18:00:58,084Z DEBUG c.g.c.b.s.org.apache.http.headers - << HTTP/1.1 302 Found 
+[]2015-02-12T18:00:58,084Z DEBUG c.g.c.b.s.org.apache.http.headers - << Date: Thu, 12 Feb 2015 18:00:57 GMT 
+[]2015-02-12T18:00:58,084Z DEBUG c.g.c.b.s.org.apache.http.headers - << P3P: policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV" 
+[]2015-02-12T18:00:58,084Z DEBUG c.g.c.b.s.org.apache.http.headers - << Cache-Control: private 
+[]2015-02-12T18:00:58,084Z DEBUG c.g.c.b.s.org.apache.http.headers - << X-Frame-Options: DENY 
+[]2015-02-12T18:00:58,084Z DEBUG c.g.c.b.s.org.apache.http.headers - << Strict-Transport-Security: max-age=2592000 
+[]2015-02-12T18:00:58,084Z DEBUG c.g.c.b.s.org.apache.http.headers - << Set-Cookie: DNR=deleted; expires=Wed, 12-Feb-2014 18:00:56 GMT; path=/; domain=.www.yahoo.com 
+[]2015-02-12T18:00:58,084Z DEBUG c.g.c.b.s.org.apache.http.headers - << Set-Cookie: DNR=deleted; expires=Wed, 12-Feb-2014 18:00:56 GMT; path=/; domain=.www.yahoo.com 
+[]2015-02-12T18:00:58,084Z DEBUG c.g.c.b.s.org.apache.http.headers - << Set-Cookie: hpc=d=QYQs9KAjxcv4GXzk.7gBHSR3DX0Q5Qx1nceGB.Zlz_08vlhpxpRAtRI5u4BfzFzJaQljpSDPs3YMk4bTsIPefeqcxZ7s6NmMCzHKcoafcGBNt2TsSrvlwVQKlejInGyhiqU8zNSm0Zg0RnKNjN08iaQc29EcbeiafUi7ZcG0uFvw77wk_dTU93sYQyiRJ6VZTRu.FQQ-&v=2; expires=Fri, 12-Feb-2016 18:00:57 GMT; path=/; domain=www.yahoo.com 
+[]2015-02-12T18:00:58,084Z DEBUG c.g.c.b.s.org.apache.http.headers - << Location: https://id.yahoo.com/?p=us 
+[]2015-02-12T18:00:58,084Z DEBUG c.g.c.b.s.org.apache.http.headers - << Vary: Accept-Encoding 
+[]2015-02-12T18:00:58,084Z DEBUG c.g.c.b.s.org.apache.http.headers - << Content-Type: text/html; charset=utf-8 
+[]2015-02-12T18:00:58,084Z DEBUG c.g.c.b.s.org.apache.http.headers - << Age: 0 
+[]2015-02-12T18:00:58,084Z DEBUG c.g.c.b.s.org.apache.http.headers - << Via: http/1.1 usproxy3.fp.gq1.yahoo.com (ApacheTrafficServer), http/1.1 ir15.fp.sg3.yahoo.com (ApacheTrafficServer) 
+[]2015-02-12T18:00:58,085Z DEBUG c.g.c.b.s.org.apache.http.headers - << Server: ATS 
+[]2015-02-12T18:00:58,085Z DEBUG c.g.c.b.s.org.apache.http.headers - << Transfer-Encoding: chunked 
+[]2015-02-12T18:00:58,085Z DEBUG c.g.c.b.s.org.apache.http.headers - << Connection: keep-alive 
+[]2015-02-12T18:00:58,085Z DEBUG c.g.c.b.s.o.a.h.c.p.ResponseProcessCookies - Cookie accepted [DNR="deleted", version:0, domain:.www.yahoo.com, path:/, expiry:Thu Feb 13 01:00:56 WIT 2014] 
+[]2015-02-12T18:00:58,085Z DEBUG c.g.c.b.s.o.a.h.c.p.ResponseProcessCookies - Cookie accepted [DNR="deleted", version:0, domain:.www.yahoo.com, path:/, expiry:Thu Feb 13 01:00:56 WIT 2014] 
+[]2015-02-12T18:00:58,086Z DEBUG c.g.c.b.s.o.a.h.c.p.ResponseProcessCookies - Cookie accepted [hpc="d=QYQs9KAjxcv4GXzk.7gBHSR3DX0Q5Qx1nceGB.Zlz_08vlhpxpRAtRI5u4BfzFzJaQljpSDPs3YMk4bTsIPefeqcxZ7s6NmMCz...", version:0, domain:www.yahoo.com, path:/, expiry:Sat Feb 13 01:00:57 WIT 2016] 
+[]2015-02-12T18:00:58,086Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultHttpClient - Connection can be kept alive indefinitely 
+[]2015-02-12T18:00:58,086Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultRedirectStrategy - Redirect requested to location 'https://id.yahoo.com/?p=us' 
+[]2015-02-12T18:00:58,108Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultHttpClient - Resetting target auth state 
+[]2015-02-12T18:00:58,108Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultHttpClient - Redirecting to 'https://id.yahoo.com/?p=us' via {s}->https://id.yahoo.com 
+[]2015-02-12T18:00:58,149Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "0000051[\r][\n]" 
+[]2015-02-12T18:00:58,149Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "<!-- hw90.fp.gq1.yahoo.com uncompressed/chunked Thu Feb 12 18:00:57 UTC 2015 -->[\n]" 
+[]2015-02-12T18:00:58,149Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "[\r][\n]" 
+[]2015-02-12T18:00:58,149Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "0[\r][\n]" 
+[]2015-02-12T18:00:58,149Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "[\r][\n]" 
+[]2015-02-12T18:00:58,150Z DEBUG c.g.c.b.s.o.a.h.i.c.BasicClientConnectionManager - Releasing connection com.gdn.common.base.shade.org.apache.http.impl.conn.ManagedClientConnectionImpl@3c5f398 
+[]2015-02-12T18:00:58,150Z DEBUG c.g.c.b.s.o.a.h.i.c.BasicClientConnectionManager - Connection can be kept alive indefinitely 
+[]2015-02-12T18:00:58,150Z DEBUG c.g.c.b.s.o.a.h.i.c.BasicClientConnectionManager - Get connection for route {s}->https://id.yahoo.com 
+[]2015-02-12T18:00:58,150Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultClientConnection - Connection 0.0.0.0:54200<->106.10.138.240:443 closed 
+[]2015-02-12T18:00:58,648Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultClientConnectionOperator - Connecting to id.yahoo.com:443 
+[]2015-02-12T18:00:59,211Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestAddCookies - CookieSpec selected: best-match 
+[]2015-02-12T18:00:59,211Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestAuthCache - Auth cache not set in the context 
+[]2015-02-12T18:00:59,211Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestTargetAuthentication - Target auth state: UNCHALLENGED 
+[]2015-02-12T18:00:59,211Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED 
+[]2015-02-12T18:00:59,211Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultHttpClient - Attempt 2 to execute request 
+[]2015-02-12T18:00:59,211Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultClientConnection - Sending request: GET /?p=us HTTP/1.1 
+[]2015-02-12T18:00:59,211Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "GET /?p=us HTTP/1.1[\r][\n]" 
+[]2015-02-12T18:00:59,211Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "accept: application/json[\r][\n]" 
+[]2015-02-12T18:00:59,211Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "Host: id.yahoo.com[\r][\n]" 
+[]2015-02-12T18:00:59,211Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]" 
+[]2015-02-12T18:00:59,211Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.3.5 (java 1.5)[\r][\n]" 
+[]2015-02-12T18:00:59,212Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "[\r][\n]" 
+[]2015-02-12T18:00:59,212Z DEBUG c.g.c.b.s.org.apache.http.headers - >> GET /?p=us HTTP/1.1 
+[]2015-02-12T18:00:59,212Z DEBUG c.g.c.b.s.org.apache.http.headers - >> accept: application/json 
+[]2015-02-12T18:00:59,212Z DEBUG c.g.c.b.s.org.apache.http.headers - >> Host: id.yahoo.com 
+[]2015-02-12T18:00:59,212Z DEBUG c.g.c.b.s.org.apache.http.headers - >> Connection: Keep-Alive 
+[]2015-02-12T18:00:59,212Z DEBUG c.g.c.b.s.org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.3.5 (java 1.5) 
+[]2015-02-12T18:00:59,509Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "HTTP/1.1 200 OK[\r][\n]" 
+[]2015-02-12T18:00:59,509Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Date: Thu, 12 Feb 2015 18:00:59 GMT[\r][\n]" 
+[]2015-02-12T18:00:59,509Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "P3P: policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"[\r][\n]" 
+[]2015-02-12T18:00:59,509Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "X-Frame-Options: DENY[\r][\n]" 
+[]2015-02-12T18:00:59,509Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Strict-Transport-Security: max-age=2592000[\r][\n]" 
+[]2015-02-12T18:00:59,509Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Set-Cookie: DNR=deleted; expires=Wed, 12-Feb-2014 18:00:58 GMT; path=/; domain=.www.yahoo.com[\r][\n]" 
+[]2015-02-12T18:00:59,510Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Set-Cookie: DNR=deleted; expires=Wed, 12-Feb-2014 18:00:58 GMT; path=/; domain=.id.yahoo.com[\r][\n]" 
+[]2015-02-12T18:00:59,510Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Set-Cookie: PH=deleted; expires=Wed, 12-Feb-2014 18:00:58 GMT; path=/; domain=.yahoo.com[\r][\n]" 
+[]2015-02-12T18:00:59,510Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Vary: Accept-Encoding[\r][\n]" 
+[]2015-02-12T18:00:59,510Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Content-Type: text/html; charset=utf-8[\r][\n]" 
+[]2015-02-12T18:00:59,510Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Age: 0[\r][\n]" 
+[]2015-02-12T18:00:59,510Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Transfer-Encoding: chunked[\r][\n]" 
+[]2015-02-12T18:00:59,510Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Connection: keep-alive[\r][\n]" 
+[]2015-02-12T18:00:59,510Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Via: http/1.1 ir4.fp.tp2.yahoo.com (ApacheTrafficServer)[\r][\n]" 
+[]2015-02-12T18:00:59,510Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Server: ATS[\r][\n]" 
+[]2015-02-12T18:00:59,510Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Cache-Control: no-store, no-cache, private, max-age=0[\r][\n]" 
+[]2015-02-12T18:00:59,510Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Expires: -1[\r][\n]" 
+[]2015-02-12T18:00:59,510Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "[\r][\n]" 
+[]2015-02-12T18:00:59,510Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultClientConnection - Receiving response: HTTP/1.1 200 OK 
+[]2015-02-12T18:00:59,510Z DEBUG c.g.c.b.s.org.apache.http.headers - << HTTP/1.1 200 OK 
+[]2015-02-12T18:00:59,510Z DEBUG c.g.c.b.s.org.apache.http.headers - << Date: Thu, 12 Feb 2015 18:00:59 GMT 
+[]2015-02-12T18:00:59,510Z DEBUG c.g.c.b.s.org.apache.http.headers - << P3P: policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV" 
+[]2015-02-12T18:00:59,521Z DEBUG c.g.c.b.s.org.apache.http.headers - << X-Frame-Options: DENY 
+[]2015-02-12T18:00:59,521Z DEBUG c.g.c.b.s.org.apache.http.headers - << Strict-Transport-Security: max-age=2592000 
+[]2015-02-12T18:00:59,521Z DEBUG c.g.c.b.s.org.apache.http.headers - << Set-Cookie: DNR=deleted; expires=Wed, 12-Feb-2014 18:00:58 GMT; path=/; domain=.www.yahoo.com 
+[]2015-02-12T18:00:59,521Z DEBUG c.g.c.b.s.org.apache.http.headers - << Set-Cookie: DNR=deleted; expires=Wed, 12-Feb-2014 18:00:58 GMT; path=/; domain=.id.yahoo.com 
+[]2015-02-12T18:00:59,521Z DEBUG c.g.c.b.s.org.apache.http.headers - << Set-Cookie: PH=deleted; expires=Wed, 12-Feb-2014 18:00:58 GMT; path=/; domain=.yahoo.com 
+[]2015-02-12T18:00:59,521Z DEBUG c.g.c.b.s.org.apache.http.headers - << Vary: Accept-Encoding 
+[]2015-02-12T18:00:59,522Z DEBUG c.g.c.b.s.org.apache.http.headers - << Content-Type: text/html; charset=utf-8 
+[]2015-02-12T18:00:59,522Z DEBUG c.g.c.b.s.org.apache.http.headers - << Age: 0 
+[]2015-02-12T18:00:59,522Z DEBUG c.g.c.b.s.org.apache.http.headers - << Transfer-Encoding: chunked 
+[]2015-02-12T18:00:59,522Z DEBUG c.g.c.b.s.org.apache.http.headers - << Connection: keep-alive 
+[]2015-02-12T18:00:59,522Z DEBUG c.g.c.b.s.org.apache.http.headers - << Via: http/1.1 ir4.fp.tp2.yahoo.com (ApacheTrafficServer) 
+[]2015-02-12T18:00:59,522Z DEBUG c.g.c.b.s.org.apache.http.headers - << Server: ATS 
+[]2015-02-12T18:00:59,522Z DEBUG c.g.c.b.s.org.apache.http.headers - << Cache-Control: no-store, no-cache, private, max-age=0 
+[]2015-02-12T18:00:59,522Z DEBUG c.g.c.b.s.org.apache.http.headers - << Expires: -1 
+[]2015-02-12T18:00:59,522Z WARN  c.g.c.b.s.o.a.h.c.p.ResponseProcessCookies - Cookie rejected [DNR="deleted", version:0, domain:.www.yahoo.com, path:/, expiry:Thu Feb 13 01:00:58 WIT 2014] Illegal domain attribute "www.yahoo.com". Domain of origin: "id.yahoo.com" 
+[]2015-02-12T18:00:59,523Z DEBUG c.g.c.b.s.o.a.h.c.p.ResponseProcessCookies - Cookie accepted [DNR="deleted", version:0, domain:.id.yahoo.com, path:/, expiry:Thu Feb 13 01:00:58 WIT 2014] 
+[]2015-02-12T18:00:59,523Z DEBUG c.g.c.b.s.o.a.h.c.p.ResponseProcessCookies - Cookie accepted [PH="deleted", version:0, domain:.yahoo.com, path:/, expiry:Thu Feb 13 01:00:58 WIT 2014] 
+[]2015-02-12T18:00:59,523Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultHttpClient - Connection can be kept alive indefinitely 
+[]2015-02-12T18:00:59,524Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultClientConnection - Connection 0.0.0.0:54201<->116.214.12.74:443 closed 
+[]2015-02-12T18:01:00,002Z DEBUG c.g.x.s.s.h.s.impl.TaskExecutorImpl - Running Task Google Fetcher 
+[]2015-02-12T18:01:00,003Z DEBUG c.g.x.s.s.h.s.impl.TaskExecutorImpl - Running Task Yahoo Fetcher 
+[]2015-02-12T18:01:00,023Z DEBUG c.g.c.b.s.o.a.h.i.c.BasicClientConnectionManager - Get connection for route {}->http://www.google.com 
+[]2015-02-12T18:01:00,023Z DEBUG c.g.c.b.s.o.a.h.i.c.BasicClientConnectionManager - Get connection for route {s}->https://www.yahoo.com 
+[]2015-02-12T18:01:00,023Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultClientConnectionOperator - Connecting to www.google.com:80 
+[]2015-02-12T18:01:00,024Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultClientConnectionOperator - Connecting to www.yahoo.com:443 
+[]2015-02-12T18:01:00,078Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestAddCookies - CookieSpec selected: best-match 
+[]2015-02-12T18:01:00,079Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestAuthCache - Auth cache not set in the context 
+[]2015-02-12T18:01:00,079Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestTargetAuthentication - Target auth state: UNCHALLENGED 
+[]2015-02-12T18:01:00,079Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED 
+[]2015-02-12T18:01:00,079Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultHttpClient - Attempt 1 to execute request 
+[]2015-02-12T18:01:00,079Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultClientConnection - Sending request: GET / HTTP/1.1 
+[]2015-02-12T18:01:00,079Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "GET / HTTP/1.1[\r][\n]" 
+[]2015-02-12T18:01:00,079Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "accept: application/json[\r][\n]" 
+[]2015-02-12T18:01:00,079Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "Host: www.google.com[\r][\n]" 
+[]2015-02-12T18:01:00,079Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]" 
+[]2015-02-12T18:01:00,079Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.3.5 (java 1.5)[\r][\n]" 
+[]2015-02-12T18:01:00,079Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "[\r][\n]" 
+[]2015-02-12T18:01:00,079Z DEBUG c.g.c.b.s.org.apache.http.headers - >> GET / HTTP/1.1 
+[]2015-02-12T18:01:00,079Z DEBUG c.g.c.b.s.org.apache.http.headers - >> accept: application/json 
+[]2015-02-12T18:01:00,079Z DEBUG c.g.c.b.s.org.apache.http.headers - >> Host: www.google.com 
+[]2015-02-12T18:01:00,079Z DEBUG c.g.c.b.s.org.apache.http.headers - >> Connection: Keep-Alive 
+[]2015-02-12T18:01:00,079Z DEBUG c.g.c.b.s.org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.3.5 (java 1.5) 
+[]2015-02-12T18:01:00,539Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestAddCookies - CookieSpec selected: best-match 
+[]2015-02-12T18:01:00,539Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestAuthCache - Auth cache not set in the context 
+[]2015-02-12T18:01:00,539Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestTargetAuthentication - Target auth state: UNCHALLENGED 
+[]2015-02-12T18:01:00,539Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED 
+[]2015-02-12T18:01:00,540Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultHttpClient - Attempt 1 to execute request 
+[]2015-02-12T18:01:00,540Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultClientConnection - Sending request: GET / HTTP/1.1 
+[]2015-02-12T18:01:00,540Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "GET / HTTP/1.1[\r][\n]" 
+[]2015-02-12T18:01:00,540Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "accept: application/json[\r][\n]" 
+[]2015-02-12T18:01:00,540Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "Host: www.yahoo.com[\r][\n]" 
+[]2015-02-12T18:01:00,540Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]" 
+[]2015-02-12T18:01:00,540Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.3.5 (java 1.5)[\r][\n]" 
+[]2015-02-12T18:01:00,540Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "[\r][\n]" 
+[]2015-02-12T18:01:00,540Z DEBUG c.g.c.b.s.org.apache.http.headers - >> GET / HTTP/1.1 
+[]2015-02-12T18:01:00,540Z DEBUG c.g.c.b.s.org.apache.http.headers - >> accept: application/json 
+[]2015-02-12T18:01:00,540Z DEBUG c.g.c.b.s.org.apache.http.headers - >> Host: www.yahoo.com 
+[]2015-02-12T18:01:00,540Z DEBUG c.g.c.b.s.org.apache.http.headers - >> Connection: Keep-Alive 
+[]2015-02-12T18:01:00,540Z DEBUG c.g.c.b.s.org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.3.5 (java 1.5) 
+[]2015-02-12T18:01:00,629Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "HTTP/1.1 200 OK[\r][\n]" 
+[]2015-02-12T18:01:00,629Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Date: Thu, 12 Feb 2015 18:01:00 GMT[\r][\n]" 
+[]2015-02-12T18:01:00,629Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Expires: -1[\r][\n]" 
+[]2015-02-12T18:01:00,629Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Cache-Control: private, max-age=0[\r][\n]" 
+[]2015-02-12T18:01:00,629Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Content-Type: text/html; charset=ISO-8859-1[\r][\n]" 
+[]2015-02-12T18:01:00,629Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "P3P: CP="This is not a P3P policy! See http://www.google.com/support/accounts/bin/answer.py?hl=en&answer=151657 for more info."[\r][\n]" 
+[]2015-02-12T18:01:00,629Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Server: gws[\r][\n]" 
+[]2015-02-12T18:01:00,629Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "X-XSS-Protection: 1; mode=block[\r][\n]" 
+[]2015-02-12T18:01:00,630Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "X-Frame-Options: SAMEORIGIN[\r][\n]" 
+[]2015-02-12T18:01:00,630Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Alternate-Protocol: 80:quic,p=0.08[\r][\n]" 
+[]2015-02-12T18:01:00,630Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Accept-Ranges: none[\r][\n]" 
+[]2015-02-12T18:01:00,630Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Vary: Accept-Encoding[\r][\n]" 
+[]2015-02-12T18:01:00,630Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Transfer-Encoding: chunked[\r][\n]" 
+[]2015-02-12T18:01:00,630Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Connection: Keep-Alive[\r][\n]" 
+[]2015-02-12T18:01:00,630Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Set-Cookie: PREF=ID=efb1525219b3aa48:FF=0:TM=1423764060:LM=1423764060:S=BajIoYgo5womv3IU; expires=Sat, 11-Feb-2017 18:01:00 GMT; path=/; domain=.google.com[\r][\n]" 
+[]2015-02-12T18:01:00,630Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Set-Cookie: NID=67=X1YT-LPF_UB6DeuNFmIDICidT96b27zxyWlsBX3yDeXqlQhbVU46hPmWrnDZdqWbpoxNqL_tdpusSm3RX5-Ly1iMPzvGMFw-Cfi0VlF0Wu7cqRzeIvH5kocZdDLr-11K; expires=Fri, 14-Aug-2015 18:01:00 GMT; path=/; domain=.google.com; HttpOnly[\r][\n]" 
+[]2015-02-12T18:01:00,630Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "[\r][\n]" 
+[]2015-02-12T18:01:00,630Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultClientConnection - Receiving response: HTTP/1.1 200 OK 
+[]2015-02-12T18:01:00,630Z DEBUG c.g.c.b.s.org.apache.http.headers - << HTTP/1.1 200 OK 
+[]2015-02-12T18:01:00,630Z DEBUG c.g.c.b.s.org.apache.http.headers - << Date: Thu, 12 Feb 2015 18:01:00 GMT 
+[]2015-02-12T18:01:00,630Z DEBUG c.g.c.b.s.org.apache.http.headers - << Expires: -1 
+[]2015-02-12T18:01:00,630Z DEBUG c.g.c.b.s.org.apache.http.headers - << Cache-Control: private, max-age=0 
+[]2015-02-12T18:01:00,630Z DEBUG c.g.c.b.s.org.apache.http.headers - << Content-Type: text/html; charset=ISO-8859-1 
+[]2015-02-12T18:01:00,630Z DEBUG c.g.c.b.s.org.apache.http.headers - << P3P: CP="This is not a P3P policy! See http://www.google.com/support/accounts/bin/answer.py?hl=en&answer=151657 for more info." 
+[]2015-02-12T18:01:00,630Z DEBUG c.g.c.b.s.org.apache.http.headers - << Server: gws 
+[]2015-02-12T18:01:00,630Z DEBUG c.g.c.b.s.org.apache.http.headers - << X-XSS-Protection: 1; mode=block 
+[]2015-02-12T18:01:00,630Z DEBUG c.g.c.b.s.org.apache.http.headers - << X-Frame-Options: SAMEORIGIN 
+[]2015-02-12T18:01:00,630Z DEBUG c.g.c.b.s.org.apache.http.headers - << Alternate-Protocol: 80:quic,p=0.08 
+[]2015-02-12T18:01:00,630Z DEBUG c.g.c.b.s.org.apache.http.headers - << Accept-Ranges: none 
+[]2015-02-12T18:01:00,630Z DEBUG c.g.c.b.s.org.apache.http.headers - << Vary: Accept-Encoding 
+[]2015-02-12T18:01:00,630Z DEBUG c.g.c.b.s.org.apache.http.headers - << Transfer-Encoding: chunked 
+[]2015-02-12T18:01:00,630Z DEBUG c.g.c.b.s.org.apache.http.headers - << Connection: Keep-Alive 
+[]2015-02-12T18:01:00,630Z DEBUG c.g.c.b.s.org.apache.http.headers - << Set-Cookie: PREF=ID=efb1525219b3aa48:FF=0:TM=1423764060:LM=1423764060:S=BajIoYgo5womv3IU; expires=Sat, 11-Feb-2017 18:01:00 GMT; path=/; domain=.google.com 
+[]2015-02-12T18:01:00,631Z DEBUG c.g.c.b.s.org.apache.http.headers - << Set-Cookie: NID=67=X1YT-LPF_UB6DeuNFmIDICidT96b27zxyWlsBX3yDeXqlQhbVU46hPmWrnDZdqWbpoxNqL_tdpusSm3RX5-Ly1iMPzvGMFw-Cfi0VlF0Wu7cqRzeIvH5kocZdDLr-11K; expires=Fri, 14-Aug-2015 18:01:00 GMT; path=/; domain=.google.com; HttpOnly 
+[]2015-02-12T18:01:00,631Z DEBUG c.g.c.b.s.o.a.h.c.p.ResponseProcessCookies - Cookie accepted [PREF="ID=efb1525219b3aa48:FF=0:TM=1423764060:LM=1423764060:S=BajIoYgo5womv3IU", version:0, domain:.google.com, path:/, expiry:Sun Feb 12 01:01:00 WIT 2017] 
+[]2015-02-12T18:01:00,631Z DEBUG c.g.c.b.s.o.a.h.c.p.ResponseProcessCookies - Cookie accepted [NID="67=X1YT-LPF_UB6DeuNFmIDICidT96b27zxyWlsBX3yDeXqlQhbVU46hPmWrnDZdqWbpoxNqL_tdpusSm3RX5-Ly1iMPzvGMFw-C...", version:0, domain:.google.com, path:/, expiry:Sat Aug 15 01:01:00 WIT 2015] 
+[]2015-02-12T18:01:00,632Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultHttpClient - Connection can be kept alive indefinitely 
+[]2015-02-12T18:01:00,632Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultClientConnection - Connection 0.0.0.0:54202<->119.110.118.113:80 closed 
+[]2015-02-12T18:01:00,889Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "HTTP/1.1 302 Found[\r][\n]" 
+[]2015-02-12T18:01:00,889Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Date: Thu, 12 Feb 2015 18:01:00 GMT[\r][\n]" 
+[]2015-02-12T18:01:00,889Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "P3P: policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"[\r][\n]" 
+[]2015-02-12T18:01:00,889Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Cache-Control: private[\r][\n]" 
+[]2015-02-12T18:01:00,889Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "X-Frame-Options: DENY[\r][\n]" 
+[]2015-02-12T18:01:00,889Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Strict-Transport-Security: max-age=2592000[\r][\n]" 
+[]2015-02-12T18:01:00,889Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Set-Cookie: DNR=deleted; expires=Wed, 12-Feb-2014 18:00:59 GMT; path=/; domain=.www.yahoo.com[\r][\n]" 
+[]2015-02-12T18:01:00,889Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Set-Cookie: DNR=deleted; expires=Wed, 12-Feb-2014 18:00:59 GMT; path=/; domain=.www.yahoo.com[\r][\n]" 
+[]2015-02-12T18:01:00,890Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Set-Cookie: hpc=d=oT.hh60mxcsBJImbpILgpkm3QV.W8FtQqHxeAcFtPlNAlnC0BZIjnkpzyGB57EBjQ9LJQBbp9KVd5q5jXfEzoZulDGVCxk8U4XgOFYhH.jvFKGNc8fkNeSN0XxZziLdtM5PUSQH0hQILiYBywZJxNDVG5cZxsg5320Ya44f73h7JiDVl.sIin6ssBn2oxe1KCgB_O0s-&v=2; expires=Fri, 12-Feb-2016 18:01:00 GMT; path=/; domain=www.yahoo.com[\r][\n]" 
+[]2015-02-12T18:01:00,890Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Location: https://id.yahoo.com/?p=us[\r][\n]" 
+[]2015-02-12T18:01:00,890Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Vary: Accept-Encoding[\r][\n]" 
+[]2015-02-12T18:01:00,890Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Content-Type: text/html; charset=utf-8[\r][\n]" 
+[]2015-02-12T18:01:00,890Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Age: 0[\r][\n]" 
+[]2015-02-12T18:01:00,890Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Via: http/1.1 usproxy3.fp.gq1.yahoo.com (ApacheTrafficServer), http/1.1 ir15.fp.sg3.yahoo.com (ApacheTrafficServer)[\r][\n]" 
+[]2015-02-12T18:01:00,890Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Server: ATS[\r][\n]" 
+[]2015-02-12T18:01:00,890Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Transfer-Encoding: chunked[\r][\n]" 
+[]2015-02-12T18:01:00,890Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Connection: keep-alive[\r][\n]" 
+[]2015-02-12T18:01:00,890Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "[\r][\n]" 
+[]2015-02-12T18:01:00,890Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultClientConnection - Receiving response: HTTP/1.1 302 Found 
+[]2015-02-12T18:01:00,890Z DEBUG c.g.c.b.s.org.apache.http.headers - << HTTP/1.1 302 Found 
+[]2015-02-12T18:01:00,890Z DEBUG c.g.c.b.s.org.apache.http.headers - << Date: Thu, 12 Feb 2015 18:01:00 GMT 
+[]2015-02-12T18:01:00,890Z DEBUG c.g.c.b.s.org.apache.http.headers - << P3P: policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV" 
+[]2015-02-12T18:01:00,891Z DEBUG c.g.c.b.s.org.apache.http.headers - << Cache-Control: private 
+[]2015-02-12T18:01:00,891Z DEBUG c.g.c.b.s.org.apache.http.headers - << X-Frame-Options: DENY 
+[]2015-02-12T18:01:00,891Z DEBUG c.g.c.b.s.org.apache.http.headers - << Strict-Transport-Security: max-age=2592000 
+[]2015-02-12T18:01:00,891Z DEBUG c.g.c.b.s.org.apache.http.headers - << Set-Cookie: DNR=deleted; expires=Wed, 12-Feb-2014 18:00:59 GMT; path=/; domain=.www.yahoo.com 
+[]2015-02-12T18:01:00,891Z DEBUG c.g.c.b.s.org.apache.http.headers - << Set-Cookie: DNR=deleted; expires=Wed, 12-Feb-2014 18:00:59 GMT; path=/; domain=.www.yahoo.com 
+[]2015-02-12T18:01:00,891Z DEBUG c.g.c.b.s.org.apache.http.headers - << Set-Cookie: hpc=d=oT.hh60mxcsBJImbpILgpkm3QV.W8FtQqHxeAcFtPlNAlnC0BZIjnkpzyGB57EBjQ9LJQBbp9KVd5q5jXfEzoZulDGVCxk8U4XgOFYhH.jvFKGNc8fkNeSN0XxZziLdtM5PUSQH0hQILiYBywZJxNDVG5cZxsg5320Ya44f73h7JiDVl.sIin6ssBn2oxe1KCgB_O0s-&v=2; expires=Fri, 12-Feb-2016 18:01:00 GMT; path=/; domain=www.yahoo.com 
+[]2015-02-12T18:01:00,891Z DEBUG c.g.c.b.s.org.apache.http.headers - << Location: https://id.yahoo.com/?p=us 
+[]2015-02-12T18:01:00,891Z DEBUG c.g.c.b.s.org.apache.http.headers - << Vary: Accept-Encoding 
+[]2015-02-12T18:01:00,891Z DEBUG c.g.c.b.s.org.apache.http.headers - << Content-Type: text/html; charset=utf-8 
+[]2015-02-12T18:01:00,891Z DEBUG c.g.c.b.s.org.apache.http.headers - << Age: 0 
+[]2015-02-12T18:01:00,891Z DEBUG c.g.c.b.s.org.apache.http.headers - << Via: http/1.1 usproxy3.fp.gq1.yahoo.com (ApacheTrafficServer), http/1.1 ir15.fp.sg3.yahoo.com (ApacheTrafficServer) 
+[]2015-02-12T18:01:00,891Z DEBUG c.g.c.b.s.org.apache.http.headers - << Server: ATS 
+[]2015-02-12T18:01:00,891Z DEBUG c.g.c.b.s.org.apache.http.headers - << Transfer-Encoding: chunked 
+[]2015-02-12T18:01:00,891Z DEBUG c.g.c.b.s.org.apache.http.headers - << Connection: keep-alive 
+[]2015-02-12T18:01:00,892Z DEBUG c.g.c.b.s.o.a.h.c.p.ResponseProcessCookies - Cookie accepted [DNR="deleted", version:0, domain:.www.yahoo.com, path:/, expiry:Thu Feb 13 01:00:59 WIT 2014] 
+[]2015-02-12T18:01:00,892Z DEBUG c.g.c.b.s.o.a.h.c.p.ResponseProcessCookies - Cookie accepted [DNR="deleted", version:0, domain:.www.yahoo.com, path:/, expiry:Thu Feb 13 01:00:59 WIT 2014] 
+[]2015-02-12T18:01:00,892Z DEBUG c.g.c.b.s.o.a.h.c.p.ResponseProcessCookies - Cookie accepted [hpc="d=oT.hh60mxcsBJImbpILgpkm3QV.W8FtQqHxeAcFtPlNAlnC0BZIjnkpzyGB57EBjQ9LJQBbp9KVd5q5jXfEzoZulDGVCxk8U4X...", version:0, domain:www.yahoo.com, path:/, expiry:Sat Feb 13 01:01:00 WIT 2016] 
+[]2015-02-12T18:01:00,893Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultHttpClient - Connection can be kept alive indefinitely 
+[]2015-02-12T18:01:00,893Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultRedirectStrategy - Redirect requested to location 'https://id.yahoo.com/?p=us' 
+[]2015-02-12T18:01:00,893Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultHttpClient - Resetting target auth state 
+[]2015-02-12T18:01:00,893Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultHttpClient - Redirecting to 'https://id.yahoo.com/?p=us' via {s}->https://id.yahoo.com 
+[]2015-02-12T18:01:00,958Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "0000051[\r][\n]" 
+[]2015-02-12T18:01:00,958Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "<!-- hw21.fp.gq1.yahoo.com uncompressed/chunked Thu Feb 12 18:01:00 UTC 2015 -->[\n]" 
+[]2015-02-12T18:01:00,958Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "[\r][\n]" 
+[]2015-02-12T18:01:00,958Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "0[\r][\n]" 
+[]2015-02-12T18:01:00,958Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "[\r][\n]" 
+[]2015-02-12T18:01:00,959Z DEBUG c.g.c.b.s.o.a.h.i.c.BasicClientConnectionManager - Releasing connection com.gdn.common.base.shade.org.apache.http.impl.conn.ManagedClientConnectionImpl@912603 
+[]2015-02-12T18:01:00,959Z DEBUG c.g.c.b.s.o.a.h.i.c.BasicClientConnectionManager - Connection can be kept alive indefinitely 
+[]2015-02-12T18:01:00,959Z DEBUG c.g.c.b.s.o.a.h.i.c.BasicClientConnectionManager - Get connection for route {s}->https://id.yahoo.com 
+[]2015-02-12T18:01:00,959Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultClientConnection - Connection 0.0.0.0:54203<->106.10.138.240:443 closed 
+[]2015-02-12T18:01:00,960Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultClientConnectionOperator - Connecting to id.yahoo.com:443 
+[]2015-02-12T18:01:01,590Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestAddCookies - CookieSpec selected: best-match 
+[]2015-02-12T18:01:01,590Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestAuthCache - Auth cache not set in the context 
+[]2015-02-12T18:01:01,590Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestTargetAuthentication - Target auth state: UNCHALLENGED 
+[]2015-02-12T18:01:01,590Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED 
+[]2015-02-12T18:01:01,590Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultHttpClient - Attempt 2 to execute request 
+[]2015-02-12T18:01:01,590Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultClientConnection - Sending request: GET /?p=us HTTP/1.1 
+[]2015-02-12T18:01:01,590Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "GET /?p=us HTTP/1.1[\r][\n]" 
+[]2015-02-12T18:01:01,630Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "accept: application/json[\r][\n]" 
+[]2015-02-12T18:01:01,631Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "Host: id.yahoo.com[\r][\n]" 
+[]2015-02-12T18:01:01,631Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]" 
+[]2015-02-12T18:01:01,631Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.3.5 (java 1.5)[\r][\n]" 
+[]2015-02-12T18:01:01,631Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "[\r][\n]" 
+[]2015-02-12T18:01:01,631Z DEBUG c.g.c.b.s.org.apache.http.headers - >> GET /?p=us HTTP/1.1 
+[]2015-02-12T18:01:01,631Z DEBUG c.g.c.b.s.org.apache.http.headers - >> accept: application/json 
+[]2015-02-12T18:01:01,631Z DEBUG c.g.c.b.s.org.apache.http.headers - >> Host: id.yahoo.com 
+[]2015-02-12T18:01:01,631Z DEBUG c.g.c.b.s.org.apache.http.headers - >> Connection: Keep-Alive 
+[]2015-02-12T18:01:01,631Z DEBUG c.g.c.b.s.org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.3.5 (java 1.5) 
+[]2015-02-12T18:01:01,899Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "HTTP/1.1 200 OK[\r][\n]" 
+[]2015-02-12T18:01:01,900Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Date: Thu, 12 Feb 2015 18:01:01 GMT[\r][\n]" 
+[]2015-02-12T18:01:01,900Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "P3P: policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"[\r][\n]" 
+[]2015-02-12T18:01:01,900Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "X-Frame-Options: DENY[\r][\n]" 
+[]2015-02-12T18:01:01,900Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Strict-Transport-Security: max-age=2592000[\r][\n]" 
+[]2015-02-12T18:01:01,900Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Set-Cookie: DNR=deleted; expires=Wed, 12-Feb-2014 18:01:00 GMT; path=/; domain=.www.yahoo.com[\r][\n]" 
+[]2015-02-12T18:01:01,900Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Set-Cookie: DNR=deleted; expires=Wed, 12-Feb-2014 18:01:00 GMT; path=/; domain=.id.yahoo.com[\r][\n]" 
+[]2015-02-12T18:01:01,900Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Set-Cookie: PH=deleted; expires=Wed, 12-Feb-2014 18:01:00 GMT; path=/; domain=.yahoo.com[\r][\n]" 
+[]2015-02-12T18:01:01,900Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Vary: Accept-Encoding[\r][\n]" 
+[]2015-02-12T18:01:01,900Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Content-Type: text/html; charset=utf-8[\r][\n]" 
+[]2015-02-12T18:01:01,900Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Age: 0[\r][\n]" 
+[]2015-02-12T18:01:01,900Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Transfer-Encoding: chunked[\r][\n]" 
+[]2015-02-12T18:01:01,900Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Connection: keep-alive[\r][\n]" 
+[]2015-02-12T18:01:01,901Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Via: http/1.1 ir3.fp.tp2.yahoo.com (ApacheTrafficServer)[\r][\n]" 
+[]2015-02-12T18:01:01,901Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Server: ATS[\r][\n]" 
+[]2015-02-12T18:01:01,901Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Cache-Control: no-store, no-cache, private, max-age=0[\r][\n]" 
+[]2015-02-12T18:01:01,901Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Expires: -1[\r][\n]" 
+[]2015-02-12T18:01:01,901Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "[\r][\n]" 
+[]2015-02-12T18:01:01,901Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultClientConnection - Receiving response: HTTP/1.1 200 OK 
+[]2015-02-12T18:01:01,901Z DEBUG c.g.c.b.s.org.apache.http.headers - << HTTP/1.1 200 OK 
+[]2015-02-12T18:01:01,901Z DEBUG c.g.c.b.s.org.apache.http.headers - << Date: Thu, 12 Feb 2015 18:01:01 GMT 
+[]2015-02-12T18:01:01,901Z DEBUG c.g.c.b.s.org.apache.http.headers - << P3P: policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV" 
+[]2015-02-12T18:01:01,901Z DEBUG c.g.c.b.s.org.apache.http.headers - << X-Frame-Options: DENY 
+[]2015-02-12T18:01:01,901Z DEBUG c.g.c.b.s.org.apache.http.headers - << Strict-Transport-Security: max-age=2592000 
+[]2015-02-12T18:01:01,901Z DEBUG c.g.c.b.s.org.apache.http.headers - << Set-Cookie: DNR=deleted; expires=Wed, 12-Feb-2014 18:01:00 GMT; path=/; domain=.www.yahoo.com 
+[]2015-02-12T18:01:01,901Z DEBUG c.g.c.b.s.org.apache.http.headers - << Set-Cookie: DNR=deleted; expires=Wed, 12-Feb-2014 18:01:00 GMT; path=/; domain=.id.yahoo.com 
+[]2015-02-12T18:01:01,901Z DEBUG c.g.c.b.s.org.apache.http.headers - << Set-Cookie: PH=deleted; expires=Wed, 12-Feb-2014 18:01:00 GMT; path=/; domain=.yahoo.com 
+[]2015-02-12T18:01:01,901Z DEBUG c.g.c.b.s.org.apache.http.headers - << Vary: Accept-Encoding 
+[]2015-02-12T18:01:01,901Z DEBUG c.g.c.b.s.org.apache.http.headers - << Content-Type: text/html; charset=utf-8 
+[]2015-02-12T18:01:01,901Z DEBUG c.g.c.b.s.org.apache.http.headers - << Age: 0 
+[]2015-02-12T18:01:01,902Z DEBUG c.g.c.b.s.org.apache.http.headers - << Transfer-Encoding: chunked 
+[]2015-02-12T18:01:01,902Z DEBUG c.g.c.b.s.org.apache.http.headers - << Connection: keep-alive 
+[]2015-02-12T18:01:01,902Z DEBUG c.g.c.b.s.org.apache.http.headers - << Via: http/1.1 ir3.fp.tp2.yahoo.com (ApacheTrafficServer) 
+[]2015-02-12T18:01:01,902Z DEBUG c.g.c.b.s.org.apache.http.headers - << Server: ATS 
+[]2015-02-12T18:01:01,902Z DEBUG c.g.c.b.s.org.apache.http.headers - << Cache-Control: no-store, no-cache, private, max-age=0 
+[]2015-02-12T18:01:01,902Z DEBUG c.g.c.b.s.org.apache.http.headers - << Expires: -1 
+[]2015-02-12T18:01:01,902Z WARN  c.g.c.b.s.o.a.h.c.p.ResponseProcessCookies - Cookie rejected [DNR="deleted", version:0, domain:.www.yahoo.com, path:/, expiry:Thu Feb 13 01:01:00 WIT 2014] Illegal domain attribute "www.yahoo.com". Domain of origin: "id.yahoo.com" 
+[]2015-02-12T18:01:01,902Z DEBUG c.g.c.b.s.o.a.h.c.p.ResponseProcessCookies - Cookie accepted [DNR="deleted", version:0, domain:.id.yahoo.com, path:/, expiry:Thu Feb 13 01:01:00 WIT 2014] 
+[]2015-02-12T18:01:01,903Z DEBUG c.g.c.b.s.o.a.h.c.p.ResponseProcessCookies - Cookie accepted [PH="deleted", version:0, domain:.yahoo.com, path:/, expiry:Thu Feb 13 01:01:00 WIT 2014] 
+[]2015-02-12T18:01:01,903Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultHttpClient - Connection can be kept alive indefinitely 
+[]2015-02-12T18:01:01,903Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultClientConnection - Connection 0.0.0.0:54204<->116.214.12.74:443 closed 
+[]2015-02-12T18:01:05,002Z DEBUG c.g.x.s.s.h.s.impl.TaskExecutorImpl - Running Task Yahoo Fetcher 
+[]2015-02-12T18:01:05,768Z DEBUG c.g.c.b.s.o.a.h.i.c.BasicClientConnectionManager - Get connection for route {s}->https://www.yahoo.com 
+[]2015-02-12T18:01:05,769Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultClientConnectionOperator - Connecting to www.yahoo.com:443 
+[]2015-02-12T18:01:06,110Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestAddCookies - CookieSpec selected: best-match 
+[]2015-02-12T18:01:06,110Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestAuthCache - Auth cache not set in the context 
+[]2015-02-12T18:01:06,110Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestTargetAuthentication - Target auth state: UNCHALLENGED 
+[]2015-02-12T18:01:06,110Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED 
+[]2015-02-12T18:01:06,110Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultHttpClient - Attempt 1 to execute request 
+[]2015-02-12T18:01:06,110Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultClientConnection - Sending request: GET / HTTP/1.1 
+[]2015-02-12T18:01:06,110Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "GET / HTTP/1.1[\r][\n]" 
+[]2015-02-12T18:01:06,111Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "accept: application/json[\r][\n]" 
+[]2015-02-12T18:01:06,111Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "Host: www.yahoo.com[\r][\n]" 
+[]2015-02-12T18:01:06,111Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]" 
+[]2015-02-12T18:01:06,111Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.3.5 (java 1.5)[\r][\n]" 
+[]2015-02-12T18:01:06,111Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "[\r][\n]" 
+[]2015-02-12T18:01:06,413Z DEBUG c.g.c.b.s.org.apache.http.headers - >> GET / HTTP/1.1 
+[]2015-02-12T18:01:06,413Z DEBUG c.g.c.b.s.org.apache.http.headers - >> accept: application/json 
+[]2015-02-12T18:01:06,413Z DEBUG c.g.c.b.s.org.apache.http.headers - >> Host: www.yahoo.com 
+[]2015-02-12T18:01:06,413Z DEBUG c.g.c.b.s.org.apache.http.headers - >> Connection: Keep-Alive 
+[]2015-02-12T18:01:06,413Z DEBUG c.g.c.b.s.org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.3.5 (java 1.5) 
+[]2015-02-12T18:01:06,749Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "HTTP/1.1 302 Found[\r][\n]" 
+[]2015-02-12T18:01:06,749Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Date: Thu, 12 Feb 2015 18:01:06 GMT[\r][\n]" 
+[]2015-02-12T18:01:06,749Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "P3P: policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"[\r][\n]" 
+[]2015-02-12T18:01:06,749Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Cache-Control: private[\r][\n]" 
+[]2015-02-12T18:01:06,749Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "X-Frame-Options: DENY[\r][\n]" 
+[]2015-02-12T18:01:06,749Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Strict-Transport-Security: max-age=2592000[\r][\n]" 
+[]2015-02-12T18:01:06,749Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Set-Cookie: DNR=deleted; expires=Wed, 12-Feb-2014 18:01:05 GMT; path=/; domain=.www.yahoo.com[\r][\n]" 
+[]2015-02-12T18:01:06,749Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Set-Cookie: DNR=deleted; expires=Wed, 12-Feb-2014 18:01:05 GMT; path=/; domain=.www.yahoo.com[\r][\n]" 
+[]2015-02-12T18:01:06,749Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Set-Cookie: hpc=d=C11dUpgYxcvMK10Ht5yDKah3fFOAWztMG9ZU_Hf5GSYA1dRBY4jhIyvdZtCW.KHfZntBIL6.xmmB0fiW8OQ1VkYOT_5kCzaHkXduoHL1GvyaoyOuR.RRwhhf4Ssy7e.YkuLhi2bHu8.dV.J0gGDDGv.mxmnX72v7n9WPTAtlRpFJHahaTwEHoXfDoV1_a4cl56DJlkQ-&v=2; expires=Fri, 12-Feb-2016 18:01:06 GMT; path=/; domain=www.yahoo.com[\r][\n]" 
+[]2015-02-12T18:01:06,749Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Location: https://id.yahoo.com/?p=us[\r][\n]" 
+[]2015-02-12T18:01:06,749Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Vary: Accept-Encoding[\r][\n]" 
+[]2015-02-12T18:01:06,750Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Content-Type: text/html; charset=utf-8[\r][\n]" 
+[]2015-02-12T18:01:06,750Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Age: 0[\r][\n]" 
+[]2015-02-12T18:01:06,750Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Via: http/1.1 usproxy3.fp.gq1.yahoo.com (ApacheTrafficServer), http/1.1 ir15.fp.sg3.yahoo.com (ApacheTrafficServer)[\r][\n]" 
+[]2015-02-12T18:01:06,750Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Server: ATS[\r][\n]" 
+[]2015-02-12T18:01:06,750Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Transfer-Encoding: chunked[\r][\n]" 
+[]2015-02-12T18:01:06,750Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Connection: keep-alive[\r][\n]" 
+[]2015-02-12T18:01:06,750Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "[\r][\n]" 
+[]2015-02-12T18:01:06,750Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultClientConnection - Receiving response: HTTP/1.1 302 Found 
+[]2015-02-12T18:01:06,750Z DEBUG c.g.c.b.s.org.apache.http.headers - << HTTP/1.1 302 Found 
+[]2015-02-12T18:01:06,750Z DEBUG c.g.c.b.s.org.apache.http.headers - << Date: Thu, 12 Feb 2015 18:01:06 GMT 
+[]2015-02-12T18:01:06,750Z DEBUG c.g.c.b.s.org.apache.http.headers - << P3P: policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV" 
+[]2015-02-12T18:01:06,750Z DEBUG c.g.c.b.s.org.apache.http.headers - << Cache-Control: private 
+[]2015-02-12T18:01:06,750Z DEBUG c.g.c.b.s.org.apache.http.headers - << X-Frame-Options: DENY 
+[]2015-02-12T18:01:06,750Z DEBUG c.g.c.b.s.org.apache.http.headers - << Strict-Transport-Security: max-age=2592000 
+[]2015-02-12T18:01:06,750Z DEBUG c.g.c.b.s.org.apache.http.headers - << Set-Cookie: DNR=deleted; expires=Wed, 12-Feb-2014 18:01:05 GMT; path=/; domain=.www.yahoo.com 
+[]2015-02-12T18:01:06,750Z DEBUG c.g.c.b.s.org.apache.http.headers - << Set-Cookie: DNR=deleted; expires=Wed, 12-Feb-2014 18:01:05 GMT; path=/; domain=.www.yahoo.com 
+[]2015-02-12T18:01:06,750Z DEBUG c.g.c.b.s.org.apache.http.headers - << Set-Cookie: hpc=d=C11dUpgYxcvMK10Ht5yDKah3fFOAWztMG9ZU_Hf5GSYA1dRBY4jhIyvdZtCW.KHfZntBIL6.xmmB0fiW8OQ1VkYOT_5kCzaHkXduoHL1GvyaoyOuR.RRwhhf4Ssy7e.YkuLhi2bHu8.dV.J0gGDDGv.mxmnX72v7n9WPTAtlRpFJHahaTwEHoXfDoV1_a4cl56DJlkQ-&v=2; expires=Fri, 12-Feb-2016 18:01:06 GMT; path=/; domain=www.yahoo.com 
+[]2015-02-12T18:01:06,751Z DEBUG c.g.c.b.s.org.apache.http.headers - << Location: https://id.yahoo.com/?p=us 
+[]2015-02-12T18:01:06,751Z DEBUG c.g.c.b.s.org.apache.http.headers - << Vary: Accept-Encoding 
+[]2015-02-12T18:01:06,751Z DEBUG c.g.c.b.s.org.apache.http.headers - << Content-Type: text/html; charset=utf-8 
+[]2015-02-12T18:01:06,751Z DEBUG c.g.c.b.s.org.apache.http.headers - << Age: 0 
+[]2015-02-12T18:01:06,751Z DEBUG c.g.c.b.s.org.apache.http.headers - << Via: http/1.1 usproxy3.fp.gq1.yahoo.com (ApacheTrafficServer), http/1.1 ir15.fp.sg3.yahoo.com (ApacheTrafficServer) 
+[]2015-02-12T18:01:06,751Z DEBUG c.g.c.b.s.org.apache.http.headers - << Server: ATS 
+[]2015-02-12T18:01:06,751Z DEBUG c.g.c.b.s.org.apache.http.headers - << Transfer-Encoding: chunked 
+[]2015-02-12T18:01:06,751Z DEBUG c.g.c.b.s.org.apache.http.headers - << Connection: keep-alive 
+[]2015-02-12T18:01:06,752Z DEBUG c.g.c.b.s.o.a.h.c.p.ResponseProcessCookies - Cookie accepted [DNR="deleted", version:0, domain:.www.yahoo.com, path:/, expiry:Thu Feb 13 01:01:05 WIT 2014] 
+[]2015-02-12T18:01:06,752Z DEBUG c.g.c.b.s.o.a.h.c.p.ResponseProcessCookies - Cookie accepted [DNR="deleted", version:0, domain:.www.yahoo.com, path:/, expiry:Thu Feb 13 01:01:05 WIT 2014] 
+[]2015-02-12T18:01:06,752Z DEBUG c.g.c.b.s.o.a.h.c.p.ResponseProcessCookies - Cookie accepted [hpc="d=C11dUpgYxcvMK10Ht5yDKah3fFOAWztMG9ZU_Hf5GSYA1dRBY4jhIyvdZtCW.KHfZntBIL6.xmmB0fiW8OQ1VkYOT_5kCzaHkX...", version:0, domain:www.yahoo.com, path:/, expiry:Sat Feb 13 01:01:06 WIT 2016] 
+[]2015-02-12T18:01:06,753Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultHttpClient - Connection can be kept alive indefinitely 
+[]2015-02-12T18:01:06,753Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultRedirectStrategy - Redirect requested to location 'https://id.yahoo.com/?p=us' 
+[]2015-02-12T18:01:06,753Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultHttpClient - Resetting target auth state 
+[]2015-02-12T18:01:06,753Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultHttpClient - Redirecting to 'https://id.yahoo.com/?p=us' via {s}->https://id.yahoo.com 
+[]2015-02-12T18:01:06,828Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "0000050[\r][\n]" 
+[]2015-02-12T18:01:06,829Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "<!-- hw4.fp.gq1.yahoo.com uncompressed/chunked Thu Feb 12 18:01:06 UTC 2015 -->[\n]" 
+[]2015-02-12T18:01:06,829Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "[\r][\n]" 
+[]2015-02-12T18:01:06,829Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "0[\r][\n]" 
+[]2015-02-12T18:01:06,829Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "[\r][\n]" 
+[]2015-02-12T18:01:06,829Z DEBUG c.g.c.b.s.o.a.h.i.c.BasicClientConnectionManager - Releasing connection com.gdn.common.base.shade.org.apache.http.impl.conn.ManagedClientConnectionImpl@7804fbee 
+[]2015-02-12T18:01:06,829Z DEBUG c.g.c.b.s.o.a.h.i.c.BasicClientConnectionManager - Connection can be kept alive indefinitely 
+[]2015-02-12T18:01:06,829Z DEBUG c.g.c.b.s.o.a.h.i.c.BasicClientConnectionManager - Get connection for route {s}->https://id.yahoo.com 
+[]2015-02-12T18:01:06,829Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultClientConnection - Connection 0.0.0.0:54205<->106.10.138.240:443 closed 
+[]2015-02-12T18:01:06,830Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultClientConnectionOperator - Connecting to id.yahoo.com:443 
+[]2015-02-12T18:01:07,370Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestAddCookies - CookieSpec selected: best-match 
+[]2015-02-12T18:01:07,370Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestAuthCache - Auth cache not set in the context 
+[]2015-02-12T18:01:07,370Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestTargetAuthentication - Target auth state: UNCHALLENGED 
+[]2015-02-12T18:01:07,370Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED 
+[]2015-02-12T18:01:07,370Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultHttpClient - Attempt 2 to execute request 
+[]2015-02-12T18:01:07,370Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultClientConnection - Sending request: GET /?p=us HTTP/1.1 
+[]2015-02-12T18:01:07,371Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "GET /?p=us HTTP/1.1[\r][\n]" 
+[]2015-02-12T18:01:07,371Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "accept: application/json[\r][\n]" 
+[]2015-02-12T18:01:07,371Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "Host: id.yahoo.com[\r][\n]" 
+[]2015-02-12T18:01:07,371Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]" 
+[]2015-02-12T18:01:07,371Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.3.5 (java 1.5)[\r][\n]" 
+[]2015-02-12T18:01:07,371Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "[\r][\n]" 
+[]2015-02-12T18:01:07,371Z DEBUG c.g.c.b.s.org.apache.http.headers - >> GET /?p=us HTTP/1.1 
+[]2015-02-12T18:01:07,371Z DEBUG c.g.c.b.s.org.apache.http.headers - >> accept: application/json 
+[]2015-02-12T18:01:07,371Z DEBUG c.g.c.b.s.org.apache.http.headers - >> Host: id.yahoo.com 
+[]2015-02-12T18:01:07,371Z DEBUG c.g.c.b.s.org.apache.http.headers - >> Connection: Keep-Alive 
+[]2015-02-12T18:01:07,371Z DEBUG c.g.c.b.s.org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.3.5 (java 1.5) 
+[]2015-02-12T18:01:07,709Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "HTTP/1.1 200 OK[\r][\n]" 
+[]2015-02-12T18:01:07,758Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Date: Thu, 12 Feb 2015 18:01:07 GMT[\r][\n]" 
+[]2015-02-12T18:01:07,758Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "P3P: policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"[\r][\n]" 
+[]2015-02-12T18:01:07,758Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "X-Frame-Options: DENY[\r][\n]" 
+[]2015-02-12T18:01:07,758Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Strict-Transport-Security: max-age=2592000[\r][\n]" 
+[]2015-02-12T18:01:07,758Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Set-Cookie: DNR=deleted; expires=Wed, 12-Feb-2014 18:01:06 GMT; path=/; domain=.www.yahoo.com[\r][\n]" 
+[]2015-02-12T18:01:07,758Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Set-Cookie: DNR=deleted; expires=Wed, 12-Feb-2014 18:01:06 GMT; path=/; domain=.id.yahoo.com[\r][\n]" 
+[]2015-02-12T18:01:07,758Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Set-Cookie: PH=deleted; expires=Wed, 12-Feb-2014 18:01:06 GMT; path=/; domain=.yahoo.com[\r][\n]" 
+[]2015-02-12T18:01:07,758Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Vary: Accept-Encoding[\r][\n]" 
+[]2015-02-12T18:01:07,758Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Content-Type: text/html; charset=utf-8[\r][\n]" 
+[]2015-02-12T18:01:07,758Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Age: 0[\r][\n]" 
+[]2015-02-12T18:01:07,758Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Transfer-Encoding: chunked[\r][\n]" 
+[]2015-02-12T18:01:07,758Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Connection: keep-alive[\r][\n]" 
+[]2015-02-12T18:01:07,759Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Via: http/1.1 ir1.fp.tp2.yahoo.com (ApacheTrafficServer)[\r][\n]" 
+[]2015-02-12T18:01:07,759Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Server: ATS[\r][\n]" 
+[]2015-02-12T18:01:07,759Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Cache-Control: no-store, no-cache, private, max-age=0[\r][\n]" 
+[]2015-02-12T18:01:07,759Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Expires: -1[\r][\n]" 
+[]2015-02-12T18:01:07,759Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "[\r][\n]" 
+[]2015-02-12T18:01:07,759Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultClientConnection - Receiving response: HTTP/1.1 200 OK 
+[]2015-02-12T18:01:07,768Z DEBUG c.g.c.b.s.org.apache.http.headers - << HTTP/1.1 200 OK 
+[]2015-02-12T18:01:07,768Z DEBUG c.g.c.b.s.org.apache.http.headers - << Date: Thu, 12 Feb 2015 18:01:07 GMT 
+[]2015-02-12T18:01:07,769Z DEBUG c.g.c.b.s.org.apache.http.headers - << P3P: policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV" 
+[]2015-02-12T18:01:07,769Z DEBUG c.g.c.b.s.org.apache.http.headers - << X-Frame-Options: DENY 
+[]2015-02-12T18:01:07,769Z DEBUG c.g.c.b.s.org.apache.http.headers - << Strict-Transport-Security: max-age=2592000 
+[]2015-02-12T18:01:07,769Z DEBUG c.g.c.b.s.org.apache.http.headers - << Set-Cookie: DNR=deleted; expires=Wed, 12-Feb-2014 18:01:06 GMT; path=/; domain=.www.yahoo.com 
+[]2015-02-12T18:01:07,769Z DEBUG c.g.c.b.s.org.apache.http.headers - << Set-Cookie: DNR=deleted; expires=Wed, 12-Feb-2014 18:01:06 GMT; path=/; domain=.id.yahoo.com 
+[]2015-02-12T18:01:07,769Z DEBUG c.g.c.b.s.org.apache.http.headers - << Set-Cookie: PH=deleted; expires=Wed, 12-Feb-2014 18:01:06 GMT; path=/; domain=.yahoo.com 
+[]2015-02-12T18:01:07,769Z DEBUG c.g.c.b.s.org.apache.http.headers - << Vary: Accept-Encoding 
+[]2015-02-12T18:01:07,769Z DEBUG c.g.c.b.s.org.apache.http.headers - << Content-Type: text/html; charset=utf-8 
+[]2015-02-12T18:01:07,769Z DEBUG c.g.c.b.s.org.apache.http.headers - << Age: 0 
+[]2015-02-12T18:01:07,769Z DEBUG c.g.c.b.s.org.apache.http.headers - << Transfer-Encoding: chunked 
+[]2015-02-12T18:01:07,769Z DEBUG c.g.c.b.s.org.apache.http.headers - << Connection: keep-alive 
+[]2015-02-12T18:01:07,769Z DEBUG c.g.c.b.s.org.apache.http.headers - << Via: http/1.1 ir1.fp.tp2.yahoo.com (ApacheTrafficServer) 
+[]2015-02-12T18:01:07,769Z DEBUG c.g.c.b.s.org.apache.http.headers - << Server: ATS 
+[]2015-02-12T18:01:07,769Z DEBUG c.g.c.b.s.org.apache.http.headers - << Cache-Control: no-store, no-cache, private, max-age=0 
+[]2015-02-12T18:01:07,769Z DEBUG c.g.c.b.s.org.apache.http.headers - << Expires: -1 
+[]2015-02-12T18:01:07,769Z WARN  c.g.c.b.s.o.a.h.c.p.ResponseProcessCookies - Cookie rejected [DNR="deleted", version:0, domain:.www.yahoo.com, path:/, expiry:Thu Feb 13 01:01:06 WIT 2014] Illegal domain attribute "www.yahoo.com". Domain of origin: "id.yahoo.com" 
+[]2015-02-12T18:01:07,770Z DEBUG c.g.c.b.s.o.a.h.c.p.ResponseProcessCookies - Cookie accepted [DNR="deleted", version:0, domain:.id.yahoo.com, path:/, expiry:Thu Feb 13 01:01:06 WIT 2014] 
+[]2015-02-12T18:01:07,770Z DEBUG c.g.c.b.s.o.a.h.c.p.ResponseProcessCookies - Cookie accepted [PH="deleted", version:0, domain:.yahoo.com, path:/, expiry:Thu Feb 13 01:01:06 WIT 2014] 
+[]2015-02-12T18:01:07,770Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultHttpClient - Connection can be kept alive indefinitely 
+[]2015-02-12T18:01:07,771Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultClientConnection - Connection 0.0.0.0:54206<->116.214.12.74:443 closed 
+[]2015-02-12T18:01:09,002Z DEBUG c.g.x.s.s.h.s.impl.TaskExecutorImpl - Running Task Google Fetcher 
+[]2015-02-12T18:01:09,104Z DEBUG c.g.c.b.s.o.a.h.i.c.BasicClientConnectionManager - Get connection for route {}->http://www.google.com 
+[]2015-02-12T18:01:10,002Z DEBUG c.g.x.s.s.h.s.impl.TaskExecutorImpl - Running Task Yahoo Fetcher 
+[]2015-02-12T18:01:10,027Z DEBUG c.g.c.b.s.o.a.h.i.c.BasicClientConnectionManager - Get connection for route {s}->https://www.yahoo.com 
+[]2015-02-12T18:01:10,028Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultClientConnectionOperator - Connecting to www.yahoo.com:443 
+[]2015-02-12T18:01:10,239Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultClientConnectionOperator - Connecting to www.google.com:80 
+[]2015-02-12T18:01:10,289Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestAddCookies - CookieSpec selected: best-match 
+[]2015-02-12T18:01:10,289Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestAuthCache - Auth cache not set in the context 
+[]2015-02-12T18:01:10,289Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestTargetAuthentication - Target auth state: UNCHALLENGED 
+[]2015-02-12T18:01:10,289Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED 
+[]2015-02-12T18:01:10,289Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultHttpClient - Attempt 1 to execute request 
+[]2015-02-12T18:01:10,289Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultClientConnection - Sending request: GET / HTTP/1.1 
+[]2015-02-12T18:01:10,290Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "GET / HTTP/1.1[\r][\n]" 
+[]2015-02-12T18:01:10,290Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "accept: application/json[\r][\n]" 
+[]2015-02-12T18:01:10,290Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "Host: www.google.com[\r][\n]" 
+[]2015-02-12T18:01:10,290Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]" 
+[]2015-02-12T18:01:10,290Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.3.5 (java 1.5)[\r][\n]" 
+[]2015-02-12T18:01:10,290Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "[\r][\n]" 
+[]2015-02-12T18:01:10,290Z DEBUG c.g.c.b.s.org.apache.http.headers - >> GET / HTTP/1.1 
+[]2015-02-12T18:01:10,290Z DEBUG c.g.c.b.s.org.apache.http.headers - >> accept: application/json 
+[]2015-02-12T18:01:10,290Z DEBUG c.g.c.b.s.org.apache.http.headers - >> Host: www.google.com 
+[]2015-02-12T18:01:10,290Z DEBUG c.g.c.b.s.org.apache.http.headers - >> Connection: Keep-Alive 
+[]2015-02-12T18:01:10,290Z DEBUG c.g.c.b.s.org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.3.5 (java 1.5) 
+[]2015-02-12T18:01:10,400Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "HTTP/1.1 200 OK[\r][\n]" 
+[]2015-02-12T18:01:10,400Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Date: Thu, 12 Feb 2015 18:01:10 GMT[\r][\n]" 
+[]2015-02-12T18:01:10,400Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Expires: -1[\r][\n]" 
+[]2015-02-12T18:01:10,400Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Cache-Control: private, max-age=0[\r][\n]" 
+[]2015-02-12T18:01:10,400Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Content-Type: text/html; charset=ISO-8859-1[\r][\n]" 
+[]2015-02-12T18:01:10,400Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "P3P: CP="This is not a P3P policy! See http://www.google.com/support/accounts/bin/answer.py?hl=en&answer=151657 for more info."[\r][\n]" 
+[]2015-02-12T18:01:10,400Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Server: gws[\r][\n]" 
+[]2015-02-12T18:01:10,400Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "X-XSS-Protection: 1; mode=block[\r][\n]" 
+[]2015-02-12T18:01:10,400Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "X-Frame-Options: SAMEORIGIN[\r][\n]" 
+[]2015-02-12T18:01:10,400Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Alternate-Protocol: 80:quic,p=0.08[\r][\n]" 
+[]2015-02-12T18:01:10,400Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Accept-Ranges: none[\r][\n]" 
+[]2015-02-12T18:01:10,401Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Vary: Accept-Encoding[\r][\n]" 
+[]2015-02-12T18:01:10,401Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Transfer-Encoding: chunked[\r][\n]" 
+[]2015-02-12T18:01:10,401Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Connection: Keep-Alive[\r][\n]" 
+[]2015-02-12T18:01:10,401Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Set-Cookie: PREF=ID=fd8988911c59e09e:FF=0:TM=1423764070:LM=1423764070:S=9T1_D62lwlIQdng6; expires=Sat, 11-Feb-2017 18:01:10 GMT; path=/; domain=.google.com[\r][\n]" 
+[]2015-02-12T18:01:10,401Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Set-Cookie: NID=67=PGsGWAqbEFEjSGPZnNFOjuAuPLBOQCHWeLiE79CA9xnqGB-PBaXmhi1Fld0nK3UWgP_Erxu7N13a1lox9RcEgplKP78lq9rbDCCIrNuFAVWAU7crp8Pru_5Ug_hv14Ea; expires=Fri, 14-Aug-2015 18:01:10 GMT; path=/; domain=.google.com; HttpOnly[\r][\n]" 
+[]2015-02-12T18:01:10,401Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "[\r][\n]" 
+[]2015-02-12T18:01:10,401Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultClientConnection - Receiving response: HTTP/1.1 200 OK 
+[]2015-02-12T18:01:10,401Z DEBUG c.g.c.b.s.org.apache.http.headers - << HTTP/1.1 200 OK 
+[]2015-02-12T18:01:10,401Z DEBUG c.g.c.b.s.org.apache.http.headers - << Date: Thu, 12 Feb 2015 18:01:10 GMT 
+[]2015-02-12T18:01:10,401Z DEBUG c.g.c.b.s.org.apache.http.headers - << Expires: -1 
+[]2015-02-12T18:01:10,401Z DEBUG c.g.c.b.s.org.apache.http.headers - << Cache-Control: private, max-age=0 
+[]2015-02-12T18:01:10,401Z DEBUG c.g.c.b.s.org.apache.http.headers - << Content-Type: text/html; charset=ISO-8859-1 
+[]2015-02-12T18:01:10,401Z DEBUG c.g.c.b.s.org.apache.http.headers - << P3P: CP="This is not a P3P policy! See http://www.google.com/support/accounts/bin/answer.py?hl=en&answer=151657 for more info." 
+[]2015-02-12T18:01:10,402Z DEBUG c.g.c.b.s.org.apache.http.headers - << Server: gws 
+[]2015-02-12T18:01:10,402Z DEBUG c.g.c.b.s.org.apache.http.headers - << X-XSS-Protection: 1; mode=block 
+[]2015-02-12T18:01:10,402Z DEBUG c.g.c.b.s.org.apache.http.headers - << X-Frame-Options: SAMEORIGIN 
+[]2015-02-12T18:01:10,402Z DEBUG c.g.c.b.s.org.apache.http.headers - << Alternate-Protocol: 80:quic,p=0.08 
+[]2015-02-12T18:01:10,402Z DEBUG c.g.c.b.s.org.apache.http.headers - << Accept-Ranges: none 
+[]2015-02-12T18:01:10,402Z DEBUG c.g.c.b.s.org.apache.http.headers - << Vary: Accept-Encoding 
+[]2015-02-12T18:01:10,402Z DEBUG c.g.c.b.s.org.apache.http.headers - << Transfer-Encoding: chunked 
+[]2015-02-12T18:01:10,402Z DEBUG c.g.c.b.s.org.apache.http.headers - << Connection: Keep-Alive 
+[]2015-02-12T18:01:10,402Z DEBUG c.g.c.b.s.org.apache.http.headers - << Set-Cookie: PREF=ID=fd8988911c59e09e:FF=0:TM=1423764070:LM=1423764070:S=9T1_D62lwlIQdng6; expires=Sat, 11-Feb-2017 18:01:10 GMT; path=/; domain=.google.com 
+[]2015-02-12T18:01:10,402Z DEBUG c.g.c.b.s.org.apache.http.headers - << Set-Cookie: NID=67=PGsGWAqbEFEjSGPZnNFOjuAuPLBOQCHWeLiE79CA9xnqGB-PBaXmhi1Fld0nK3UWgP_Erxu7N13a1lox9RcEgplKP78lq9rbDCCIrNuFAVWAU7crp8Pru_5Ug_hv14Ea; expires=Fri, 14-Aug-2015 18:01:10 GMT; path=/; domain=.google.com; HttpOnly 
+[]2015-02-12T18:01:10,403Z DEBUG c.g.c.b.s.o.a.h.c.p.ResponseProcessCookies - Cookie accepted [PREF="ID=fd8988911c59e09e:FF=0:TM=1423764070:LM=1423764070:S=9T1_D62lwlIQdng6", version:0, domain:.google.com, path:/, expiry:Sun Feb 12 01:01:10 WIT 2017] 
+[]2015-02-12T18:01:10,404Z DEBUG c.g.c.b.s.o.a.h.c.p.ResponseProcessCookies - Cookie accepted [NID="67=PGsGWAqbEFEjSGPZnNFOjuAuPLBOQCHWeLiE79CA9xnqGB-PBaXmhi1Fld0nK3UWgP_Erxu7N13a1lox9RcEgplKP78lq9rbD...", version:0, domain:.google.com, path:/, expiry:Sat Aug 15 01:01:10 WIT 2015] 
+[]2015-02-12T18:01:10,404Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultHttpClient - Connection can be kept alive indefinitely 
+[]2015-02-12T18:01:10,404Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultClientConnection - Connection 0.0.0.0:54208<->119.110.118.49:80 closed 
+[]2015-02-12T18:01:10,529Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestAddCookies - CookieSpec selected: best-match 
+[]2015-02-12T18:01:10,529Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestAuthCache - Auth cache not set in the context 
+[]2015-02-12T18:01:10,529Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestTargetAuthentication - Target auth state: UNCHALLENGED 
+[]2015-02-12T18:01:10,529Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED 
+[]2015-02-12T18:01:10,529Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultHttpClient - Attempt 1 to execute request 
+[]2015-02-12T18:01:10,530Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultClientConnection - Sending request: GET / HTTP/1.1 
+[]2015-02-12T18:01:10,530Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "GET / HTTP/1.1[\r][\n]" 
+[]2015-02-12T18:01:10,530Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "accept: application/json[\r][\n]" 
+[]2015-02-12T18:01:10,530Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "Host: www.yahoo.com[\r][\n]" 
+[]2015-02-12T18:01:10,530Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]" 
+[]2015-02-12T18:01:10,530Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.3.5 (java 1.5)[\r][\n]" 
+[]2015-02-12T18:01:10,530Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "[\r][\n]" 
+[]2015-02-12T18:01:10,530Z DEBUG c.g.c.b.s.org.apache.http.headers - >> GET / HTTP/1.1 
+[]2015-02-12T18:01:10,530Z DEBUG c.g.c.b.s.org.apache.http.headers - >> accept: application/json 
+[]2015-02-12T18:01:10,530Z DEBUG c.g.c.b.s.org.apache.http.headers - >> Host: www.yahoo.com 
+[]2015-02-12T18:01:10,530Z DEBUG c.g.c.b.s.org.apache.http.headers - >> Connection: Keep-Alive 
+[]2015-02-12T18:01:10,530Z DEBUG c.g.c.b.s.org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.3.5 (java 1.5) 
+[]2015-02-12T18:01:10,985Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "HTTP/1.1 302 Found[\r][\n]" 
+[]2015-02-12T18:01:10,986Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Date: Thu, 12 Feb 2015 18:01:10 GMT[\r][\n]" 
+[]2015-02-12T18:01:10,986Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "P3P: policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"[\r][\n]" 
+[]2015-02-12T18:01:10,986Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Cache-Control: private[\r][\n]" 
+[]2015-02-12T18:01:10,986Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "X-Frame-Options: DENY[\r][\n]" 
+[]2015-02-12T18:01:10,986Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Strict-Transport-Security: max-age=2592000[\r][\n]" 
+[]2015-02-12T18:01:10,986Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Set-Cookie: DNR=deleted; expires=Wed, 12-Feb-2014 18:01:09 GMT; path=/; domain=.www.yahoo.com[\r][\n]" 
+[]2015-02-12T18:01:10,986Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Set-Cookie: DNR=deleted; expires=Wed, 12-Feb-2014 18:01:09 GMT; path=/; domain=.www.yahoo.com[\r][\n]" 
+[]2015-02-12T18:01:10,986Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Set-Cookie: hpc=d=oiEkDsYcxcuAzF12IthYlcqYj08F7I14qP1u1Yn8s81xGjM5OXEDAfTFhiJjag3kfehD_6U_8KxeMIjRYVAl8oveevTUiUlUTn7O7snrh3d9gsc_9flNOtVF6FutxqdEhc7FU8zE7ZrRFbOjP0dqYJx0wPIi_v.y_geUfXaJYvuF6a93BE5Nwv2_3b9Rq7U6fyR8TVo-&v=2; expires=Fri, 12-Feb-2016 18:01:10 GMT; path=/; domain=www.yahoo.com[\r][\n]" 
+[]2015-02-12T18:01:10,986Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Location: https://id.yahoo.com/?p=us[\r][\n]" 
+[]2015-02-12T18:01:10,986Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Vary: Accept-Encoding[\r][\n]" 
+[]2015-02-12T18:01:10,986Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Content-Type: text/html; charset=utf-8[\r][\n]" 
+[]2015-02-12T18:01:10,986Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Age: 0[\r][\n]" 
+[]2015-02-12T18:01:10,986Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Via: http/1.1 usproxy3.fp.gq1.yahoo.com (ApacheTrafficServer), http/1.1 ir15.fp.sg3.yahoo.com (ApacheTrafficServer)[\r][\n]" 
+[]2015-02-12T18:01:10,986Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Server: ATS[\r][\n]" 
+[]2015-02-12T18:01:10,986Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Transfer-Encoding: chunked[\r][\n]" 
+[]2015-02-12T18:01:10,986Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Connection: keep-alive[\r][\n]" 
+[]2015-02-12T18:01:10,986Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "[\r][\n]" 
+[]2015-02-12T18:01:10,987Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultClientConnection - Receiving response: HTTP/1.1 302 Found 
+[]2015-02-12T18:01:10,987Z DEBUG c.g.c.b.s.org.apache.http.headers - << HTTP/1.1 302 Found 
+[]2015-02-12T18:01:10,987Z DEBUG c.g.c.b.s.org.apache.http.headers - << Date: Thu, 12 Feb 2015 18:01:10 GMT 
+[]2015-02-12T18:01:10,987Z DEBUG c.g.c.b.s.org.apache.http.headers - << P3P: policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV" 
+[]2015-02-12T18:01:10,987Z DEBUG c.g.c.b.s.org.apache.http.headers - << Cache-Control: private 
+[]2015-02-12T18:01:10,987Z DEBUG c.g.c.b.s.org.apache.http.headers - << X-Frame-Options: DENY 
+[]2015-02-12T18:01:10,987Z DEBUG c.g.c.b.s.org.apache.http.headers - << Strict-Transport-Security: max-age=2592000 
+[]2015-02-12T18:01:10,987Z DEBUG c.g.c.b.s.org.apache.http.headers - << Set-Cookie: DNR=deleted; expires=Wed, 12-Feb-2014 18:01:09 GMT; path=/; domain=.www.yahoo.com 
+[]2015-02-12T18:01:10,987Z DEBUG c.g.c.b.s.org.apache.http.headers - << Set-Cookie: DNR=deleted; expires=Wed, 12-Feb-2014 18:01:09 GMT; path=/; domain=.www.yahoo.com 
+[]2015-02-12T18:01:10,987Z DEBUG c.g.c.b.s.org.apache.http.headers - << Set-Cookie: hpc=d=oiEkDsYcxcuAzF12IthYlcqYj08F7I14qP1u1Yn8s81xGjM5OXEDAfTFhiJjag3kfehD_6U_8KxeMIjRYVAl8oveevTUiUlUTn7O7snrh3d9gsc_9flNOtVF6FutxqdEhc7FU8zE7ZrRFbOjP0dqYJx0wPIi_v.y_geUfXaJYvuF6a93BE5Nwv2_3b9Rq7U6fyR8TVo-&v=2; expires=Fri, 12-Feb-2016 18:01:10 GMT; path=/; domain=www.yahoo.com 
+[]2015-02-12T18:01:10,987Z DEBUG c.g.c.b.s.org.apache.http.headers - << Location: https://id.yahoo.com/?p=us 
+[]2015-02-12T18:01:10,987Z DEBUG c.g.c.b.s.org.apache.http.headers - << Vary: Accept-Encoding 
+[]2015-02-12T18:01:10,987Z DEBUG c.g.c.b.s.org.apache.http.headers - << Content-Type: text/html; charset=utf-8 
+[]2015-02-12T18:01:10,987Z DEBUG c.g.c.b.s.org.apache.http.headers - << Age: 0 
+[]2015-02-12T18:01:10,987Z DEBUG c.g.c.b.s.org.apache.http.headers - << Via: http/1.1 usproxy3.fp.gq1.yahoo.com (ApacheTrafficServer), http/1.1 ir15.fp.sg3.yahoo.com (ApacheTrafficServer) 
+[]2015-02-12T18:01:10,987Z DEBUG c.g.c.b.s.org.apache.http.headers - << Server: ATS 
+[]2015-02-12T18:01:10,987Z DEBUG c.g.c.b.s.org.apache.http.headers - << Transfer-Encoding: chunked 
+[]2015-02-12T18:01:10,987Z DEBUG c.g.c.b.s.org.apache.http.headers - << Connection: keep-alive 
+[]2015-02-12T18:01:10,988Z DEBUG c.g.c.b.s.o.a.h.c.p.ResponseProcessCookies - Cookie accepted [DNR="deleted", version:0, domain:.www.yahoo.com, path:/, expiry:Thu Feb 13 01:01:09 WIT 2014] 
+[]2015-02-12T18:01:10,988Z DEBUG c.g.c.b.s.o.a.h.c.p.ResponseProcessCookies - Cookie accepted [DNR="deleted", version:0, domain:.www.yahoo.com, path:/, expiry:Thu Feb 13 01:01:09 WIT 2014] 
+[]2015-02-12T18:01:10,988Z DEBUG c.g.c.b.s.o.a.h.c.p.ResponseProcessCookies - Cookie accepted [hpc="d=oiEkDsYcxcuAzF12IthYlcqYj08F7I14qP1u1Yn8s81xGjM5OXEDAfTFhiJjag3kfehD_6U_8KxeMIjRYVAl8oveevTUiUlUTn...", version:0, domain:www.yahoo.com, path:/, expiry:Sat Feb 13 01:01:10 WIT 2016] 
+[]2015-02-12T18:01:10,988Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultHttpClient - Connection can be kept alive indefinitely 
+[]2015-02-12T18:01:10,988Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultRedirectStrategy - Redirect requested to location 'https://id.yahoo.com/?p=us' 
+[]2015-02-12T18:01:10,988Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultHttpClient - Resetting target auth state 
+[]2015-02-12T18:01:10,988Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultHttpClient - Redirecting to 'https://id.yahoo.com/?p=us' via {s}->https://id.yahoo.com 
+[]2015-02-12T18:01:11,058Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "0000051[\r][\n]" 
+[]2015-02-12T18:01:11,059Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "<!-- hw15.fp.gq1.yahoo.com uncompressed/chunked Thu Feb 12 18:01:10 UTC 2015 -->[\n]" 
+[]2015-02-12T18:01:11,059Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "[\r][\n]" 
+[]2015-02-12T18:01:11,059Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "0[\r][\n]" 
+[]2015-02-12T18:01:11,059Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "[\r][\n]" 
+[]2015-02-12T18:01:11,059Z DEBUG c.g.c.b.s.o.a.h.i.c.BasicClientConnectionManager - Releasing connection com.gdn.common.base.shade.org.apache.http.impl.conn.ManagedClientConnectionImpl@d01781 
+[]2015-02-12T18:01:11,059Z DEBUG c.g.c.b.s.o.a.h.i.c.BasicClientConnectionManager - Connection can be kept alive indefinitely 
+[]2015-02-12T18:01:11,059Z DEBUG c.g.c.b.s.o.a.h.i.c.BasicClientConnectionManager - Get connection for route {s}->https://id.yahoo.com 
+[]2015-02-12T18:01:11,059Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultClientConnection - Connection 0.0.0.0:54207<->106.10.138.240:443 closed 
+[]2015-02-12T18:01:11,060Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultClientConnectionOperator - Connecting to id.yahoo.com:443 
+[]2015-02-12T18:01:11,740Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestAddCookies - CookieSpec selected: best-match 
+[]2015-02-12T18:01:11,740Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestAuthCache - Auth cache not set in the context 
+[]2015-02-12T18:01:11,740Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestTargetAuthentication - Target auth state: UNCHALLENGED 
+[]2015-02-12T18:01:11,740Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED 
+[]2015-02-12T18:01:11,740Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultHttpClient - Attempt 2 to execute request 
+[]2015-02-12T18:01:11,740Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultClientConnection - Sending request: GET /?p=us HTTP/1.1 
+[]2015-02-12T18:01:11,740Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "GET /?p=us HTTP/1.1[\r][\n]" 
+[]2015-02-12T18:01:11,740Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "accept: application/json[\r][\n]" 
+[]2015-02-12T18:01:11,740Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "Host: id.yahoo.com[\r][\n]" 
+[]2015-02-12T18:01:11,740Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]" 
+[]2015-02-12T18:01:11,740Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.3.5 (java 1.5)[\r][\n]" 
+[]2015-02-12T18:01:11,741Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "[\r][\n]" 
+[]2015-02-12T18:01:11,741Z DEBUG c.g.c.b.s.org.apache.http.headers - >> GET /?p=us HTTP/1.1 
+[]2015-02-12T18:01:11,741Z DEBUG c.g.c.b.s.org.apache.http.headers - >> accept: application/json 
+[]2015-02-12T18:01:11,741Z DEBUG c.g.c.b.s.org.apache.http.headers - >> Host: id.yahoo.com 
+[]2015-02-12T18:01:11,741Z DEBUG c.g.c.b.s.org.apache.http.headers - >> Connection: Keep-Alive 
+[]2015-02-12T18:01:11,741Z DEBUG c.g.c.b.s.org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.3.5 (java 1.5) 
+[]2015-02-12T18:01:12,151Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "HTTP/1.1 200 OK[\r][\n]" 
+[]2015-02-12T18:01:12,152Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Date: Thu, 12 Feb 2015 18:01:11 GMT[\r][\n]" 
+[]2015-02-12T18:01:12,152Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "P3P: policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"[\r][\n]" 
+[]2015-02-12T18:01:12,152Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "X-Frame-Options: DENY[\r][\n]" 
+[]2015-02-12T18:01:12,152Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Strict-Transport-Security: max-age=2592000[\r][\n]" 
+[]2015-02-12T18:01:12,152Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Set-Cookie: DNR=deleted; expires=Wed, 12-Feb-2014 18:01:10 GMT; path=/; domain=.www.yahoo.com[\r][\n]" 
+[]2015-02-12T18:01:12,152Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Set-Cookie: DNR=deleted; expires=Wed, 12-Feb-2014 18:01:10 GMT; path=/; domain=.id.yahoo.com[\r][\n]" 
+[]2015-02-12T18:01:12,152Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Set-Cookie: PH=deleted; expires=Wed, 12-Feb-2014 18:01:10 GMT; path=/; domain=.yahoo.com[\r][\n]" 
+[]2015-02-12T18:01:12,152Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Vary: Accept-Encoding[\r][\n]" 
+[]2015-02-12T18:01:12,152Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Content-Type: text/html; charset=utf-8[\r][\n]" 
+[]2015-02-12T18:01:12,152Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Age: 2[\r][\n]" 
+[]2015-02-12T18:01:12,152Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Transfer-Encoding: chunked[\r][\n]" 
+[]2015-02-12T18:01:12,152Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Connection: keep-alive[\r][\n]" 
+[]2015-02-12T18:01:12,152Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Via: http/1.1 ir2.fp.tp2.yahoo.com (ApacheTrafficServer)[\r][\n]" 
+[]2015-02-12T18:01:12,152Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Server: ATS[\r][\n]" 
+[]2015-02-12T18:01:12,152Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Cache-Control: no-store, no-cache, private, max-age=0[\r][\n]" 
+[]2015-02-12T18:01:12,152Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Expires: -1[\r][\n]" 
+[]2015-02-12T18:01:12,152Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "[\r][\n]" 
+[]2015-02-12T18:01:12,153Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultClientConnection - Receiving response: HTTP/1.1 200 OK 
+[]2015-02-12T18:01:12,153Z DEBUG c.g.c.b.s.org.apache.http.headers - << HTTP/1.1 200 OK 
+[]2015-02-12T18:01:12,153Z DEBUG c.g.c.b.s.org.apache.http.headers - << Date: Thu, 12 Feb 2015 18:01:11 GMT 
+[]2015-02-12T18:01:12,153Z DEBUG c.g.c.b.s.org.apache.http.headers - << P3P: policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV" 
+[]2015-02-12T18:01:12,153Z DEBUG c.g.c.b.s.org.apache.http.headers - << X-Frame-Options: DENY 
+[]2015-02-12T18:01:12,153Z DEBUG c.g.c.b.s.org.apache.http.headers - << Strict-Transport-Security: max-age=2592000 
+[]2015-02-12T18:01:12,153Z DEBUG c.g.c.b.s.org.apache.http.headers - << Set-Cookie: DNR=deleted; expires=Wed, 12-Feb-2014 18:01:10 GMT; path=/; domain=.www.yahoo.com 
+[]2015-02-12T18:01:12,153Z DEBUG c.g.c.b.s.org.apache.http.headers - << Set-Cookie: DNR=deleted; expires=Wed, 12-Feb-2014 18:01:10 GMT; path=/; domain=.id.yahoo.com 
+[]2015-02-12T18:01:12,153Z DEBUG c.g.c.b.s.org.apache.http.headers - << Set-Cookie: PH=deleted; expires=Wed, 12-Feb-2014 18:01:10 GMT; path=/; domain=.yahoo.com 
+[]2015-02-12T18:01:12,153Z DEBUG c.g.c.b.s.org.apache.http.headers - << Vary: Accept-Encoding 
+[]2015-02-12T18:01:12,153Z DEBUG c.g.c.b.s.org.apache.http.headers - << Content-Type: text/html; charset=utf-8 
+[]2015-02-12T18:01:12,153Z DEBUG c.g.c.b.s.org.apache.http.headers - << Age: 2 
+[]2015-02-12T18:01:12,153Z DEBUG c.g.c.b.s.org.apache.http.headers - << Transfer-Encoding: chunked 
+[]2015-02-12T18:01:12,153Z DEBUG c.g.c.b.s.org.apache.http.headers - << Connection: keep-alive 
+[]2015-02-12T18:01:12,153Z DEBUG c.g.c.b.s.org.apache.http.headers - << Via: http/1.1 ir2.fp.tp2.yahoo.com (ApacheTrafficServer) 
+[]2015-02-12T18:01:12,153Z DEBUG c.g.c.b.s.org.apache.http.headers - << Server: ATS 
+[]2015-02-12T18:01:12,153Z DEBUG c.g.c.b.s.org.apache.http.headers - << Cache-Control: no-store, no-cache, private, max-age=0 
+[]2015-02-12T18:01:12,153Z DEBUG c.g.c.b.s.org.apache.http.headers - << Expires: -1 
+[]2015-02-12T18:01:12,154Z WARN  c.g.c.b.s.o.a.h.c.p.ResponseProcessCookies - Cookie rejected [DNR="deleted", version:0, domain:.www.yahoo.com, path:/, expiry:Thu Feb 13 01:01:10 WIT 2014] Illegal domain attribute "www.yahoo.com". Domain of origin: "id.yahoo.com" 
+[]2015-02-12T18:01:12,154Z DEBUG c.g.c.b.s.o.a.h.c.p.ResponseProcessCookies - Cookie accepted [DNR="deleted", version:0, domain:.id.yahoo.com, path:/, expiry:Thu Feb 13 01:01:10 WIT 2014] 
+[]2015-02-12T18:01:12,154Z DEBUG c.g.c.b.s.o.a.h.c.p.ResponseProcessCookies - Cookie accepted [PH="deleted", version:0, domain:.yahoo.com, path:/, expiry:Thu Feb 13 01:01:10 WIT 2014] 
+[]2015-02-12T18:01:12,154Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultHttpClient - Connection can be kept alive indefinitely 
+[]2015-02-12T18:01:12,155Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultClientConnection - Connection 0.0.0.0:54209<->116.214.12.74:443 closed 
+[]2015-02-12T18:01:15,023Z DEBUG c.g.x.s.s.h.s.impl.TaskExecutorImpl - Running Task Yahoo Fetcher 
+[]2015-02-12T18:01:15,129Z DEBUG c.g.c.b.s.o.a.h.i.c.BasicClientConnectionManager - Get connection for route {s}->https://www.yahoo.com 
+[]2015-02-12T18:01:15,130Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultClientConnectionOperator - Connecting to www.yahoo.com:443 
+[]2015-02-12T18:01:15,484Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestAddCookies - CookieSpec selected: best-match 
+[]2015-02-12T18:01:15,485Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestAuthCache - Auth cache not set in the context 
+[]2015-02-12T18:01:15,485Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestTargetAuthentication - Target auth state: UNCHALLENGED 
+[]2015-02-12T18:01:15,485Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED 
+[]2015-02-12T18:01:15,485Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultHttpClient - Attempt 1 to execute request 
+[]2015-02-12T18:01:15,485Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultClientConnection - Sending request: GET / HTTP/1.1 
+[]2015-02-12T18:01:15,485Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "GET / HTTP/1.1[\r][\n]" 
+[]2015-02-12T18:01:15,485Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "accept: application/json[\r][\n]" 
+[]2015-02-12T18:01:15,485Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "Host: www.yahoo.com[\r][\n]" 
+[]2015-02-12T18:01:15,485Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]" 
+[]2015-02-12T18:01:15,485Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.3.5 (java 1.5)[\r][\n]" 
+[]2015-02-12T18:01:15,485Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "[\r][\n]" 
+[]2015-02-12T18:01:15,485Z DEBUG c.g.c.b.s.org.apache.http.headers - >> GET / HTTP/1.1 
+[]2015-02-12T18:01:15,485Z DEBUG c.g.c.b.s.org.apache.http.headers - >> accept: application/json 
+[]2015-02-12T18:01:15,485Z DEBUG c.g.c.b.s.org.apache.http.headers - >> Host: www.yahoo.com 
+[]2015-02-12T18:01:15,485Z DEBUG c.g.c.b.s.org.apache.http.headers - >> Connection: Keep-Alive 
+[]2015-02-12T18:01:15,485Z DEBUG c.g.c.b.s.org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.3.5 (java 1.5) 
+[]2015-02-12T18:01:15,901Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "HTTP/1.1 302 Found[\r][\n]" 
+[]2015-02-12T18:01:15,901Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Date: Thu, 12 Feb 2015 18:01:15 GMT[\r][\n]" 
+[]2015-02-12T18:01:15,901Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "P3P: policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"[\r][\n]" 
+[]2015-02-12T18:01:15,901Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Cache-Control: private[\r][\n]" 
+[]2015-02-12T18:01:15,901Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "X-Frame-Options: DENY[\r][\n]" 
+[]2015-02-12T18:01:15,901Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Strict-Transport-Security: max-age=2592000[\r][\n]" 
+[]2015-02-12T18:01:15,901Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Set-Cookie: DNR=deleted; expires=Wed, 12-Feb-2014 18:01:14 GMT; path=/; domain=.www.yahoo.com[\r][\n]" 
+[]2015-02-12T18:01:15,901Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Set-Cookie: DNR=deleted; expires=Wed, 12-Feb-2014 18:01:14 GMT; path=/; domain=.www.yahoo.com[\r][\n]" 
+[]2015-02-12T18:01:15,901Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Set-Cookie: hpc=d=A7CJ.hERxcvyAgBaq9vnLfsYxD_GFB1FviqJg_tDjElDlVXEwJj.EQdjzCikQ1ERn3FMFVBRgqyBW_4goEzZ6fq_z9zntAlGqnOf_yqTH0LtwNxWWYDnKS46Kt4AAQ.3n..C02dJ7afKPi_knF9P7mggOoY8nJaD_cL2h2v0YLTr0bYO8XezHXODYlo6TYF2skIFwSo-&v=2; expires=Fri, 12-Feb-2016 18:01:15 GMT; path=/; domain=www.yahoo.com[\r][\n]" 
+[]2015-02-12T18:01:15,901Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Location: https://id.yahoo.com/?p=us[\r][\n]" 
+[]2015-02-12T18:01:15,901Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Vary: Accept-Encoding[\r][\n]" 
+[]2015-02-12T18:01:15,901Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Content-Type: text/html; charset=utf-8[\r][\n]" 
+[]2015-02-12T18:01:15,902Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Age: 0[\r][\n]" 
+[]2015-02-12T18:01:15,902Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Via: http/1.1 usproxy3.fp.gq1.yahoo.com (ApacheTrafficServer), http/1.1 ir15.fp.sg3.yahoo.com (ApacheTrafficServer)[\r][\n]" 
+[]2015-02-12T18:01:15,902Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Server: ATS[\r][\n]" 
+[]2015-02-12T18:01:15,902Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Transfer-Encoding: chunked[\r][\n]" 
+[]2015-02-12T18:01:15,902Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Connection: keep-alive[\r][\n]" 
+[]2015-02-12T18:01:15,902Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "[\r][\n]" 
+[]2015-02-12T18:01:15,902Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultClientConnection - Receiving response: HTTP/1.1 302 Found 
+[]2015-02-12T18:01:15,902Z DEBUG c.g.c.b.s.org.apache.http.headers - << HTTP/1.1 302 Found 
+[]2015-02-12T18:01:15,902Z DEBUG c.g.c.b.s.org.apache.http.headers - << Date: Thu, 12 Feb 2015 18:01:15 GMT 
+[]2015-02-12T18:01:15,902Z DEBUG c.g.c.b.s.org.apache.http.headers - << P3P: policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV" 
+[]2015-02-12T18:01:15,954Z DEBUG c.g.c.b.s.org.apache.http.headers - << Cache-Control: private 
+[]2015-02-12T18:01:15,954Z DEBUG c.g.c.b.s.org.apache.http.headers - << X-Frame-Options: DENY 
+[]2015-02-12T18:01:15,954Z DEBUG c.g.c.b.s.org.apache.http.headers - << Strict-Transport-Security: max-age=2592000 
+[]2015-02-12T18:01:15,954Z DEBUG c.g.c.b.s.org.apache.http.headers - << Set-Cookie: DNR=deleted; expires=Wed, 12-Feb-2014 18:01:14 GMT; path=/; domain=.www.yahoo.com 
+[]2015-02-12T18:01:15,954Z DEBUG c.g.c.b.s.org.apache.http.headers - << Set-Cookie: DNR=deleted; expires=Wed, 12-Feb-2014 18:01:14 GMT; path=/; domain=.www.yahoo.com 
+[]2015-02-12T18:01:15,954Z DEBUG c.g.c.b.s.org.apache.http.headers - << Set-Cookie: hpc=d=A7CJ.hERxcvyAgBaq9vnLfsYxD_GFB1FviqJg_tDjElDlVXEwJj.EQdjzCikQ1ERn3FMFVBRgqyBW_4goEzZ6fq_z9zntAlGqnOf_yqTH0LtwNxWWYDnKS46Kt4AAQ.3n..C02dJ7afKPi_knF9P7mggOoY8nJaD_cL2h2v0YLTr0bYO8XezHXODYlo6TYF2skIFwSo-&v=2; expires=Fri, 12-Feb-2016 18:01:15 GMT; path=/; domain=www.yahoo.com 
+[]2015-02-12T18:01:15,954Z DEBUG c.g.c.b.s.org.apache.http.headers - << Location: https://id.yahoo.com/?p=us 
+[]2015-02-12T18:01:15,954Z DEBUG c.g.c.b.s.org.apache.http.headers - << Vary: Accept-Encoding 
+[]2015-02-12T18:01:15,955Z DEBUG c.g.c.b.s.org.apache.http.headers - << Content-Type: text/html; charset=utf-8 
+[]2015-02-12T18:01:15,955Z DEBUG c.g.c.b.s.org.apache.http.headers - << Age: 0 
+[]2015-02-12T18:01:15,955Z DEBUG c.g.c.b.s.org.apache.http.headers - << Via: http/1.1 usproxy3.fp.gq1.yahoo.com (ApacheTrafficServer), http/1.1 ir15.fp.sg3.yahoo.com (ApacheTrafficServer) 
+[]2015-02-12T18:01:15,955Z DEBUG c.g.c.b.s.org.apache.http.headers - << Server: ATS 
+[]2015-02-12T18:01:15,955Z DEBUG c.g.c.b.s.org.apache.http.headers - << Transfer-Encoding: chunked 
+[]2015-02-12T18:01:15,955Z DEBUG c.g.c.b.s.org.apache.http.headers - << Connection: keep-alive 
+[]2015-02-12T18:01:15,955Z DEBUG c.g.c.b.s.o.a.h.c.p.ResponseProcessCookies - Cookie accepted [DNR="deleted", version:0, domain:.www.yahoo.com, path:/, expiry:Thu Feb 13 01:01:14 WIT 2014] 
+[]2015-02-12T18:01:15,956Z DEBUG c.g.c.b.s.o.a.h.c.p.ResponseProcessCookies - Cookie accepted [DNR="deleted", version:0, domain:.www.yahoo.com, path:/, expiry:Thu Feb 13 01:01:14 WIT 2014] 
+[]2015-02-12T18:01:15,956Z DEBUG c.g.c.b.s.o.a.h.c.p.ResponseProcessCookies - Cookie accepted [hpc="d=A7CJ.hERxcvyAgBaq9vnLfsYxD_GFB1FviqJg_tDjElDlVXEwJj.EQdjzCikQ1ERn3FMFVBRgqyBW_4goEzZ6fq_z9zntAlGqn...", version:0, domain:www.yahoo.com, path:/, expiry:Sat Feb 13 01:01:15 WIT 2016] 
+[]2015-02-12T18:01:15,956Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultHttpClient - Connection can be kept alive indefinitely 
+[]2015-02-12T18:01:15,956Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultRedirectStrategy - Redirect requested to location 'https://id.yahoo.com/?p=us' 
+[]2015-02-12T18:01:15,957Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultHttpClient - Resetting target auth state 
+[]2015-02-12T18:01:15,957Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultHttpClient - Redirecting to 'https://id.yahoo.com/?p=us' via {s}->https://id.yahoo.com 
+[]2015-02-12T18:01:15,978Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "0000051[\r][\n]" 
+[]2015-02-12T18:01:15,978Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "<!-- hw52.fp.gq1.yahoo.com uncompressed/chunked Thu Feb 12 18:01:15 UTC 2015 -->[\n]" 
+[]2015-02-12T18:01:15,978Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "[\r][\n]" 
+[]2015-02-12T18:01:15,978Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "0[\r][\n]" 
+[]2015-02-12T18:01:15,978Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "[\r][\n]" 
+[]2015-02-12T18:01:15,978Z DEBUG c.g.c.b.s.o.a.h.i.c.BasicClientConnectionManager - Releasing connection com.gdn.common.base.shade.org.apache.http.impl.conn.ManagedClientConnectionImpl@6d8aaafb 
+[]2015-02-12T18:01:15,979Z DEBUG c.g.c.b.s.o.a.h.i.c.BasicClientConnectionManager - Connection can be kept alive indefinitely 
+[]2015-02-12T18:01:15,979Z DEBUG c.g.c.b.s.o.a.h.i.c.BasicClientConnectionManager - Get connection for route {s}->https://id.yahoo.com 
+[]2015-02-12T18:01:15,979Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultClientConnection - Connection 0.0.0.0:54210<->106.10.138.240:443 closed 
+[]2015-02-12T18:01:15,980Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultClientConnectionOperator - Connecting to id.yahoo.com:443 
+[]2015-02-12T18:01:16,640Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestAddCookies - CookieSpec selected: best-match 
+[]2015-02-12T18:01:16,640Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestAuthCache - Auth cache not set in the context 
+[]2015-02-12T18:01:16,640Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestTargetAuthentication - Target auth state: UNCHALLENGED 
+[]2015-02-12T18:01:16,640Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED 
+[]2015-02-12T18:01:16,640Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultHttpClient - Attempt 2 to execute request 
+[]2015-02-12T18:01:16,640Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultClientConnection - Sending request: GET /?p=us HTTP/1.1 
+[]2015-02-12T18:01:16,640Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "GET /?p=us HTTP/1.1[\r][\n]" 
+[]2015-02-12T18:01:16,640Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "accept: application/json[\r][\n]" 
+[]2015-02-12T18:01:16,641Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "Host: id.yahoo.com[\r][\n]" 
+[]2015-02-12T18:01:16,641Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]" 
+[]2015-02-12T18:01:16,641Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.3.5 (java 1.5)[\r][\n]" 
+[]2015-02-12T18:01:16,641Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "[\r][\n]" 
+[]2015-02-12T18:01:16,641Z DEBUG c.g.c.b.s.org.apache.http.headers - >> GET /?p=us HTTP/1.1 
+[]2015-02-12T18:01:16,641Z DEBUG c.g.c.b.s.org.apache.http.headers - >> accept: application/json 
+[]2015-02-12T18:01:16,641Z DEBUG c.g.c.b.s.org.apache.http.headers - >> Host: id.yahoo.com 
+[]2015-02-12T18:01:16,641Z DEBUG c.g.c.b.s.org.apache.http.headers - >> Connection: Keep-Alive 
+[]2015-02-12T18:01:16,641Z DEBUG c.g.c.b.s.org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.3.5 (java 1.5) 
+[]2015-02-12T18:01:16,940Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "HTTP/1.1 200 OK[\r][\n]" 
+[]2015-02-12T18:01:16,940Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Date: Thu, 12 Feb 2015 18:01:16 GMT[\r][\n]" 
+[]2015-02-12T18:01:16,941Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "P3P: policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"[\r][\n]" 
+[]2015-02-12T18:01:16,941Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "X-Frame-Options: DENY[\r][\n]" 
+[]2015-02-12T18:01:16,941Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Strict-Transport-Security: max-age=2592000[\r][\n]" 
+[]2015-02-12T18:01:16,941Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Set-Cookie: DNR=deleted; expires=Wed, 12-Feb-2014 18:01:15 GMT; path=/; domain=.www.yahoo.com[\r][\n]" 
+[]2015-02-12T18:01:16,941Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Set-Cookie: DNR=deleted; expires=Wed, 12-Feb-2014 18:01:15 GMT; path=/; domain=.id.yahoo.com[\r][\n]" 
+[]2015-02-12T18:01:16,941Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Set-Cookie: PH=deleted; expires=Wed, 12-Feb-2014 18:01:15 GMT; path=/; domain=.yahoo.com[\r][\n]" 
+[]2015-02-12T18:01:16,941Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Vary: Accept-Encoding[\r][\n]" 
+[]2015-02-12T18:01:16,941Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Content-Type: text/html; charset=utf-8[\r][\n]" 
+[]2015-02-12T18:01:16,941Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Age: 0[\r][\n]" 
+[]2015-02-12T18:01:16,941Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Transfer-Encoding: chunked[\r][\n]" 
+[]2015-02-12T18:01:16,941Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Connection: keep-alive[\r][\n]" 
+[]2015-02-12T18:01:16,941Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Via: http/1.1 ir1.fp.tp2.yahoo.com (ApacheTrafficServer)[\r][\n]" 
+[]2015-02-12T18:01:16,941Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Server: ATS[\r][\n]" 
+[]2015-02-12T18:01:16,948Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Cache-Control: no-store, no-cache, private, max-age=0[\r][\n]" 
+[]2015-02-12T18:01:16,948Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Expires: -1[\r][\n]" 
+[]2015-02-12T18:01:16,948Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "[\r][\n]" 
+[]2015-02-12T18:01:16,948Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultClientConnection - Receiving response: HTTP/1.1 200 OK 
+[]2015-02-12T18:01:16,948Z DEBUG c.g.c.b.s.org.apache.http.headers - << HTTP/1.1 200 OK 
+[]2015-02-12T18:01:16,948Z DEBUG c.g.c.b.s.org.apache.http.headers - << Date: Thu, 12 Feb 2015 18:01:16 GMT 
+[]2015-02-12T18:01:16,948Z DEBUG c.g.c.b.s.org.apache.http.headers - << P3P: policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV" 
+[]2015-02-12T18:01:16,948Z DEBUG c.g.c.b.s.org.apache.http.headers - << X-Frame-Options: DENY 
+[]2015-02-12T18:01:16,948Z DEBUG c.g.c.b.s.org.apache.http.headers - << Strict-Transport-Security: max-age=2592000 
+[]2015-02-12T18:01:16,948Z DEBUG c.g.c.b.s.org.apache.http.headers - << Set-Cookie: DNR=deleted; expires=Wed, 12-Feb-2014 18:01:15 GMT; path=/; domain=.www.yahoo.com 
+[]2015-02-12T18:01:16,948Z DEBUG c.g.c.b.s.org.apache.http.headers - << Set-Cookie: DNR=deleted; expires=Wed, 12-Feb-2014 18:01:15 GMT; path=/; domain=.id.yahoo.com 
+[]2015-02-12T18:01:16,948Z DEBUG c.g.c.b.s.org.apache.http.headers - << Set-Cookie: PH=deleted; expires=Wed, 12-Feb-2014 18:01:15 GMT; path=/; domain=.yahoo.com 
+[]2015-02-12T18:01:16,948Z DEBUG c.g.c.b.s.org.apache.http.headers - << Vary: Accept-Encoding 
+[]2015-02-12T18:01:16,948Z DEBUG c.g.c.b.s.org.apache.http.headers - << Content-Type: text/html; charset=utf-8 
+[]2015-02-12T18:01:16,948Z DEBUG c.g.c.b.s.org.apache.http.headers - << Age: 0 
+[]2015-02-12T18:01:16,948Z DEBUG c.g.c.b.s.org.apache.http.headers - << Transfer-Encoding: chunked 
+[]2015-02-12T18:01:16,948Z DEBUG c.g.c.b.s.org.apache.http.headers - << Connection: keep-alive 
+[]2015-02-12T18:01:16,948Z DEBUG c.g.c.b.s.org.apache.http.headers - << Via: http/1.1 ir1.fp.tp2.yahoo.com (ApacheTrafficServer) 
+[]2015-02-12T18:01:16,948Z DEBUG c.g.c.b.s.org.apache.http.headers - << Server: ATS 
+[]2015-02-12T18:01:16,948Z DEBUG c.g.c.b.s.org.apache.http.headers - << Cache-Control: no-store, no-cache, private, max-age=0 
+[]2015-02-12T18:01:16,948Z DEBUG c.g.c.b.s.org.apache.http.headers - << Expires: -1 
+[]2015-02-12T18:01:16,949Z WARN  c.g.c.b.s.o.a.h.c.p.ResponseProcessCookies - Cookie rejected [DNR="deleted", version:0, domain:.www.yahoo.com, path:/, expiry:Thu Feb 13 01:01:15 WIT 2014] Illegal domain attribute "www.yahoo.com". Domain of origin: "id.yahoo.com" 
+[]2015-02-12T18:01:16,949Z DEBUG c.g.c.b.s.o.a.h.c.p.ResponseProcessCookies - Cookie accepted [DNR="deleted", version:0, domain:.id.yahoo.com, path:/, expiry:Thu Feb 13 01:01:15 WIT 2014] 
+[]2015-02-12T18:01:16,949Z DEBUG c.g.c.b.s.o.a.h.c.p.ResponseProcessCookies - Cookie accepted [PH="deleted", version:0, domain:.yahoo.com, path:/, expiry:Thu Feb 13 01:01:15 WIT 2014] 
+[]2015-02-12T18:01:16,949Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultHttpClient - Connection can be kept alive indefinitely 
+[]2015-02-12T18:01:16,949Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultClientConnection - Connection 0.0.0.0:54211<->116.214.12.74:443 closed 
+[]2015-02-12T18:01:18,001Z DEBUG c.g.x.s.s.h.s.impl.TaskExecutorImpl - Running Task Google Fetcher 
+[]2015-02-12T18:01:18,115Z DEBUG c.g.c.b.s.o.a.h.i.c.BasicClientConnectionManager - Get connection for route {}->http://www.google.com 
+[]2015-02-12T18:01:18,115Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultClientConnectionOperator - Connecting to www.google.com:80 
+[]2015-02-12T18:01:18,168Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestAddCookies - CookieSpec selected: best-match 
+[]2015-02-12T18:01:18,169Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestAuthCache - Auth cache not set in the context 
+[]2015-02-12T18:01:18,169Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestTargetAuthentication - Target auth state: UNCHALLENGED 
+[]2015-02-12T18:01:18,169Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED 
+[]2015-02-12T18:01:18,169Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultHttpClient - Attempt 1 to execute request 
+[]2015-02-12T18:01:18,169Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultClientConnection - Sending request: GET / HTTP/1.1 
+[]2015-02-12T18:01:18,169Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "GET / HTTP/1.1[\r][\n]" 
+[]2015-02-12T18:01:18,169Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "accept: application/json[\r][\n]" 
+[]2015-02-12T18:01:18,169Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "Host: www.google.com[\r][\n]" 
+[]2015-02-12T18:01:18,169Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]" 
+[]2015-02-12T18:01:18,169Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.3.5 (java 1.5)[\r][\n]" 
+[]2015-02-12T18:01:18,169Z DEBUG c.g.c.b.shade.org.apache.http.wire -  >> "[\r][\n]" 
+[]2015-02-12T18:01:18,169Z DEBUG c.g.c.b.s.org.apache.http.headers - >> GET / HTTP/1.1 
+[]2015-02-12T18:01:18,169Z DEBUG c.g.c.b.s.org.apache.http.headers - >> accept: application/json 
+[]2015-02-12T18:01:18,169Z DEBUG c.g.c.b.s.org.apache.http.headers - >> Host: www.google.com 
+[]2015-02-12T18:01:18,169Z DEBUG c.g.c.b.s.org.apache.http.headers - >> Connection: Keep-Alive 
+[]2015-02-12T18:01:18,169Z DEBUG c.g.c.b.s.org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.3.5 (java 1.5) 
+[]2015-02-12T18:01:18,269Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "HTTP/1.1 200 OK[\r][\n]" 
+[]2015-02-12T18:01:18,270Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Date: Thu, 12 Feb 2015 18:01:18 GMT[\r][\n]" 
+[]2015-02-12T18:01:18,270Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Expires: -1[\r][\n]" 
+[]2015-02-12T18:01:18,270Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Cache-Control: private, max-age=0[\r][\n]" 
+[]2015-02-12T18:01:18,270Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Content-Type: text/html; charset=ISO-8859-1[\r][\n]" 
+[]2015-02-12T18:01:18,270Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "P3P: CP="This is not a P3P policy! See http://www.google.com/support/accounts/bin/answer.py?hl=en&answer=151657 for more info."[\r][\n]" 
+[]2015-02-12T18:01:18,270Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Server: gws[\r][\n]" 
+[]2015-02-12T18:01:18,270Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "X-XSS-Protection: 1; mode=block[\r][\n]" 
+[]2015-02-12T18:01:18,270Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "X-Frame-Options: SAMEORIGIN[\r][\n]" 
+[]2015-02-12T18:01:18,270Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Alternate-Protocol: 80:quic,p=0.08[\r][\n]" 
+[]2015-02-12T18:01:18,270Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Accept-Ranges: none[\r][\n]" 
+[]2015-02-12T18:01:18,270Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Vary: Accept-Encoding[\r][\n]" 
+[]2015-02-12T18:01:18,270Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Transfer-Encoding: chunked[\r][\n]" 
+[]2015-02-12T18:01:18,270Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Connection: Keep-Alive[\r][\n]" 
+[]2015-02-12T18:01:18,270Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Set-Cookie: PREF=ID=d58b228470425dbf:FF=0:TM=1423764078:LM=1423764078:S=jK81TujxrnNrIQCu; expires=Sat, 11-Feb-2017 18:01:18 GMT; path=/; domain=.google.com[\r][\n]" 
+[]2015-02-12T18:01:18,270Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "Set-Cookie: NID=67=T7byOXBDbzZmDPr5DGcu6326lexVMc3IagcHBq74zQzZRAcRv1R6erkbsBbiATOjqLCRdmKTb_qhB-iRHv-JOJAET0_HKjcLuiQsgD8w1g-oGke-9Vn_cenRyAzgGzgD; expires=Fri, 14-Aug-2015 18:01:18 GMT; path=/; domain=.google.com; HttpOnly[\r][\n]" 
+[]2015-02-12T18:01:18,270Z DEBUG c.g.c.b.shade.org.apache.http.wire -  << "[\r][\n]" 
+[]2015-02-12T18:01:18,271Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultClientConnection - Receiving response: HTTP/1.1 200 OK 
+[]2015-02-12T18:01:18,271Z DEBUG c.g.c.b.s.org.apache.http.headers - << HTTP/1.1 200 OK 
+[]2015-02-12T18:01:18,271Z DEBUG c.g.c.b.s.org.apache.http.headers - << Date: Thu, 12 Feb 2015 18:01:18 GMT 
+[]2015-02-12T18:01:18,271Z DEBUG c.g.c.b.s.org.apache.http.headers - << Expires: -1 
+[]2015-02-12T18:01:18,271Z DEBUG c.g.c.b.s.org.apache.http.headers - << Cache-Control: private, max-age=0 
+[]2015-02-12T18:01:18,271Z DEBUG c.g.c.b.s.org.apache.http.headers - << Content-Type: text/html; charset=ISO-8859-1 
+[]2015-02-12T18:01:18,271Z DEBUG c.g.c.b.s.org.apache.http.headers - << P3P: CP="This is not a P3P policy! See http://www.google.com/support/accounts/bin/answer.py?hl=en&answer=151657 for more info." 
+[]2015-02-12T18:01:18,271Z DEBUG c.g.c.b.s.org.apache.http.headers - << Server: gws 
+[]2015-02-12T18:01:18,271Z DEBUG c.g.c.b.s.org.apache.http.headers - << X-XSS-Protection: 1; mode=block 
+[]2015-02-12T18:01:18,271Z DEBUG c.g.c.b.s.org.apache.http.headers - << X-Frame-Options: SAMEORIGIN 
+[]2015-02-12T18:01:18,271Z DEBUG c.g.c.b.s.org.apache.http.headers - << Alternate-Protocol: 80:quic,p=0.08 
+[]2015-02-12T18:01:18,271Z DEBUG c.g.c.b.s.org.apache.http.headers - << Accept-Ranges: none 
+[]2015-02-12T18:01:18,271Z DEBUG c.g.c.b.s.org.apache.http.headers - << Vary: Accept-Encoding 
+[]2015-02-12T18:01:18,271Z DEBUG c.g.c.b.s.org.apache.http.headers - << Transfer-Encoding: chunked 
+[]2015-02-12T18:01:18,271Z DEBUG c.g.c.b.s.org.apache.http.headers - << Connection: Keep-Alive 
+[]2015-02-12T18:01:18,271Z DEBUG c.g.c.b.s.org.apache.http.headers - << Set-Cookie: PREF=ID=d58b228470425dbf:FF=0:TM=1423764078:LM=1423764078:S=jK81TujxrnNrIQCu; expires=Sat, 11-Feb-2017 18:01:18 GMT; path=/; domain=.google.com 
+[]2015-02-12T18:01:18,271Z DEBUG c.g.c.b.s.org.apache.http.headers - << Set-Cookie: NID=67=T7byOXBDbzZmDPr5DGcu6326lexVMc3IagcHBq74zQzZRAcRv1R6erkbsBbiATOjqLCRdmKTb_qhB-iRHv-JOJAET0_HKjcLuiQsgD8w1g-oGke-9Vn_cenRyAzgGzgD; expires=Fri, 14-Aug-2015 18:01:18 GMT; path=/; domain=.google.com; HttpOnly 
+[]2015-02-12T18:01:18,272Z DEBUG c.g.c.b.s.o.a.h.c.p.ResponseProcessCookies - Cookie accepted [PREF="ID=d58b228470425dbf:FF=0:TM=1423764078:LM=1423764078:S=jK81TujxrnNrIQCu", version:0, domain:.google.com, path:/, expiry:Sun Feb 12 01:01:18 WIT 2017] 
+[]2015-02-12T18:01:18,272Z DEBUG c.g.c.b.s.o.a.h.c.p.ResponseProcessCookies - Cookie accepted [NID="67=T7byOXBDbzZmDPr5DGcu6326lexVMc3IagcHBq74zQzZRAcRv1R6erkbsBbiATOjqLCRdmKTb_qhB-iRHv-JOJAET0_HKjcLu...", version:0, domain:.google.com, path:/, expiry:Sat Aug 15 01:01:18 WIT 2015] 
+[]2015-02-12T18:01:18,272Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultHttpClient - Connection can be kept alive indefinitely 
+[]2015-02-12T18:01:18,272Z DEBUG c.g.c.b.s.o.a.h.i.c.DefaultClientConnection - Connection 0.0.0.0:54213<->119.110.118.49:80 closed 

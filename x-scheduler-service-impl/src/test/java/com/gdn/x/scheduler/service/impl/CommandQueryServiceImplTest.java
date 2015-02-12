@@ -67,7 +67,7 @@ public class CommandQueryServiceImplTest {
 		assertNull(commandResponse);
 	}
 	
-	@Test(timeout = 1000)
+	@Test(timeout = 1500)
 	public void wrapCommand_commandIsOfWSType_WSCommandResponseReturned() throws Exception {
 		CommandResponse commandResponse = commandQueryService.wrapCommand(buildWSCommand());
 		assertTrue(commandResponse instanceof WSCommandResponse);

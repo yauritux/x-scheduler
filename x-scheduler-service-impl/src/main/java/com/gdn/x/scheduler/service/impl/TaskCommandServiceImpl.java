@@ -33,7 +33,7 @@ import com.gdn.x.scheduler.rest.web.model.TaskRequest;
 import com.gdn.x.scheduler.rest.web.model.WSCommandResponse;
 import com.gdn.x.scheduler.service.CommandQueryService;
 import com.gdn.x.scheduler.service.TaskCommandService;
-import com.gdn.x.scheduler.service.TaskExecutor;
+import com.gdn.x.scheduler.service.helper.schedengine.impl.TaskExecutorImpl;
 
 /**
  * 
@@ -56,7 +56,7 @@ public class TaskCommandServiceImpl implements TaskCommandService, BeanFactoryAw
 	private CommandQueryService commandQueryService;
 	private SchedulerFactoryBean schedulerFactory;
 	private TaskDAO taskDAO;
-	//private TaskExecutor taskExecutor;
+	//private TaskExecutorImpl taskExecutor;
 	
 	@Autowired
 	public TaskCommandServiceImpl(CommandQueryService commandQueryService, 
@@ -86,13 +86,13 @@ public class TaskCommandServiceImpl implements TaskCommandService, BeanFactoryAw
 		Task task = taskDAO.save(entity);
 		
 		// set the task to run
-		TaskExecutor taskExecutor = this.beanFactory.getBean("taskExecutor", TaskExecutor.class);
-		taskExecutor.setTask(task);
+		TaskExecutorImpl taskExecutorImpl = this.beanFactory.getBean("taskExecutor", TaskExecutorImpl.class);
+		taskExecutorImpl.setTask(task);
 		
 		try {
 			// create job			
 			MethodInvokingJobDetailFactoryBean jobDetail = new MethodInvokingJobDetailFactoryBean();
-			jobDetail.setTargetObject(taskExecutor);
+			jobDetail.setTargetObject(taskExecutorImpl);
 			jobDetail.setTargetMethod("run");
 			jobDetail.setName(task.getTaskName() + "-JOB");
 			jobDetail.setGroup(task.getCommand().getCommandType().name());

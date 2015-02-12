@@ -61,7 +61,7 @@ public class WSJob {
 	//#####	if (taskExecution == null) {
 					// start immediately
 	//#####		System.out.println("invoke " + task.getTaskName());
-	//#####		taskExecutor.execute(new TaskExecutor(commandQueryService, taskExecutionCommandService, task));
+	//#####		taskExecutor.execute(new TaskExecutorImpl(commandQueryService, taskExecutionCommandService, task));
 	//#####	} else {
 					// check end time is null or not
 	//#####		if (taskExecution.getEnd() != null) {
@@ -86,7 +86,7 @@ public class WSJob {
 	//#####			if (current.getTimeInMillis() - end.getTimeInMillis() >= milliseconds) {
 						//if (current.get(java.util.Calendar.SECOND) >= seconds) {
 	//#####				System.out.println("invoke next task: " + task.getTaskName());
-	//#####				taskExecutor.execute(new TaskExecutor(commandQueryService, taskExecutionCommandService, task));
+	//#####				taskExecutor.execute(new TaskExecutorImpl(commandQueryService, taskExecutionCommandService, task));
 	//#####			}						
 	//#####		} else {
 	//#####			System.out.println("task " + task.getTaskName() + " is still running. Couldn't run in paralel.");

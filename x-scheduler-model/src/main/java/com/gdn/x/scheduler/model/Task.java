@@ -21,7 +21,7 @@ public class Task extends GdnBaseEntity {
 
 	private static final long serialVersionUID = -60028310176870786L;
 
-	@Column(name = "task_name", nullable = false, length = 55)
+	@Column(name = "task_name", nullable = false, length = 55, unique = true)
 	private String taskName;
 	
 	@ManyToOne
