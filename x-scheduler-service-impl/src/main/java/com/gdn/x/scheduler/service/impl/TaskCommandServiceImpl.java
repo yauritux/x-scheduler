@@ -3,9 +3,14 @@ package com.gdn.x.scheduler.service.impl;
 import java.util.Date;
 import java.util.List;
 
+import org.quartz.JobDetail;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.quartz.CronTriggerFactoryBean;
+import org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean;
+import org.springframework.scheduling.quartz.SchedulerAccessor;
+import org.springframework.scheduling.quartz.SchedulerFactoryBean;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
@@ -15,7 +20,6 @@ import com.gdn.common.base.shade.org.apache.http.client.methods.HttpGet;
 import com.gdn.common.base.shade.org.apache.http.impl.client.DefaultHttpClient;
 import com.gdn.x.scheduler.constant.CommandType;
 import com.gdn.x.scheduler.constant.SchedulerIntervalUnit;
-import com.gdn.x.scheduler.constant.ThreadRunningPolicy;
 import com.gdn.x.scheduler.constant.WSMethod;
 import com.gdn.x.scheduler.dao.TaskDAO;
 import com.gdn.x.scheduler.model.Task;
@@ -24,6 +28,7 @@ import com.gdn.x.scheduler.rest.web.model.TaskRequest;
 import com.gdn.x.scheduler.rest.web.model.WSCommandResponse;
 import com.gdn.x.scheduler.service.CommandQueryService;
 import com.gdn.x.scheduler.service.TaskCommandService;
+import com.gdn.x.scheduler.service.TaskExecutor;
 
 /**
  * 
@@ -42,12 +47,17 @@ public class TaskCommandServiceImpl implements TaskCommandService {
 	private static final Logger LOG = LoggerFactory.getLogger(TaskCommandServiceImpl.class);
 	
 	private CommandQueryService commandQueryService;
+	private SchedulerFactoryBean schedulerFactory;
 	private TaskDAO taskDAO;
+	private TaskExecutor taskExecutor;
 	
 	@Autowired
-	public TaskCommandServiceImpl(CommandQueryService commandQueryService, TaskDAO taskDAO) {
+	public TaskCommandServiceImpl(CommandQueryService commandQueryService, 
+			SchedulerFactoryBean schedulerFactory, TaskDAO taskDAO, TaskExecutor taskExecutor) {
 		this.commandQueryService = commandQueryService;
+		this.schedulerFactory = schedulerFactory;
 		this.taskDAO = taskDAO;
+		this.taskExecutor = taskExecutor;
 	}
 
 	/**
@@ -61,7 +71,69 @@ public class TaskCommandServiceImpl implements TaskCommandService {
 		if (entity == null) {
 			return null;
 		}
-		return taskDAO.save(entity);
+		if (entity.getDayOfWeek().equalsIgnoreCase("*") && entity.getDayOfMonth().equalsIgnoreCase("*")) {
+			entity.setDayOfWeek("?");
+		}
+		
+		Task task = taskDAO.save(entity);
+		
+		// set the task to run
+		taskExecutor.setTask(task);
+		
+		try {
+			// create job			
+			MethodInvokingJobDetailFactoryBean jobDetail = new MethodInvokingJobDetailFactoryBean();
+			jobDetail.setTargetObject(taskExecutor);
+			jobDetail.setTargetMethod("run");
+			jobDetail.setName(task.getTaskName());
+			jobDetail.setConcurrent(true);
+			jobDetail.afterPropertiesSet();
+			
+			// create trigger
+			StringBuilder builder = new StringBuilder();
+			builder.append(task.getSeconds());
+			builder.append(" ");
+			builder.append(task.getMinutes());
+			builder.append(" ");
+			builder.append(task.getHours());
+			builder.append(" ");
+			builder.append(task.getDayOfMonth());
+			builder.append(" ");
+			builder.append(task.getMonth());
+			builder.append(" ");
+			builder.append(task.getDayOfWeek());
+			if (task.getYear() != null && !task.getYear().isEmpty()) {
+				builder.append(" ");
+				builder.append(task.getYear());
+			}
+			CronTriggerFactoryBean cronTrigger = new CronTriggerFactoryBean();
+			cronTrigger.setBeanName(task.getTaskName());
+			cronTrigger.setJobDetail((JobDetail) jobDetail.getObject());
+			cronTrigger.setCronExpression(builder.toString());
+			cronTrigger.afterPropertiesSet();
+			
+			// add to schedule
+			if (!schedulerFactory.getScheduler().isStarted()) {
+				schedulerFactory.getScheduler().start();
+			}
+			//schedulerFactory.getScheduler().scheduleJob((JobDetail) jobDetail.getObject(), cronTrigger.getObject());
+			schedulerFactory.getScheduler().scheduleJob(cronTrigger.getObject());
+			
+		} catch (NoSuchMethodException e) {
+			LOG.error(e.getMessage(), e);		
+			System.err.println(e.getMessage());
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			LOG.error(e.getMessage(), e);
+			System.err.println(e.getMessage());
+			e.printStackTrace();
+		} catch (Exception e) {
+			LOG.error(e.getMessage(), e);
+			System.err.println(e.getMessage());
+			e.printStackTrace();
+		}
+		
+		return task;
 	}
 
 	/**

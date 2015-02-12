@@ -7,11 +7,13 @@
 	<version>1.0.0.RC1</version>
 	<name>${project.groupId}-${project.artifactId}</name>
 
+	<!--
 	<scm>
 		<connection>scm:git:ssh://git@stash.gdn.lokal:7990/scm/x/x-scheduler.git</connection>
 		<developerConnection>scm:git:ssh://git@stash.gdn.lokal:7990/scm/x/x-scheduler.git</developerConnection>
 		<tag>HEAD</tag>
 	</scm>
+	-->
 
 	<developers>
 		<developer>
@@ -25,6 +27,7 @@
 		</developer>
 	</developers>
 
+	<!--
 	<distributionManagement>
 		<repository>
 			<id>deploymentRepo</id>
@@ -67,6 +70,7 @@
 		</repository>
 
 	</repositories>
+	-->
 
 	<modules>
 		<module>x-scheduler-model</module>
@@ -206,8 +210,10 @@
 		<spring-data-rest-webmvc-version>2.1.4.RELEASE</spring-data-rest-webmvc-version>
 		<javax.inject-version>1</javax.inject-version>
 		<logback-core-version>1.1.2</logback-core-version>
-		<gdn-common-base-version>2.9.0</gdn-common-base-version>
-		<gdn-base-rest-web-version>3.1.0</gdn-base-rest-web-version>
+		<!--<gdn-common-base-version>2.9.0</gdn-common-base-version>-->
+		<gdn-common-base-version>2.11.0-SNAPSHOT</gdn-common-base-version>
+		<!--<gdn-base-rest-web-version>3.1.0</gdn-base-rest-web-version>-->
+		<gdn-base-rest-web-version>3.4.0-SNAPSHOT</gdn-base-rest-web-version>
 		<swagger-springmvc.version>0.8.5</swagger-springmvc.version>
 		<freemarker-version>2.3.20</freemarker-version>
 		<jsonpath-version>0.9.1</jsonpath-version>

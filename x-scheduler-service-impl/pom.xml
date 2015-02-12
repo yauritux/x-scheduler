@@ -15,6 +15,7 @@
 		<finalName>${project.name}</finalName>
 	</build>
 
+ 	<!--
 	<repositories>
 		<repository>
 			<id>local-artifactory</id>
@@ -23,6 +24,7 @@
 			<layout>default</layout>
 		</repository>
 	</repositories>
+	-->
 
 	<dependencies>
 

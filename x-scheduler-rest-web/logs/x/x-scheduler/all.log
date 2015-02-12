@@ -1347,3 +1347,187 @@ Caused by: javax.persistence.NonUniqueResultException: result returns more than 
 []2015-02-06T09:28:19,072Z INFO  org.quartz.core.QuartzScheduler - Scheduler xScheduler_$_NON_CLUSTERED shutting down. 
 []2015-02-06T09:28:19,072Z INFO  org.quartz.core.QuartzScheduler - Scheduler xScheduler_$_NON_CLUSTERED paused. 
 []2015-02-06T09:28:19,072Z INFO  org.quartz.core.QuartzScheduler - Scheduler xScheduler_$_NON_CLUSTERED shutdown complete. 
+[]2015-02-06T09:49:00,252Z INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor 
+[]2015-02-06T09:49:00,263Z INFO  o.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl 
+[]2015-02-06T09:49:00,263Z INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.2.1 created. 
+[]2015-02-06T09:49:00,264Z INFO  org.quartz.simpl.RAMJobStore - RAMJobStore initialized. 
+[]2015-02-06T09:49:00,265Z INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.2.1) 'xScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 20 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+ 
+[]2015-02-06T09:49:00,265Z INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'xScheduler' initialized from an externally provided properties instance. 
+[]2015-02-06T09:49:00,265Z INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.2.1 
+[]2015-02-06T09:49:00,266Z INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@5420d1d3 
+[]2015-02-06T09:49:00,778Z INFO  org.quartz.core.QuartzScheduler - Scheduler xScheduler_$_NON_CLUSTERED started. 
+[]2015-02-06T09:49:01,453Z INFO  c.m.s.plugin.SwaggerPluginAdapter - Context refreshed 
+[]2015-02-06T09:49:01,453Z INFO  c.m.s.plugin.SwaggerPluginAdapter - Found custom SwaggerSpringMvcPlugins 
+[]2015-02-06T09:49:01,453Z INFO  c.m.s.plugin.SwaggerPluginAdapter - initializing plugin bean customImplementation 
+[]2015-02-06T09:49:01,459Z INFO  c.m.s.s.ApiListingReferenceScanner - Scanning for api listing references 
+[]2015-02-06T09:49:01,461Z INFO  c.m.s.s.ApiListingReferenceScanner - Request mapping: getTask belongs to groups: [[ResourceGroup{groupName='task'}]]  
+[]2015-02-06T09:49:01,461Z INFO  c.m.s.s.ApiListingReferenceScanner - Adding resource to group:ResourceGroup{groupName='task'} with description:task for handler method:getTask 
+[]2015-02-06T09:49:01,461Z INFO  c.m.s.s.ApiListingReferenceScanner - Request mapping: fetchTasks belongs to groups: [[ResourceGroup{groupName='task'}]]  
+[]2015-02-06T09:49:01,462Z INFO  c.m.s.s.ApiListingReferenceScanner - Adding resource to group:ResourceGroup{groupName='task'} with description:task for handler method:fetchTasks 
+[]2015-02-06T09:49:01,462Z INFO  c.m.s.s.ApiListingReferenceScanner - Request mapping: submitTask belongs to groups: [[ResourceGroup{groupName='task'}]]  
+[]2015-02-06T09:49:01,463Z INFO  c.m.s.s.ApiListingReferenceScanner - Adding resource to group:ResourceGroup{groupName='task'} with description:task for handler method:submitTask 
+[]2015-02-06T09:49:01,463Z INFO  c.m.s.s.ApiListingReferenceScanner - Request mapping: getWSCommand belongs to groups: [[ResourceGroup{groupName='command'}]]  
+[]2015-02-06T09:49:01,463Z INFO  c.m.s.s.ApiListingReferenceScanner - Adding resource to group:ResourceGroup{groupName='command'} with description:command for handler method:getWSCommand 
+[]2015-02-06T09:49:01,463Z INFO  c.m.s.s.ApiListingReferenceScanner - Request mapping: getWSCommands belongs to groups: [[ResourceGroup{groupName='command'}]]  
+[]2015-02-06T09:49:01,463Z INFO  c.m.s.s.ApiListingReferenceScanner - Adding resource to group:ResourceGroup{groupName='command'} with description:command for handler method:getWSCommands 
+[]2015-02-06T09:49:01,464Z INFO  c.m.s.s.ApiListingReferenceScanner - Request mapping: submitCommand belongs to groups: [[ResourceGroup{groupName='command'}]]  
+[]2015-02-06T09:49:01,464Z INFO  c.m.s.s.ApiListingReferenceScanner - Adding resource to group:ResourceGroup{groupName='command'} with description:command for handler method:submitCommand 
+[]2015-02-06T09:49:01,464Z INFO  c.m.s.s.ApiListingReferenceScanner - Excluding method as it contains the excluded annotation: interface com.mangofactory.swagger.annotations.ApiIgnore 
+[]2015-02-06T09:49:01,464Z INFO  c.m.s.s.ApiListingReferenceScanner - Excluding method as it contains the excluded annotation: interface com.mangofactory.swagger.annotations.ApiIgnore 
+[]2015-02-06T09:49:01,468Z INFO  c.m.s.s.ApiListingReferenceScanner - Created resource listing Path: http://localhost:8080/api-docs/default/task Description: task Position: 0 
+[]2015-02-06T09:49:01,469Z INFO  c.m.s.s.ApiListingReferenceScanner - Created resource listing Path: http://localhost:8080/api-docs/default/command Description: command Position: 0 
+[]2015-02-06T09:49:01,729Z INFO  c.m.s.c.SwaggerApiResourceListing - Added a resource listing with (2) api resources:  
+[]2015-02-06T09:49:01,729Z INFO  c.m.s.c.SwaggerApiResourceListing -   command at location: /api-docshttp://localhost:8080/api-docs/default/command 
+[]2015-02-06T09:49:01,729Z INFO  c.m.s.c.SwaggerApiResourceListing -   task at location: /api-docshttp://localhost:8080/api-docs/default/task 
+[]2015-02-06T09:49:32,804Z INFO  org.quartz.core.QuartzScheduler - Scheduler xScheduler_$_NON_CLUSTERED paused. 
+[]2015-02-06T09:49:32,809Z INFO  org.quartz.core.QuartzScheduler - Scheduler xScheduler_$_NON_CLUSTERED shutting down. 
+[]2015-02-06T09:49:32,809Z INFO  org.quartz.core.QuartzScheduler - Scheduler xScheduler_$_NON_CLUSTERED paused. 
+[]2015-02-06T09:49:32,810Z INFO  org.quartz.core.QuartzScheduler - Scheduler xScheduler_$_NON_CLUSTERED shutdown complete. 
+[]2015-02-12T01:09:58,214Z INFO  java.sql.DatabaseMetaData - HHH000262: Table not found: activity_log 
+[]2015-02-12T01:09:58,231Z INFO  java.sql.DatabaseMetaData - HHH000262: Table not found: command 
+[]2015-02-12T01:09:58,235Z INFO  java.sql.DatabaseMetaData - HHH000262: Table not found: task 
+[]2015-02-12T01:09:58,239Z INFO  java.sql.DatabaseMetaData - HHH000262: Table not found: task_execution 
+[]2015-02-12T01:09:58,243Z INFO  java.sql.DatabaseMetaData - HHH000262: Table not found: activity_log 
+[]2015-02-12T01:09:58,247Z INFO  java.sql.DatabaseMetaData - HHH000262: Table not found: command 
+[]2015-02-12T01:09:58,250Z INFO  java.sql.DatabaseMetaData - HHH000262: Table not found: task 
+[]2015-02-12T01:09:58,253Z INFO  java.sql.DatabaseMetaData - HHH000262: Table not found: task_execution 
+[]2015-02-12T01:09:58,259Z INFO  java.sql.DatabaseMetaData - HHH000262: Table not found: activity_log 
+[]2015-02-12T01:09:58,262Z INFO  java.sql.DatabaseMetaData - HHH000262: Table not found: command 
+[]2015-02-12T01:09:58,265Z INFO  java.sql.DatabaseMetaData - HHH000262: Table not found: task 
+[]2015-02-12T01:09:58,268Z INFO  java.sql.DatabaseMetaData - HHH000262: Table not found: task_execution 
+[]2015-02-12T01:09:59,916Z INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor 
+[]2015-02-12T01:09:59,982Z INFO  o.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl 
+[]2015-02-12T01:09:59,984Z INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.2.1 created. 
+[]2015-02-12T01:09:59,985Z INFO  org.quartz.simpl.RAMJobStore - RAMJobStore initialized. 
+[]2015-02-12T01:09:59,986Z INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.2.1) 'xScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 20 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+ 
+[]2015-02-12T01:09:59,987Z INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'xScheduler' initialized from an externally provided properties instance. 
+[]2015-02-12T01:09:59,987Z INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.2.1 
+[]2015-02-12T01:09:59,989Z INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@31eb7f2b 
+[]2015-02-12T01:10:01,146Z INFO  org.quartz.core.QuartzScheduler - Scheduler xScheduler_$_NON_CLUSTERED started. 
+[]2015-02-12T01:10:02,853Z INFO  c.m.s.plugin.SwaggerPluginAdapter - Context refreshed 
+[]2015-02-12T01:10:02,854Z INFO  c.m.s.plugin.SwaggerPluginAdapter - Found custom SwaggerSpringMvcPlugins 
+[]2015-02-12T01:10:02,854Z INFO  c.m.s.plugin.SwaggerPluginAdapter - initializing plugin bean customImplementation 
+[]2015-02-12T01:10:02,864Z INFO  c.m.s.s.ApiListingReferenceScanner - Scanning for api listing references 
+[]2015-02-12T01:10:02,867Z INFO  c.m.s.s.ApiListingReferenceScanner - Request mapping: getWSCommand belongs to groups: [[ResourceGroup{groupName='command'}]]  
+[]2015-02-12T01:10:02,867Z INFO  c.m.s.s.ApiListingReferenceScanner - Adding resource to group:ResourceGroup{groupName='command'} with description:command for handler method:getWSCommand 
+[]2015-02-12T01:10:02,868Z INFO  c.m.s.s.ApiListingReferenceScanner - Request mapping: getWSCommands belongs to groups: [[ResourceGroup{groupName='command'}]]  
+[]2015-02-12T01:10:02,869Z INFO  c.m.s.s.ApiListingReferenceScanner - Adding resource to group:ResourceGroup{groupName='command'} with description:command for handler method:getWSCommands 
+[]2015-02-12T01:10:02,870Z INFO  c.m.s.s.ApiListingReferenceScanner - Request mapping: submitCommand belongs to groups: [[ResourceGroup{groupName='command'}]]  
+[]2015-02-12T01:10:02,870Z INFO  c.m.s.s.ApiListingReferenceScanner - Adding resource to group:ResourceGroup{groupName='command'} with description:command for handler method:submitCommand 
+[]2015-02-12T01:10:02,871Z INFO  c.m.s.s.ApiListingReferenceScanner - Request mapping: fetchTasks belongs to groups: [[ResourceGroup{groupName='task'}]]  
+[]2015-02-12T01:10:02,871Z INFO  c.m.s.s.ApiListingReferenceScanner - Adding resource to group:ResourceGroup{groupName='task'} with description:task for handler method:fetchTasks 
+[]2015-02-12T01:10:02,871Z INFO  c.m.s.s.ApiListingReferenceScanner - Request mapping: submitTask belongs to groups: [[ResourceGroup{groupName='task'}]]  
+[]2015-02-12T01:10:02,871Z INFO  c.m.s.s.ApiListingReferenceScanner - Adding resource to group:ResourceGroup{groupName='task'} with description:task for handler method:submitTask 
+[]2015-02-12T01:10:02,872Z INFO  c.m.s.s.ApiListingReferenceScanner - Request mapping: getTask belongs to groups: [[ResourceGroup{groupName='task'}]]  
+[]2015-02-12T01:10:02,872Z INFO  c.m.s.s.ApiListingReferenceScanner - Adding resource to group:ResourceGroup{groupName='task'} with description:task for handler method:getTask 
+[]2015-02-12T01:10:02,872Z INFO  c.m.s.s.ApiListingReferenceScanner - Excluding method as it contains the excluded annotation: interface com.mangofactory.swagger.annotations.ApiIgnore 
+[]2015-02-12T01:10:02,872Z INFO  c.m.s.s.ApiListingReferenceScanner - Excluding method as it contains the excluded annotation: interface com.mangofactory.swagger.annotations.ApiIgnore 
+[]2015-02-12T01:10:02,881Z INFO  c.m.s.s.ApiListingReferenceScanner - Created resource listing Path: http://localhost:8080/api-docs/default/task Description: task Position: 0 
+[]2015-02-12T01:10:02,882Z INFO  c.m.s.s.ApiListingReferenceScanner - Created resource listing Path: http://localhost:8080/api-docs/default/command Description: command Position: 0 
+[]2015-02-12T01:10:03,347Z INFO  c.m.s.c.SwaggerApiResourceListing - Added a resource listing with (2) api resources:  
+[]2015-02-12T01:10:03,348Z INFO  c.m.s.c.SwaggerApiResourceListing -   command at location: /api-docshttp://localhost:8080/api-docs/default/command 
+[]2015-02-12T01:10:03,348Z INFO  c.m.s.c.SwaggerApiResourceListing -   task at location: /api-docshttp://localhost:8080/api-docs/default/task 
+[]2015-02-12T01:12:30,410Z INFO  org.quartz.core.QuartzScheduler - Scheduler xScheduler_$_NON_CLUSTERED paused. 
+[]2015-02-12T01:12:30,416Z INFO  org.quartz.core.QuartzScheduler - Scheduler xScheduler_$_NON_CLUSTERED shutting down. 
+[]2015-02-12T01:12:30,416Z INFO  org.quartz.core.QuartzScheduler - Scheduler xScheduler_$_NON_CLUSTERED paused. 
+[]2015-02-12T01:12:30,417Z INFO  org.quartz.core.QuartzScheduler - Scheduler xScheduler_$_NON_CLUSTERED shutdown complete. 
+[]2015-02-12T02:57:33,902Z INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor 
+[]2015-02-12T02:57:33,928Z INFO  o.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl 
+[]2015-02-12T02:57:33,929Z INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.2.1 created. 
+[]2015-02-12T02:57:33,931Z INFO  org.quartz.simpl.RAMJobStore - RAMJobStore initialized. 
+[]2015-02-12T02:57:33,932Z INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.2.1) 'cronScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 20 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+ 
+[]2015-02-12T02:57:33,932Z INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'cronScheduler' initialized from an externally provided properties instance. 
+[]2015-02-12T02:57:33,932Z INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.2.1 
+[]2015-02-12T02:57:33,934Z INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@14ddc522 
+[]2015-02-12T02:57:35,333Z INFO  org.quartz.core.QuartzScheduler - Scheduler cronScheduler_$_NON_CLUSTERED started. 
+[]2015-02-12T02:57:37,277Z INFO  c.m.s.plugin.SwaggerPluginAdapter - Context refreshed 
+[]2015-02-12T02:57:37,278Z INFO  c.m.s.plugin.SwaggerPluginAdapter - Found custom SwaggerSpringMvcPlugins 
+[]2015-02-12T02:57:37,279Z INFO  c.m.s.plugin.SwaggerPluginAdapter - initializing plugin bean customImplementation 
+[]2015-02-12T02:57:37,290Z INFO  c.m.s.s.ApiListingReferenceScanner - Scanning for api listing references 
+[]2015-02-12T02:57:37,295Z INFO  c.m.s.s.ApiListingReferenceScanner - Request mapping: getWSCommand belongs to groups: [[ResourceGroup{groupName='command'}]]  
+[]2015-02-12T02:57:37,295Z INFO  c.m.s.s.ApiListingReferenceScanner - Adding resource to group:ResourceGroup{groupName='command'} with description:command for handler method:getWSCommand 
+[]2015-02-12T02:57:37,296Z INFO  c.m.s.s.ApiListingReferenceScanner - Request mapping: getWSCommands belongs to groups: [[ResourceGroup{groupName='command'}]]  
+[]2015-02-12T02:57:37,297Z INFO  c.m.s.s.ApiListingReferenceScanner - Adding resource to group:ResourceGroup{groupName='command'} with description:command for handler method:getWSCommands 
+[]2015-02-12T02:57:37,298Z INFO  c.m.s.s.ApiListingReferenceScanner - Request mapping: submitCommand belongs to groups: [[ResourceGroup{groupName='command'}]]  
+[]2015-02-12T02:57:37,298Z INFO  c.m.s.s.ApiListingReferenceScanner - Adding resource to group:ResourceGroup{groupName='command'} with description:command for handler method:submitCommand 
+[]2015-02-12T02:57:37,299Z INFO  c.m.s.s.ApiListingReferenceScanner - Request mapping: fetchTasks belongs to groups: [[ResourceGroup{groupName='task'}]]  
+[]2015-02-12T02:57:37,299Z INFO  c.m.s.s.ApiListingReferenceScanner - Adding resource to group:ResourceGroup{groupName='task'} with description:task for handler method:fetchTasks 
+[]2015-02-12T02:57:37,300Z INFO  c.m.s.s.ApiListingReferenceScanner - Request mapping: submitTask belongs to groups: [[ResourceGroup{groupName='task'}]]  
+[]2015-02-12T02:57:37,300Z INFO  c.m.s.s.ApiListingReferenceScanner - Adding resource to group:ResourceGroup{groupName='task'} with description:task for handler method:submitTask 
+[]2015-02-12T02:57:37,300Z INFO  c.m.s.s.ApiListingReferenceScanner - Request mapping: getTask belongs to groups: [[ResourceGroup{groupName='task'}]]  
+[]2015-02-12T02:57:37,300Z INFO  c.m.s.s.ApiListingReferenceScanner - Adding resource to group:ResourceGroup{groupName='task'} with description:task for handler method:getTask 
+[]2015-02-12T02:57:37,301Z INFO  c.m.s.s.ApiListingReferenceScanner - Excluding method as it contains the excluded annotation: interface com.mangofactory.swagger.annotations.ApiIgnore 
+[]2015-02-12T02:57:37,301Z INFO  c.m.s.s.ApiListingReferenceScanner - Excluding method as it contains the excluded annotation: interface com.mangofactory.swagger.annotations.ApiIgnore 
+[]2015-02-12T02:57:37,315Z INFO  c.m.s.s.ApiListingReferenceScanner - Created resource listing Path: http://localhost:8080/api-docs/default/task Description: task Position: 0 
+[]2015-02-12T02:57:37,315Z INFO  c.m.s.s.ApiListingReferenceScanner - Created resource listing Path: http://localhost:8080/api-docs/default/command Description: command Position: 0 
+[]2015-02-12T02:57:37,841Z INFO  c.m.s.c.SwaggerApiResourceListing - Added a resource listing with (2) api resources:  
+[]2015-02-12T02:57:37,842Z INFO  c.m.s.c.SwaggerApiResourceListing -   command at location: /api-docshttp://localhost:8080/api-docs/default/command 
+[]2015-02-12T02:57:37,842Z INFO  c.m.s.c.SwaggerApiResourceListing -   task at location: /api-docshttp://localhost:8080/api-docs/default/task 
+[]2015-02-12T03:01:49,352Z INFO  org.quartz.core.QuartzScheduler - Scheduler cronScheduler_$_NON_CLUSTERED paused. 
+[]2015-02-12T03:01:49,385Z INFO  org.quartz.core.QuartzScheduler - Scheduler cronScheduler_$_NON_CLUSTERED shutting down. 
+[]2015-02-12T03:01:49,385Z INFO  org.quartz.core.QuartzScheduler - Scheduler cronScheduler_$_NON_CLUSTERED paused. 
+[]2015-02-12T03:01:49,386Z INFO  org.quartz.core.QuartzScheduler - Scheduler cronScheduler_$_NON_CLUSTERED shutdown complete. 
+[]2015-02-12T03:11:41,441Z INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor 
+[]2015-02-12T03:11:41,630Z INFO  o.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl 
+[]2015-02-12T03:11:41,631Z INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.2.1 created. 
+[]2015-02-12T03:11:41,632Z INFO  org.quartz.simpl.RAMJobStore - RAMJobStore initialized. 
+[]2015-02-12T03:11:41,633Z INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.2.1) 'cronScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 20 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+ 
+[]2015-02-12T03:11:41,633Z INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'cronScheduler' initialized from an externally provided properties instance. 
+[]2015-02-12T03:11:41,633Z INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.2.1 
+[]2015-02-12T03:11:41,635Z INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@2346c84b 
+[]2015-02-12T03:11:42,944Z INFO  org.quartz.core.QuartzScheduler - Scheduler cronScheduler_$_NON_CLUSTERED started. 
+[]2015-02-12T03:11:45,088Z INFO  c.m.s.plugin.SwaggerPluginAdapter - Context refreshed 
+[]2015-02-12T03:11:45,089Z INFO  c.m.s.plugin.SwaggerPluginAdapter - Found custom SwaggerSpringMvcPlugins 
+[]2015-02-12T03:11:45,089Z INFO  c.m.s.plugin.SwaggerPluginAdapter - initializing plugin bean customImplementation 
+[]2015-02-12T03:11:45,100Z INFO  c.m.s.s.ApiListingReferenceScanner - Scanning for api listing references 
+[]2015-02-12T03:11:45,104Z INFO  c.m.s.s.ApiListingReferenceScanner - Request mapping: getWSCommand belongs to groups: [[ResourceGroup{groupName='command'}]]  
+[]2015-02-12T03:11:45,104Z INFO  c.m.s.s.ApiListingReferenceScanner - Adding resource to group:ResourceGroup{groupName='command'} with description:command for handler method:getWSCommand 
+[]2015-02-12T03:11:45,105Z INFO  c.m.s.s.ApiListingReferenceScanner - Request mapping: getWSCommands belongs to groups: [[ResourceGroup{groupName='command'}]]  
+[]2015-02-12T03:11:45,107Z INFO  c.m.s.s.ApiListingReferenceScanner - Adding resource to group:ResourceGroup{groupName='command'} with description:command for handler method:getWSCommands 
+[]2015-02-12T03:11:45,108Z INFO  c.m.s.s.ApiListingReferenceScanner - Request mapping: submitCommand belongs to groups: [[ResourceGroup{groupName='command'}]]  
+[]2015-02-12T03:11:45,108Z INFO  c.m.s.s.ApiListingReferenceScanner - Adding resource to group:ResourceGroup{groupName='command'} with description:command for handler method:submitCommand 
+[]2015-02-12T03:11:45,109Z INFO  c.m.s.s.ApiListingReferenceScanner - Request mapping: getTask belongs to groups: [[ResourceGroup{groupName='task'}]]  
+[]2015-02-12T03:11:45,109Z INFO  c.m.s.s.ApiListingReferenceScanner - Adding resource to group:ResourceGroup{groupName='task'} with description:task for handler method:getTask 
+[]2015-02-12T03:11:45,109Z INFO  c.m.s.s.ApiListingReferenceScanner - Request mapping: fetchTasks belongs to groups: [[ResourceGroup{groupName='task'}]]  
+[]2015-02-12T03:11:45,109Z INFO  c.m.s.s.ApiListingReferenceScanner - Adding resource to group:ResourceGroup{groupName='task'} with description:task for handler method:fetchTasks 
+[]2015-02-12T03:11:45,110Z INFO  c.m.s.s.ApiListingReferenceScanner - Request mapping: submitTask belongs to groups: [[ResourceGroup{groupName='task'}]]  
+[]2015-02-12T03:11:45,110Z INFO  c.m.s.s.ApiListingReferenceScanner - Adding resource to group:ResourceGroup{groupName='task'} with description:task for handler method:submitTask 
+[]2015-02-12T03:11:45,110Z INFO  c.m.s.s.ApiListingReferenceScanner - Excluding method as it contains the excluded annotation: interface com.mangofactory.swagger.annotations.ApiIgnore 
+[]2015-02-12T03:11:45,110Z INFO  c.m.s.s.ApiListingReferenceScanner - Excluding method as it contains the excluded annotation: interface com.mangofactory.swagger.annotations.ApiIgnore 
+[]2015-02-12T03:11:45,118Z INFO  c.m.s.s.ApiListingReferenceScanner - Created resource listing Path: http://localhost:8080/api-docs/default/task Description: task Position: 0 
+[]2015-02-12T03:11:45,118Z INFO  c.m.s.s.ApiListingReferenceScanner - Created resource listing Path: http://localhost:8080/api-docs/default/command Description: command Position: 0 
+[]2015-02-12T03:11:45,488Z INFO  c.m.s.c.SwaggerApiResourceListing - Added a resource listing with (2) api resources:  
+[]2015-02-12T03:11:45,488Z INFO  c.m.s.c.SwaggerApiResourceListing -   command at location: /api-docshttp://localhost:8080/api-docs/default/command 
+[]2015-02-12T03:11:45,488Z INFO  c.m.s.c.SwaggerApiResourceListing -   task at location: /api-docshttp://localhost:8080/api-docs/default/task 
+[]2015-02-12T03:17:41,724Z INFO  org.quartz.core.QuartzScheduler - Scheduler cronScheduler_$_NON_CLUSTERED paused. 
+[]2015-02-12T03:17:41,759Z INFO  org.quartz.core.QuartzScheduler - Scheduler cronScheduler_$_NON_CLUSTERED shutting down. 
+[]2015-02-12T03:17:41,759Z INFO  org.quartz.core.QuartzScheduler - Scheduler cronScheduler_$_NON_CLUSTERED paused. 
+[]2015-02-12T03:17:41,760Z INFO  org.quartz.core.QuartzScheduler - Scheduler cronScheduler_$_NON_CLUSTERED shutdown complete. 
