@@ -23,7 +23,8 @@ import com.gdn.x.scheduler.constant.CommandType;
 import com.gdn.x.scheduler.dao.TaskDAO;
 import com.gdn.x.scheduler.model.Task;
 import com.gdn.x.scheduler.model.WebServiceCommand;
-import com.gdn.x.scheduler.service.TaskQueryService;
+import com.gdn.x.scheduler.service.domain.TaskQueryService;
+import com.gdn.x.scheduler.service.domain.impl.TaskQueryServiceImpl;
 
 /**
  * 

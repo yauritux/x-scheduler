@@ -35,8 +35,8 @@ import com.gdn.x.scheduler.model.ShellScriptCommand;
 import com.gdn.x.scheduler.model.WebServiceCommand;
 import com.gdn.x.scheduler.rest.web.model.WSCommandRequest;
 import com.gdn.x.scheduler.rest.web.model.WSCommandResponse;
-import com.gdn.x.scheduler.service.CommandCommandService;
-import com.gdn.x.scheduler.service.CommandQueryService;
+import com.gdn.x.scheduler.service.domain.CommandCommandService;
+import com.gdn.x.scheduler.service.domain.CommandQueryService;
 
 /**
  * 

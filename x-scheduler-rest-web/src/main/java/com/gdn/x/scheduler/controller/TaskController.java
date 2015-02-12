@@ -27,8 +27,8 @@ import com.gdn.common.web.wrapper.response.PageMetaData;
 import com.gdn.x.scheduler.model.Task;
 import com.gdn.x.scheduler.rest.web.model.TaskRequest;
 import com.gdn.x.scheduler.rest.web.model.TaskResponse;
-import com.gdn.x.scheduler.service.TaskCommandService;
-import com.gdn.x.scheduler.service.TaskQueryService;
+import com.gdn.x.scheduler.service.domain.TaskCommandService;
+import com.gdn.x.scheduler.service.domain.TaskQueryService;
 import com.wordnik.swagger.annotations.Api;
 
 /**

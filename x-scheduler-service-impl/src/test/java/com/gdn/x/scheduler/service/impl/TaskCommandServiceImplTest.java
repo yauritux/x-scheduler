@@ -34,8 +34,10 @@ import com.gdn.x.scheduler.dao.TaskDAO;
 import com.gdn.x.scheduler.model.Task;
 import com.gdn.x.scheduler.model.WebServiceCommand;
 import com.gdn.x.scheduler.rest.web.model.TaskRequest;
-import com.gdn.x.scheduler.service.CommandQueryService;
-import com.gdn.x.scheduler.service.TaskCommandService;
+import com.gdn.x.scheduler.service.domain.CommandQueryService;
+import com.gdn.x.scheduler.service.domain.TaskCommandService;
+import com.gdn.x.scheduler.service.domain.impl.CommandQueryServiceImpl;
+import com.gdn.x.scheduler.service.domain.impl.TaskCommandServiceImpl;
 
 /**
  * 

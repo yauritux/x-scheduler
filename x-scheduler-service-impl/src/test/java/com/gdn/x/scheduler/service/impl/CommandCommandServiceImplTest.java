@@ -31,7 +31,8 @@ import com.gdn.x.scheduler.model.Command;
 import com.gdn.x.scheduler.model.WebServiceCommand;
 import com.gdn.x.scheduler.rest.web.model.CommandRequest;
 import com.gdn.x.scheduler.rest.web.model.WSCommandRequest;
-import com.gdn.x.scheduler.service.CommandCommandService;
+import com.gdn.x.scheduler.service.domain.CommandCommandService;
+import com.gdn.x.scheduler.service.domain.impl.CommandCommandServiceImpl;
 import com.gdn.x.scheduler.service.helper.factory.impl.CommandFactory;
 import com.gdn.x.scheduler.service.helper.invoker.impl.CommandInvokerImpl;
 
