@@ -41,12 +41,8 @@ public class TaskCommandServiceImpl implements TaskCommandService { //, BeanFact
 	
 	private static final Logger LOG = LoggerFactory.getLogger(TaskCommandServiceImpl.class);
 	
-	//private BeanFactory beanFactory;
-	
 	private CommandQueryService commandQueryService;
-	//private SchedulerFactoryBean schedulerFactory;
 	private TaskDAO taskDAO;
-	//private TaskExecutorImpl taskExecutor;
 	
 	private CoreEngine schedulerEngine;
 	
