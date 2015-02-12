@@ -3,19 +3,9 @@ package com.gdn.x.scheduler.service.domain.impl;
 import java.util.Date;
 import java.util.List;
 
-import org.quartz.JobDetail;
-import org.quartz.JobKey;
-import org.quartz.Scheduler;
-import org.quartz.impl.matchers.GroupMatcher;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.BeansException;
-import org.springframework.beans.factory.BeanFactory;
-import org.springframework.beans.factory.BeanFactoryAware;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.scheduling.quartz.CronTriggerFactoryBean;
-import org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean;
-import org.springframework.scheduling.quartz.SchedulerFactoryBean;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
@@ -33,7 +23,7 @@ import com.gdn.x.scheduler.rest.web.model.TaskRequest;
 import com.gdn.x.scheduler.rest.web.model.WSCommandResponse;
 import com.gdn.x.scheduler.service.domain.CommandQueryService;
 import com.gdn.x.scheduler.service.domain.TaskCommandService;
-import com.gdn.x.scheduler.service.schedengine.impl.TaskExecutorImpl;
+import com.gdn.x.scheduler.service.schedengine.CoreEngine;
 
 /**
  * 
@@ -47,24 +37,25 @@ import com.gdn.x.scheduler.service.schedengine.impl.TaskExecutorImpl;
  */
 @Service("taskCommandService")
 @Transactional(readOnly = false, propagation = Propagation.REQUIRED)
-public class TaskCommandServiceImpl implements TaskCommandService, BeanFactoryAware {
+public class TaskCommandServiceImpl implements TaskCommandService { //, BeanFactoryAware {
 	
 	private static final Logger LOG = LoggerFactory.getLogger(TaskCommandServiceImpl.class);
 	
-	private BeanFactory beanFactory;
+	//private BeanFactory beanFactory;
 	
 	private CommandQueryService commandQueryService;
-	private SchedulerFactoryBean schedulerFactory;
+	//private SchedulerFactoryBean schedulerFactory;
 	private TaskDAO taskDAO;
 	//private TaskExecutorImpl taskExecutor;
 	
+	private CoreEngine schedulerEngine;
+	
 	@Autowired
 	public TaskCommandServiceImpl(CommandQueryService commandQueryService, 
-			SchedulerFactoryBean schedulerFactory, TaskDAO taskDAO) {
+			CoreEngine schedulerEngine, TaskDAO taskDAO) { 
 		this.commandQueryService = commandQueryService;
-		this.schedulerFactory = schedulerFactory;
+		this.schedulerEngine = schedulerEngine;
 		this.taskDAO = taskDAO;
-		//this.taskExecutor = taskExecutor;
 	}
 
 	/**
@@ -85,79 +76,8 @@ public class TaskCommandServiceImpl implements TaskCommandService, BeanFactoryAw
 		
 		Task task = taskDAO.save(entity);
 		
-		// set the task to run
-		TaskExecutorImpl taskExecutorImpl = this.beanFactory.getBean("taskExecutor", TaskExecutorImpl.class);
-		taskExecutorImpl.setTask(task);
-		
-		try {
-			// create job			
-			MethodInvokingJobDetailFactoryBean jobDetail = new MethodInvokingJobDetailFactoryBean();
-			jobDetail.setTargetObject(taskExecutorImpl);
-			jobDetail.setTargetMethod("run");
-			jobDetail.setName(task.getTaskName() + "-JOB");
-			jobDetail.setGroup(task.getCommand().getCommandType().name());
-			jobDetail.setConcurrent(false);
-			jobDetail.afterPropertiesSet();
-			
-			// create trigger
-			StringBuilder builder = new StringBuilder();
-			builder.append(task.getSeconds());
-			builder.append(" ");
-			builder.append(task.getMinutes());
-			builder.append(" ");
-			builder.append(task.getHours());
-			builder.append(" ");
-			builder.append(task.getDayOfMonth());
-			builder.append(" ");
-			builder.append(task.getMonth());
-			builder.append(" ");
-			builder.append(task.getDayOfWeek());
-			if (task.getYear() != null && !task.getYear().isEmpty()) {
-				builder.append(" ");
-				builder.append(task.getYear());
-			}
-			CronTriggerFactoryBean cronTrigger = new CronTriggerFactoryBean();
-			cronTrigger.setBeanName(task.getTaskName());
-			cronTrigger.setJobDetail((JobDetail) jobDetail.getObject());
-			cronTrigger.setName(task.getTaskName() + "-TRIGGER");
-			cronTrigger.setGroup(task.getCommand().getCommandType().name());
-			cronTrigger.setCronExpression(builder.toString());
-			cronTrigger.afterPropertiesSet();
-			
-			Scheduler scheduler = schedulerFactory.getScheduler();
-			
-			// add to schedule
-			if (!scheduler.isStarted()) {
-				scheduler.start();
-			}
-			
-			scheduler.scheduleJob(jobDetail.getObject(), cronTrigger.getObject());									
-			
-			for (String groupName : scheduler.getJobGroupNames()) {
-				System.out.println("Scheduler Group Name = " + groupName);
+		schedulerEngine.scheduleTask(task);
 				
-				for (JobKey jobKey : scheduler.getJobKeys(GroupMatcher.jobGroupEquals(groupName))) {
-					System.out.println("jobName = " + jobKey.getName());
-					System.out.println("jobGroup = " + jobKey.getGroup());
-					
-					System.out.println("Total Trigger for this job: " + scheduler.getTriggersOfJob(jobKey).size());
-				}
-			}			
-			
-		} catch (NoSuchMethodException e) {
-			LOG.error(e.getMessage(), e);		
-			System.err.println(e.getMessage());
-			e.printStackTrace();
-		} catch (ClassNotFoundException e) {
-			LOG.error(e.getMessage(), e);
-			System.err.println(e.getMessage());
-			e.printStackTrace();
-		} catch (Exception e) {
-			LOG.error(e.getMessage(), e);
-			System.err.println(e.getMessage());
-			e.printStackTrace();
-		}
-		
 		return task;
 	}
 
@@ -354,10 +274,5 @@ public class TaskCommandServiceImpl implements TaskCommandService, BeanFactoryAw
 			}
 			httpClient.getConnectionManager().shutdown();
 		}
-	}
-
-	@Override
-	public void setBeanFactory(BeanFactory beanFactory) throws BeansException {
-		this.beanFactory = beanFactory;
 	}
 }

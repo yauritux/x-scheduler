@@ -24,7 +24,6 @@ import org.powermock.core.classloader.annotations.PowerMockIgnore;
 import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.core.classloader.annotations.SuppressStaticInitializationFor;
 import org.powermock.modules.junit4.PowerMockRunner;
-import org.springframework.scheduling.quartz.SchedulerFactoryBean;
 
 import com.gdn.x.scheduler.constant.CommandType;
 import com.gdn.x.scheduler.constant.SchedulerIntervalUnit;
@@ -38,6 +37,7 @@ import com.gdn.x.scheduler.service.domain.CommandQueryService;
 import com.gdn.x.scheduler.service.domain.TaskCommandService;
 import com.gdn.x.scheduler.service.domain.impl.CommandQueryServiceImpl;
 import com.gdn.x.scheduler.service.domain.impl.TaskCommandServiceImpl;
+import com.gdn.x.scheduler.service.schedengine.CoreEngine;
 
 /**
  * 
@@ -60,16 +60,16 @@ public class TaskCommandServiceImplTest {
 	
 	//Collaborators
 	private CommandQueryService commandQueryService;
-	private SchedulerFactoryBean schedulerFactoryBean;
+	private CoreEngine coreEngine;
 	private TaskDAO taskDAO;
 	
 	@Before
 	public void setup() {
 		commandQueryService = mock(CommandQueryServiceImpl.class, withSettings().name("Command Query Service").verboseLogging());
-		schedulerFactoryBean = mock(SchedulerFactoryBean.class, withSettings().name("Scheduler Factory Bean").verboseLogging());		
+		coreEngine = mock(CoreEngine.class, withSettings().name("Core Scheduler Engine").verboseLogging());		
 		taskDAO = mock(TaskDAO.class, withSettings().name("Task DAO").verboseLogging());		
 		
-		taskService = spy(new TaskCommandServiceImpl(commandQueryService, schedulerFactoryBean, taskDAO));
+		taskService = spy(new TaskCommandServiceImpl(commandQueryService, coreEngine, taskDAO));
 	}
 	
 	@Ignore

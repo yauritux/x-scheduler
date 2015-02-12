@@ -50,7 +50,6 @@ public class CommandQueryServiceImplTest {
 	
 	@Test(timeout = 1000)
 	public void findById_nullId_nullReturned() {
-		when(mockCommandDAO.findById(null)).thenReturn(null);
 		Command command = commandQueryService.findById(null);
 		assertNull(command);
 	}
@@ -68,13 +67,13 @@ public class CommandQueryServiceImplTest {
 		assertNull(commandResponse);
 	}
 	
-	@Test(timeout = 1500)
+	@Test(timeout = 2000)
 	public void wrapCommand_commandIsOfWSType_WSCommandResponseReturned() throws Exception {
 		CommandResponse commandResponse = commandQueryService.wrapCommand(buildWSCommand());
 		assertTrue(commandResponse instanceof WSCommandResponse);
 	}
 	
-	@Test(timeout = 1000)
+	@Test(timeout = 2000)
 	public void wrapCommand_commandBadJsonFormat_nullIsReturned() throws Exception {
 		assertNull(commandQueryService.wrapCommand(buildBadWSCommand()));
 	}

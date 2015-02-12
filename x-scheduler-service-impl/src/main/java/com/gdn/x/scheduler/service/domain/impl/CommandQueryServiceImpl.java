@@ -51,6 +51,9 @@ public class CommandQueryServiceImpl implements CommandQueryService {
 	 */	
 	@Override
 	public Command findById(String id) {
+		if (id == null) {
+			return null;
+		}
 		return commandDAO.findById(id != null ? id.trim() : id);
 	}
 
