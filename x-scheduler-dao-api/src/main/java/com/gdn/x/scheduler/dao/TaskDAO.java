@@ -31,7 +31,7 @@ public interface TaskDAO extends CrudRepository<Task, String> {
     public static final String FIND_BY_ID_EXCL_DELETE
     	= "FROM Task t WHERE t.id = :id AND t.markForDelete = false";
     public static final String FIND_EXPIRED_TASKS
-    	= "FROM Task t WHERE t.expiryDate >= :expiryDate AND t.markForDelete = false";
+    	= "FROM Task t WHERE t.expiryDate <= :expiryDate AND t.markForDelete = false";
     public static final String COUNT_RECORDS_EXCL_DELETE
     	= "SELECT count(t) FROM Task t WHERE t.markForDelete = false";
 
@@ -81,6 +81,6 @@ public interface TaskDAO extends CrudRepository<Task, String> {
 	public int restoreTask(@Param("id") String id);
 	
 	@Modifying
-	@Query(value = "UPDATE Task t SET markForDelete = true WHERE expiryDate >= :expiryDate")
+	@Query(value = "UPDATE Task t SET markForDelete = true WHERE expiryDate <= :expiryDate")
 	public int deleteExpiredTasks(@Param("expiryDate") Date expiryDate);
 }
