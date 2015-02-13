@@ -1,5 +1,7 @@
 package com.gdn.x.scheduler.service.domain;
 
+import java.util.Date;
+
 import com.gdn.x.scheduler.model.Task;
 import com.gdn.x.scheduler.rest.web.model.TaskRequest;
 import com.gdn.x.scheduler.service.domain.base.BaseCommandService;
@@ -15,4 +17,5 @@ import com.gdn.x.scheduler.service.domain.base.BaseCommandService;
 public interface TaskCommandService extends BaseCommandService<Task> {
 	
 	public Task buildTaskFromRequest(TaskRequest request);
+	public int deleteExpiredTasks(Date date);
 }

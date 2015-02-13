@@ -171,6 +171,17 @@ public class TaskCommandServiceImpl implements TaskCommandService {
 		}
 		return affected;
 	}
+	
+	/**
+	 * Delete tasks those are already expired.
+	 * 
+	 * @param date of expired
+	 * @return number of records deleted.
+	 */
+	@Override
+	public int deleteExpiredTasks(Date date) {
+		return taskDAO.deleteExpiredTasks(date);
+	}
 
 	/**
 	 * build task object from user's HTTP request. 

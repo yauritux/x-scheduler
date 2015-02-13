@@ -79,4 +79,8 @@ public interface TaskDAO extends CrudRepository<Task, String> {
 	@Modifying
 	@Query(value = "UPDATE Task t SET markForDelete = false WHERE id = :id")
 	public int restoreTask(@Param("id") String id);
+	
+	@Modifying
+	@Query(value = "UPDATE Task t SET markForDelete = true WHERE expiryDate >= :expiryDate")
+	public int deleteExpiredTasks(@Param("expiryDate") Date expiryDate);
 }
