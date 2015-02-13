@@ -18,6 +18,10 @@ import com.gdn.x.scheduler.service.domain.TaskExecutionCommandService;
  * @author yauritux (yauritux@gmail.com)
  * @version 1.0.0.RC1
  * @since 1.0.0.RC1
+ * 
+ * Service class that contains all logics to manipulate the TaskExecution data.
+ * TaskExecution represents the history/log of every task those are being executed or have been executed.
+ * Basically, this class represents command layer service of CQRS pattern.
  *
  */
 @Service("taskExecutionCommandService")
@@ -57,21 +61,21 @@ public class TaskExecutionCommandServiceImpl implements
 
 	@Override
 	public boolean delete(TaskExecution entity) {
-		throw new UnsupportedOperationException("Unsupported on this version.");
+		throw new UnsupportedOperationException("Unsupported on this major version.");
 	}
 
 	@Override
 	public boolean restore(TaskExecution entity) {
-		throw new UnsupportedOperationException("Unsupported on this version.");
+		throw new UnsupportedOperationException("Unsupported on this major version.");
 	}
 
 	@Override
 	public int batchDelete(List<TaskExecution> entities) {
-		throw new UnsupportedOperationException("Unsupported on this version.");
+		throw new UnsupportedOperationException("Unsupported on this major version.");
 	}
 
 	@Override
 	public int batchRestore(List<TaskExecution> entities) {
-		throw new UnsupportedOperationException("Unsupported on this version.");
+		throw new UnsupportedOperationException("Unsupported on this major version.");
 	}
 }

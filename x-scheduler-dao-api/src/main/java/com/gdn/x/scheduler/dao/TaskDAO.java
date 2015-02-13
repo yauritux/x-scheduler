@@ -1,5 +1,6 @@
 package com.gdn.x.scheduler.dao;
 
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.data.domain.Page;
@@ -29,6 +30,8 @@ public interface TaskDAO extends CrudRepository<Task, String> {
     	= "FROM Task t WHERE t.taskName like :taskName ORDER BY createdDate DESC";
     public static final String FIND_BY_ID_EXCL_DELETE
     	= "FROM Task t WHERE t.id = :id AND t.markForDelete = false";
+    public static final String FIND_EXPIRED_TASKS
+    	= "FROM Task t WHERE t.expiryDate >= :expiryDate AND t.markForDelete = false";
     public static final String COUNT_RECORDS_EXCL_DELETE
     	= "SELECT count(t) FROM Task t WHERE t.markForDelete = false";
 
@@ -65,6 +68,9 @@ public interface TaskDAO extends CrudRepository<Task, String> {
 	
 	@Query(FIND_BY_TASK_NAME_LIKE)
 	public Page<Task> findByTaskNameLike(@Param("taskName") String taskName, Pageable pageable);
+	
+	@Query(FIND_EXPIRED_TASKS)
+	public List<Task> findExpiredTasks(@Param("expiryDate") Date expiryDate);
 	
 	@Modifying
 	@Query(value = "UPDATE Task t SET markForDelete = true WHERE id = :id")

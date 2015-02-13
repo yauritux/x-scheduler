@@ -1,10 +1,14 @@
 package com.gdn.x.scheduler.model;
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 import com.gdn.common.base.entity.GdnBaseEntity;
 
@@ -48,6 +52,10 @@ public class Task extends GdnBaseEntity {
 	
 	@Column(name = "yr", nullable = true)
 	private String year;
+	
+	@Column(name = "expiry_date", nullable = true)
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date expiryDate;
 	
 	/*
 	@Enumerated(EnumType.STRING)
@@ -137,4 +145,12 @@ public class Task extends GdnBaseEntity {
 	public void setYear(String year) {
 		this.year = year;
 	}	
+	
+	public Date getExpiryDate() {
+		return expiryDate;
+	}
+	
+	public void setExpiryDate(Date expiryDate) {
+		this.expiryDate = expiryDate;
+	}
 }

@@ -1,5 +1,6 @@
 package com.gdn.x.scheduler.service.domain.impl;
 
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -219,6 +220,19 @@ public class TaskQueryServiceImpl implements TaskQueryService {
 			return null;
 		}
 		return taskDAO.findByIdExclDelete(id);
+	}
+	
+	/**
+	 * find all tasks those already expired.
+	 * @param expiryDate date of expired
+	 * @return tasks those already expired.
+	 */
+	@Override
+	public List<Task> findExpiredTasks(Date expiryDate) {
+		if (expiryDate == null) {
+			return null;
+		}
+		return taskDAO.findExpiredTasks(expiryDate);
 	}
 
 	/**

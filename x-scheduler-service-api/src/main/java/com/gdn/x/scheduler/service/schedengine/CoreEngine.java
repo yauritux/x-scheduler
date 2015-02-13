@@ -1,6 +1,5 @@
 package com.gdn.x.scheduler.service.schedengine;
 
-import com.gdn.x.scheduler.model.Task;
 
 /**
  * 
@@ -9,7 +8,7 @@ import com.gdn.x.scheduler.model.Task;
  * @since 1.0.0.RC1
  *
  */
-public interface CoreEngine {
+public interface CoreEngine<T> {
 
-	public void scheduleTask(Task task);
+	public void scheduleJob(T entity);
 }

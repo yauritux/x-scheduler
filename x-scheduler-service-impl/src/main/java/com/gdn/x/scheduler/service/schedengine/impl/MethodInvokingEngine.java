@@ -27,7 +27,7 @@ import com.gdn.x.scheduler.service.schedengine.CoreEngine;
  */
 @Service("methodInvokingEngine")
 @Transactional(readOnly = false, propagation = Propagation.REQUIRED)
-public class MethodInvokingEngine implements CoreEngine, BeanFactoryAware {
+public class MethodInvokingEngine implements CoreEngine<Task>, BeanFactoryAware {
 	
 	private static final Logger LOG = LoggerFactory.getLogger(MethodInvokingEngine.class);
 	
@@ -40,23 +40,23 @@ public class MethodInvokingEngine implements CoreEngine, BeanFactoryAware {
 	}
 
 	@Override
-	public void scheduleTask(Task task) {
-		// set the task to run
-		/* 
-		 * since we are calling taskExecutor (which is prototype scope) 
-		 * from the scope of this class (which is singleton by default)
-		 * then we need to force the DI here, otherwise the prototype bean 
-		 * won't be acting as it should. 
-		 * see my comment on linkedIn discussion group 
-		 * at https://www.linkedin.com/groupItem?view=&gid=46964&type=member&item=212949099&commentID=5971684518195658753
-		 * &report.success=8ULbKyXO6NDvmoK7o030UNOYGZKrvdhBhypZ_w8EpQrrQI-BBjkmxwkEOwBjLE28YyDIxcyEO7_TA_giuRN#commentID_5971684518195658753 
-		 * regarding this matter.
-		 *  
-		 */
-		TaskExecutorImpl taskExecutorImpl = this.beanFactory.getBean("taskExecutor", TaskExecutorImpl.class);
-		taskExecutorImpl.setTask(task);		
-		
+	public void scheduleJob(Task task) {		
 		try {
+			// set the task to run
+			/* 
+			 * since we are calling taskExecutor (which is prototype scope) 
+			 * from the scope of this class (which is singleton by default)
+			 * then we need to force the DI here, otherwise the prototype bean 
+			 * won't be acting as it should. 
+			 * see my comment on linkedIn discussion group 
+			 * at https://www.linkedin.com/groupItem?view=&gid=46964&type=member&item=212949099&commentID=5971684518195658753
+			 * &report.success=8ULbKyXO6NDvmoK7o030UNOYGZKrvdhBhypZ_w8EpQrrQI-BBjkmxwkEOwBjLE28YyDIxcyEO7_TA_giuRN#commentID_5971684518195658753 
+			 * regarding this matter.
+			 *  
+			 */
+			TaskExecutorImpl taskExecutorImpl = this.beanFactory.getBean("taskExecutor", TaskExecutorImpl.class);
+			taskExecutorImpl.setTask(task);		
+			
 			// create job			
 			MethodInvokingJobDetailFactoryBean jobDetail = new MethodInvokingJobDetailFactoryBean();
 			jobDetail.setTargetObject(taskExecutorImpl);

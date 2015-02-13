@@ -1,5 +1,6 @@
 package com.gdn.x.scheduler.service.domain;
 
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.data.domain.Page;
@@ -29,5 +30,6 @@ public interface TaskQueryService {
 	public Page<Task> findByTaskName(String taskName, int pageNumber, int pageSize);
 	public List<Task> findByTaskNameLike(String taskName);
 	public Page<Task> findByTaskNameLike(String taskName, int pageNumber, int pageSize);
+	public List<Task> findExpiredTasks(Date date);
 	public TaskResponse wrapTask(Task task);
 }

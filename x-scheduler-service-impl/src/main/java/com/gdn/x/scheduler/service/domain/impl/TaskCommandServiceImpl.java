@@ -30,18 +30,18 @@ import com.gdn.x.scheduler.service.schedengine.CoreEngine;
  */
 @Service("taskCommandService")
 @Transactional(readOnly = false, propagation = Propagation.REQUIRED)
-public class TaskCommandServiceImpl implements TaskCommandService { //, BeanFactoryAware {
+public class TaskCommandServiceImpl implements TaskCommandService {
 	
 	private static final Logger LOG = LoggerFactory.getLogger(TaskCommandServiceImpl.class);
 	
 	private CommandQueryService commandQueryService;
 	private TaskDAO taskDAO;
 	
-	private CoreEngine schedulerEngine;
+	private CoreEngine<Task> schedulerEngine;
 	
 	@Autowired
 	public TaskCommandServiceImpl(CommandQueryService commandQueryService, 
-			CoreEngine schedulerEngine, TaskDAO taskDAO) { 
+			CoreEngine<Task> schedulerEngine, TaskDAO taskDAO) { 
 		this.commandQueryService = commandQueryService;
 		this.schedulerEngine = schedulerEngine;
 		this.taskDAO = taskDAO;
@@ -65,7 +65,7 @@ public class TaskCommandServiceImpl implements TaskCommandService { //, BeanFact
 		
 		Task task = taskDAO.save(entity);
 		
-		schedulerEngine.scheduleTask(task);
+		schedulerEngine.scheduleJob(task);
 				
 		return task;
 	}

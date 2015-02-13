@@ -35,7 +35,7 @@ public class SchedulerBootstrap implements ApplicationStartup {
 	
 	private static boolean TASKS_LOADED = false;
 	
-	private CoreEngine schedulerEngine;
+	private CoreEngine<Task> schedulerEngine;
 	private TaskQueryService taskQueryService;
 	
 	/**
@@ -45,7 +45,7 @@ public class SchedulerBootstrap implements ApplicationStartup {
 	 * @param taskQueryService
 	 */
 	@Autowired
-	public SchedulerBootstrap(CoreEngine schedulerEngine, TaskQueryService taskQueryService) {
+	public SchedulerBootstrap(CoreEngine<Task> schedulerEngine, TaskQueryService taskQueryService) {
 		this.schedulerEngine = schedulerEngine;
 		this.taskQueryService = taskQueryService;
 	}
@@ -62,7 +62,7 @@ public class SchedulerBootstrap implements ApplicationStartup {
 		    LOG.debug("total tasks fetched from db: " + (tasks != null ? tasks.size() : 0));
 			
 			for (Task task : tasks) {
-				schedulerEngine.scheduleTask(task);
+				schedulerEngine.scheduleJob(task);
 			}
 			
 			TASKS_LOADED = true;
