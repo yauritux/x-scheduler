@@ -10,17 +10,10 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.gdn.common.base.shade.org.apache.http.HttpResponse;
-import com.gdn.common.base.shade.org.apache.http.client.methods.HttpGet;
-import com.gdn.common.base.shade.org.apache.http.impl.client.DefaultHttpClient;
-import com.gdn.x.scheduler.constant.CommandType;
 import com.gdn.x.scheduler.constant.SchedulerIntervalUnit;
-import com.gdn.x.scheduler.constant.WSMethod;
 import com.gdn.x.scheduler.dao.TaskDAO;
 import com.gdn.x.scheduler.model.Task;
-import com.gdn.x.scheduler.model.WebServiceCommand;
 import com.gdn.x.scheduler.rest.web.model.TaskRequest;
-import com.gdn.x.scheduler.rest.web.model.WSCommandResponse;
 import com.gdn.x.scheduler.service.domain.CommandQueryService;
 import com.gdn.x.scheduler.service.domain.TaskCommandService;
 import com.gdn.x.scheduler.service.schedengine.CoreEngine;
@@ -234,41 +227,5 @@ public class TaskCommandServiceImpl implements TaskCommandService { //, BeanFact
 		task.setMarkForDelete(false);
 		task.setStoreId(request.getStoreId());
 		return task;
-	}
-	
-	@SuppressWarnings("deprecation")
-	@Override
-	public void executeTask(Task task) throws Exception {
-		if (task == null || task.getCommand() == null) {
-			throw new RuntimeException("No Task to execute...");
-		}
-		
-		if (task.getCommand().getCommandType() == CommandType.WEB_SERVICE) {
-			System.out.println("Calling web service...");
-			HttpResponse response = null;
-			WebServiceCommand command = (WebServiceCommand) task.getCommand();
-			WSCommandResponse webService = (WSCommandResponse) commandQueryService.wrapCommand(command);
-			@SuppressWarnings({ "resource" })
-			DefaultHttpClient httpClient = new DefaultHttpClient();
-			if (webService.getHttpMethod().equalsIgnoreCase(WSMethod.GET.name())) {
-				StringBuilder strRequest = new StringBuilder();
-				strRequest.append(webService.getEndPoint());
-				if (webService.getParameters() != null && !webService.getParameters().isEmpty()) {
-					strRequest.append("?" + webService.getParameters());
-				}
-				HttpGet getRequest = new HttpGet(strRequest.toString());
-				getRequest.addHeader("accept", "application/json");
-				
-				response = httpClient.execute(getRequest);
-				
-				System.out.println("Response Code = " + response.getStatusLine().getStatusCode());
-				
-				if (response.getStatusLine().getStatusCode() != 200) {
-					throw new RuntimeException("Failed to execute WS. Status Code: "
-							+ response.getStatusLine().getStatusCode());
-				}
-			}
-			httpClient.getConnectionManager().shutdown();
-		}
-	}
+	}	
 }

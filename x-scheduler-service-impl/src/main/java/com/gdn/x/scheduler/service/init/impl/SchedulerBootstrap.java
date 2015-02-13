@@ -4,6 +4,8 @@ import java.util.List;
 
 import javax.annotation.PreDestroy;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.stereotype.Component;
@@ -20,45 +22,57 @@ import com.gdn.x.scheduler.service.schedengine.CoreEngine;
  * @author yauritux (yauritux@gmail.com)
  * @version 1.0.0.RC1
  * @since 1.0.0.RC1
+ * 
+ * This class represents bootstrap service that will be fired up at the beginning 
+ * to inject all tasks in the database into the job scheduler engine.
  *
  */
-@Component("startupHouseKeeper")
+@Component("schedulerBootstrap")
 @Transactional(readOnly = true, propagation = Propagation.REQUIRES_NEW)
-public class StartupHouseKeeper implements ApplicationStartup {
+public class SchedulerBootstrap implements ApplicationStartup {
+	
+	private static final Logger LOG = LoggerFactory.getLogger(SchedulerBootstrap.class);
 	
 	private static boolean TASKS_LOADED = false;
 	
 	private CoreEngine schedulerEngine;
 	private TaskQueryService taskQueryService;
 	
+	/**
+	 * Default constructor which takes two service beans in the parameters.
+	 * 
+	 * @param schedulerEngine
+	 * @param taskQueryService
+	 */
 	@Autowired
-	public StartupHouseKeeper(CoreEngine schedulerEngine, TaskQueryService taskQueryService) {
+	public SchedulerBootstrap(CoreEngine schedulerEngine, TaskQueryService taskQueryService) {
 		this.schedulerEngine = schedulerEngine;
 		this.taskQueryService = taskQueryService;
 	}
 
+	/**
+	 * Invoke periodically by container to check any occured event.
+	 * 
+	 * @param event
+	 */
 	@Override
 	public void onApplicationEvent(ContextRefreshedEvent event) {
-		System.out.println("onApplicationEvent::START");
-		
-		System.out.println("schedulerEngine = " + schedulerEngine);
-		System.out.println("taskQueryService = " + taskQueryService);
-		System.out.println("all tasks have been loaded = " + TASKS_LOADED);
-		
 		if (!TASKS_LOADED) {			
 			List<Task> tasks = taskQueryService.fetchAll();
-			System.out.println("total tasks fetched from db: " + (tasks != null ? tasks.size() : 0));
+		    LOG.debug("total tasks fetched from db: " + (tasks != null ? tasks.size() : 0));
 			
 			for (Task task : tasks) {
 				schedulerEngine.scheduleTask(task);
 			}
 			
 			TASKS_LOADED = true;
-		}
-		
-		System.out.println("onApplicationEvent::END");
+		}		
 	}
 
+	/**
+	 * Cleanup method which is executed during the shutdown process of the container.
+	 * 
+	 */
 	@Override
 	@PreDestroy
 	public void onDestroy() {

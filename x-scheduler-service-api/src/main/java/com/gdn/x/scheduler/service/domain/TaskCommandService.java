@@ -15,5 +15,4 @@ import com.gdn.x.scheduler.service.domain.base.BaseCommandService;
 public interface TaskCommandService extends BaseCommandService<Task> {
 	
 	public Task buildTaskFromRequest(TaskRequest request);
-	public void executeTask(Task task) throws Exception;
 }
