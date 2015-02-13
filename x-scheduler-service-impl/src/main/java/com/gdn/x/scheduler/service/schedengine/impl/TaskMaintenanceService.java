@@ -3,9 +3,9 @@ package com.gdn.x.scheduler.service.schedengine.impl;
 import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.scheduling.annotation.EnableScheduling;
-import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.gdn.x.scheduler.service.domain.TaskCommandService;
 
@@ -17,7 +17,7 @@ import com.gdn.x.scheduler.service.domain.TaskCommandService;
  *
  */
 @Service("taskMaintenanceService")
-@EnableScheduling
+@Transactional(readOnly = false, propagation = Propagation.REQUIRES_NEW)
 public class TaskMaintenanceService {
 	
 	private TaskCommandService taskCommandService;
@@ -27,8 +27,8 @@ public class TaskMaintenanceService {
 		this.taskCommandService = taskCommandService;
 	}
 
-	@Scheduled(fixedRate = 5000)
 	public void run() {
+		System.out.println("taskMaintenanceService::run()::STARTING");
 		taskCommandService.deleteExpiredTasks(new Date());
 	}
 }
