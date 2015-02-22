@@ -4,10 +4,13 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import com.gdn.common.base.entity.GdnBaseEntity;
+import com.gdn.x.scheduler.constant.ProcessStatus;
 
 /**
  * 
@@ -30,6 +33,13 @@ public class TaskExecution extends GdnBaseEntity {
 	
 	@Column(name = "end_time", nullable = true)
 	private Date end;
+	
+	@Enumerated(EnumType.STRING)
+	@Column(name = "status", nullable = false)
+	private ProcessStatus status;
+	
+	@Column(name = "machine_id", nullable = false)
+	private String machineId;
 	
 	public TaskExecution() {}
 
@@ -55,5 +65,21 @@ public class TaskExecution extends GdnBaseEntity {
 
 	public void setEnd(Date end) {
 		this.end = end;
+	}
+	
+	public ProcessStatus getStatus() {
+		return status;
+	}
+	
+	public void setStatus(ProcessStatus status) {
+		this.status = status;
+	}
+	
+	public String getMachineId() {
+		return machineId;
+	}
+	
+	public void setMachineId(String machineId) {
+		this.machineId = machineId;
 	}
 }

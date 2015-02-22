@@ -51,13 +51,13 @@ public class BaseDAOTest {
 	
 	public static final Operation INSERT_TASK = 
         insertInto("TASK")
-            .columns("ID", "TASK_NAME", "COMMAND_ID", "SECS", "MINS", "HRS", "DAY_OF_MONTH", "MTH", "DAY_OF_WEEK", "YR", "CREATED_BY", "CREATED_DATE","STORE_ID","MARK_FOR_DELETE","OPTLOCK")
-            .values("1", "task1", "1", "0/55", "*", "*", "*", "*", "*", null, "yauritux", "2015-01-01", "store-123", false, 0)
-            .values("2", "task2", "2", "0", "0", "12", "*", "*", "?", null, "yauritux", "2015-01-02", "store-123", false, 0)
-            .values("3", "task3", "3", "0", "15", "10", "*", "*", "?", "2017", "yauritux", "2015-01-03", "store-123", false, 0)
-            .values("4", "task4", "3", "0", "10,44", "14", "?", "3", "WED", null, "yauritux", "2015-01-04", "store-123", false, 0)
-            .values("5", "task5", "2", "0", "15", "10", "?", "*", "6L", "2015-2017", "yauritux", "2015-01-05", "store-123", false, 0)
-            .values("6", "task6", "1", "0", "15", "10", "?", "*", "6#3", null, "yauritux", "2015-01-06", "store-123", false, 0)
+            .columns("ID", "TASK_NAME", "COMMAND_ID", "SECS", "MINS", "HRS", "DAY_OF_MONTH", "MTH", "DAY_OF_WEEK", "YR", "CREATED_BY", "CREATED_DATE","STORE_ID","MARK_FOR_DELETE","OPTLOCK", "START_DATE", "PRIORITY", "STATE", "MACHINE_ID")
+            .values("1", "task1", "1", "0/55", "*", "*", "*", "*", "*", null, "yauritux", "2015-01-01", "store-123", false, 0, "2015-01-01", 1, "ACTIVE", "")
+            .values("2", "task2", "2", "0", "0", "12", "*", "*", "?", null, "yauritux", "2015-01-02", "store-123", false, 0, "2015-01-02", 2, "ACTIVE", "")
+            .values("3", "task3", "3", "0", "15", "10", "*", "*", "?", "2017", "yauritux", "2015-01-03", "store-123", false, 0, "2015-01-03", 3, "ACTIVE", "")
+            .values("4", "task4", "3", "0", "10,44", "14", "?", "3", "WED", null, "yauritux", "2015-01-04", "store-123", false, 0, "2015-01-04", 4, "ACTIVE", "")
+            .values("5", "task5", "2", "0", "15", "10", "?", "*", "6L", "2015-2017", "yauritux", "2015-01-05", "store-123", false, 0, "2015-01-05", 5, "ACTIVE", "")
+            .values("6", "task6", "1", "0", "15", "10", "?", "*", "6#3", null, "yauritux", "2015-01-06", "store-123", false, 0, "2015-01-06", 6, "ACTIVE", "")
             .build();
 		
 	@Autowired

@@ -4,6 +4,8 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
@@ -11,6 +13,7 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 import com.gdn.common.base.entity.GdnBaseEntity;
+import com.gdn.x.scheduler.constant.ThreadState;
 
 /**
  * 
@@ -56,6 +59,20 @@ public class Task extends GdnBaseEntity {
 	@Column(name = "expiry_date", nullable = true)
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date expiryDate;
+	
+	@Column(name = "start_date", nullable = true)
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date startDate;
+	
+	@Column(name = "priority", nullable = false)
+	private int priority;
+	
+	@Enumerated(EnumType.STRING)
+	@Column(name = "state", nullable = false)
+	private ThreadState state;
+	
+	@Column(name = "machine_id", nullable = true)
+	private String machineId;
 	
 	/*
 	@Enumerated(EnumType.STRING)
@@ -152,5 +169,37 @@ public class Task extends GdnBaseEntity {
 	
 	public void setExpiryDate(Date expiryDate) {
 		this.expiryDate = expiryDate;
+	}
+	
+	public Date getStartDate() {
+		return startDate;
+	}
+	
+	public void setStartDate(Date startDate) {
+		this.startDate = startDate;
+	}
+	
+	public int getPriority() {
+		return priority;
+	}
+	
+	public void setPriority(int priority) {
+		this.priority = priority;
+	}
+	
+	public ThreadState getState() {
+		return state;
+	}
+	
+	public void setState(ThreadState state) {
+		this.state = state;
+	}
+	
+	public String getMachineId() {
+		return machineId;
+	}
+	
+	public void setMachineId(String machineId) {
+		this.machineId = machineId;
 	}
 }

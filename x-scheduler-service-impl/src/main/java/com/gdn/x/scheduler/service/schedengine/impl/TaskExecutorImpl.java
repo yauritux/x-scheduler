@@ -1,5 +1,6 @@
 package com.gdn.x.scheduler.service.schedengine.impl;
 
+import java.io.IOException;
 import java.util.Date;
 
 import org.slf4j.Logger;
@@ -8,9 +9,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-import com.gdn.common.base.shade.org.apache.http.HttpResponse;
+import com.gdn.common.base.shade.org.apache.http.client.config.RequestConfig;
+import com.gdn.common.base.shade.org.apache.http.client.methods.CloseableHttpResponse;
 import com.gdn.common.base.shade.org.apache.http.client.methods.HttpGet;
-import com.gdn.common.base.shade.org.apache.http.impl.client.DefaultHttpClient;
+import com.gdn.common.base.shade.org.apache.http.impl.client.CloseableHttpClient;
+import com.gdn.common.base.shade.org.apache.http.impl.client.HttpClientBuilder;
 import com.gdn.x.scheduler.constant.CommandType;
 import com.gdn.x.scheduler.constant.WSMethod;
 import com.gdn.x.scheduler.model.Task;
@@ -58,7 +61,9 @@ public class TaskExecutorImpl implements TaskExecutor {
 		
 		System.out.println("Running Task " + task.getTaskName());
 
-		DefaultHttpClient httpClient = null;
+		CloseableHttpClient httpClient = null;
+		HttpGet getRequest = null;
+		CloseableHttpResponse response = null;		
 		//TODO :: implement command/strategy pattern for this particular operation
 		try {
 			if (task.getCommand().getCommandType() == CommandType.WEB_SERVICE) {
@@ -66,18 +71,20 @@ public class TaskExecutorImpl implements TaskExecutor {
 
 				TaskExecution taskExecution = taskExecutionCommandService.createTaskExecutionFromTask(task, true);
 				
-				HttpResponse response = null;
 				WebServiceCommand command = (WebServiceCommand) task.getCommand();
 				WSCommandResponse webService = (WSCommandResponse) commandQueryService.wrapCommand(command);
-				httpClient = new DefaultHttpClient();
+				httpClient = HttpClientBuilder.create().build();
 				if (webService.getHttpMethod().equalsIgnoreCase(WSMethod.GET.name())) {
 					StringBuilder strRequest = new StringBuilder();
 					strRequest.append(webService.getEndPoint());
 					if (webService.getParameters() != null && !webService.getParameters().isEmpty()) {
 						strRequest.append("?" + webService.getParameters());
 					}
-					HttpGet getRequest = new HttpGet(strRequest.toString());
+					RequestConfig requestConfig = RequestConfig.custom().setConnectionRequestTimeout(11000)
+							.setConnectTimeout(11000).setSocketTimeout(11000).build();
+					getRequest = new HttpGet(strRequest.toString());
 					getRequest.addHeader("accept", "application/json");
+					getRequest.setConfig(requestConfig);
 					
 					response = httpClient.execute(getRequest);
 					
@@ -88,7 +95,6 @@ public class TaskExecutorImpl implements TaskExecutor {
 								+ response.getStatusLine().getStatusCode());
 					}
 				}
-				httpClient.getConnectionManager().shutdown();	
 				
 				taskExecution.setEnd(new Date());
 				taskExecutionCommandService.save(taskExecution);
@@ -96,8 +102,15 @@ public class TaskExecutorImpl implements TaskExecutor {
 		}catch (Exception e) {
 			LOG.error(e.getMessage(), e);			
 			e.printStackTrace();
-			if (httpClient != null) {
-				httpClient.getConnectionManager().shutdown();
+		} finally {
+			try {
+				if (getRequest != null) {
+					getRequest.releaseConnection();
+				}
+				response.close();
+			} catch (IOException ioe) {
+				LOG.error(ioe.getMessage(), ioe);
+				ioe.printStackTrace();
 			}
 		}
 	}
