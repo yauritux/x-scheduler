@@ -1,5 +1,7 @@
 package com.gdn.x.scheduler.service.schedengine;
 
+import org.springframework.scheduling.quartz.SchedulerFactoryBean;
+
 
 /**
  * 
@@ -11,4 +13,5 @@ package com.gdn.x.scheduler.service.schedengine;
 public interface CoreEngine<T> {
 
 	public void scheduleJob(T entity);
+	public SchedulerFactoryBean getSchedulerFactory();
 }

@@ -10,6 +10,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
 
+import com.gdn.x.scheduler.constant.ThreadState;
 import com.gdn.x.scheduler.model.Task;
 
 /**
@@ -83,4 +84,12 @@ public interface TaskDAO extends CrudRepository<Task, String> {
 	@Modifying
 	@Query(value = "UPDATE Task t SET markForDelete = true WHERE expiryDate <= :expiryDate")
 	public int deleteExpiredTasks(@Param("expiryDate") Date expiryDate);
+	
+	@Modifying
+	@Query(value = "UPDATE Task t SET state = :state WHERE id = :id")
+	public int updateTaskState(@Param("state") ThreadState state, @Param("id") String id);
+	
+	@Modifying
+	@Query(value = "UPDATE Task t SET machineId = :machineId WHERE id = :id")
+	public int updateTaskMachineId(@Param("machineId") String machineId, @Param("id") String id);
 }

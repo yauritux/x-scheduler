@@ -3,6 +3,8 @@ package com.gdn.x.scheduler.service.domain.impl;
 import java.util.Date;
 import java.util.List;
 
+import org.quartz.JobKey;
+import org.quartz.SchedulerException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +13,7 @@ import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.gdn.x.scheduler.constant.SchedulerIntervalUnit;
+import com.gdn.x.scheduler.constant.ThreadState;
 import com.gdn.x.scheduler.dao.TaskDAO;
 import com.gdn.x.scheduler.model.Task;
 import com.gdn.x.scheduler.rest.web.model.TaskRequest;
@@ -173,14 +176,31 @@ public class TaskCommandServiceImpl implements TaskCommandService {
 	}
 	
 	/**
-	 * Delete tasks those are already expired.
+	 * Delete tasks those have already expired.
 	 * 
 	 * @param date of expired
-	 * @return number of records deleted.
+	 * @return number of deleted tasks.
 	 */
 	@Override
 	public int deleteExpiredTasks(Date date) {
-		return taskDAO.deleteExpiredTasks(date);
+		//int affectedTasks = taskDAO.deleteExpiredTasks(date);
+		List<Task> expiredTasks = taskDAO.findExpiredTasks(date);
+		int affectedTasks = 0;
+		if (expiredTasks != null) {
+			try {
+				for (Task task : expiredTasks) {
+					taskDAO.deleteTask(task.getId());
+					schedulerEngine.getSchedulerFactory().getScheduler().deleteJob(new JobKey(task.getTaskName() + "-JOB"));
+					affectedTasks++;
+				}
+			} catch (SchedulerException schedulerException) {
+				LOG.error(schedulerException.getMessage(), schedulerException);
+			} catch (Exception e) {
+				LOG.error(e.getMessage(), e);
+			}
+		}
+		
+		return affectedTasks;
 	}
 
 	/**
@@ -190,6 +210,7 @@ public class TaskCommandServiceImpl implements TaskCommandService {
 	 */
 	@Override
 	public Task buildTaskFromRequest(TaskRequest request) {
+		System.out.println("buildTaskFromRequest::BEGIN");
 		Task task = new Task();
 		task.setTaskName(request.getTaskName());
 		task.setCommand(commandQueryService.findById(request.getCommandId()));
@@ -237,6 +258,25 @@ public class TaskCommandServiceImpl implements TaskCommandService {
 		task.setCreatedDate(request.getSubmittedOn() == null ? new Date() : request.getSubmittedOn());
 		task.setMarkForDelete(false);
 		task.setStoreId(request.getStoreId());
+		task.setStartDate(request.getStartDate() == null ? new Date() : request.getStartDate());
+		
+		if (request.getExpiryDate() != null) {
+			System.out.println("Set expiryDate");
+			task.setExpiryDate(request.getExpiryDate());
+		}
+		
+		//task.setState(ThreadState.ACTIVE);
+		
 		return task;
-	}	
+	}
+
+	@Override
+	public int updateTaskState(ThreadState state, String taskId) {
+		return taskDAO.updateTaskState(state, taskId);
+	}
+
+	@Override
+	public int updateTaskRunningMachine(String machineId, String taskId) {
+		return taskDAO.updateTaskMachineId(machineId, taskId);
+	}		
 }

@@ -20,6 +20,7 @@ import org.powermock.core.classloader.annotations.SuppressStaticInitializationFo
 import org.powermock.modules.junit4.PowerMockRunner;
 
 import com.gdn.x.scheduler.constant.CommandType;
+import com.gdn.x.scheduler.constant.ThreadState;
 import com.gdn.x.scheduler.dao.TaskDAO;
 import com.gdn.x.scheduler.model.Task;
 import com.gdn.x.scheduler.model.WebServiceCommand;
@@ -102,6 +103,7 @@ public class TaskQueryServiceImplTest {
 		task.setId(id);
 		task.setTaskName("WS Task");
 		task.setCommand(buildWSCommandSample(id));
+		//task.setState(ThreadState.SCHEDULED);
 		task.setMarkForDelete(false);
 		
 		return task;

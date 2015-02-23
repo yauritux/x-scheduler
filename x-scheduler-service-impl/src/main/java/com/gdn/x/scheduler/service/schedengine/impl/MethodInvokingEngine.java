@@ -46,7 +46,7 @@ public class MethodInvokingEngine implements CoreEngine<Task>, BeanFactoryAware 
 			/* 
 			 * since we are calling taskExecutor (which is prototype scope) 
 			 * from the scope of this class (which is singleton by default)
-			 * then we need to force the DI here, otherwise the prototype bean 
+			 * then we need to force the DI here (that's why i made this class implement BeanFactoryAware) , otherwise the prototype bean 
 			 * won't be acting as it should. 
 			 * see my comment on linkedIn discussion group 
 			 * at https://www.linkedin.com/groupItem?view=&gid=46964&type=member&item=212949099&commentID=5971684518195658753
@@ -73,7 +73,9 @@ public class MethodInvokingEngine implements CoreEngine<Task>, BeanFactoryAware 
 			cronTrigger.setName(task.getTaskName() + "-TRIGGER");
 			cronTrigger.setGroup(task.getCommand().getCommandType().name());
 			cronTrigger.setCronExpression(getCronExpressionFromTask(task));
-			cronTrigger.setStartTime(task.getStartDate()); // activate scheduler on specific date
+			if (task.getStartDate() != null) {
+				cronTrigger.setStartTime(task.getStartDate()); // activate scheduler on specific date
+			}
 			cronTrigger.afterPropertiesSet();
 			
 			Scheduler scheduler = schedulerFactory.getScheduler();
@@ -92,6 +94,11 @@ public class MethodInvokingEngine implements CoreEngine<Task>, BeanFactoryAware 
 		} catch (Exception e) {
 			LOG.error(e.getMessage(), e);
 		}		
+	}
+	
+	@Override
+	public SchedulerFactoryBean getSchedulerFactory() {
+		return schedulerFactory;
 	}
 
 	@Override

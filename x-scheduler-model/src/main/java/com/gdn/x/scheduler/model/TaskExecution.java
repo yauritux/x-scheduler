@@ -39,7 +39,7 @@ public class TaskExecution extends GdnBaseEntity {
 	private ProcessStatus status;
 	
 	@Column(name = "machine_id", nullable = false)
-	private String machineId;
+	private String machineId = "NOT-SET";
 	
 	public TaskExecution() {}
 

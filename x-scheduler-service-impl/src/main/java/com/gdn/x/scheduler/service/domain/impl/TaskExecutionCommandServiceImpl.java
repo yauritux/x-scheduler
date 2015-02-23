@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.gdn.x.scheduler.constant.ProcessStatus;
 import com.gdn.x.scheduler.dao.TaskExecutionDAO;
 import com.gdn.x.scheduler.model.Task;
 import com.gdn.x.scheduler.model.TaskExecution;
@@ -28,11 +29,12 @@ import com.gdn.x.scheduler.service.domain.TaskExecutionCommandService;
 @Transactional(readOnly = false, propagation = Propagation.REQUIRED)
 public class TaskExecutionCommandServiceImpl implements
 		TaskExecutionCommandService {
-	
+		
 	private TaskExecutionDAO taskExecutionDAO;
 	
 	@Autowired
-	public TaskExecutionCommandServiceImpl(TaskExecutionDAO taskExecutionDAO) {
+	public TaskExecutionCommandServiceImpl(
+			TaskExecutionDAO taskExecutionDAO) {
 		this.taskExecutionDAO = taskExecutionDAO;
 	}
 
@@ -51,7 +53,10 @@ public class TaskExecutionCommandServiceImpl implements
 		taskExecution.setCreatedDate(new Date());
 		taskExecution.setStart(new Date());
 		taskExecution.setEnd(null);
+		taskExecution.setStatus(ProcessStatus.IN_PROGRESS);
 		taskExecution.setTask(task);
+		taskExecution.setMachineId(System.getenv(MACHINE_ID) != null ? System.getenv(MACHINE_ID) : "NOT-SET");
+		
 		if (persist) {
 			taskExecution = this.save(taskExecution);
 		}

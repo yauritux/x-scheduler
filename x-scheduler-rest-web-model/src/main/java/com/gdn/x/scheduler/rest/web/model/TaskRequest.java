@@ -32,6 +32,9 @@ public class TaskRequest extends SimpleRequestHolder {
 	private String dayOfWeek;
 	private String year;
 	private String threadRunningPolicy;
+	private Date startDate;
+	private Date expiryDate;
+	//private int priority;
 	
 	/**
 	 * TODO: use enum instead of String
@@ -172,4 +175,30 @@ public class TaskRequest extends SimpleRequestHolder {
 	public void setSubmittedOn(Date submittedOn) {
 		this.submittedOn = submittedOn;
 	}
+	
+	public Date getStartDate() {
+		return startDate;
+	}
+	
+	public void setStartDate(Date startDate) {
+		this.startDate = startDate;
+	}
+	
+	public Date getExpiryDate() {
+		return expiryDate;
+	}
+	
+	public void setExpiryDate(Date expiryDate) {
+		this.expiryDate = expiryDate;
+	}
+	
+	/*
+	public int getPriority() {
+		return priority;
+	}
+	
+	public void setPriority(int priority) {
+		this.priority = priority;
+	}
+	*/
 }

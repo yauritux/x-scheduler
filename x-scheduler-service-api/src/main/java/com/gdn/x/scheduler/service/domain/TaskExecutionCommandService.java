@@ -11,5 +11,7 @@ import com.gdn.x.scheduler.service.domain.base.BaseCommandService;
  */
 public interface TaskExecutionCommandService extends BaseCommandService<TaskExecution> {
 	
+	String MACHINE_ID = "MACHINE_ID";
+	
 	public TaskExecution createTaskExecutionFromTask(Task task, boolean persist);
 }

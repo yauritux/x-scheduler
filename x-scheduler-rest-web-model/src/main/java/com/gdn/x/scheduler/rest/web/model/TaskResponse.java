@@ -22,6 +22,11 @@ public class TaskResponse extends BaseResponse {
 	private String commandType;
 	private Date createdDate;
 	private Date updatedDate;
+	private Date startDate;
+	private Date expiryDate;
+	private int priority;
+	private String state;
+	private String machineId;
 
 	public TaskResponse() {}
 
@@ -96,4 +101,44 @@ public class TaskResponse extends BaseResponse {
 	public void setUpdatedDate(Date updatedDate) {
 		this.updatedDate = updatedDate;
 	}
+	
+	public Date getStartDate() {
+		return startDate;
+	}
+
+	public void setStartDate(Date startDate) {
+		this.startDate = startDate;
+	}
+
+	public Date getExpiryDate() {
+		return expiryDate;
+	}
+
+	public void setExpiryDate(Date expiryDate) {
+		this.expiryDate = expiryDate;
+	}
+
+	public int getPriority() {
+		return priority;
+	}
+
+	public void setPriority(int priority) {
+		this.priority = priority;
+	}
+
+	public String getState() {
+		return state;
+	}
+
+	public void setState(String state) {
+		this.state = state;
+	}
+
+	public String getMachineId() {
+		return machineId;
+	}
+
+	public void setMachineId(String machineId) {
+		this.machineId = machineId;
+	}	
 }

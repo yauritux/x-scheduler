@@ -173,6 +173,15 @@ public class TaskQueryServiceImpl implements TaskQueryService {
 		taskResponse.setUpdatedBy(task.getUpdatedBy());
 		taskResponse.setUpdatedDate(task.getUpdatedDate());
 		
+		taskResponse.setStartDate(task.getStartDate());
+		taskResponse.setExpiryDate(task.getExpiryDate());
+		/*
+		taskResponse.setMachineId(task.getMachineId());
+		if (task.getState() != null) {
+			taskResponse.setState(task.getState().name());
+		}
+		*/
+		
 		return taskResponse;
 	}
 
