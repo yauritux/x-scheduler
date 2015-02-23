@@ -261,11 +261,10 @@ public class TaskCommandServiceImpl implements TaskCommandService {
 		task.setStartDate(request.getStartDate() == null ? new Date() : request.getStartDate());
 		
 		if (request.getExpiryDate() != null) {
-			System.out.println("Set expiryDate");
 			task.setExpiryDate(request.getExpiryDate());
 		}
 		
-		//task.setState(ThreadState.ACTIVE);
+		task.setState(ThreadState.ACTIVE);
 		
 		return task;
 	}

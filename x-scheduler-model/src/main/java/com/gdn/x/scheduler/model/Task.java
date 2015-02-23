@@ -67,6 +67,7 @@ public class Task extends GdnBaseEntity {
 	/*
 	@Column(name = "priority", nullable = false)
 	private int priority;
+	*/
 	
 	@Enumerated(EnumType.STRING)
 	@Column(name = "process_state", nullable = false)
@@ -74,7 +75,6 @@ public class Task extends GdnBaseEntity {
 	
 	@Column(name = "machine_id", nullable = true)
 	private String machineId;
-	*/
 	
 	/*
 	@Enumerated(EnumType.STRING)
@@ -189,6 +189,7 @@ public class Task extends GdnBaseEntity {
 	public void setPriority(int priority) {
 		this.priority = priority;
 	}
+	*/
 	
 	public ThreadState getState() {
 		return state;
@@ -205,5 +206,4 @@ public class Task extends GdnBaseEntity {
 	public void setMachineId(String machineId) {
 		this.machineId = machineId;
 	}
-	*/
 }

@@ -71,12 +71,10 @@ public class TaskExecutorImpl implements TaskExecutor {
 			return;
 		}
 		
-		/*
 		if (task.getState() == ThreadState.RUNNING) {
 			System.out.println("Task " + task.getTaskName() + " is still running on another thread. Pending for now and will be examined again later.");
 			return;
 		}
-		*/
 		
 		System.out.println("Running Task " + task.getTaskName() + " [" + task.getCommand().getCommandType().name() + "]");
 
@@ -91,8 +89,9 @@ public class TaskExecutorImpl implements TaskExecutor {
 				System.out.println("Calling web service...");
 
 				taskExecution = taskExecutionCommandService.createTaskExecutionFromTask(task, true);
-				//taskCommandService.updateTaskRunningMachine(TaskExecutionCommandService.MACHINE_ID, task.getId());
-				//taskCommandService.updateTaskState(ThreadState.RUNNING, task.getId()); // always update (persisted) task whenever state is changed.
+				taskCommandService.updateTaskRunningMachine(System.getenv(TaskExecutionCommandService.MACHINE_ID) == null 
+						? "NOT-SET" : System.getenv(TaskExecutionCommandService.MACHINE_ID), task.getId());
+				taskCommandService.updateTaskState(ThreadState.RUNNING, task.getId()); // always update (persisted) task whenever state is changed.
 				
 				WebServiceCommand command = (WebServiceCommand) task.getCommand();
 				WSCommandResponse webService = (WSCommandResponse) commandQueryService.wrapCommand(command);
@@ -130,11 +129,11 @@ public class TaskExecutorImpl implements TaskExecutor {
 				LOG.error("Task isn't recognized by the system");
 			}
 		}catch (Exception e) {
-			//taskCommandService.updateTaskState(ThreadState.TERMINATED, task.getId()); // means task has stopped unexpectedly due to some exceptions 
+			taskCommandService.updateTaskState(ThreadState.TERMINATED, task.getId()); // means task has stopped unexpectedly due to some exceptions 
 			
 			if (taskExecution != null) {
 				taskExecution.setEnd(new Date());
-				//taskExecution.setStatus(ProcessStatus.FAILED);
+				taskExecution.setStatus(ProcessStatus.FAILED);
 				taskExecutionCommandService.save(taskExecution);
 			}
 			

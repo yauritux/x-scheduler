@@ -55,6 +55,7 @@ public class TaskExecutionCommandServiceImpl implements
 		taskExecution.setEnd(null);
 		taskExecution.setStatus(ProcessStatus.IN_PROGRESS);
 		taskExecution.setTask(task);
+		taskExecution.setStoreId(task.getStoreId());
 		taskExecution.setMachineId(System.getenv(MACHINE_ID) != null ? System.getenv(MACHINE_ID) : "NOT-SET");
 		
 		if (persist) {
