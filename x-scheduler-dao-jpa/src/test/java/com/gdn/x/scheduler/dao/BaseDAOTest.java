@@ -53,7 +53,6 @@ public class BaseDAOTest {
 	public static final Operation INSERT_TASK = 
         insertInto("TASK")
             .columns("ID", "TASK_NAME", "COMMAND_ID", "SECS", "MINS", "HRS", "DAY_OF_MONTH", "MTH", "DAY_OF_WEEK", "YR", "CREATED_BY", "CREATED_DATE","STORE_ID","MARK_FOR_DELETE","OPTLOCK", "START_DATE", "EXPIRY_DATE", "PROCESS_STATE", "MACHINE_ID")
-        	//.columns("ID", "TASK_NAME", "COMMAND_ID", "SECS", "MINS", "HRS", "DAY_OF_MONTH", "MTH", "DAY_OF_WEEK", "YR", "CREATED_BY", "CREATED_DATE","STORE_ID","MARK_FOR_DELETE","OPTLOCK", "START_DATE", "EXPIRY_DATE")        
             .values("1", "task1", "1", "0/55", "*", "*", "*", "*", "*", null, "yauritux", "2015-01-01", "store-123", false, 0, "2015-01-01", null, ThreadState.ACTIVE, "test-machine")
             .values("2", "task2", "2", "0", "0", "12", "*", "*", "?", null, "yauritux", "2015-01-02", "store-123", false, 0, "2015-01-02", null, ThreadState.ACTIVE, "test-machine")
             .values("3", "task3", "3", "0", "15", "10", "*", "*", "?", "2017", "yauritux", "2015-01-03", "store-123", false, 0, "2015-01-03", null, ThreadState.ACTIVE, "test-machine")

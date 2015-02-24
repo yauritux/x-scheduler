@@ -107,6 +107,7 @@ public class WSCommandReceiverImpl implements CommandReceiver {
 		wsCommand.setCreatedBy(wsCommandRequest.getSubmittedBy());
 		wsCommand.setCreatedDate(wsCommandRequest.getSubmittedOn());
 		wsCommand.setMarkForDelete(false);
+		wsCommand.setStoreId(wsCommandRequest.getStoreId());
 		
 		return wsCommand;
 	}

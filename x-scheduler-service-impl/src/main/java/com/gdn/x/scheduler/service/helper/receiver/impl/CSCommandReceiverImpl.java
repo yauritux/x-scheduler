@@ -2,15 +2,16 @@ package com.gdn.x.scheduler.service.helper.receiver.impl;
 
 import java.io.IOException;
 
-import org.codehaus.jackson.JsonFactory;
-import org.codehaus.jackson.JsonNode;
-import org.codehaus.jackson.JsonParseException;
-import org.codehaus.jackson.JsonParser;
-import org.codehaus.jackson.map.ObjectMapper;
-
+import com.fasterxml.jackson.core.JsonFactory;
+import com.fasterxml.jackson.core.JsonParseException;
+import com.fasterxml.jackson.core.JsonParser;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.gdn.x.scheduler.constant.ClientSDKRequestField;
 import com.gdn.x.scheduler.constant.CommandType;
+import com.gdn.x.scheduler.model.ClientSDKCommand;
 import com.gdn.x.scheduler.model.Command;
+import com.gdn.x.scheduler.rest.web.model.CSCommandRequest;
 import com.gdn.x.scheduler.rest.web.model.CSCommandResponse;
 import com.gdn.x.scheduler.rest.web.model.CommandRequest;
 import com.gdn.x.scheduler.rest.web.model.CommandResponse;
@@ -29,9 +30,16 @@ import com.gdn.x.scheduler.service.helper.receiver.CommandReceiver;
 public class CSCommandReceiverImpl implements CommandReceiver {
 	
 	private Command command;
+	
+	/**
+	 * default constructor
+	 */
+	public CSCommandReceiverImpl() {
+		super();
+	}
 
 	/**
-	 * The default constructor for this class that receives
+	 * The constructor for this class that receives
 	 * command entity as the parameter.
 	 * 
 	 * @param command
@@ -78,7 +86,19 @@ public class CSCommandReceiverImpl implements CommandReceiver {
 	@Override
 	public Command convertToCommand(CommandRequest commandRequest)
 			throws Exception {
-		// TODO
-		throw new UnsupportedOperationException("Not supported on this version");
+		ClientSDKCommand csCommand = new ClientSDKCommand();
+		csCommand.setId(((commandRequest.getId() != null && !commandRequest.getId().isEmpty())
+				? commandRequest.getId() : null));
+		CSCommandRequest csCommandRequest = (CSCommandRequest) commandRequest;
+		csCommand.setCommand("{\"" + ClientSDKRequestField.ENTRY_POINT.label() + "\":\"" 
+				+ csCommandRequest.getEntryPoint() 
+				+ "\"}");
+		csCommand.setCommandType(CommandType.CLIENT_SDK);
+		csCommand.setCreatedBy(csCommandRequest.getSubmittedBy());
+		csCommand.setCreatedDate(csCommandRequest.getSubmittedOn());
+		csCommand.setMarkForDelete(false);
+		csCommand.setStoreId(csCommandRequest.getStoreId());
+		
+		return csCommand;		
 	}
 }

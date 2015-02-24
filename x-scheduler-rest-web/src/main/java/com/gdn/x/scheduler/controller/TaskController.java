@@ -105,19 +105,16 @@ public class TaskController {
 		
 		return new GdnRestListResponse<TaskResponse>(taskResponses, pageMetaData, requestId);		
 	}
-	
+
 	@RequestMapping(value = "", method = RequestMethod.POST)
 	public GdnBaseRestResponse submitTask(@Valid @RequestBody TaskRequest taskRequest,
 			BindingResult result, @RequestParam String storeId, @RequestParam String requestId) {
-		
-		System.out.println("TaskController::submitTask");
 		
 		if (result.hasErrors()) {
 			return errorValidation(result);
 		}				
 		
 		Task task = taskCommandService.buildTaskFromRequest(taskRequest);
-		System.out.println("saving task = " + task);
 		taskCommandService.save(task);
 		
 		GdnBaseRestResponse response = new GdnBaseRestResponse(true);

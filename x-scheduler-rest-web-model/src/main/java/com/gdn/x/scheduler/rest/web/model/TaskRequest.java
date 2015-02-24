@@ -32,8 +32,8 @@ public class TaskRequest extends SimpleRequestHolder {
 	private String dayOfWeek;
 	private String year;
 	private String threadRunningPolicy;
-	private Date startDate;
-	private Date expiryDate;
+	private String startDate;
+	private String expiryDate;	
 	//private int priority;
 	
 	/**
@@ -176,19 +176,19 @@ public class TaskRequest extends SimpleRequestHolder {
 		this.submittedOn = submittedOn;
 	}
 	
-	public Date getStartDate() {
+	public String getStartDate() {
 		return startDate;
 	}
 	
-	public void setStartDate(Date startDate) {
+	public void setStartDate(String startDate) {
 		this.startDate = startDate;
 	}
 	
-	public Date getExpiryDate() {
+	public String getExpiryDate() {
 		return expiryDate;
 	}
 	
-	public void setExpiryDate(Date expiryDate) {
+	public void setExpiryDate(String expiryDate) {
 		this.expiryDate = expiryDate;
 	}
 	

@@ -1,13 +1,13 @@
 package com.gdn.x.scheduler.service.impl;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
+import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.atLeastOnce;
 import static org.mockito.Mockito.never;
-import static org.mockito.Mockito.withSettings;
 import static org.mockito.Mockito.verify;
-import static org.mockito.Matchers.any;
+import static org.mockito.Mockito.withSettings;
 import static org.powermock.api.mockito.PowerMockito.mock;
 import static org.powermock.api.mockito.PowerMockito.spy;
 import static org.powermock.api.mockito.PowerMockito.when;
@@ -103,7 +103,7 @@ public class TaskQueryServiceImplTest {
 		task.setId(id);
 		task.setTaskName("WS Task");
 		task.setCommand(buildWSCommandSample(id));
-		//task.setState(ThreadState.SCHEDULED);
+		task.setState(ThreadState.SCHEDULED);
 		task.setMarkForDelete(false);
 		
 		return task;

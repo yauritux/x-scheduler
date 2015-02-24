@@ -50,7 +50,7 @@ public class CommandFactory {
 			if (request.getCommandType().equalsIgnoreCase(CommandType.WEB_SERVICE.name())) {
 				return new WSCommand(new WSCommandReceiverImpl());
 			} else if (request.getCommandType().equalsIgnoreCase(CommandType.CLIENT_SDK.name())) {
-				//TODO
+				return new ClientSDKCommand(new CSCommandReceiverImpl());
 			}
 		} catch (NullPointerException ignored) {}
 		

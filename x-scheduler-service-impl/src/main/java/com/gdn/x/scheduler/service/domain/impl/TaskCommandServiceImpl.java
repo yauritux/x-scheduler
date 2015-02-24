@@ -1,5 +1,7 @@
 package com.gdn.x.scheduler.service.domain.impl;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
@@ -258,10 +260,27 @@ public class TaskCommandServiceImpl implements TaskCommandService {
 		task.setCreatedDate(request.getSubmittedOn() == null ? new Date() : request.getSubmittedOn());
 		task.setMarkForDelete(false);
 		task.setStoreId(request.getStoreId());
-		task.setStartDate(request.getStartDate() == null ? new Date() : request.getStartDate());
-		
-		if (request.getExpiryDate() != null) {
-			task.setExpiryDate(request.getExpiryDate());
+		//task.setStartDate(request.getStartDate() == null ? new Date() : request.getStartDate());
+		try {
+			System.out.println("request.getStartDate() = " + request.getStartDate());
+			DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+			if (request.getStartDate() != null) {
+				System.out.println("parsing date");
+				task.setStartDate(df.parse(request.getStartDate()));				
+			} else {
+				System.out.println("startDate is empty, set to current date");
+				task.setStartDate(new Date());
+			}
+			System.out.println("start date has been set to " + task.getStartDate());
+			
+			if (request.getExpiryDate() != null && !request.getExpiryDate().isEmpty()) {			
+				task.setExpiryDate(df.parse(request.getExpiryDate()));
+			}
+		} catch (java.text.ParseException pe) {
+			LOG.error(pe.getMessage(), pe);
+			pe.printStackTrace();
+			task.setStartDate(new Date());
+			task.setExpiryDate(null);
 		}
 		
 		task.setState(ThreadState.ACTIVE);

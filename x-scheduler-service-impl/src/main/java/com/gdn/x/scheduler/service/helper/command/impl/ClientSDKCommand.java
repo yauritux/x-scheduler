@@ -58,7 +58,12 @@ public class ClientSDKCommand implements Command {
 	@Override
 	public com.gdn.x.scheduler.model.Command buildFromCommandRequest(
 			CommandRequest request) {
-		//TODO
-		throw new UnsupportedOperationException("This version doesn't support this type of command. Please upgrade the version.");
+		com.gdn.x.scheduler.model.Command command = null;
+		try {
+			command = receiver.convertToCommand(request);
+		} catch (Exception e) {
+			LOG.error(e.getMessage(), e);
+		}
+		return command;		
 	}
 }
