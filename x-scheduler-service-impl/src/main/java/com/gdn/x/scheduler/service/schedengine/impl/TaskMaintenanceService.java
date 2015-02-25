@@ -3,6 +3,7 @@ package com.gdn.x.scheduler.service.schedengine.impl;
 import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.scheduling.quartz.SchedulerFactoryBean;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
@@ -28,10 +29,8 @@ public class TaskMaintenanceService {
 		this.taskCommandService = taskCommandService;
 	}
 
+	@Async
 	public void run() {
-		int affectedTasks = taskCommandService.deleteExpiredTasks(new Date());
-		if (affectedTasks > 0) {
-			System.out.println(affectedTasks + " expired tasks successfully deleted and removed from the scheduler.");
-		}
+		taskCommandService.deleteExpiredTasks(new Date());
 	}
 }

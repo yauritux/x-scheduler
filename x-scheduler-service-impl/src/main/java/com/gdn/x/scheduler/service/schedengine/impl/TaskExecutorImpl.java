@@ -35,7 +35,10 @@ import com.gdn.x.scheduler.service.schedengine.TaskExecutor;
  * @version 1.0.0.RC1
  * @since 1.0.0.RC1
  * 
- * TODO:: removes boilerplate code in exception handling block
+ * TODO:: 
+ *  - removes boilerplate code in exception handling block
+ *  - removes SHELL_SCRIPT command since the implementation is similar with CLIENT_SDK, 
+ *    hence we can merge it into the CLIENT_SDK command.
  *
  */
 @Component("taskExecutor")
@@ -71,12 +74,13 @@ public class TaskExecutorImpl implements TaskExecutor {
 		}
 		
 		if (task.isMarkForDelete()) {
-			System.out.println("Task " + task.getTaskName() + " is marked as delete. Cancel to run.");
+			LOG.error("Task " + task.getTaskName() + " is marked as delete. Cancel to run.");
 			return;
 		}
 		
 		if (task.getState() == ThreadState.RUNNING) {
-			System.out.println("Task " + task.getTaskName() + " is still running on another thread. Pending for now and will be examined again later.");
+			System.out.println("Task " + task.getTaskName() + " is still running on another thread/machine. Pending for now and will be examined again later.");
+			LOG.error("Task " + task.getTaskName() + " is still running on another thread/machine. Pending for now and will be examined again later.");
 			return;
 		}
 		
@@ -152,7 +156,7 @@ public class TaskExecutorImpl implements TaskExecutor {
 				taskExecutionCommandService.save(taskExecution);
 				
 			} else if (task.getCommand().getCommandType() == CommandType.SHELL_SCRIPT) {
-				//TODO:: implement here
+				//TODO:: removes SHELL_SCRIPT command since the implementation is similar with CLIENT_SDK, hence we can merge it into the CLIENT_SDK command.
 			} else {
 				LOG.error("Task command isn't recognized/supported by the system!");
 			}

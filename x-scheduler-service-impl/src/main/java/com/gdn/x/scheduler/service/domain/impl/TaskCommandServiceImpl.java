@@ -189,20 +189,19 @@ public class TaskCommandServiceImpl implements TaskCommandService {
 		List<Task> expiredTasks = taskDAO.findExpiredTasks(date);
 		int affectedTasks = 0;
 		if (expiredTasks != null) {
-			try {
+			try {				
 				for (Task task : expiredTasks) {
+					taskDAO.deleteTask(task.getId());
+					
 					System.out.println("processing expired task " + task.getTaskName());
 					
 					JobDetail jobDetail = schedulerEngine.getSchedulerFactory().getScheduler()
 							.getJobDetail(new JobKey(task.getId() + "-JOB", task.getCommand().getCommandType().name()));
 					
 					schedulerEngine.getSchedulerFactory().getScheduler().deleteJob(jobDetail.getKey());
-					
-					taskDAO.deleteTask(task.getId());
-					
+										
 					affectedTasks++;
-				}
-				
+				}				
 			} catch (SchedulerException schedulerException) {
 				LOG.error(schedulerException.getMessage(), schedulerException);
 				schedulerException.printStackTrace();
@@ -210,6 +209,10 @@ public class TaskCommandServiceImpl implements TaskCommandService {
 				LOG.error(e.getMessage(), e);
 				e.printStackTrace();
 			}
+		}
+		
+		if (affectedTasks > 0) {
+			System.out.println(affectedTasks + " expired tasks successfully deleted and removed from the scheduler.");			
 		}
 				
 		return affectedTasks;
@@ -272,7 +275,7 @@ public class TaskCommandServiceImpl implements TaskCommandService {
 		task.setStoreId(request.getStoreId());
 		try {
 			DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-			if (request.getStartDate() != null) {
+			if (request.getStartDate() != null && !request.getStartDate().isEmpty()) {
 				task.setStartDate(df.parse(request.getStartDate()));				
 			} else {
 				task.setStartDate(new Date());
@@ -287,6 +290,8 @@ public class TaskCommandServiceImpl implements TaskCommandService {
 			task.setStartDate(new Date());
 			task.setExpiryDate(null);
 		}
+		
+		//task.setPriority(request.getPriority());
 		
 		task.setState(ThreadState.ACTIVE);
 		

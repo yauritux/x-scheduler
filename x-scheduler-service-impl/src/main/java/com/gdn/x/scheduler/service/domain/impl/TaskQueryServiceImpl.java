@@ -176,6 +176,7 @@ public class TaskQueryServiceImpl implements TaskQueryService {
 		taskResponse.setStartDate(task.getStartDate());
 		taskResponse.setExpiryDate(task.getExpiryDate());
 		taskResponse.setMachineId(task.getMachineId());
+		//taskResponse.setPriority(task.getPriority() == null ? 0 : task.getPriority());
 		if (task.getState() != null) {
 			taskResponse.setState(task.getState().name());
 		}

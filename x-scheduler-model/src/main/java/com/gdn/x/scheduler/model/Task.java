@@ -66,7 +66,7 @@ public class Task extends GdnBaseEntity {
 	
 	/*
 	@Column(name = "priority", nullable = false)
-	private int priority;
+	private Integer priority;
 	*/
 	
 	@Enumerated(EnumType.STRING)

@@ -1,17 +1,5 @@
 package com.gdn.x.scheduler.service;
 
-import java.util.List;
-
-import org.quartz.JobExecutionContext;
-import org.quartz.JobExecutionException;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
-import org.springframework.scheduling.quartz.QuartzJobBean;
-
-import com.gdn.x.scheduler.model.Task;
-import com.gdn.x.scheduler.model.TaskExecution;
-import com.gdn.x.scheduler.model.WebServiceCommand;
 
 /**
  * 
@@ -19,6 +7,7 @@ import com.gdn.x.scheduler.model.WebServiceCommand;
  *
  */
 //public class WSJob extends QuartzJobBean {
+@Deprecated
 public class WSJob {
 	
 	//#####private static final Logger LOG = LoggerFactory.getLogger(WSJob.class);

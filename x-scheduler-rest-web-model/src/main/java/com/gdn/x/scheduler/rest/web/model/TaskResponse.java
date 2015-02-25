@@ -24,7 +24,7 @@ public class TaskResponse extends BaseResponse {
 	private Date updatedDate;
 	private Date startDate;
 	private Date expiryDate;
-	private int priority;
+	//private Integer priority;
 	private String state;
 	private String machineId;
 
@@ -118,13 +118,15 @@ public class TaskResponse extends BaseResponse {
 		this.expiryDate = expiryDate;
 	}
 
-	public int getPriority() {
+	/*
+	public Integer getPriority() {
 		return priority;
 	}
 
-	public void setPriority(int priority) {
+	public void setPriority(Integer priority) {
 		this.priority = priority;
 	}
+	*/
 
 	public String getState() {
 		return state;
