@@ -35,6 +35,7 @@ import com.gdn.x.scheduler.model.ClientSDKCommand;
 import com.gdn.x.scheduler.model.Command;
 import com.gdn.x.scheduler.model.WebServiceCommand;
 import com.gdn.x.scheduler.rest.web.model.CSCommandRequest;
+import com.gdn.x.scheduler.rest.web.model.CSCommandResponse;
 import com.gdn.x.scheduler.rest.web.model.CommandResponse;
 import com.gdn.x.scheduler.rest.web.model.WSCommandRequest;
 import com.gdn.x.scheduler.rest.web.model.WSCommandResponse;
@@ -96,6 +97,35 @@ public class CommandController {
 		return null;
 	}
 	
+	@RequestMapping(value = "/cs/{id}", method = RequestMethod.GET)
+	public GdnRestSingleResponse<CSCommandResponse> getCSCommand(@PathVariable("id") String id,
+			@RequestParam String storeId, @RequestParam String requestId) throws Exception {
+		try {
+			Command command = commandQueryService.findById(id);
+			if (command.getCommandType() == CommandType.CLIENT_SDK) {
+				CommandResponse commandResponse = commandQueryService.wrapCommand(command);
+				if (commandResponse == null) {
+					return null;
+				}
+		    
+				return new GdnRestSingleResponse<CSCommandResponse>(
+					(CSCommandResponse) commandResponse, requestId
+				);	
+			}
+		} catch (JsonParseException e) {
+			LOG.error(e.getMessage(), e);
+			throw e;
+		} catch (IOException e) {
+			LOG.error(e.getMessage(), e);
+			throw e;
+		} catch (Exception e) {
+			LOG.error(e.getMessage(), e);
+			throw e;
+		}
+		
+		return null;
+	}	
+	
 	@RequestMapping(value = "/ws", method = RequestMethod.GET)
 	public GdnRestListResponse<WSCommandResponse> getWSCommands(
 			@RequestParam String storeId, @RequestParam String requestId,
@@ -109,7 +139,8 @@ public class CommandController {
 		PageMetaData pageMetaData = null;
 		
 		try {		
-			Page<Command> pageList = commandQueryService.fetchAll(pageNumber, pageSize);
+			//Page<Command> pageList = commandQueryService.fetchAll(pageNumber, pageSize);
+			Page<Command> pageList = commandQueryService.findByCommandType(CommandType.WEB_SERVICE, pageNumber, pageSize);
 		
 			List<Command> commands = pageList.getContent();
 		
@@ -136,6 +167,48 @@ public class CommandController {
 				
 		return new GdnRestListResponse<WSCommandResponse>(listResponse, pageMetaData, requestId);
 	}
+	
+	@RequestMapping(value = "/cs", method = RequestMethod.GET)
+	public GdnRestListResponse<CSCommandResponse> getCSCommands(
+			@RequestParam String storeId, @RequestParam String requestId,
+			@RequestParam(defaultValue = "0") Integer pageNumber,
+			@RequestParam(defaultValue = "30") Integer pageSize) 
+					throws ReflectiveOperationException, NullPointerException, 
+						JsonParseException, IOException {
+
+		List<CSCommandResponse> listResponse = new ArrayList<CSCommandResponse>();
+		
+		PageMetaData pageMetaData = null;
+		
+		try {		
+			//Page<Command> pageList = commandQueryService.fetchAll(pageNumber, pageSize);
+			Page<Command> pageList = commandQueryService.findByCommandType(CommandType.CLIENT_SDK, pageNumber, pageSize);
+		
+			List<Command> commands = pageList.getContent();
+		
+			LOG.debug("total commands found: " + (commands != null ? commands.size() : 0));
+				
+			for (Command command : commands) {
+				listResponse.add((CSCommandResponse) commandQueryService.wrapCommand(command));
+			}
+			
+			pageMetaData = new PageMetaData(pageSize, pageNumber, pageList.getTotalElements());
+			
+		} catch (NullPointerException e) { 
+			LOG.error(e.getMessage(), e);
+			throw e;
+		} catch (JsonParseException e) {
+			LOG.error(e.getMessage(), e);
+			throw e;
+		} catch (IOException e) {
+			LOG.error(e.getMessage(), e);
+			throw e;
+		} catch (Exception e) {
+			LOG.error(e.getMessage(), e);
+		}
+				
+		return new GdnRestListResponse<CSCommandResponse>(listResponse, pageMetaData, requestId);
+	}	
 	
 	@RequestMapping(value = "/ws", method = RequestMethod.POST, consumes = "application/json")
 	public GdnBaseRestResponse submitCommand(@Valid @RequestBody WSCommandRequest wsCommandRequest,

@@ -5,6 +5,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
+import org.quartz.JobDetail;
 import org.quartz.JobKey;
 import org.quartz.SchedulerException;
 import org.slf4j.Logger;
@@ -185,23 +186,32 @@ public class TaskCommandServiceImpl implements TaskCommandService {
 	 */
 	@Override
 	public int deleteExpiredTasks(Date date) {
-		//int affectedTasks = taskDAO.deleteExpiredTasks(date);
 		List<Task> expiredTasks = taskDAO.findExpiredTasks(date);
 		int affectedTasks = 0;
 		if (expiredTasks != null) {
 			try {
 				for (Task task : expiredTasks) {
+					System.out.println("processing expired task " + task.getTaskName());
+					
+					JobDetail jobDetail = schedulerEngine.getSchedulerFactory().getScheduler()
+							.getJobDetail(new JobKey(task.getId() + "-JOB", task.getCommand().getCommandType().name()));
+					
+					schedulerEngine.getSchedulerFactory().getScheduler().deleteJob(jobDetail.getKey());
+					
 					taskDAO.deleteTask(task.getId());
-					schedulerEngine.getSchedulerFactory().getScheduler().deleteJob(new JobKey(task.getTaskName() + "-JOB"));
+					
 					affectedTasks++;
 				}
+				
 			} catch (SchedulerException schedulerException) {
 				LOG.error(schedulerException.getMessage(), schedulerException);
+				schedulerException.printStackTrace();
 			} catch (Exception e) {
 				LOG.error(e.getMessage(), e);
+				e.printStackTrace();
 			}
 		}
-		
+				
 		return affectedTasks;
 	}
 
@@ -260,18 +270,13 @@ public class TaskCommandServiceImpl implements TaskCommandService {
 		task.setCreatedDate(request.getSubmittedOn() == null ? new Date() : request.getSubmittedOn());
 		task.setMarkForDelete(false);
 		task.setStoreId(request.getStoreId());
-		//task.setStartDate(request.getStartDate() == null ? new Date() : request.getStartDate());
 		try {
-			System.out.println("request.getStartDate() = " + request.getStartDate());
 			DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 			if (request.getStartDate() != null) {
-				System.out.println("parsing date");
 				task.setStartDate(df.parse(request.getStartDate()));				
 			} else {
-				System.out.println("startDate is empty, set to current date");
 				task.setStartDate(new Date());
 			}
-			System.out.println("start date has been set to " + task.getStartDate());
 			
 			if (request.getExpiryDate() != null && !request.getExpiryDate().isEmpty()) {			
 				task.setExpiryDate(df.parse(request.getExpiryDate()));

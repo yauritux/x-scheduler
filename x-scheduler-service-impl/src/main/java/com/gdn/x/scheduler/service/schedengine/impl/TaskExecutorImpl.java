@@ -18,9 +18,11 @@ import com.gdn.x.scheduler.constant.CommandType;
 import com.gdn.x.scheduler.constant.ProcessStatus;
 import com.gdn.x.scheduler.constant.ThreadState;
 import com.gdn.x.scheduler.constant.WSMethod;
+import com.gdn.x.scheduler.model.ClientSDKCommand;
 import com.gdn.x.scheduler.model.Task;
 import com.gdn.x.scheduler.model.TaskExecution;
 import com.gdn.x.scheduler.model.WebServiceCommand;
+import com.gdn.x.scheduler.rest.web.model.CSCommandResponse;
 import com.gdn.x.scheduler.rest.web.model.WSCommandResponse;
 import com.gdn.x.scheduler.service.domain.CommandQueryService;
 import com.gdn.x.scheduler.service.domain.TaskCommandService;
@@ -32,6 +34,8 @@ import com.gdn.x.scheduler.service.schedengine.TaskExecutor;
  * @author yauritux (yauritux@gmail.com)
  * @version 1.0.0.RC1
  * @since 1.0.0.RC1
+ * 
+ * TODO:: removes boilerplate code in exception handling block
  *
  */
 @Component("taskExecutor")
@@ -122,13 +126,59 @@ public class TaskExecutorImpl implements TaskExecutor {
 				taskExecution.setStatus(ProcessStatus.FINISHED);
 				taskExecutionCommandService.save(taskExecution);
 			} else if (task.getCommand().getCommandType() == CommandType.CLIENT_SDK) {
-				//TODO:: implement here
+				//TODO:: please apply SOLID Design here!
+				System.out.println("Calling CLIENT_SDK...");
+				
+				taskExecution = taskExecutionCommandService.createTaskExecutionFromTask(task, true);
+				taskCommandService.updateTaskRunningMachine(System.getenv(TaskExecutionCommandService.MACHINE_ID) == null
+						? "NOT-SET" : System.getenv(TaskExecutionCommandService.MACHINE_ID), task.getId());
+				taskCommandService.updateTaskState(ThreadState.RUNNING, task.getId()); 
+				
+				ClientSDKCommand command = (ClientSDKCommand) task.getCommand();
+				CSCommandResponse clientSDK = (CSCommandResponse) commandQueryService.wrapCommand(command);
+				
+				Process p = Runtime.getRuntime().exec("java -jar " + clientSDK.getEntryPoint());
+				p.waitFor();
+				int exitCode = p.exitValue();
+				System.out.println("Done with exit code = " + exitCode);
+				
+				if (exitCode != 0) {
+					taskExecution.setStatus(ProcessStatus.FAILED);
+				} else {
+					taskExecution.setStatus(ProcessStatus.FINISHED);
+				}
+				
+				taskExecution.setEnd(new Date());
+				taskExecutionCommandService.save(taskExecution);
+				
 			} else if (task.getCommand().getCommandType() == CommandType.SHELL_SCRIPT) {
 				//TODO:: implement here
 			} else {
-				LOG.error("Task isn't recognized by the system");
+				LOG.error("Task command isn't recognized/supported by the system!");
 			}
-		}catch (Exception e) {
+		} catch (InterruptedException ie) { 
+			taskCommandService.updateTaskState(ThreadState.TERMINATED, task.getId());
+			
+			if (taskExecution != null) {
+				taskExecution.setEnd(new Date());
+				taskExecution.setStatus(ProcessStatus.FAILED);
+				taskExecutionCommandService.save(taskExecution);
+			}
+			
+			LOG.error(ie.getMessage(), ie);
+			ie.printStackTrace();
+		} catch (IOException ioe) {
+			taskCommandService.updateTaskState(ThreadState.TERMINATED, task.getId());
+			
+			if (taskExecution != null) {
+				taskExecution.setEnd(new Date());
+				taskExecution.setStatus(ProcessStatus.FAILED);
+				taskExecutionCommandService.save(taskExecution);
+			}
+			
+			LOG.error(ioe.getMessage(), ioe);
+			ioe.printStackTrace();
+		} catch (Exception e) {
 			taskCommandService.updateTaskState(ThreadState.TERMINATED, task.getId()); // means task has stopped unexpectedly due to some exceptions 
 			
 			if (taskExecution != null) {
@@ -139,15 +189,21 @@ public class TaskExecutorImpl implements TaskExecutor {
 			
 			LOG.error(e.getMessage(), e);			
 			e.printStackTrace();
-		} finally {
+		} finally {			
 			try {
+				taskCommandService.updateTaskState(ThreadState.SCHEDULED, task.getId()); 				
 				if (getRequest != null) {
 					getRequest.releaseConnection();
 				}
-				response.close();
+				if (response != null) {
+					response.close();
+				}
 			} catch (IOException ioe) {
 				LOG.error(ioe.getMessage(), ioe);
 				ioe.printStackTrace();
+			} catch (Exception e) {
+				LOG.error(e.getMessage(), e);
+				e.printStackTrace();
 			}
 		}
 	}

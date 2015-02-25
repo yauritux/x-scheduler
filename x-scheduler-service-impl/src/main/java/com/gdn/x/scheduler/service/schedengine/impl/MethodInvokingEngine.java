@@ -61,7 +61,7 @@ public class MethodInvokingEngine implements CoreEngine<Task>, BeanFactoryAware 
 			MethodInvokingJobDetailFactoryBean jobDetail = new MethodInvokingJobDetailFactoryBean();
 			jobDetail.setTargetObject(taskExecutorImpl);
 			jobDetail.setTargetMethod("run");
-			jobDetail.setName(task.getTaskName() + "-JOB");
+			jobDetail.setName(task.getId() + "-JOB");
 			jobDetail.setGroup(task.getCommand().getCommandType().name());
 			jobDetail.setConcurrent(false);
 			jobDetail.afterPropertiesSet();

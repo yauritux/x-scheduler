@@ -153,7 +153,7 @@ public class CommandControllerTest {
 	public void getWSCommands_everythingNormal_responseStatusIsOK() throws Exception {
 		List<? extends Command> wsCommands = populateWSCommands();
 		//@formatter:off
-		when(commandQueryService.fetchAll(any(Integer.class), any(Integer.class)))
+		when(commandQueryService.findByCommandType(any(CommandType.class), any(Integer.class), any(Integer.class)))
 			.thenReturn((Page<Command>) new PageImpl<>(wsCommands));
 		when(commandQueryService.wrapCommand(any(Command.class))).thenReturn(buildWSCommandResponse("1", URL[0]));
 		
@@ -170,7 +170,7 @@ public class CommandControllerTest {
 	public void getWSCommands_everythingNormal_twoRecordsFound() throws Exception {
 		List<? extends Command> wsCommands = populateWSCommands();
 		//@formatter:off
-		when(commandQueryService.fetchAll(any(Integer.class), any(Integer.class)))
+		when(commandQueryService.findByCommandType(any(CommandType.class), any(Integer.class), any(Integer.class)))
 			.thenReturn((Page<Command>) new PageImpl<>(wsCommands));
 		when(commandQueryService.wrapCommand(any(Command.class))).thenReturn(buildWSCommandResponse("2", URL[1]));
 		
@@ -187,7 +187,7 @@ public class CommandControllerTest {
 	@Test(timeout = 1000)
 	public void getWSCommands_emptyRecords_noRecordsFound() throws Exception {
 		//@formatter:off
-		when(commandQueryService.fetchAll(any(Integer.class), any(Integer.class)))
+		when(commandQueryService.findByCommandType(any(CommandType.class), any(Integer.class), any(Integer.class)))
 			.thenReturn(new PageImpl<>(new ArrayList<Command>()));
 		
 		mockMvc.perform(get("/command/ws")
