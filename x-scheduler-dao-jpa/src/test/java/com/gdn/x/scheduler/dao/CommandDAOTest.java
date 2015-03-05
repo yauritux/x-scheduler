@@ -18,7 +18,8 @@ import com.gdn.x.scheduler.model.Command;
 
 /**
  * 
- * @author yauritux
+ * @author yauritux (yauritux@gmail.com)
+ * @version 1.0.0.RC1
  *
  */
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -41,52 +42,57 @@ public class CommandDAOTest extends BaseDAOTest {
 	
 	@Test(timeout = 1000)
 	public void findByIdExclDelete_recordDeleted_noRecordFound() {
-		commandDAO.deleteCommand("3");
+		commandDAO.deleteCommand("2");
+		assertNull(commandDAO.findByIdExclDelete("2"));
+	}
+	
+	@Test(timeout = 1000)
+	public void findByIdExclDelete_nonExistingRecord_noRecordFound() {
 		assertNull(commandDAO.findByIdExclDelete("3"));
 	}
 	
 	@Test(timeout = 1000)
 	public void findByIdExclDelete_existingRecord_recordFound() {
-		assertNull(commandDAO.findByIdExclDelete("4"));
+		assertNotNull(commandDAO.findByIdExclDelete("1"));
 	}
 	
 	@Test(timeout = 1000)
-	public void count_inclusiveMarkForDelete_3RecordsFound() {
-		assertTrue(commandDAO.count() == 3);
+	public void count_inclusiveMarkForDelete_2RecordsFound() {
+		assertTrue(commandDAO.count() == 2);
 	}
 	
 	@Test(timeout = 1000)
-	public void countExclDelete_2RecordsDeleted_1RecordFound() {
-		commandDAO.deleteCommand("3");
+	public void countExclDelete_2RecordsDeleted_0RecordFound() {
 		commandDAO.deleteCommand("2");
-		assertTrue(commandDAO.countExclDelete() == 1);
-	}
-	
-	@Test(timeout = 1000)
-	public void countExclDelete_noRecordsDeleted_3RecordsFound() {
-		assertTrue(commandDAO.countExclDelete() == 3);
-	}
-	
-	@Test(timeout = 1000)
-	public void fetchAll_noRecordsDeleted_3RecordsFound() {
-		assertTrue(commandDAO.fetchAll().size() == 3);
-	}
-	
-	@Test(timeout = 1000)
-	public void fetchAll_1RecordDeleted_2RecordsFound() {
 		commandDAO.deleteCommand("1");
-		assertEquals(2, commandDAO.fetchAll().size());
+		assertTrue(commandDAO.countExclDelete() == 0);
 	}
 	
 	@Test(timeout = 1000)
-	public void findAll_1RecordDeleted_3RecordsFound() {
+	public void countExclDelete_noRecordsDeleted_2RecordsFound() {
+		assertTrue(commandDAO.countExclDelete() == 2);
+	}
+	
+	@Test(timeout = 1000)
+	public void fetchAll_noRecordsDeleted_2RecordsFound() {
+		assertTrue(commandDAO.fetchAll().size() == 2);
+	}
+	
+	@Test(timeout = 1000)
+	public void fetchAll_1RecordDeleted_1RecordsFound() {
 		commandDAO.deleteCommand("1");
-		assertEquals(3, commandDAO.findAll().size());
+		assertEquals(1, commandDAO.fetchAll().size());
 	}
 	
 	@Test(timeout = 1000)
-	public void findAll_noRecordsDeleted_3RecordsFound() {
-		assertEquals(3, commandDAO.findAll().size());
+	public void findAll_1RecordDeleted_2RecordsFound() {
+		commandDAO.deleteCommand("1");
+		assertEquals(2, commandDAO.findAll().size());
+	}
+	
+	@Test(timeout = 1000)
+	public void findAll_noRecordsDeleted_2RecordsFound() {
+		assertEquals(2, commandDAO.findAll().size());
 	}
 	
 	@Test(timeout = 1000)
@@ -107,14 +113,14 @@ public class CommandDAOTest extends BaseDAOTest {
 	
 	@Test(timeout = 1000)
 	public void deleteCommand_existingRecord_markForDeleteIsTrue() {
-		commandDAO.deleteCommand("3");
-		assertTrue(commandDAO.findById("3").isMarkForDelete());
+		commandDAO.deleteCommand("2");
+		assertTrue(commandDAO.findById("2").isMarkForDelete());
 	}
 	
 	@Test(timeout = 1000)
 	public void restoreCommand_existingRecord_markForDeleteIsFalse() {
-		commandDAO.deleteCommand("3");
-		commandDAO.restoreCommand("3");
-		assertFalse(commandDAO.findById("3").isMarkForDelete());
+		commandDAO.deleteCommand("2");
+		commandDAO.restoreCommand("2");
+		assertFalse(commandDAO.findById("2").isMarkForDelete());
 	}	
 }

@@ -58,8 +58,8 @@ public class TaskDAOTest extends BaseDAOTest {
 	
 	@Test(timeout = 1000)
 	public void deleteTask_success_markForDeleteIsTrue() {
-		taskDAO.deleteTask("6");
-		Task task = taskDAO.findById("6");
+		taskDAO.deleteTask("4");
+		Task task = taskDAO.findById("4");
 		assertTrue(task.isMarkForDelete());
 	}
 	
@@ -88,22 +88,22 @@ public class TaskDAOTest extends BaseDAOTest {
 	
 	@Test(timeout = 1000)
 	public void restoreTask_success_markForDeleteIsFalse() {
-		taskDAO.deleteTask("5");
-		taskDAO.restoreTask("5");
-		Task task = taskDAO.findById("5");		
+		taskDAO.deleteTask("3");
+		taskDAO.restoreTask("3");
+		Task task = taskDAO.findById("3");		
 		assertFalse(task.isMarkForDelete());
 	}
 	
 	@Test(timeout = 1000)
 	public void findAll_success_fetchAllRecordsInclusiveMarkForDelete() {
-		taskDAO.deleteTask("6");
-		assertTrue(taskDAO.findAll().size() == 6);
+		taskDAO.deleteTask("2");
+		assertTrue(taskDAO.findAll().size() == 4);
 	}
 	
 	@Test(timeout = 1000)
 	public void exists_existingId_trueIsReturned() {
-		taskDAO.deleteTask("5");
-		assertTrue(taskDAO.exists("5"));
+		taskDAO.deleteTask("3");
+		assertTrue(taskDAO.exists("3"));
 	}
 	
 	@Test(timeout = 1000)
@@ -112,15 +112,15 @@ public class TaskDAOTest extends BaseDAOTest {
 	}
 	
 	@Test(timeout = 1000)
-	public void count_inclusiveMarkForDelete_6RecordsReturned() {
-		taskDAO.deleteTask("5");
-		assertTrue(taskDAO.count() == 6);
+	public void count_inclusiveMarkForDelete_4RecordsReturned() {
+		taskDAO.deleteTask("3");
+		assertTrue(taskDAO.count() == 4);
 	}
 	
 	@Test(timeout = 1000)
-	public void countExclDelete_2RecordsDeleted_4RecordsReturned() {
-		taskDAO.deleteTask("5");
-		taskDAO.deleteTask("6");
-		assertTrue(taskDAO.countExclDelete() == 4);
+	public void countExclDelete_2RecordsDeleted_2RecordsReturned() {
+		taskDAO.deleteTask("3");
+		taskDAO.deleteTask("4");
+		assertTrue(taskDAO.countExclDelete() == 2);
 	}
 }

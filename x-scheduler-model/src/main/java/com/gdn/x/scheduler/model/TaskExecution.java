@@ -9,6 +9,8 @@ import javax.persistence.Enumerated;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import org.springframework.beans.factory.annotation.Value;
+
 import com.gdn.common.base.entity.GdnBaseEntity;
 import com.gdn.x.scheduler.constant.ProcessStatus;
 
@@ -39,7 +41,8 @@ public class TaskExecution extends GdnBaseEntity {
 	private ProcessStatus status;
 	
 	@Column(name = "machine_id", nullable = false)
-	private String machineId = "NOT-SET";
+	@Value("${machineId}")
+	private String machineId;
 	
 	public TaskExecution() {}
 

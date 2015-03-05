@@ -225,7 +225,6 @@ public class TaskCommandServiceImpl implements TaskCommandService {
 	 */
 	@Override
 	public Task buildTaskFromRequest(TaskRequest request) {
-		System.out.println("buildTaskFromRequest::BEGIN");
 		Task task = new Task();
 		task.setTaskName(request.getTaskName());
 		task.setCommand(commandQueryService.findById(request.getCommandId()));
@@ -291,7 +290,7 @@ public class TaskCommandServiceImpl implements TaskCommandService {
 			task.setExpiryDate(null);
 		}
 		
-		//task.setPriority(request.getPriority());
+		task.setPriority(request.getPriority());
 		
 		task.setState(ThreadState.ACTIVE);
 		

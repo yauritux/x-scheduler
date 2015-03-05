@@ -24,9 +24,9 @@ public class ClientSDKCommand extends Command {
 	
 	/**
 	 * return entry point of the class executed. 
-	 * Entry point here refers to the method in the class.
+	 * Entry point here refers to the name of the program.
 	 * 
-	 * @return string represent method name in the class.
+	 * @return string represent name of program.
 	 */
 	public String getEntryPoint() {
 		return entryPoint;

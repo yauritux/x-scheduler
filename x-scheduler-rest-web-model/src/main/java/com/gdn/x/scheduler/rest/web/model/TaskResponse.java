@@ -6,7 +6,9 @@ import com.gdn.common.web.base.BaseResponse;
 
 /**
  * 
- * @author yauritux
+ * @author yauritux (yauritux@gmail.com)
+ * @version 1.0.0.RC1
+ * @since 1.0.0.RC1
  *
  */
 public class TaskResponse extends BaseResponse {
@@ -24,7 +26,7 @@ public class TaskResponse extends BaseResponse {
 	private Date updatedDate;
 	private Date startDate;
 	private Date expiryDate;
-	//private Integer priority;
+	private Integer priority;
 	private String state;
 	private String machineId;
 
@@ -118,7 +120,6 @@ public class TaskResponse extends BaseResponse {
 		this.expiryDate = expiryDate;
 	}
 
-	/*
 	public Integer getPriority() {
 		return priority;
 	}
@@ -126,7 +127,6 @@ public class TaskResponse extends BaseResponse {
 	public void setPriority(Integer priority) {
 		this.priority = priority;
 	}
-	*/
 
 	public String getState() {
 		return state;

@@ -14,6 +14,7 @@ import com.gdn.common.base.shade.org.apache.http.client.methods.CloseableHttpRes
 import com.gdn.common.base.shade.org.apache.http.client.methods.HttpGet;
 import com.gdn.common.base.shade.org.apache.http.impl.client.CloseableHttpClient;
 import com.gdn.common.base.shade.org.apache.http.impl.client.HttpClientBuilder;
+import com.gdn.x.scheduler.constant.ClientSDKExtension;
 import com.gdn.x.scheduler.constant.CommandType;
 import com.gdn.x.scheduler.constant.ProcessStatus;
 import com.gdn.x.scheduler.constant.ThreadState;
@@ -37,8 +38,6 @@ import com.gdn.x.scheduler.service.schedengine.TaskExecutor;
  * 
  * TODO:: 
  *  - removes boilerplate code in exception handling block
- *  - removes SHELL_SCRIPT command since the implementation is similar with CLIENT_SDK, 
- *    hence we can merge it into the CLIENT_SDK command.
  *
  */
 @Component("taskExecutor")
@@ -134,14 +133,28 @@ public class TaskExecutorImpl implements TaskExecutor {
 				System.out.println("Calling CLIENT_SDK...");
 				
 				taskExecution = taskExecutionCommandService.createTaskExecutionFromTask(task, true);
+				/*
 				taskCommandService.updateTaskRunningMachine(System.getenv(TaskExecutionCommandService.MACHINE_ID) == null
 						? "NOT-SET" : System.getenv(TaskExecutionCommandService.MACHINE_ID), task.getId());
+				*/
+				taskCommandService.updateTaskRunningMachine(task.getMachineId() == null ? "NOT-SET" : task.getMachineId(), 
+						task.getId());
 				taskCommandService.updateTaskState(ThreadState.RUNNING, task.getId()); 
 				
 				ClientSDKCommand command = (ClientSDKCommand) task.getCommand();
 				CSCommandResponse clientSDK = (CSCommandResponse) commandQueryService.wrapCommand(command);
 				
-				Process p = Runtime.getRuntime().exec("java -jar " + clientSDK.getEntryPoint());
+				String[] fileParts = clientSDK.getEntryPoint().split("\\.");
+				String extension = fileParts[fileParts.length - 1];
+				Process p = null;
+				
+				if (extension.equalsIgnoreCase(ClientSDKExtension.JAR.extension())) {
+					p = Runtime.getRuntime().exec("java -jar " + clientSDK.getEntryPoint());
+				} else if (extension.equalsIgnoreCase(ClientSDKExtension.SHELL_SCRIPT.extension())) {
+					p = Runtime.getRuntime().exec("bash " + clientSDK.getEntryPoint());
+				} else {
+					throw new Exception("Unrecognized Task's Command.");
+				}
 				p.waitFor();
 				int exitCode = p.exitValue();
 				System.out.println("Done with exit code = " + exitCode);
@@ -155,8 +168,6 @@ public class TaskExecutorImpl implements TaskExecutor {
 				taskExecution.setEnd(new Date());
 				taskExecutionCommandService.save(taskExecution);
 				
-			} else if (task.getCommand().getCommandType() == CommandType.SHELL_SCRIPT) {
-				//TODO:: removes SHELL_SCRIPT command since the implementation is similar with CLIENT_SDK, hence we can merge it into the CLIENT_SDK command.
 			} else {
 				LOG.error("Task command isn't recognized/supported by the system!");
 			}
@@ -195,7 +206,6 @@ public class TaskExecutorImpl implements TaskExecutor {
 			e.printStackTrace();
 		} finally {			
 			try {
-				taskCommandService.updateTaskState(ThreadState.SCHEDULED, task.getId()); 				
 				if (getRequest != null) {
 					getRequest.releaseConnection();
 				}
@@ -210,5 +220,7 @@ public class TaskExecutorImpl implements TaskExecutor {
 				e.printStackTrace();
 			}
 		}
+		
+		taskCommandService.updateTaskState(ThreadState.SCHEDULED, task.getId());		
 	}
 }

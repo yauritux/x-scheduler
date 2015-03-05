@@ -30,8 +30,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.gdn.x.scheduler.constant.CommandType;
 import com.gdn.x.scheduler.constant.WSMethod;
 import com.gdn.x.scheduler.constant.WSRequestHeader;
+import com.gdn.x.scheduler.model.ClientSDKCommand;
 import com.gdn.x.scheduler.model.Command;
-import com.gdn.x.scheduler.model.ShellScriptCommand;
 import com.gdn.x.scheduler.model.WebServiceCommand;
 import com.gdn.x.scheduler.rest.web.model.WSCommandRequest;
 import com.gdn.x.scheduler.rest.web.model.WSCommandResponse;
@@ -72,7 +72,7 @@ public class CommandControllerTest {
 	
 	@Test(timeout = 1000)
 	public void getWSCommand_notWebService_nullIsReturned() throws Exception {
-		when(commandQueryService.findById("2")).thenReturn(buildSSCommand());
+		when(commandQueryService.findById("2")).thenReturn(buildCSCommand());
 		//@formatter:off
 		mockMvc.perform(get("/command/ws/2")
 				.param("storeId", STORE_ID)
@@ -313,17 +313,17 @@ public class CommandControllerTest {
 		return response;
 	}
 	
-	private ShellScriptCommand buildSSCommand() {
-		ShellScriptCommand ssCommand = new ShellScriptCommand();
-		ssCommand.setId("2");
-		ssCommand.setCommandType(CommandType.SHELL_SCRIPT);
-		ssCommand.setCommand("setup.sh");
-		ssCommand.setCreatedBy("yauritux");
-		ssCommand.setCreatedDate(new Date());
-		ssCommand.setStoreId(STORE_ID);
-		ssCommand.setMarkForDelete(false);
+	private ClientSDKCommand buildCSCommand() {
+		ClientSDKCommand csCommand = new ClientSDKCommand();
+		csCommand.setId("2");
+		csCommand.setCommandType(CommandType.CLIENT_SDK);
+		csCommand.setCommand("{\"entry_point\": \"hello.jar\"}");
+		csCommand.setCreatedBy("yauritux");
+		csCommand.setCreatedDate(new Date());
+		csCommand.setStoreId(STORE_ID);
+		csCommand.setMarkForDelete(false);
 		
-		return ssCommand;
+		return csCommand;
 	}
 	
 	private List<? extends Command> populateWSCommands() {

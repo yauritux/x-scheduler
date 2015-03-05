@@ -12,6 +12,8 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import org.springframework.beans.factory.annotation.Value;
+
 import com.gdn.common.base.entity.GdnBaseEntity;
 import com.gdn.x.scheduler.constant.ThreadState;
 
@@ -64,16 +66,15 @@ public class Task extends GdnBaseEntity {
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date startDate;
 	
-	/*
 	@Column(name = "priority", nullable = false)
 	private Integer priority;
-	*/
 	
 	@Enumerated(EnumType.STRING)
 	@Column(name = "process_state", nullable = false)
 	private ThreadState state;
 	
 	@Column(name = "machine_id", nullable = true)
+	@Value("${machineId}")
 	private String machineId;
 	
 	/*
@@ -181,7 +182,6 @@ public class Task extends GdnBaseEntity {
 		this.startDate = startDate;
 	}
 	
-	/*
 	public int getPriority() {
 		return priority;
 	}
@@ -189,7 +189,6 @@ public class Task extends GdnBaseEntity {
 	public void setPriority(int priority) {
 		this.priority = priority;
 	}
-	*/
 	
 	public ThreadState getState() {
 		return state;

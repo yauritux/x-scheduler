@@ -73,7 +73,7 @@ public class MethodInvokingEngine implements CoreEngine<Task>, BeanFactoryAware 
 			cronTrigger.setName(task.getTaskName() + "-TRIGGER");
 			cronTrigger.setGroup(task.getCommand().getCommandType().name());
 			cronTrigger.setCronExpression(getCronExpressionFromTask(task));
-			//cronTrigger.setPriority(task.getPriority());
+			cronTrigger.setPriority(task.getPriority());
 			if (task.getStartDate() != null) {
 				cronTrigger.setStartTime(task.getStartDate()); // activate scheduler on specific date
 			}

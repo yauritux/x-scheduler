@@ -34,7 +34,7 @@ public class TaskRequest extends SimpleRequestHolder {
 	private String threadRunningPolicy;
 	private String startDate;
 	private String expiryDate;	
-	//private int priority;
+	private int priority;
 	
 	/**
 	 * TODO: use enum instead of String
@@ -192,7 +192,6 @@ public class TaskRequest extends SimpleRequestHolder {
 		this.expiryDate = expiryDate;
 	}
 	
-	/*
 	public int getPriority() {
 		return priority;
 	}
@@ -200,5 +199,4 @@ public class TaskRequest extends SimpleRequestHolder {
 	public void setPriority(int priority) {
 		this.priority = priority;
 	}
-	*/
 }

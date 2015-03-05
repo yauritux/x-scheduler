@@ -41,7 +41,7 @@ public abstract class Command extends GdnBaseEntity {
 	/**
 	 * retrieve command that will be executed by task object.
 	 * The command will be representing in JSON string which will be different 
-	 * between each CommandType (i.e. WEB_SERVICE, CLIENT_SDK, SHELL_SCRIPT).
+	 * between each CommandType (i.e. WEB_SERVICE, CLIENT_SDK).
 	 * e.g. for WEB_SERVICE, the JSON string will contain some keys such as URL, WS method, etc.
 	 *  
 	 * @return command in JSON string.
@@ -57,7 +57,7 @@ public abstract class Command extends GdnBaseEntity {
 	/**
 	 * Parameters are various, depend on the command type.
 	 * e.g. parameter for WEB_SERVICE will be query parameters those are supplied 
-	 * along with the URL of the endpoint service. And for CLIENT_SDK or SHELL_SCRIPT, 
+	 * along with the URL of the endpoint service. And for CLIENT_SDK, 
 	 * parameter will be arguments of the command that is being executed.
 	 * 
 	 * @return parameters in string

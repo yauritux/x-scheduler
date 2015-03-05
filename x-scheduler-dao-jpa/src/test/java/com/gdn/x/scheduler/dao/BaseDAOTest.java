@@ -47,18 +47,15 @@ public class BaseDAOTest {
 			.columns("ID", "COMMAND", "PARAMETERS", "CONTENTS", "ENTRY_POINT", "COMMAND_TYPE", "CREATED_BY", "CREATED_DATE", "STORE_ID", "MARK_FOR_DELETE", "OPTLOCK")
 			.values("1", "{\"" + WSRequestHeader.URL.label() + "\":\"" + URL + "\",\"" + WSRequestHeader.METHOD.label() + "\":\""+ WSMethod.GET.name() + "\"}", "", "", "", CommandType.WEB_SERVICE.name(), "yauritux", "2015-01-01", "store-123", false, 0)
 			.values("2", "{\"class\":\"OrderManagementService\",\"method\":\"createOrder\"}", "1,2015-01-01,100000,100000,CASH", "", "", CommandType.CLIENT_SDK.name(), "yauritux", "2015-01-01", "store-123", false, 0)
-			.values("3", "{\"scriptName\":\"cleaner.sh\", \"type\":\"shell-script\", \"path\": \".\"}", "", "", "", CommandType.SHELL_SCRIPT.name(), "yauritux", "2015-01-01", "store-123", false, 0)
 			.build();
 	
 	public static final Operation INSERT_TASK = 
         insertInto("TASK")
-            .columns("ID", "TASK_NAME", "COMMAND_ID", "SECS", "MINS", "HRS", "DAY_OF_MONTH", "MTH", "DAY_OF_WEEK", "YR", "CREATED_BY", "CREATED_DATE","STORE_ID","MARK_FOR_DELETE","OPTLOCK", "START_DATE", "EXPIRY_DATE", "PROCESS_STATE", "MACHINE_ID")
-            .values("1", "task1", "1", "0/55", "*", "*", "*", "*", "*", null, "yauritux", "2015-01-01", "store-123", false, 0, "2015-01-01", null, ThreadState.ACTIVE, "test-machine")
-            .values("2", "task2", "2", "0", "0", "12", "*", "*", "?", null, "yauritux", "2015-01-02", "store-123", false, 0, "2015-01-02", null, ThreadState.ACTIVE, "test-machine")
-            .values("3", "task3", "3", "0", "15", "10", "*", "*", "?", "2017", "yauritux", "2015-01-03", "store-123", false, 0, "2015-01-03", null, ThreadState.ACTIVE, "test-machine")
-            .values("4", "task4", "3", "0", "10,44", "14", "?", "3", "WED", null, "yauritux", "2015-01-04", "store-123", false, 0, "2015-01-04", null, ThreadState.ACTIVE, "test-machine")
-            .values("5", "task5", "2", "0", "15", "10", "?", "*", "6L", "2015-2017", "yauritux", "2015-01-05", "store-123", false, 0, "2015-01-05", null, ThreadState.ACTIVE, "test-machine")
-            .values("6", "task6", "1", "0", "15", "10", "?", "*", "6#3", null, "yauritux", "2015-01-06", "store-123", false, 0, "2015-01-06", null, ThreadState.ACTIVE, "test-machine")
+            .columns("ID", "TASK_NAME", "COMMAND_ID", "SECS", "MINS", "HRS", "DAY_OF_MONTH", "MTH", "DAY_OF_WEEK", "YR", "CREATED_BY", "CREATED_DATE","STORE_ID","MARK_FOR_DELETE","OPTLOCK", "START_DATE", "EXPIRY_DATE", "PROCESS_STATE", "MACHINE_ID", "PRIORITY")
+            .values("1", "task1", "1", "0/55", "*", "*", "*", "*", "*", null, "yauritux", "2015-01-01", "store-123", false, 0, "2015-01-01", null, ThreadState.ACTIVE, "test-machine", 1)
+            .values("2", "task2", "2", "0", "0", "12", "*", "*", "?", null, "yauritux", "2015-01-02", "store-123", false, 0, "2015-01-02", null, ThreadState.ACTIVE, "test-machine", 2)
+            .values("3", "task3", "2", "0", "15", "10", "?", "*", "6L", "2015-2017", "yauritux", "2015-01-05", "store-123", false, 0, "2015-01-05", null, ThreadState.ACTIVE, "test-machine", 3)
+            .values("4", "task4", "1", "0", "15", "10", "?", "*", "6#3", null, "yauritux", "2015-01-06", "store-123", false, 0, "2015-01-06", null, ThreadState.ACTIVE, "test-machine", 4)
             .build();
 		
 	@Autowired

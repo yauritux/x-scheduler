@@ -10,8 +10,7 @@ package com.gdn.x.scheduler.constant;
 public enum CommandType {
 	
 	WEB_SERVICE(CommandTypeEnum.WS), 
-	CLIENT_SDK(CommandTypeEnum.CS), 
-	SHELL_SCRIPT(CommandTypeEnum.SS);
+	CLIENT_SDK(CommandTypeEnum.CS);
 	
 	private String label;
 	
@@ -31,6 +30,5 @@ public enum CommandType {
 	public class CommandTypeEnum {
 		public static final String WS = "WEB_SERVICE";
 		public static final String CS = "CLIENT_SDK";
-		public static final String SS = "SHELL_SCRIPT";
 	}
 }
