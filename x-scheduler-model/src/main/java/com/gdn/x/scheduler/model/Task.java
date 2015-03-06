@@ -12,8 +12,6 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-import org.springframework.beans.factory.annotation.Value;
-
 import com.gdn.common.base.entity.GdnBaseEntity;
 import com.gdn.x.scheduler.constant.ThreadState;
 
@@ -74,7 +72,6 @@ public class Task extends GdnBaseEntity {
 	private ThreadState state;
 	
 	@Column(name = "machine_id", nullable = true)
-	@Value("${machineId}")
 	private String machineId;
 	
 	/*

@@ -193,13 +193,14 @@
 					<scanIntervalSeconds>10</scanIntervalSeconds>
 					<stopKey>foo</stopKey>
 					<stopPort>9999</stopPort>
+					<!--
 					<systemProperties>
 						<systemProperty>
 							<name>X_CONF_DIR</name>
-							<!--<value>/home/centos/Projects/X-Scheduler/x-scheduler/x-scheduler-config/db</value>-->
 							<value>/Users/apple/Projects/GDN/X/x-scheduler/x-scheduler-config</value>
 						</systemProperty>
 					</systemProperties>
+					-->
 					<webAppConfig>
 						<allowDuplicateFragmentNames>true</allowDuplicateFragmentNames>
 						<jettyEnvXml>src/etc/jettyEnv.xml</jettyEnvXml>

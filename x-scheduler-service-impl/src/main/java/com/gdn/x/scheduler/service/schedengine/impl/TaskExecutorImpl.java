@@ -1,7 +1,9 @@
 package com.gdn.x.scheduler.service.schedengine.impl;
 
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Date;
+import java.util.Properties;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -92,12 +94,19 @@ public class TaskExecutorImpl implements TaskExecutor {
 		
 		//TODO :: implement command/strategy pattern for this particular operation
 		try {
+			Properties prop = new Properties();
+			prop.load(new FileInputStream(System.getenv("X_CONF_DIR") + "/x-scheduler.properties"));
+			
 			if (task.getCommand().getCommandType() == CommandType.WEB_SERVICE) {
 				System.out.println("Calling web service...");
 
+				task.setMachineId(prop.getProperty("machineId") == null ? "NOT-SET" : prop.getProperty("machineId"));				
 				taskExecution = taskExecutionCommandService.createTaskExecutionFromTask(task, true);
+				/*
 				taskCommandService.updateTaskRunningMachine(System.getenv(TaskExecutionCommandService.MACHINE_ID) == null 
 						? "NOT-SET" : System.getenv(TaskExecutionCommandService.MACHINE_ID), task.getId());
+				*/
+				taskCommandService.updateTaskRunningMachine(task.getMachineId(), task.getId());
 				taskCommandService.updateTaskState(ThreadState.RUNNING, task.getId()); // always update (persisted) task whenever state is changed.
 				
 				WebServiceCommand command = (WebServiceCommand) task.getCommand();
@@ -133,12 +142,11 @@ public class TaskExecutorImpl implements TaskExecutor {
 				System.out.println("Calling CLIENT_SDK...");
 				
 				taskExecution = taskExecutionCommandService.createTaskExecutionFromTask(task, true);
-				/*
 				taskCommandService.updateTaskRunningMachine(System.getenv(TaskExecutionCommandService.MACHINE_ID) == null
 						? "NOT-SET" : System.getenv(TaskExecutionCommandService.MACHINE_ID), task.getId());
-				*/
-				taskCommandService.updateTaskRunningMachine(task.getMachineId() == null ? "NOT-SET" : task.getMachineId(), 
-						task.getId());
+				
+				task.setMachineId(taskExecution.getMachineId() == null ? "NOT-SET" : taskExecution.getMachineId());
+				
 				taskCommandService.updateTaskState(ThreadState.RUNNING, task.getId()); 
 				
 				ClientSDKCommand command = (ClientSDKCommand) task.getCommand();
@@ -171,6 +179,9 @@ public class TaskExecutorImpl implements TaskExecutor {
 			} else {
 				LOG.error("Task command isn't recognized/supported by the system!");
 			}
+			
+			taskCommandService.updateTaskState(ThreadState.SCHEDULED, task.getId());		
+			
 		} catch (InterruptedException ie) { 
 			taskCommandService.updateTaskState(ThreadState.TERMINATED, task.getId());
 			
@@ -219,8 +230,6 @@ public class TaskExecutorImpl implements TaskExecutor {
 				LOG.error(e.getMessage(), e);
 				e.printStackTrace();
 			}
-		}
-		
-		taskCommandService.updateTaskState(ThreadState.SCHEDULED, task.getId());		
+		}		
 	}
 }
