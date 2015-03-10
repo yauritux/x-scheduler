@@ -1,9 +1,7 @@
 package com.gdn.x.scheduler.service.schedengine.impl;
 
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Date;
-import java.util.Properties;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -27,6 +25,7 @@ import com.gdn.x.scheduler.model.TaskExecution;
 import com.gdn.x.scheduler.model.WebServiceCommand;
 import com.gdn.x.scheduler.rest.web.model.CSCommandResponse;
 import com.gdn.x.scheduler.rest.web.model.WSCommandResponse;
+import com.gdn.x.scheduler.service.common.helper.impl.CommonUtil;
 import com.gdn.x.scheduler.service.domain.CommandQueryService;
 import com.gdn.x.scheduler.service.domain.TaskCommandService;
 import com.gdn.x.scheduler.service.domain.TaskExecutionCommandService;
@@ -94,13 +93,16 @@ public class TaskExecutorImpl implements TaskExecutor {
 		
 		//TODO :: implement command/strategy pattern for this particular operation
 		try {
+			/*
 			Properties prop = new Properties();
 			prop.load(new FileInputStream(System.getenv("X_CONF_DIR") + "/x-scheduler.properties"));
+			*/
 			
 			if (task.getCommand().getCommandType() == CommandType.WEB_SERVICE) {
 				System.out.println("Calling web service...");
 
-				task.setMachineId(prop.getProperty("machineId") == null ? "NOT-SET" : prop.getProperty("machineId"));				
+				//task.setMachineId(prop.getProperty("machineId") == null ? "NOT-SET" : prop.getProperty("machineId"));
+				task.setMachineId(CommonUtil.getMachineId() == null ? "NOT-SET" : CommonUtil.getMachineId());
 				taskExecution = taskExecutionCommandService.createTaskExecutionFromTask(task, true);
 				/*
 				taskCommandService.updateTaskRunningMachine(System.getenv(TaskExecutionCommandService.MACHINE_ID) == null 

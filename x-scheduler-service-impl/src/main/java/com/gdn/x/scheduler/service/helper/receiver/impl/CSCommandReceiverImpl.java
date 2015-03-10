@@ -15,6 +15,7 @@ import com.gdn.x.scheduler.rest.web.model.CSCommandRequest;
 import com.gdn.x.scheduler.rest.web.model.CSCommandResponse;
 import com.gdn.x.scheduler.rest.web.model.CommandRequest;
 import com.gdn.x.scheduler.rest.web.model.CommandResponse;
+import com.gdn.x.scheduler.service.common.helper.impl.CommonUtil;
 import com.gdn.x.scheduler.service.helper.receiver.CommandReceiver;
 
 /**
@@ -67,8 +68,10 @@ public class CSCommandReceiverImpl implements CommandReceiver {
 		
 		try {
 			ObjectMapper mapper = new ObjectMapper();
-			JsonFactory factory = mapper.getJsonFactory();
-			JsonParser jp = factory.createJsonParser(command.getCommand());
+			//JsonFactory factory = mapper.getJsonFactory();
+			JsonFactory factory = mapper.getFactory();
+			//JsonParser jp = factory.createJsonParser(command.getCommand());
+			JsonParser jp = factory.createParser(command.getCommand());
 			JsonNode actualObj = mapper.readTree(jp);
 				
 			commandResponse.setEntryPoint(actualObj.get(ClientSDKRequestField.ENTRY_POINT.label()).asText());
@@ -90,7 +93,10 @@ public class CSCommandReceiverImpl implements CommandReceiver {
 		csCommand.setId(((commandRequest.getId() != null && !commandRequest.getId().isEmpty())
 				? commandRequest.getId() : null));
 		CSCommandRequest csCommandRequest = (CSCommandRequest) commandRequest;
-		csCommand.setCommand("{\"" + ClientSDKRequestField.ENTRY_POINT.label() + "\":\"" 
+		String uploadedDir = (CommonUtil.getUploadDir() == null ? "" : CommonUtil.getUploadDir());
+		csCommand.setCommand("{\"" + ClientSDKRequestField.ENTRY_POINT.label()
+				+ "\":\""
+				+ uploadedDir + "/"  								
 				+ csCommandRequest.getEntryPoint() 
 				+ "\"}");
 		csCommand.setCommandType(CommandType.CLIENT_SDK);

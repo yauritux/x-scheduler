@@ -18,6 +18,7 @@ import com.gdn.x.scheduler.service.domain.base.BaseCommandService;
 public interface TaskCommandService extends BaseCommandService<Task> {
 	
 	String MACHINE_ID = "MACHINE_ID";
+	String UPLOAD_DIR = "UPLOAD_DIR";
 	
 	public Task buildTaskFromRequest(TaskRequest request);
 	public int deleteExpiredTasks(Date date);

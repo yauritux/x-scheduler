@@ -2,10 +2,12 @@ package com.gdn.x.scheduler.controller;
 
 import java.io.BufferedOutputStream;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Properties;
 
 import javax.validation.Valid;
 
@@ -39,6 +41,7 @@ import com.gdn.x.scheduler.rest.web.model.CSCommandResponse;
 import com.gdn.x.scheduler.rest.web.model.CommandResponse;
 import com.gdn.x.scheduler.rest.web.model.WSCommandRequest;
 import com.gdn.x.scheduler.rest.web.model.WSCommandResponse;
+import com.gdn.x.scheduler.service.common.helper.impl.CommonUtil;
 import com.gdn.x.scheduler.service.domain.CommandCommandService;
 import com.gdn.x.scheduler.service.domain.CommandQueryService;
 import com.wordnik.swagger.annotations.Api;
@@ -254,23 +257,23 @@ public class CommandController {
 		GdnBaseRestResponse response = null;
 		
 		if (!file.isEmpty()) {
-			String uploadedDir = (System.getenv("UPLOAD_DIR") == null ? "" : System.getenv("UPLOAD_DIR"));
-			System.out.println("uploadedDir = " + uploadedDir);
+			//String uploadedDir = (System.getenv("UPLOAD_DIR") == null ? "" : System.getenv("UPLOAD_DIR"));
+			StringBuffer uploadedDir = new StringBuffer().append((CommonUtil.getUploadDir() == null ? "" : CommonUtil.getUploadDir())).append("/");
+			
+			System.out.println("uploadedDir = " + uploadedDir.toString());
+			
 			try {
 				byte[] bytes = file.getBytes();
-				BufferedOutputStream stream = new BufferedOutputStream(
-						new FileOutputStream(new File(uploadedDir + fileName)));
+				BufferedOutputStream stream = new BufferedOutputStream(new FileOutputStream(new File(uploadedDir.toString() + fileName)));
 				stream.write(bytes);
 				stream.close();
-				System.out.println("Successfully uploaded.");
 			} catch (Exception e) {
-				System.out.println("Failed to upload file " + fileName);
+				e.printStackTrace();
 				response = new GdnBaseRestResponse("Failed to upload file " + fileName, "UPLOAD_FAILED", false, requestId);
 				return response;			
 			}
 		} else {
-			System.out.println("No File uploaded.");
-			response = new GdnBaseRestResponse("Please upload the ClientSDK!", "NO_SDK_UPLOADED", false, requestId);				
+			response = new GdnBaseRestResponse("No SDK uploaded. Please upload the ClientSDK!", "NO_SDK_UPLOADED", false, requestId);				
 			return response;		
 		}
 		
