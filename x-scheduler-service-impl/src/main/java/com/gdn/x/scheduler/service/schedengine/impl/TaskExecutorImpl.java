@@ -93,21 +93,11 @@ public class TaskExecutorImpl implements TaskExecutor {
 		
 		//TODO :: implement command/strategy pattern for this particular operation
 		try {
-			/*
-			Properties prop = new Properties();
-			prop.load(new FileInputStream(System.getenv("X_CONF_DIR") + "/x-scheduler.properties"));
-			*/
-			
 			if (task.getCommand().getCommandType() == CommandType.WEB_SERVICE) {
 				System.out.println("Calling web service...");
 
-				//task.setMachineId(prop.getProperty("machineId") == null ? "NOT-SET" : prop.getProperty("machineId"));
 				task.setMachineId(CommonUtil.getMachineId() == null ? "NOT-SET" : CommonUtil.getMachineId());
 				taskExecution = taskExecutionCommandService.createTaskExecutionFromTask(task, true);
-				/*
-				taskCommandService.updateTaskRunningMachine(System.getenv(TaskExecutionCommandService.MACHINE_ID) == null 
-						? "NOT-SET" : System.getenv(TaskExecutionCommandService.MACHINE_ID), task.getId());
-				*/
 				taskCommandService.updateTaskRunningMachine(task.getMachineId(), task.getId());
 				taskCommandService.updateTaskState(ThreadState.RUNNING, task.getId()); // always update (persisted) task whenever state is changed.
 				

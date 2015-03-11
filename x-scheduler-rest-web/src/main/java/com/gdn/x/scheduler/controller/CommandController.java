@@ -2,12 +2,10 @@ package com.gdn.x.scheduler.controller;
 
 import java.io.BufferedOutputStream;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Properties;
 
 import javax.validation.Valid;
 
@@ -257,10 +255,7 @@ public class CommandController {
 		GdnBaseRestResponse response = null;
 		
 		if (!file.isEmpty()) {
-			//String uploadedDir = (System.getenv("UPLOAD_DIR") == null ? "" : System.getenv("UPLOAD_DIR"));
 			StringBuffer uploadedDir = new StringBuffer().append((CommonUtil.getUploadDir() == null ? "" : CommonUtil.getUploadDir())).append("/");
-			
-			System.out.println("uploadedDir = " + uploadedDir.toString());
 			
 			try {
 				byte[] bytes = file.getBytes();
@@ -268,7 +263,6 @@ public class CommandController {
 				stream.write(bytes);
 				stream.close();
 			} catch (Exception e) {
-				e.printStackTrace();
 				response = new GdnBaseRestResponse("Failed to upload file " + fileName, "UPLOAD_FAILED", false, requestId);
 				return response;			
 			}
