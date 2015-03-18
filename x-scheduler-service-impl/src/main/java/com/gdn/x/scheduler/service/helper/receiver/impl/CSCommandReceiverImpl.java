@@ -2,11 +2,15 @@ package com.gdn.x.scheduler.service.helper.receiver.impl;
 
 import java.io.IOException;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.fasterxml.jackson.core.JsonFactory;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.gdn.x.scheduler.constant.ClientSDKExtension;
 import com.gdn.x.scheduler.constant.ClientSDKRequestField;
 import com.gdn.x.scheduler.constant.CommandType;
 import com.gdn.x.scheduler.model.ClientSDKCommand;
@@ -16,6 +20,7 @@ import com.gdn.x.scheduler.rest.web.model.CSCommandResponse;
 import com.gdn.x.scheduler.rest.web.model.CommandRequest;
 import com.gdn.x.scheduler.rest.web.model.CommandResponse;
 import com.gdn.x.scheduler.service.common.helper.impl.CommonUtil;
+import com.gdn.x.scheduler.service.domain.CommandQueryService;
 import com.gdn.x.scheduler.service.helper.receiver.CommandReceiver;
 
 /**
@@ -30,7 +35,10 @@ import com.gdn.x.scheduler.service.helper.receiver.CommandReceiver;
  */
 public class CSCommandReceiverImpl implements CommandReceiver {
 	
+	private static final Logger LOG = LoggerFactory.getLogger(CSCommandReceiverImpl.class);
+	
 	private Command command;
+	private CommandQueryService commandQueryService;
 	
 	/**
 	 * default constructor
@@ -47,6 +55,10 @@ public class CSCommandReceiverImpl implements CommandReceiver {
 	 */
 	public CSCommandReceiverImpl(Command command) {
 		this.command = command;
+	}
+	
+	public void setCommandQueryService(CommandQueryService commandQueryService) {
+		this.commandQueryService = commandQueryService;
 	}
 
 	/**
@@ -68,9 +80,7 @@ public class CSCommandReceiverImpl implements CommandReceiver {
 		
 		try {
 			ObjectMapper mapper = new ObjectMapper();
-			//JsonFactory factory = mapper.getJsonFactory();
 			JsonFactory factory = mapper.getFactory();
-			//JsonParser jp = factory.createJsonParser(command.getCommand());
 			JsonParser jp = factory.createParser(command.getCommand());
 			JsonNode actualObj = mapper.readTree(jp);
 				
@@ -106,5 +116,38 @@ public class CSCommandReceiverImpl implements CommandReceiver {
 		csCommand.setStoreId(csCommandRequest.getStoreId());
 		
 		return csCommand;		
+	}
+	
+	@Override
+	public void executeCommand() throws Exception {
+		System.out.println("Calling CLIENT_SDK...");
+		
+		try {
+			CSCommandResponse clientSDK = (CSCommandResponse) commandQueryService.wrapCommand(command);
+			
+			String[] fileParts = clientSDK.getEntryPoint().split("\\.");
+			String extension = fileParts[fileParts.length - 1];
+			Process p = null;
+			
+			if (extension.equalsIgnoreCase(ClientSDKExtension.JAR.extension())) {
+				p = Runtime.getRuntime().exec("java -jar " + clientSDK.getEntryPoint());
+			} else if (extension.equalsIgnoreCase(ClientSDKExtension.SHELL_SCRIPT.extension())) {
+				p = Runtime.getRuntime().exec("bash " + clientSDK.getEntryPoint());
+			} else {
+				throw new Exception("Unrecognized Task's Command.");
+			}
+			p.waitFor();
+			int exitCode = p.exitValue();
+			System.out.println("Done with exit code = " + exitCode);
+			
+			if (exitCode != 0) {
+				throw new RuntimeException("Failed to execute ClientSDK. Exit Code: "
+						+ exitCode);
+			}	
+		} catch (Exception e) {
+			LOG.error(e.getMessage(), e);
+			e.printStackTrace();
+			throw e;
+		}
 	}
 }

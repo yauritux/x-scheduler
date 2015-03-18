@@ -9,26 +9,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-import com.gdn.common.base.shade.org.apache.http.client.config.RequestConfig;
-import com.gdn.common.base.shade.org.apache.http.client.methods.CloseableHttpResponse;
-import com.gdn.common.base.shade.org.apache.http.client.methods.HttpGet;
-import com.gdn.common.base.shade.org.apache.http.impl.client.CloseableHttpClient;
-import com.gdn.common.base.shade.org.apache.http.impl.client.HttpClientBuilder;
-import com.gdn.x.scheduler.constant.ClientSDKExtension;
-import com.gdn.x.scheduler.constant.CommandType;
 import com.gdn.x.scheduler.constant.ProcessStatus;
 import com.gdn.x.scheduler.constant.ThreadState;
-import com.gdn.x.scheduler.constant.WSMethod;
-import com.gdn.x.scheduler.model.ClientSDKCommand;
 import com.gdn.x.scheduler.model.Task;
 import com.gdn.x.scheduler.model.TaskExecution;
-import com.gdn.x.scheduler.model.WebServiceCommand;
-import com.gdn.x.scheduler.rest.web.model.CSCommandResponse;
-import com.gdn.x.scheduler.rest.web.model.WSCommandResponse;
 import com.gdn.x.scheduler.service.common.helper.impl.CommonUtil;
 import com.gdn.x.scheduler.service.domain.CommandQueryService;
 import com.gdn.x.scheduler.service.domain.TaskCommandService;
 import com.gdn.x.scheduler.service.domain.TaskExecutionCommandService;
+import com.gdn.x.scheduler.service.helper.factory.impl.CommandFactory;
+import com.gdn.x.scheduler.service.helper.receiver.CommandReceiver;
 import com.gdn.x.scheduler.service.schedengine.TaskExecutor;
 
 /**
@@ -36,9 +26,6 @@ import com.gdn.x.scheduler.service.schedengine.TaskExecutor;
  * @author yauritux (yauritux@gmail.com)
  * @version 1.0.0.RC1
  * @since 1.0.0.RC1
- * 
- * TODO:: 
- *  - removes boilerplate code in exception handling block
  *
  */
 @Component("taskExecutor")
@@ -86,142 +73,42 @@ public class TaskExecutorImpl implements TaskExecutor {
 		
 		System.out.println("Running Task " + task.getTaskName() + " [" + task.getCommand().getCommandType().name() + "]");
 
-		CloseableHttpClient httpClient = null;
-		HttpGet getRequest = null;
-		CloseableHttpResponse response = null;
 		TaskExecution taskExecution = null;
 		
-		//TODO :: implement command/strategy pattern for this particular operation
 		try {
-			if (task.getCommand().getCommandType() == CommandType.WEB_SERVICE) {
-				System.out.println("Calling web service...");
-
-				task.setMachineId(CommonUtil.getMachineId() == null ? "NOT-SET" : CommonUtil.getMachineId());
-				taskExecution = taskExecutionCommandService.createTaskExecutionFromTask(task, true);
-				taskCommandService.updateTaskRunningMachine(task.getMachineId(), task.getId());
-				taskCommandService.updateTaskState(ThreadState.RUNNING, task.getId()); // always update (persisted) task whenever state is changed.
-				
-				WebServiceCommand command = (WebServiceCommand) task.getCommand();
-				WSCommandResponse webService = (WSCommandResponse) commandQueryService.wrapCommand(command);
-				httpClient = HttpClientBuilder.create().build();
-				if (webService.getHttpMethod().equalsIgnoreCase(WSMethod.GET.name())) {
-					StringBuilder strRequest = new StringBuilder();
-					strRequest.append(webService.getEndPoint());
-					if (webService.getParameters() != null && !webService.getParameters().isEmpty()) {
-						strRequest.append("?" + webService.getParameters());
-					}
-					RequestConfig requestConfig = RequestConfig.custom().setConnectionRequestTimeout(11000)
-							.setConnectTimeout(11000).setSocketTimeout(11000).build();
-					getRequest = new HttpGet(strRequest.toString());
-					getRequest.addHeader("accept", "application/json");
-					getRequest.setConfig(requestConfig);
-					
-					response = httpClient.execute(getRequest);
-					
-					System.out.println("Response Code = " + response.getStatusLine().getStatusCode());
-					
-					if (response.getStatusLine().getStatusCode() != 200) {
-						throw new RuntimeException("Failed to execute WS. Status Code: "
-								+ response.getStatusLine().getStatusCode());
-					}
-				}
-				
-				taskExecution.setEnd(new Date());
-				taskExecution.setStatus(ProcessStatus.FINISHED);
-				taskExecutionCommandService.save(taskExecution);
-			} else if (task.getCommand().getCommandType() == CommandType.CLIENT_SDK) {
-				//TODO:: please apply SOLID Design here!
-				System.out.println("Calling CLIENT_SDK...");
-				
-				taskExecution = taskExecutionCommandService.createTaskExecutionFromTask(task, true);
-				taskCommandService.updateTaskRunningMachine(System.getenv(TaskExecutionCommandService.MACHINE_ID) == null
-						? "NOT-SET" : System.getenv(TaskExecutionCommandService.MACHINE_ID), task.getId());
-				
-				task.setMachineId(taskExecution.getMachineId() == null ? "NOT-SET" : taskExecution.getMachineId());
-				
-				taskCommandService.updateTaskState(ThreadState.RUNNING, task.getId()); 
-				
-				ClientSDKCommand command = (ClientSDKCommand) task.getCommand();
-				CSCommandResponse clientSDK = (CSCommandResponse) commandQueryService.wrapCommand(command);
-				
-				String[] fileParts = clientSDK.getEntryPoint().split("\\.");
-				String extension = fileParts[fileParts.length - 1];
-				Process p = null;
-				
-				if (extension.equalsIgnoreCase(ClientSDKExtension.JAR.extension())) {
-					p = Runtime.getRuntime().exec("java -jar " + clientSDK.getEntryPoint());
-				} else if (extension.equalsIgnoreCase(ClientSDKExtension.SHELL_SCRIPT.extension())) {
-					p = Runtime.getRuntime().exec("bash " + clientSDK.getEntryPoint());
-				} else {
-					throw new Exception("Unrecognized Task's Command.");
-				}
-				p.waitFor();
-				int exitCode = p.exitValue();
-				System.out.println("Done with exit code = " + exitCode);
-				
-				if (exitCode != 0) {
-					taskExecution.setStatus(ProcessStatus.FAILED);
-				} else {
-					taskExecution.setStatus(ProcessStatus.FINISHED);
-				}
-				
-				taskExecution.setEnd(new Date());
-				taskExecutionCommandService.save(taskExecution);
-				
-			} else {
-				LOG.error("Task command isn't recognized/supported by the system!");
-			}
+			task.setMachineId(CommonUtil.getMachineId() == null ? "NOT-SET" : CommonUtil.getMachineId());
+			taskExecution = taskExecutionCommandService.createTaskExecutionFromTask(task, true);
+			taskCommandService.updateTaskRunningMachine(task.getMachineId(), task.getId());
+			taskCommandService.updateTaskState(ThreadState.RUNNING, task.getId()); // always update (persisted) task whenever state is changed.
 			
+			CommandReceiver commandReceiver = CommandFactory.getCommandReceiverFromEntity(task.getCommand());
+			commandReceiver.setCommandQueryService(commandQueryService);
+			commandReceiver.executeCommand();			
+			
+			taskExecution.setStatus(ProcessStatus.FINISHED);
+			taskExecution.setEnd(new Date());
+			taskExecutionCommandService.save(taskExecution);			
 			taskCommandService.updateTaskState(ThreadState.SCHEDULED, task.getId());		
 			
 		} catch (InterruptedException ie) { 
-			taskCommandService.updateTaskState(ThreadState.TERMINATED, task.getId());
-			
-			if (taskExecution != null) {
-				taskExecution.setEnd(new Date());
-				taskExecution.setStatus(ProcessStatus.FAILED);
-				taskExecutionCommandService.save(taskExecution);
-			}
-			
-			LOG.error(ie.getMessage(), ie);
-			ie.printStackTrace();
+			taskExecutionErrorHandling(taskExecution, task, ie);
 		} catch (IOException ioe) {
-			taskCommandService.updateTaskState(ThreadState.TERMINATED, task.getId());
-			
-			if (taskExecution != null) {
-				taskExecution.setEnd(new Date());
-				taskExecution.setStatus(ProcessStatus.FAILED);
-				taskExecutionCommandService.save(taskExecution);
-			}
-			
-			LOG.error(ioe.getMessage(), ioe);
-			ioe.printStackTrace();
+			taskExecutionErrorHandling(taskExecution, task, ioe);
 		} catch (Exception e) {
-			taskCommandService.updateTaskState(ThreadState.TERMINATED, task.getId()); // means task has stopped unexpectedly due to some exceptions 
-			
-			if (taskExecution != null) {
-				taskExecution.setEnd(new Date());
-				taskExecution.setStatus(ProcessStatus.FAILED);
-				taskExecutionCommandService.save(taskExecution);
-			}
-			
-			LOG.error(e.getMessage(), e);			
-			e.printStackTrace();
-		} finally {			
-			try {
-				if (getRequest != null) {
-					getRequest.releaseConnection();
-				}
-				if (response != null) {
-					response.close();
-				}
-			} catch (IOException ioe) {
-				LOG.error(ioe.getMessage(), ioe);
-				ioe.printStackTrace();
-			} catch (Exception e) {
-				LOG.error(e.getMessage(), e);
-				e.printStackTrace();
-			}
+			taskExecutionErrorHandling(taskExecution, task, e);
 		}		
+	}
+	
+	private final void taskExecutionErrorHandling(TaskExecution taskExecution, Task task, Exception e) {
+		taskCommandService.updateTaskState(ThreadState.TERMINATED, task.getId()); // means task has stopped unexpectedly due to some exceptions 
+		
+		if (taskExecution != null) {
+			taskExecution.setEnd(new Date());
+			taskExecution.setStatus(ProcessStatus.FAILED);
+			taskExecutionCommandService.save(taskExecution);
+		}
+		
+		LOG.error(e.getMessage(), e);			
+		e.printStackTrace();		
 	}
 }

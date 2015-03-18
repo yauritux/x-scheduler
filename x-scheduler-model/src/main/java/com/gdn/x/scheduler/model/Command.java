@@ -76,5 +76,5 @@ public abstract class Command extends GdnBaseEntity {
 	
 	public void setCommandType(CommandType commandType) {
 		this.commandType = commandType;
-	}	
+	}		
 }

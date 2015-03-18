@@ -5,6 +5,7 @@ import com.gdn.x.scheduler.rest.web.model.CommandRequest;
 import com.gdn.x.scheduler.service.helper.command.Command;
 import com.gdn.x.scheduler.service.helper.command.impl.ClientSDKCommand;
 import com.gdn.x.scheduler.service.helper.command.impl.WSCommand;
+import com.gdn.x.scheduler.service.helper.receiver.CommandReceiver;
 import com.gdn.x.scheduler.service.helper.receiver.impl.CSCommandReceiverImpl;
 import com.gdn.x.scheduler.service.helper.receiver.impl.WSCommandReceiverImpl;
 
@@ -19,7 +20,7 @@ import com.gdn.x.scheduler.service.helper.receiver.impl.WSCommandReceiverImpl;
 public class CommandFactory {
 
 	/**
-	 * Build specific command object (i.e. WebService, ClientSDK, or ShellScript) 
+	 * Build specific command object (i.e. WebService, ClientSDK) 
 	 * based on the command provided in the method argument.
 	 * 
 	 * @param command
@@ -39,7 +40,7 @@ public class CommandFactory {
 	}
 	
 	/**
-	 * Build specific command object (i.e. WebService, ClientSDK, or ShellScript) 
+	 * Build specific command object (i.e. WebService, ClientSDK) 
 	 * based on the CommandRequest object.
 	 * 
 	 * @param request
@@ -51,6 +52,26 @@ public class CommandFactory {
 				return new WSCommand(new WSCommandReceiverImpl());
 			} else if (request.getCommandType().equalsIgnoreCase(CommandType.CLIENT_SDK.name())) {
 				return new ClientSDKCommand(new CSCommandReceiverImpl());
+			}
+		} catch (NullPointerException ignored) {}
+		
+		return null;
+	}
+	
+	/**
+	 * get specific implementation of CommandReceiver (i.e. WebService, ClientSDK) 
+	 * based on the command provided in the argument.
+	 * 
+	 * @param command
+	 * @return CommandReceiver
+	 */
+	public static final CommandReceiver getCommandReceiverFromEntity(com.gdn.x.scheduler.model.Command command) {
+		try {
+			if (command.getCommandType() == CommandType.WEB_SERVICE) {
+				return new WSCommandReceiverImpl(command);
+			} 
+			if (command.getCommandType() == CommandType.CLIENT_SDK) {
+				return new CSCommandReceiverImpl(command);
 			}
 		} catch (NullPointerException ignored) {}
 		

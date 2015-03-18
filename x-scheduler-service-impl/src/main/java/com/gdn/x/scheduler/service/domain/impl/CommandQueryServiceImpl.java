@@ -3,7 +3,6 @@ package com.gdn.x.scheduler.service.domain.impl;
 import java.io.IOException;
 import java.util.List;
 
-import org.codehaus.jackson.JsonParseException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -11,6 +10,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.fasterxml.jackson.core.JsonParseException;
 import com.gdn.x.scheduler.constant.CommandType;
 import com.gdn.x.scheduler.dao.CommandDAO;
 import com.gdn.x.scheduler.model.Command;

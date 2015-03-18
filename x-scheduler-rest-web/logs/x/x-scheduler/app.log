@@ -1,6 +1,6 @@
-[]2015-03-10T23:11:50,513Z ERROR c.g.x.s.c.CommandController - null 
+[]2015-03-18T18:25:52,552Z ERROR c.g.x.s.c.CommandController - null 
 java.lang.NullPointerException: null
-	at com.gdn.x.scheduler.controller.CommandController.getWSCommands(CommandController.java:148) ~[classes/:na]
+	at com.gdn.x.scheduler.controller.CommandController.getWSCommands(CommandController.java:146) ~[classes/:na]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.7.0_40]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57) ~[na:1.7.0_40]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.7.0_40]
@@ -33,10 +33,10 @@ java.lang.NullPointerException: null
 	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) [junit-4.11.jar:na]
 	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:19) [junit-4.11.jar:na]
 	at org.junit.internal.runners.statements.FailOnTimeout$StatementThread.run(FailOnTimeout.java:74) [junit-4.11.jar:na]
-[]2015-03-10T23:11:51,743Z DEBUG c.g.x.s.c.CommandController - total commands found: 2 
-[]2015-03-10T23:11:51,919Z DEBUG c.g.x.s.c.CommandController - total commands found: 2 
-[]2015-03-10T23:11:52,053Z DEBUG c.g.x.s.c.CommandController - total commands found: 0 
-[]2015-03-10T23:11:52,507Z ERROR c.g.x.s.controller.TaskController - null 
+[]2015-03-18T18:25:53,534Z DEBUG c.g.x.s.c.CommandController - total commands found: 2 
+[]2015-03-18T18:25:53,683Z DEBUG c.g.x.s.c.CommandController - total commands found: 2 
+[]2015-03-18T18:25:53,820Z DEBUG c.g.x.s.c.CommandController - total commands found: 0 
+[]2015-03-18T18:25:54,262Z ERROR c.g.x.s.controller.TaskController - null 
 java.lang.NullPointerException: null
 	at com.gdn.x.scheduler.controller.TaskController.fetchTasks(TaskController.java:88) ~[classes/:na]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.7.0_40]
@@ -71,231 +71,774 @@ java.lang.NullPointerException: null
 	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) [junit-4.11.jar:na]
 	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:19) [junit-4.11.jar:na]
 	at org.junit.internal.runners.statements.FailOnTimeout$StatementThread.run(FailOnTimeout.java:74) [junit-4.11.jar:na]
-[]2015-03-10T23:11:52,691Z DEBUG c.g.x.s.controller.TaskController - total tasks found: 0 
-[]2015-03-10T23:14:41,055Z DEBUG c.g.x.s.s.i.impl.SchedulerBootstrap - total tasks fetched from db: 0 
-[]2015-03-10T23:20:34,293Z DEBUG c.g.x.s.s.i.impl.SchedulerBootstrap - total tasks fetched from db: 0 
-[]2015-03-10T23:24:14,457Z ERROR c.g.x.s.c.CommandController - null 
-java.lang.NullPointerException: null
-	at com.gdn.x.scheduler.controller.CommandController.getWSCommands(CommandController.java:148) ~[classes/:na]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.7.0_40]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57) ~[na:1.7.0_40]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.7.0_40]
-	at java.lang.reflect.Method.invoke(Method.java:606) ~[na:1.7.0_40]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:215) [spring-web-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:132) [spring-web-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104) [spring-webmvc-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandleMethod(RequestMappingHandlerAdapter.java:781) [spring-webmvc-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:721) [spring-webmvc-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:83) [spring-webmvc-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:943) [spring-webmvc-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:877) [spring-webmvc-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:961) [spring-webmvc-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:852) [spring-webmvc-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687) [javax.servlet-api-3.1.0.jar:3.1.0]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:837) [spring-webmvc-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.test.web.servlet.TestDispatcherServlet.service(TestDispatcherServlet.java:62) [spring-test-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790) [javax.servlet-api-3.1.0.jar:3.1.0]
-	at org.springframework.mock.web.MockFilterChain$ServletFilterProxy.doFilter(MockFilterChain.java:170) [spring-test-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:137) [spring-test-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.test.web.servlet.MockMvc.perform(MockMvc.java:145) [spring-test-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at com.gdn.x.scheduler.controller.CommandControllerTest.getWSCommands_nullRecords_NPERaised(CommandControllerTest.java:208) [test-classes/:na]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.7.0_40]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57) ~[na:1.7.0_40]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.7.0_40]
-	at java.lang.reflect.Method.invoke(Method.java:606) ~[na:1.7.0_40]
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47) [junit-4.11.jar:na]
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.11.jar:na]
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44) [junit-4.11.jar:na]
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) [junit-4.11.jar:na]
-	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:19) [junit-4.11.jar:na]
-	at org.junit.internal.runners.statements.FailOnTimeout$StatementThread.run(FailOnTimeout.java:74) [junit-4.11.jar:na]
-[]2015-03-10T23:24:14,982Z DEBUG c.g.x.s.c.CommandController - total commands found: 2 
-[]2015-03-10T23:24:15,163Z DEBUG c.g.x.s.c.CommandController - total commands found: 2 
-[]2015-03-10T23:24:15,286Z DEBUG c.g.x.s.c.CommandController - total commands found: 0 
-[]2015-03-10T23:24:15,671Z ERROR c.g.x.s.controller.TaskController - null 
-java.lang.NullPointerException: null
-	at com.gdn.x.scheduler.controller.TaskController.fetchTasks(TaskController.java:88) ~[classes/:na]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.7.0_40]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57) ~[na:1.7.0_40]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.7.0_40]
-	at java.lang.reflect.Method.invoke(Method.java:606) ~[na:1.7.0_40]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:215) [spring-web-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:132) [spring-web-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104) [spring-webmvc-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandleMethod(RequestMappingHandlerAdapter.java:781) [spring-webmvc-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:721) [spring-webmvc-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:83) [spring-webmvc-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:943) [spring-webmvc-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:877) [spring-webmvc-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:961) [spring-webmvc-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:852) [spring-webmvc-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687) [javax.servlet-api-3.1.0.jar:3.1.0]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:837) [spring-webmvc-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.test.web.servlet.TestDispatcherServlet.service(TestDispatcherServlet.java:62) [spring-test-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790) [javax.servlet-api-3.1.0.jar:3.1.0]
-	at org.springframework.mock.web.MockFilterChain$ServletFilterProxy.doFilter(MockFilterChain.java:170) [spring-test-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:137) [spring-test-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.test.web.servlet.MockMvc.perform(MockMvc.java:145) [spring-test-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at com.gdn.x.scheduler.controller.TaskControllerTest.fetchTasks_nullRecords_NPERaised(TaskControllerTest.java:117) [test-classes/:na]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.7.0_40]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57) ~[na:1.7.0_40]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.7.0_40]
-	at java.lang.reflect.Method.invoke(Method.java:606) ~[na:1.7.0_40]
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47) [junit-4.11.jar:na]
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.11.jar:na]
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44) [junit-4.11.jar:na]
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) [junit-4.11.jar:na]
-	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:19) [junit-4.11.jar:na]
-	at org.junit.internal.runners.statements.FailOnTimeout$StatementThread.run(FailOnTimeout.java:74) [junit-4.11.jar:na]
-[]2015-03-10T23:24:15,796Z DEBUG c.g.x.s.controller.TaskController - total tasks found: 0 
-[]2015-03-10T23:25:09,492Z DEBUG c.g.x.s.s.i.impl.SchedulerBootstrap - total tasks fetched from db: 0 
-[]2015-03-10T23:32:10,211Z ERROR c.g.x.s.c.CommandController - null 
-java.lang.NullPointerException: null
-	at com.gdn.x.scheduler.controller.CommandController.getWSCommands(CommandController.java:148) ~[classes/:na]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.7.0_40]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57) ~[na:1.7.0_40]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.7.0_40]
-	at java.lang.reflect.Method.invoke(Method.java:606) ~[na:1.7.0_40]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:215) [spring-web-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:132) [spring-web-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104) [spring-webmvc-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandleMethod(RequestMappingHandlerAdapter.java:781) [spring-webmvc-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:721) [spring-webmvc-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:83) [spring-webmvc-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:943) [spring-webmvc-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:877) [spring-webmvc-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:961) [spring-webmvc-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:852) [spring-webmvc-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687) [javax.servlet-api-3.1.0.jar:3.1.0]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:837) [spring-webmvc-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.test.web.servlet.TestDispatcherServlet.service(TestDispatcherServlet.java:62) [spring-test-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790) [javax.servlet-api-3.1.0.jar:3.1.0]
-	at org.springframework.mock.web.MockFilterChain$ServletFilterProxy.doFilter(MockFilterChain.java:170) [spring-test-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:137) [spring-test-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.test.web.servlet.MockMvc.perform(MockMvc.java:145) [spring-test-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at com.gdn.x.scheduler.controller.CommandControllerTest.getWSCommands_nullRecords_NPERaised(CommandControllerTest.java:208) [test-classes/:na]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.7.0_40]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57) ~[na:1.7.0_40]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.7.0_40]
-	at java.lang.reflect.Method.invoke(Method.java:606) ~[na:1.7.0_40]
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47) [junit-4.11.jar:na]
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.11.jar:na]
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44) [junit-4.11.jar:na]
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) [junit-4.11.jar:na]
-	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:19) [junit-4.11.jar:na]
-	at org.junit.internal.runners.statements.FailOnTimeout$StatementThread.run(FailOnTimeout.java:74) [junit-4.11.jar:na]
-[]2015-03-10T23:32:10,738Z DEBUG c.g.x.s.c.CommandController - total commands found: 2 
-[]2015-03-10T23:32:10,915Z DEBUG c.g.x.s.c.CommandController - total commands found: 2 
-[]2015-03-10T23:32:11,040Z DEBUG c.g.x.s.c.CommandController - total commands found: 0 
-[]2015-03-10T23:32:11,497Z ERROR c.g.x.s.controller.TaskController - null 
-java.lang.NullPointerException: null
-	at com.gdn.x.scheduler.controller.TaskController.fetchTasks(TaskController.java:88) ~[classes/:na]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.7.0_40]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57) ~[na:1.7.0_40]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.7.0_40]
-	at java.lang.reflect.Method.invoke(Method.java:606) ~[na:1.7.0_40]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:215) [spring-web-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:132) [spring-web-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104) [spring-webmvc-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandleMethod(RequestMappingHandlerAdapter.java:781) [spring-webmvc-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:721) [spring-webmvc-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:83) [spring-webmvc-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:943) [spring-webmvc-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:877) [spring-webmvc-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:961) [spring-webmvc-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:852) [spring-webmvc-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687) [javax.servlet-api-3.1.0.jar:3.1.0]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:837) [spring-webmvc-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.test.web.servlet.TestDispatcherServlet.service(TestDispatcherServlet.java:62) [spring-test-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790) [javax.servlet-api-3.1.0.jar:3.1.0]
-	at org.springframework.mock.web.MockFilterChain$ServletFilterProxy.doFilter(MockFilterChain.java:170) [spring-test-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:137) [spring-test-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.test.web.servlet.MockMvc.perform(MockMvc.java:145) [spring-test-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at com.gdn.x.scheduler.controller.TaskControllerTest.fetchTasks_nullRecords_NPERaised(TaskControllerTest.java:117) [test-classes/:na]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.7.0_40]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57) ~[na:1.7.0_40]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.7.0_40]
-	at java.lang.reflect.Method.invoke(Method.java:606) ~[na:1.7.0_40]
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47) [junit-4.11.jar:na]
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.11.jar:na]
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44) [junit-4.11.jar:na]
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) [junit-4.11.jar:na]
-	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:19) [junit-4.11.jar:na]
-	at org.junit.internal.runners.statements.FailOnTimeout$StatementThread.run(FailOnTimeout.java:74) [junit-4.11.jar:na]
-[]2015-03-10T23:32:11,619Z DEBUG c.g.x.s.controller.TaskController - total tasks found: 0 
-[]2015-03-10T23:33:02,390Z DEBUG c.g.x.s.s.i.impl.SchedulerBootstrap - total tasks fetched from db: 0 
-[]2015-03-10T23:42:02,383Z ERROR c.g.x.s.c.CommandController - null 
-java.lang.NullPointerException: null
-	at com.gdn.x.scheduler.controller.CommandController.getWSCommands(CommandController.java:148) ~[classes/:na]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.7.0_40]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57) ~[na:1.7.0_40]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.7.0_40]
-	at java.lang.reflect.Method.invoke(Method.java:606) ~[na:1.7.0_40]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:215) [spring-web-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:132) [spring-web-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104) [spring-webmvc-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandleMethod(RequestMappingHandlerAdapter.java:781) [spring-webmvc-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:721) [spring-webmvc-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:83) [spring-webmvc-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:943) [spring-webmvc-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:877) [spring-webmvc-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:961) [spring-webmvc-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:852) [spring-webmvc-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687) [javax.servlet-api-3.1.0.jar:3.1.0]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:837) [spring-webmvc-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.test.web.servlet.TestDispatcherServlet.service(TestDispatcherServlet.java:62) [spring-test-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790) [javax.servlet-api-3.1.0.jar:3.1.0]
-	at org.springframework.mock.web.MockFilterChain$ServletFilterProxy.doFilter(MockFilterChain.java:170) [spring-test-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:137) [spring-test-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.test.web.servlet.MockMvc.perform(MockMvc.java:145) [spring-test-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at com.gdn.x.scheduler.controller.CommandControllerTest.getWSCommands_nullRecords_NPERaised(CommandControllerTest.java:208) [test-classes/:na]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.7.0_40]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57) ~[na:1.7.0_40]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.7.0_40]
-	at java.lang.reflect.Method.invoke(Method.java:606) ~[na:1.7.0_40]
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47) [junit-4.11.jar:na]
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.11.jar:na]
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44) [junit-4.11.jar:na]
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) [junit-4.11.jar:na]
-	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:19) [junit-4.11.jar:na]
-	at org.junit.internal.runners.statements.FailOnTimeout$StatementThread.run(FailOnTimeout.java:74) [junit-4.11.jar:na]
-[]2015-03-10T23:42:02,928Z DEBUG c.g.x.s.c.CommandController - total commands found: 2 
-[]2015-03-10T23:42:03,107Z DEBUG c.g.x.s.c.CommandController - total commands found: 2 
-[]2015-03-10T23:42:03,227Z DEBUG c.g.x.s.c.CommandController - total commands found: 0 
-[]2015-03-10T23:42:03,623Z ERROR c.g.x.s.controller.TaskController - null 
-java.lang.NullPointerException: null
-	at com.gdn.x.scheduler.controller.TaskController.fetchTasks(TaskController.java:88) ~[classes/:na]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.7.0_40]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57) ~[na:1.7.0_40]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.7.0_40]
-	at java.lang.reflect.Method.invoke(Method.java:606) ~[na:1.7.0_40]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:215) [spring-web-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:132) [spring-web-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104) [spring-webmvc-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandleMethod(RequestMappingHandlerAdapter.java:781) [spring-webmvc-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:721) [spring-webmvc-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:83) [spring-webmvc-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:943) [spring-webmvc-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:877) [spring-webmvc-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:961) [spring-webmvc-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:852) [spring-webmvc-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687) [javax.servlet-api-3.1.0.jar:3.1.0]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:837) [spring-webmvc-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.test.web.servlet.TestDispatcherServlet.service(TestDispatcherServlet.java:62) [spring-test-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790) [javax.servlet-api-3.1.0.jar:3.1.0]
-	at org.springframework.mock.web.MockFilterChain$ServletFilterProxy.doFilter(MockFilterChain.java:170) [spring-test-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:137) [spring-test-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.test.web.servlet.MockMvc.perform(MockMvc.java:145) [spring-test-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at com.gdn.x.scheduler.controller.TaskControllerTest.fetchTasks_nullRecords_NPERaised(TaskControllerTest.java:117) [test-classes/:na]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.7.0_40]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57) ~[na:1.7.0_40]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.7.0_40]
-	at java.lang.reflect.Method.invoke(Method.java:606) ~[na:1.7.0_40]
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47) [junit-4.11.jar:na]
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.11.jar:na]
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44) [junit-4.11.jar:na]
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) [junit-4.11.jar:na]
-	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:19) [junit-4.11.jar:na]
-	at org.junit.internal.runners.statements.FailOnTimeout$StatementThread.run(FailOnTimeout.java:74) [junit-4.11.jar:na]
-[]2015-03-10T23:42:03,746Z DEBUG c.g.x.s.controller.TaskController - total tasks found: 0 
-[]2015-03-10T23:43:04,663Z DEBUG c.g.x.s.s.i.impl.SchedulerBootstrap - total tasks fetched from db: 0 
+[]2015-03-18T18:25:54,388Z DEBUG c.g.x.s.controller.TaskController - total tasks found: 0 
+[]2015-03-18T18:30:36,519Z DEBUG c.g.x.s.s.i.impl.SchedulerBootstrap - total tasks fetched from db: 0 
+[eb14132c-99ad-4c6b-8ae2-c399153ab478|store-123|||222]2015-03-18T18:40:05,201Z DEBUG c.g.x.s.c.CommandController - total commands found: 1 
+[a6dceb0c-a17f-4bfd-ae14-20391b8f2442|store-123|||777]2015-03-18T18:44:24,793Z DEBUG c.g.x.s.c.CommandController - total commands found: 1 
+[]2015-03-18T18:46:56,753Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestAddCookies - CookieSpec selected: best-match 
+[]2015-03-18T18:46:56,791Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestAuthCache - Auth cache not set in the context 
+[]2015-03-18T18:46:56,793Z DEBUG c.g.c.b.s.o.a.h.i.c.PoolingHttpClientConnectionManager - Connection request: [route: {}->http://www.google.co.id:80][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20] 
+[]2015-03-18T18:46:56,827Z DEBUG c.g.c.b.s.o.a.h.i.c.PoolingHttpClientConnectionManager - Connection leased: [id: 0][route: {}->http://www.google.co.id:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20] 
+[]2015-03-18T18:46:56,828Z DEBUG c.g.c.b.s.o.a.h.i.e.MainClientExec - Opening connection {}->http://www.google.co.id:80 
+[]2015-03-18T18:46:56,973Z DEBUG c.g.c.b.s.o.a.h.i.c.HttpClientConnectionOperator - Connecting to www.google.co.id/173.194.117.15:80 
+[]2015-03-18T18:46:57,033Z DEBUG c.g.c.b.s.o.a.h.i.c.HttpClientConnectionOperator - Connection established 192.168.1.100:51639<->173.194.117.15:80 
+[]2015-03-18T18:46:57,033Z DEBUG c.g.c.b.s.o.a.h.i.e.MainClientExec - Executing request GET / HTTP/1.1 
+[]2015-03-18T18:46:57,033Z DEBUG c.g.c.b.s.o.a.h.i.e.MainClientExec - Target auth state: UNCHALLENGED 
+[]2015-03-18T18:46:57,034Z DEBUG c.g.c.b.s.o.a.h.i.e.MainClientExec - Proxy auth state: UNCHALLENGED 
+[]2015-03-18T18:46:57,035Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-0 >> GET / HTTP/1.1 
+[]2015-03-18T18:46:57,035Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-0 >> accept: application/json 
+[]2015-03-18T18:46:57,035Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-0 >> Host: www.google.co.id 
+[]2015-03-18T18:46:57,036Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-0 >> Connection: Keep-Alive 
+[]2015-03-18T18:46:57,036Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-0 >> User-Agent: Apache-HttpClient/4.3.5 (java 1.5) 
+[]2015-03-18T18:46:57,036Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-0 >> Accept-Encoding: gzip,deflate 
+[]2015-03-18T18:46:57,036Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-0 >> "GET / HTTP/1.1[\r][\n]" 
+[]2015-03-18T18:46:57,036Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-0 >> "accept: application/json[\r][\n]" 
+[]2015-03-18T18:46:57,036Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-0 >> "Host: www.google.co.id[\r][\n]" 
+[]2015-03-18T18:46:57,036Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]" 
+[]2015-03-18T18:46:57,036Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.3.5 (java 1.5)[\r][\n]" 
+[]2015-03-18T18:46:57,036Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]" 
+[]2015-03-18T18:46:57,036Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-0 >> "[\r][\n]" 
+[]2015-03-18T18:46:57,154Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-0 << "HTTP/1.1 200 OK[\r][\n]" 
+[]2015-03-18T18:46:57,155Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-0 << "Date: Wed, 18 Mar 2015 18:46:57 GMT[\r][\n]" 
+[]2015-03-18T18:46:57,188Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-0 << "Expires: -1[\r][\n]" 
+[]2015-03-18T18:46:57,188Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-0 << "Cache-Control: private, max-age=0[\r][\n]" 
+[]2015-03-18T18:46:57,188Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-0 << "Content-Type: text/html; charset=ISO-8859-1[\r][\n]" 
+[]2015-03-18T18:46:57,188Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-0 << "Set-Cookie: PREF=ID=f26e50cd65234e4b:FF=0:TM=1426704417:LM=1426704417:S=4uFZwJQLl883Qk2s; expires=Fri, 17-Mar-2017 18:46:57 GMT; path=/; domain=.google.co.id[\r][\n]" 
+[]2015-03-18T18:46:57,188Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-0 << "Set-Cookie: NID=67=kZKM5Dd7_zCl4zVIcZ0DJpoDfnWk9utuHApeCe--J36kn8lCoOexPUBZoEgb1tsKSn_OtqgLVwfQjRq27ol3RDF-Ky9FSk0vFr1xj3OVOcZEBoZZUYTe0JK32pmYIaLk; expires=Thu, 17-Sep-2015 18:46:57 GMT; path=/; domain=.google.co.id; HttpOnly[\r][\n]" 
+[]2015-03-18T18:46:57,188Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-0 << "P3P: CP="This is not a P3P policy! See http://www.google.com/support/accounts/bin/answer.py?hl=en&answer=151657 for more info."[\r][\n]" 
+[]2015-03-18T18:46:57,188Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-0 << "Server: gws[\r][\n]" 
+[]2015-03-18T18:46:57,189Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-0 << "X-XSS-Protection: 1; mode=block[\r][\n]" 
+[]2015-03-18T18:46:57,189Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-0 << "X-Frame-Options: SAMEORIGIN[\r][\n]" 
+[]2015-03-18T18:46:57,189Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-0 << "Alternate-Protocol: 80:quic,p=0.5[\r][\n]" 
+[]2015-03-18T18:46:57,189Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-0 << "Accept-Ranges: none[\r][\n]" 
+[]2015-03-18T18:46:57,189Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-0 << "Vary: Accept-Encoding[\r][\n]" 
+[]2015-03-18T18:46:57,189Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-0 << "Transfer-Encoding: chunked[\r][\n]" 
+[]2015-03-18T18:46:57,189Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-0 << "[\r][\n]" 
+[]2015-03-18T18:46:57,189Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-0 << "4912[\r][\n]" 
+[]2015-03-18T18:46:57,189Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-0 << "<!doctype html><html itemscope="" itemtype="http://schema.org/WebPage" lang="id"><head><meta content="/images/google_favicon_128.png" itemprop="image"><title>Google</title><script>(function(){window.google={kEI:'IcgJVcCeBc_iuQSO8YD4Cw',kEXPI:'3700311,3700362,4011559,4020347,4020560,4021338,4028717,4028932,4029018,4029043,4029054,4029141,4029478,4029515,4029666,4029815,4029860,4029952,4029957,4030035,4030405,4030440,4031366,4031608,4031627,4031654,8300095,8300126,8500393,8500572,8500852,8500948,8501183,10200083',authuser:0,kSID:'IcgJVcCeBc_iu" 
+[]2015-03-18T18:46:57,207Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-0 << HTTP/1.1 200 OK 
+[]2015-03-18T18:46:57,207Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-0 << Date: Wed, 18 Mar 2015 18:46:57 GMT 
+[]2015-03-18T18:46:57,207Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-0 << Expires: -1 
+[]2015-03-18T18:46:57,207Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-0 << Cache-Control: private, max-age=0 
+[]2015-03-18T18:46:57,207Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-0 << Content-Type: text/html; charset=ISO-8859-1 
+[]2015-03-18T18:46:57,207Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-0 << Set-Cookie: PREF=ID=f26e50cd65234e4b:FF=0:TM=1426704417:LM=1426704417:S=4uFZwJQLl883Qk2s; expires=Fri, 17-Mar-2017 18:46:57 GMT; path=/; domain=.google.co.id 
+[]2015-03-18T18:46:57,207Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-0 << Set-Cookie: NID=67=kZKM5Dd7_zCl4zVIcZ0DJpoDfnWk9utuHApeCe--J36kn8lCoOexPUBZoEgb1tsKSn_OtqgLVwfQjRq27ol3RDF-Ky9FSk0vFr1xj3OVOcZEBoZZUYTe0JK32pmYIaLk; expires=Thu, 17-Sep-2015 18:46:57 GMT; path=/; domain=.google.co.id; HttpOnly 
+[]2015-03-18T18:46:57,208Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-0 << P3P: CP="This is not a P3P policy! See http://www.google.com/support/accounts/bin/answer.py?hl=en&answer=151657 for more info." 
+[]2015-03-18T18:46:57,208Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-0 << Server: gws 
+[]2015-03-18T18:46:57,208Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-0 << X-XSS-Protection: 1; mode=block 
+[]2015-03-18T18:46:57,208Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-0 << X-Frame-Options: SAMEORIGIN 
+[]2015-03-18T18:46:57,208Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-0 << Alternate-Protocol: 80:quic,p=0.5 
+[]2015-03-18T18:46:57,208Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-0 << Accept-Ranges: none 
+[]2015-03-18T18:46:57,208Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-0 << Vary: Accept-Encoding 
+[]2015-03-18T18:46:57,208Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-0 << Transfer-Encoding: chunked 
+[]2015-03-18T18:46:57,227Z DEBUG c.g.c.b.s.o.a.h.i.e.MainClientExec - Connection can be kept alive indefinitely 
+[]2015-03-18T18:46:57,273Z DEBUG c.g.c.b.s.o.a.h.c.p.ResponseProcessCookies - Cookie accepted [PREF="ID=f26e50cd65234e4b:FF=0:TM=1426704417:LM=1426704417:S=4uFZwJQLl883Qk2s", version:0, domain:.google.co.id, path:/, expiry:Sat Mar 18 01:46:57 WIT 2017] 
+[]2015-03-18T18:46:57,274Z DEBUG c.g.c.b.s.o.a.h.c.p.ResponseProcessCookies - Cookie accepted [NID="67=kZKM5Dd7_zCl4zVIcZ0DJpoDfnWk9utuHApeCe--J36kn8lCoOexPUBZoEgb1tsKSn_OtqgLVwfQjRq27ol3RDF-Ky9FSk0vF...", version:0, domain:.google.co.id, path:/, expiry:Fri Sep 18 01:46:57 WIT 2015] 
+[]2015-03-18T18:46:58,024Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestAddCookies - CookieSpec selected: best-match 
+[]2015-03-18T18:46:58,025Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestAuthCache - Auth cache not set in the context 
+[]2015-03-18T18:46:58,025Z DEBUG c.g.c.b.s.o.a.h.i.c.PoolingHttpClientConnectionManager - Connection request: [route: {}->http://www.google.co.id:80][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20] 
+[]2015-03-18T18:46:58,025Z DEBUG c.g.c.b.s.o.a.h.i.c.PoolingHttpClientConnectionManager - Connection leased: [id: 1][route: {}->http://www.google.co.id:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20] 
+[]2015-03-18T18:46:58,025Z DEBUG c.g.c.b.s.o.a.h.i.e.MainClientExec - Opening connection {}->http://www.google.co.id:80 
+[]2015-03-18T18:46:58,025Z DEBUG c.g.c.b.s.o.a.h.i.c.HttpClientConnectionOperator - Connecting to www.google.co.id/173.194.117.15:80 
+[]2015-03-18T18:46:58,062Z DEBUG c.g.c.b.s.o.a.h.i.c.HttpClientConnectionOperator - Connection established 192.168.1.100:51640<->173.194.117.15:80 
+[]2015-03-18T18:46:58,062Z DEBUG c.g.c.b.s.o.a.h.i.e.MainClientExec - Executing request GET / HTTP/1.1 
+[]2015-03-18T18:46:58,062Z DEBUG c.g.c.b.s.o.a.h.i.e.MainClientExec - Target auth state: UNCHALLENGED 
+[]2015-03-18T18:46:58,062Z DEBUG c.g.c.b.s.o.a.h.i.e.MainClientExec - Proxy auth state: UNCHALLENGED 
+[]2015-03-18T18:46:58,063Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-1 >> GET / HTTP/1.1 
+[]2015-03-18T18:46:58,063Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-1 >> accept: application/json 
+[]2015-03-18T18:46:58,063Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-1 >> Host: www.google.co.id 
+[]2015-03-18T18:46:58,063Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-1 >> Connection: Keep-Alive 
+[]2015-03-18T18:46:58,063Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-1 >> User-Agent: Apache-HttpClient/4.3.5 (java 1.5) 
+[]2015-03-18T18:46:58,063Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-1 >> Accept-Encoding: gzip,deflate 
+[]2015-03-18T18:46:58,063Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-1 >> "GET / HTTP/1.1[\r][\n]" 
+[]2015-03-18T18:46:58,063Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-1 >> "accept: application/json[\r][\n]" 
+[]2015-03-18T18:46:58,063Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-1 >> "Host: www.google.co.id[\r][\n]" 
+[]2015-03-18T18:46:58,063Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-1 >> "Connection: Keep-Alive[\r][\n]" 
+[]2015-03-18T18:46:58,063Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-1 >> "User-Agent: Apache-HttpClient/4.3.5 (java 1.5)[\r][\n]" 
+[]2015-03-18T18:46:58,063Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-1 >> "Accept-Encoding: gzip,deflate[\r][\n]" 
+[]2015-03-18T18:46:58,063Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-1 >> "[\r][\n]" 
+[]2015-03-18T18:46:58,216Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-1 << "HTTP/1.1 200 OK[\r][\n]" 
+[]2015-03-18T18:46:58,216Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-1 << "Date: Wed, 18 Mar 2015 18:46:58 GMT[\r][\n]" 
+[]2015-03-18T18:46:58,216Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-1 << "Expires: -1[\r][\n]" 
+[]2015-03-18T18:46:58,216Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-1 << "Cache-Control: private, max-age=0[\r][\n]" 
+[]2015-03-18T18:46:58,216Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-1 << "Content-Type: text/html; charset=ISO-8859-1[\r][\n]" 
+[]2015-03-18T18:46:58,216Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-1 << "Set-Cookie: PREF=ID=ffb869ac5ae87f71:FF=0:TM=1426704418:LM=1426704418:S=77WGZyR6SNLrUjNM; expires=Fri, 17-Mar-2017 18:46:58 GMT; path=/; domain=.google.co.id[\r][\n]" 
+[]2015-03-18T18:46:58,216Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-1 << "Set-Cookie: NID=67=TkdYqeISpEhVM4iz-c4lItPcAp8QIjAc7QWyNSaYzxMNAPiRRKV2aIgg3V64qqoQ-TftlwhnSZemC_feswjK2vLqhGr9osUJM2iJkHDw7o1WCcT7NS02Bo0VyH5JL7U2; expires=Thu, 17-Sep-2015 18:46:58 GMT; path=/; domain=.google.co.id; HttpOnly[\r][\n]" 
+[]2015-03-18T18:46:58,216Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-1 << "P3P: CP="This is not a P3P policy! See http://www.google.com/support/accounts/bin/answer.py?hl=en&answer=151657 for more info."[\r][\n]" 
+[]2015-03-18T18:46:58,216Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-1 << "Server: gws[\r][\n]" 
+[]2015-03-18T18:46:58,216Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-1 << "X-XSS-Protection: 1; mode=block[\r][\n]" 
+[]2015-03-18T18:46:58,216Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-1 << "X-Frame-Options: SAMEORIGIN[\r][\n]" 
+[]2015-03-18T18:46:58,216Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-1 << "Alternate-Protocol: 80:quic,p=0.5[\r][\n]" 
+[]2015-03-18T18:46:58,216Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-1 << "Accept-Ranges: none[\r][\n]" 
+[]2015-03-18T18:46:58,216Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-1 << "Vary: Accept-Encoding[\r][\n]" 
+[]2015-03-18T18:46:58,216Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-1 << "Transfer-Encoding: chunked[\r][\n]" 
+[]2015-03-18T18:46:58,216Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-1 << "[\r][\n]" 
+[]2015-03-18T18:46:58,216Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-1 << "4914[\r][\n]" 
+[]2015-03-18T18:46:58,216Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-1 << "<!doctype html><html itemscope="" itemtype="http://schema.org/WebPage" lang="id"><head><meta content="/images/google_favicon_128.png" itemprop="image"><title>Google</title><script>(function(){window.google={kEI:'IsgJVfaECcmPuATnhICoBw',kEXPI:'3700339,3700362,3700366,4011559,4020347,4020562,4020726,4023677,4024600,4028717,4028793,4028932,4029043,4029054,4029140,4029477,4029515,4029815,4029861,4029956,4030036,4030406,4030440,4031093,4031367,4031409,4031576,4031616,4031627,8500393,8501312,10200083,10200793,10201031',authuser:0,kSID:'IsgJVfaECcm" 
+[]2015-03-18T18:46:58,216Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-1 << HTTP/1.1 200 OK 
+[]2015-03-18T18:46:58,217Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-1 << Date: Wed, 18 Mar 2015 18:46:58 GMT 
+[]2015-03-18T18:46:58,217Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-1 << Expires: -1 
+[]2015-03-18T18:46:58,217Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-1 << Cache-Control: private, max-age=0 
+[]2015-03-18T18:46:58,217Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-1 << Content-Type: text/html; charset=ISO-8859-1 
+[]2015-03-18T18:46:58,217Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-1 << Set-Cookie: PREF=ID=ffb869ac5ae87f71:FF=0:TM=1426704418:LM=1426704418:S=77WGZyR6SNLrUjNM; expires=Fri, 17-Mar-2017 18:46:58 GMT; path=/; domain=.google.co.id 
+[]2015-03-18T18:46:58,217Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-1 << Set-Cookie: NID=67=TkdYqeISpEhVM4iz-c4lItPcAp8QIjAc7QWyNSaYzxMNAPiRRKV2aIgg3V64qqoQ-TftlwhnSZemC_feswjK2vLqhGr9osUJM2iJkHDw7o1WCcT7NS02Bo0VyH5JL7U2; expires=Thu, 17-Sep-2015 18:46:58 GMT; path=/; domain=.google.co.id; HttpOnly 
+[]2015-03-18T18:46:58,217Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-1 << P3P: CP="This is not a P3P policy! See http://www.google.com/support/accounts/bin/answer.py?hl=en&answer=151657 for more info." 
+[]2015-03-18T18:46:58,217Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-1 << Server: gws 
+[]2015-03-18T18:46:58,217Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-1 << X-XSS-Protection: 1; mode=block 
+[]2015-03-18T18:46:58,217Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-1 << X-Frame-Options: SAMEORIGIN 
+[]2015-03-18T18:46:58,217Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-1 << Alternate-Protocol: 80:quic,p=0.5 
+[]2015-03-18T18:46:58,217Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-1 << Accept-Ranges: none 
+[]2015-03-18T18:46:58,217Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-1 << Vary: Accept-Encoding 
+[]2015-03-18T18:46:58,217Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-1 << Transfer-Encoding: chunked 
+[]2015-03-18T18:46:58,217Z DEBUG c.g.c.b.s.o.a.h.i.e.MainClientExec - Connection can be kept alive indefinitely 
+[]2015-03-18T18:46:58,218Z DEBUG c.g.c.b.s.o.a.h.c.p.ResponseProcessCookies - Cookie accepted [PREF="ID=ffb869ac5ae87f71:FF=0:TM=1426704418:LM=1426704418:S=77WGZyR6SNLrUjNM", version:0, domain:.google.co.id, path:/, expiry:Sat Mar 18 01:46:58 WIT 2017] 
+[]2015-03-18T18:46:58,218Z DEBUG c.g.c.b.s.o.a.h.c.p.ResponseProcessCookies - Cookie accepted [NID="67=TkdYqeISpEhVM4iz-c4lItPcAp8QIjAc7QWyNSaYzxMNAPiRRKV2aIgg3V64qqoQ-TftlwhnSZemC_feswjK2vLqhGr9osUJM...", version:0, domain:.google.co.id, path:/, expiry:Fri Sep 18 01:46:58 WIT 2015] 
+[]2015-03-18T18:47:00,055Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestAddCookies - CookieSpec selected: best-match 
+[]2015-03-18T18:47:00,055Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestAuthCache - Auth cache not set in the context 
+[]2015-03-18T18:47:00,056Z DEBUG c.g.c.b.s.o.a.h.i.c.PoolingHttpClientConnectionManager - Connection request: [route: {}->http://www.google.co.id:80][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20] 
+[]2015-03-18T18:47:00,056Z DEBUG c.g.c.b.s.o.a.h.i.c.PoolingHttpClientConnectionManager - Connection leased: [id: 2][route: {}->http://www.google.co.id:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20] 
+[]2015-03-18T18:47:00,056Z DEBUG c.g.c.b.s.o.a.h.i.e.MainClientExec - Opening connection {}->http://www.google.co.id:80 
+[]2015-03-18T18:47:00,056Z DEBUG c.g.c.b.s.o.a.h.i.c.HttpClientConnectionOperator - Connecting to www.google.co.id/173.194.117.15:80 
+[]2015-03-18T18:47:00,092Z DEBUG c.g.c.b.s.o.a.h.i.c.HttpClientConnectionOperator - Connection established 192.168.1.100:51641<->173.194.117.15:80 
+[]2015-03-18T18:47:00,092Z DEBUG c.g.c.b.s.o.a.h.i.e.MainClientExec - Executing request GET / HTTP/1.1 
+[]2015-03-18T18:47:00,092Z DEBUG c.g.c.b.s.o.a.h.i.e.MainClientExec - Target auth state: UNCHALLENGED 
+[]2015-03-18T18:47:00,092Z DEBUG c.g.c.b.s.o.a.h.i.e.MainClientExec - Proxy auth state: UNCHALLENGED 
+[]2015-03-18T18:47:00,093Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-2 >> GET / HTTP/1.1 
+[]2015-03-18T18:47:00,093Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-2 >> accept: application/json 
+[]2015-03-18T18:47:00,093Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-2 >> Host: www.google.co.id 
+[]2015-03-18T18:47:00,093Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-2 >> Connection: Keep-Alive 
+[]2015-03-18T18:47:00,093Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-2 >> User-Agent: Apache-HttpClient/4.3.5 (java 1.5) 
+[]2015-03-18T18:47:00,093Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-2 >> Accept-Encoding: gzip,deflate 
+[]2015-03-18T18:47:00,093Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-2 >> "GET / HTTP/1.1[\r][\n]" 
+[]2015-03-18T18:47:00,093Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-2 >> "accept: application/json[\r][\n]" 
+[]2015-03-18T18:47:00,093Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-2 >> "Host: www.google.co.id[\r][\n]" 
+[]2015-03-18T18:47:00,093Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-2 >> "Connection: Keep-Alive[\r][\n]" 
+[]2015-03-18T18:47:00,093Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-2 >> "User-Agent: Apache-HttpClient/4.3.5 (java 1.5)[\r][\n]" 
+[]2015-03-18T18:47:00,093Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-2 >> "Accept-Encoding: gzip,deflate[\r][\n]" 
+[]2015-03-18T18:47:00,093Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-2 >> "[\r][\n]" 
+[]2015-03-18T18:47:00,263Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-2 << "HTTP/1.1 200 OK[\r][\n]" 
+[]2015-03-18T18:47:00,263Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-2 << "Date: Wed, 18 Mar 2015 18:47:00 GMT[\r][\n]" 
+[]2015-03-18T18:47:00,263Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-2 << "Expires: -1[\r][\n]" 
+[]2015-03-18T18:47:00,263Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-2 << "Cache-Control: private, max-age=0[\r][\n]" 
+[]2015-03-18T18:47:00,263Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-2 << "Content-Type: text/html; charset=ISO-8859-1[\r][\n]" 
+[]2015-03-18T18:47:00,263Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-2 << "Set-Cookie: PREF=ID=f7c1ed58478cad4f:FF=0:TM=1426704420:LM=1426704420:S=h-7uO3UizmP0Qmg1; expires=Fri, 17-Mar-2017 18:47:00 GMT; path=/; domain=.google.co.id[\r][\n]" 
+[]2015-03-18T18:47:00,263Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-2 << "Set-Cookie: NID=67=XNPcC3QdyP_vI7aZ0K8JTyzAqmFjVep6-d8WhmjJ1YmtDfragaFzSb7SQhFaSeURVvtEljai3a47knlcdzYQiM6JKNxUr404kbLspdPhDvHKlgluOpL_26ynYj9TZfId; expires=Thu, 17-Sep-2015 18:47:00 GMT; path=/; domain=.google.co.id; HttpOnly[\r][\n]" 
+[]2015-03-18T18:47:00,264Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-2 << "P3P: CP="This is not a P3P policy! See http://www.google.com/support/accounts/bin/answer.py?hl=en&answer=151657 for more info."[\r][\n]" 
+[]2015-03-18T18:47:00,264Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-2 << "Server: gws[\r][\n]" 
+[]2015-03-18T18:47:00,264Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-2 << "X-XSS-Protection: 1; mode=block[\r][\n]" 
+[]2015-03-18T18:47:00,264Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-2 << "X-Frame-Options: SAMEORIGIN[\r][\n]" 
+[]2015-03-18T18:47:00,264Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-2 << "Alternate-Protocol: 80:quic,p=0.5[\r][\n]" 
+[]2015-03-18T18:47:00,264Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-2 << "Accept-Ranges: none[\r][\n]" 
+[]2015-03-18T18:47:00,264Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-2 << "Vary: Accept-Encoding[\r][\n]" 
+[]2015-03-18T18:47:00,264Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-2 << "Transfer-Encoding: chunked[\r][\n]" 
+[]2015-03-18T18:47:00,264Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-2 << "[\r][\n]" 
+[]2015-03-18T18:47:00,264Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-2 << "4903[\r][\n]" 
+[]2015-03-18T18:47:00,264Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-2 << "<!doctype html><html itemscope="" itemtype="http://schema.org/WebPage" lang="id"><head><meta content="/images/google_favicon_128.png" itemprop="image"><title>Google</title><script>(function(){window.google={kEI:'JMgJVc7fCoOwuQTb3YHQCg',kEXPI:'3700305,3700362,3700366,4010073,4011559,4020347,4020560,4021338,4024681,4028717,4028794,4028875,4028932,4029043,4029054,4029141,4029478,4029515,4029783,4029815,4029861,4030036,4030405,4030440,4031366,4031393,4031627,8300096,8500393,8501183,10200083,10200095',authuser:0,kSID:'JMgJVc7fCoOwuQTb3YHQCg'};goo" 
+[]2015-03-18T18:47:00,264Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-2 << HTTP/1.1 200 OK 
+[]2015-03-18T18:47:00,264Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-2 << Date: Wed, 18 Mar 2015 18:47:00 GMT 
+[]2015-03-18T18:47:00,264Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-2 << Expires: -1 
+[]2015-03-18T18:47:00,264Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-2 << Cache-Control: private, max-age=0 
+[]2015-03-18T18:47:00,264Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-2 << Content-Type: text/html; charset=ISO-8859-1 
+[]2015-03-18T18:47:00,264Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-2 << Set-Cookie: PREF=ID=f7c1ed58478cad4f:FF=0:TM=1426704420:LM=1426704420:S=h-7uO3UizmP0Qmg1; expires=Fri, 17-Mar-2017 18:47:00 GMT; path=/; domain=.google.co.id 
+[]2015-03-18T18:47:00,264Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-2 << Set-Cookie: NID=67=XNPcC3QdyP_vI7aZ0K8JTyzAqmFjVep6-d8WhmjJ1YmtDfragaFzSb7SQhFaSeURVvtEljai3a47knlcdzYQiM6JKNxUr404kbLspdPhDvHKlgluOpL_26ynYj9TZfId; expires=Thu, 17-Sep-2015 18:47:00 GMT; path=/; domain=.google.co.id; HttpOnly 
+[]2015-03-18T18:47:00,264Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-2 << P3P: CP="This is not a P3P policy! See http://www.google.com/support/accounts/bin/answer.py?hl=en&answer=151657 for more info." 
+[]2015-03-18T18:47:00,264Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-2 << Server: gws 
+[]2015-03-18T18:47:00,264Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-2 << X-XSS-Protection: 1; mode=block 
+[]2015-03-18T18:47:00,264Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-2 << X-Frame-Options: SAMEORIGIN 
+[]2015-03-18T18:47:00,264Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-2 << Alternate-Protocol: 80:quic,p=0.5 
+[]2015-03-18T18:47:00,264Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-2 << Accept-Ranges: none 
+[]2015-03-18T18:47:00,264Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-2 << Vary: Accept-Encoding 
+[]2015-03-18T18:47:00,264Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-2 << Transfer-Encoding: chunked 
+[]2015-03-18T18:47:00,264Z DEBUG c.g.c.b.s.o.a.h.i.e.MainClientExec - Connection can be kept alive indefinitely 
+[]2015-03-18T18:47:00,265Z DEBUG c.g.c.b.s.o.a.h.c.p.ResponseProcessCookies - Cookie accepted [PREF="ID=f7c1ed58478cad4f:FF=0:TM=1426704420:LM=1426704420:S=h-7uO3UizmP0Qmg1", version:0, domain:.google.co.id, path:/, expiry:Sat Mar 18 01:47:00 WIT 2017] 
+[]2015-03-18T18:47:00,266Z DEBUG c.g.c.b.s.o.a.h.c.p.ResponseProcessCookies - Cookie accepted [NID="67=XNPcC3QdyP_vI7aZ0K8JTyzAqmFjVep6-d8WhmjJ1YmtDfragaFzSb7SQhFaSeURVvtEljai3a47knlcdzYQiM6JKNxUr404k...", version:0, domain:.google.co.id, path:/, expiry:Fri Sep 18 01:47:00 WIT 2015] 
+[]2015-03-18T18:47:02,025Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestAddCookies - CookieSpec selected: best-match 
+[]2015-03-18T18:47:02,025Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestAuthCache - Auth cache not set in the context 
+[]2015-03-18T18:47:02,025Z DEBUG c.g.c.b.s.o.a.h.i.c.PoolingHttpClientConnectionManager - Connection request: [route: {}->http://www.google.co.id:80][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20] 
+[]2015-03-18T18:47:02,025Z DEBUG c.g.c.b.s.o.a.h.i.c.PoolingHttpClientConnectionManager - Connection leased: [id: 3][route: {}->http://www.google.co.id:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20] 
+[]2015-03-18T18:47:02,025Z DEBUG c.g.c.b.s.o.a.h.i.e.MainClientExec - Opening connection {}->http://www.google.co.id:80 
+[]2015-03-18T18:47:02,025Z DEBUG c.g.c.b.s.o.a.h.i.c.HttpClientConnectionOperator - Connecting to www.google.co.id/173.194.117.15:80 
+[]2015-03-18T18:47:02,062Z DEBUG c.g.c.b.s.o.a.h.i.c.HttpClientConnectionOperator - Connection established 192.168.1.100:51642<->173.194.117.15:80 
+[]2015-03-18T18:47:02,062Z DEBUG c.g.c.b.s.o.a.h.i.e.MainClientExec - Executing request GET / HTTP/1.1 
+[]2015-03-18T18:47:02,062Z DEBUG c.g.c.b.s.o.a.h.i.e.MainClientExec - Target auth state: UNCHALLENGED 
+[]2015-03-18T18:47:02,062Z DEBUG c.g.c.b.s.o.a.h.i.e.MainClientExec - Proxy auth state: UNCHALLENGED 
+[]2015-03-18T18:47:02,062Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-3 >> GET / HTTP/1.1 
+[]2015-03-18T18:47:02,063Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-3 >> accept: application/json 
+[]2015-03-18T18:47:02,063Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-3 >> Host: www.google.co.id 
+[]2015-03-18T18:47:02,063Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-3 >> Connection: Keep-Alive 
+[]2015-03-18T18:47:02,063Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-3 >> User-Agent: Apache-HttpClient/4.3.5 (java 1.5) 
+[]2015-03-18T18:47:02,063Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-3 >> Accept-Encoding: gzip,deflate 
+[]2015-03-18T18:47:02,063Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-3 >> "GET / HTTP/1.1[\r][\n]" 
+[]2015-03-18T18:47:02,063Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-3 >> "accept: application/json[\r][\n]" 
+[]2015-03-18T18:47:02,063Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-3 >> "Host: www.google.co.id[\r][\n]" 
+[]2015-03-18T18:47:02,063Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-3 >> "Connection: Keep-Alive[\r][\n]" 
+[]2015-03-18T18:47:02,063Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-3 >> "User-Agent: Apache-HttpClient/4.3.5 (java 1.5)[\r][\n]" 
+[]2015-03-18T18:47:02,063Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-3 >> "Accept-Encoding: gzip,deflate[\r][\n]" 
+[]2015-03-18T18:47:02,063Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-3 >> "[\r][\n]" 
+[]2015-03-18T18:47:02,203Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-3 << "HTTP/1.1 200 OK[\r][\n]" 
+[]2015-03-18T18:47:02,203Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-3 << "Date: Wed, 18 Mar 2015 18:47:02 GMT[\r][\n]" 
+[]2015-03-18T18:47:02,203Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-3 << "Expires: -1[\r][\n]" 
+[]2015-03-18T18:47:02,203Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-3 << "Cache-Control: private, max-age=0[\r][\n]" 
+[]2015-03-18T18:47:02,203Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-3 << "Content-Type: text/html; charset=ISO-8859-1[\r][\n]" 
+[]2015-03-18T18:47:02,203Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-3 << "Set-Cookie: PREF=ID=8a7bd851af86a558:FF=0:TM=1426704422:LM=1426704422:S=jeP1vUoM_Bat9eAf; expires=Fri, 17-Mar-2017 18:47:02 GMT; path=/; domain=.google.co.id[\r][\n]" 
+[]2015-03-18T18:47:02,203Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-3 << "Set-Cookie: NID=67=mxXZOPiYEUutJ36VWpO9XRqWjpYXVZOyA8YIo-TbLXyYu4lHCXRTaox0pBVkbKfa72gUUjd7w5do1HsjeZ66D1I2bnxf_xJUUi-zUVIyQ1ZX9G3_3GM4ZYFt_ooDnoMp; expires=Thu, 17-Sep-2015 18:47:02 GMT; path=/; domain=.google.co.id; HttpOnly[\r][\n]" 
+[]2015-03-18T18:47:02,204Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-3 << "P3P: CP="This is not a P3P policy! See http://www.google.com/support/accounts/bin/answer.py?hl=en&answer=151657 for more info."[\r][\n]" 
+[]2015-03-18T18:47:02,204Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-3 << "Server: gws[\r][\n]" 
+[]2015-03-18T18:47:02,204Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-3 << "X-XSS-Protection: 1; mode=block[\r][\n]" 
+[]2015-03-18T18:47:02,204Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-3 << "X-Frame-Options: SAMEORIGIN[\r][\n]" 
+[]2015-03-18T18:47:02,204Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-3 << "Alternate-Protocol: 80:quic,p=0.5[\r][\n]" 
+[]2015-03-18T18:47:02,204Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-3 << "Accept-Ranges: none[\r][\n]" 
+[]2015-03-18T18:47:02,204Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-3 << "Vary: Accept-Encoding[\r][\n]" 
+[]2015-03-18T18:47:02,204Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-3 << "Transfer-Encoding: chunked[\r][\n]" 
+[]2015-03-18T18:47:02,204Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-3 << "[\r][\n]" 
+[]2015-03-18T18:47:02,204Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-3 << "4923[\r][\n]" 
+[]2015-03-18T18:47:02,204Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-3 << "<!doctype html><html itemscope="" itemtype="http://schema.org/WebPage" lang="id"><head><meta content="/images/google_favicon_128.png" itemprop="image"><title>Google</title><script>(function(){window.google={kEI:'JsgJVe7jCNGwuAS2oYHgCg',kEXPI:'3700252,3700362,4011559,4017578,4020347,4020560,4020726,4021338,4024681,4028716,4028793,4028932,4029042,4029054,4029141,4029478,4029515,4029815,4029861,4029952,4029957,4030036,4030108,4030154,4030406,4030506,4031366,4031389,4031608,4031616,8300096,8500393,8500852,8501183,10200084,10201031',authuser:0,kS" 
+[]2015-03-18T18:47:02,204Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-3 << HTTP/1.1 200 OK 
+[]2015-03-18T18:47:02,204Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-3 << Date: Wed, 18 Mar 2015 18:47:02 GMT 
+[]2015-03-18T18:47:02,204Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-3 << Expires: -1 
+[]2015-03-18T18:47:02,204Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-3 << Cache-Control: private, max-age=0 
+[]2015-03-18T18:47:02,204Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-3 << Content-Type: text/html; charset=ISO-8859-1 
+[]2015-03-18T18:47:02,204Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-3 << Set-Cookie: PREF=ID=8a7bd851af86a558:FF=0:TM=1426704422:LM=1426704422:S=jeP1vUoM_Bat9eAf; expires=Fri, 17-Mar-2017 18:47:02 GMT; path=/; domain=.google.co.id 
+[]2015-03-18T18:47:02,204Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-3 << Set-Cookie: NID=67=mxXZOPiYEUutJ36VWpO9XRqWjpYXVZOyA8YIo-TbLXyYu4lHCXRTaox0pBVkbKfa72gUUjd7w5do1HsjeZ66D1I2bnxf_xJUUi-zUVIyQ1ZX9G3_3GM4ZYFt_ooDnoMp; expires=Thu, 17-Sep-2015 18:47:02 GMT; path=/; domain=.google.co.id; HttpOnly 
+[]2015-03-18T18:47:02,204Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-3 << P3P: CP="This is not a P3P policy! See http://www.google.com/support/accounts/bin/answer.py?hl=en&answer=151657 for more info." 
+[]2015-03-18T18:47:02,204Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-3 << Server: gws 
+[]2015-03-18T18:47:02,204Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-3 << X-XSS-Protection: 1; mode=block 
+[]2015-03-18T18:47:02,204Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-3 << X-Frame-Options: SAMEORIGIN 
+[]2015-03-18T18:47:02,204Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-3 << Alternate-Protocol: 80:quic,p=0.5 
+[]2015-03-18T18:47:02,204Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-3 << Accept-Ranges: none 
+[]2015-03-18T18:47:02,204Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-3 << Vary: Accept-Encoding 
+[]2015-03-18T18:47:02,204Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-3 << Transfer-Encoding: chunked 
+[]2015-03-18T18:47:02,204Z DEBUG c.g.c.b.s.o.a.h.i.e.MainClientExec - Connection can be kept alive indefinitely 
+[]2015-03-18T18:47:02,205Z DEBUG c.g.c.b.s.o.a.h.c.p.ResponseProcessCookies - Cookie accepted [PREF="ID=8a7bd851af86a558:FF=0:TM=1426704422:LM=1426704422:S=jeP1vUoM_Bat9eAf", version:0, domain:.google.co.id, path:/, expiry:Sat Mar 18 01:47:02 WIT 2017] 
+[]2015-03-18T18:47:02,205Z DEBUG c.g.c.b.s.o.a.h.c.p.ResponseProcessCookies - Cookie accepted [NID="67=mxXZOPiYEUutJ36VWpO9XRqWjpYXVZOyA8YIo-TbLXyYu4lHCXRTaox0pBVkbKfa72gUUjd7w5do1HsjeZ66D1I2bnxf_xJUU...", version:0, domain:.google.co.id, path:/, expiry:Fri Sep 18 01:47:02 WIT 2015] 
+[]2015-03-18T18:47:04,026Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestAddCookies - CookieSpec selected: best-match 
+[]2015-03-18T18:47:04,026Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestAuthCache - Auth cache not set in the context 
+[]2015-03-18T18:47:04,026Z DEBUG c.g.c.b.s.o.a.h.i.c.PoolingHttpClientConnectionManager - Connection request: [route: {}->http://www.google.co.id:80][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20] 
+[]2015-03-18T18:47:04,027Z DEBUG c.g.c.b.s.o.a.h.i.c.PoolingHttpClientConnectionManager - Connection leased: [id: 4][route: {}->http://www.google.co.id:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20] 
+[]2015-03-18T18:47:04,027Z DEBUG c.g.c.b.s.o.a.h.i.e.MainClientExec - Opening connection {}->http://www.google.co.id:80 
+[]2015-03-18T18:47:04,027Z DEBUG c.g.c.b.s.o.a.h.i.c.HttpClientConnectionOperator - Connecting to www.google.co.id/173.194.117.15:80 
+[]2015-03-18T18:47:04,072Z DEBUG c.g.c.b.s.o.a.h.i.c.HttpClientConnectionOperator - Connection established 192.168.1.100:51644<->173.194.117.15:80 
+[]2015-03-18T18:47:04,072Z DEBUG c.g.c.b.s.o.a.h.i.e.MainClientExec - Executing request GET / HTTP/1.1 
+[]2015-03-18T18:47:04,072Z DEBUG c.g.c.b.s.o.a.h.i.e.MainClientExec - Target auth state: UNCHALLENGED 
+[]2015-03-18T18:47:04,072Z DEBUG c.g.c.b.s.o.a.h.i.e.MainClientExec - Proxy auth state: UNCHALLENGED 
+[]2015-03-18T18:47:04,073Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-4 >> GET / HTTP/1.1 
+[]2015-03-18T18:47:04,073Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-4 >> accept: application/json 
+[]2015-03-18T18:47:04,073Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-4 >> Host: www.google.co.id 
+[]2015-03-18T18:47:04,073Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-4 >> Connection: Keep-Alive 
+[]2015-03-18T18:47:04,073Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-4 >> User-Agent: Apache-HttpClient/4.3.5 (java 1.5) 
+[]2015-03-18T18:47:04,073Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-4 >> Accept-Encoding: gzip,deflate 
+[]2015-03-18T18:47:04,073Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-4 >> "GET / HTTP/1.1[\r][\n]" 
+[]2015-03-18T18:47:04,073Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-4 >> "accept: application/json[\r][\n]" 
+[]2015-03-18T18:47:04,073Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-4 >> "Host: www.google.co.id[\r][\n]" 
+[]2015-03-18T18:47:04,073Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-4 >> "Connection: Keep-Alive[\r][\n]" 
+[]2015-03-18T18:47:04,073Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-4 >> "User-Agent: Apache-HttpClient/4.3.5 (java 1.5)[\r][\n]" 
+[]2015-03-18T18:47:04,073Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-4 >> "Accept-Encoding: gzip,deflate[\r][\n]" 
+[]2015-03-18T18:47:04,073Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-4 >> "[\r][\n]" 
+[]2015-03-18T18:47:04,223Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-4 << "HTTP/1.1 200 OK[\r][\n]" 
+[]2015-03-18T18:47:04,223Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-4 << "Date: Wed, 18 Mar 2015 18:47:04 GMT[\r][\n]" 
+[]2015-03-18T18:47:04,223Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-4 << "Expires: -1[\r][\n]" 
+[]2015-03-18T18:47:04,223Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-4 << "Cache-Control: private, max-age=0[\r][\n]" 
+[]2015-03-18T18:47:04,223Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-4 << "Content-Type: text/html; charset=ISO-8859-1[\r][\n]" 
+[]2015-03-18T18:47:04,223Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-4 << "Set-Cookie: PREF=ID=56aeca046ab44b90:FF=0:TM=1426704424:LM=1426704424:S=TV8yMXU1rz1hTH7N; expires=Fri, 17-Mar-2017 18:47:04 GMT; path=/; domain=.google.co.id[\r][\n]" 
+[]2015-03-18T18:47:04,223Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-4 << "Set-Cookie: NID=67=q0RsR7p7dh6E9p1F-qnbNq2CcegOV6bHTr8LkabWmua-h3znrPxR1qF1ElObOfgchX8Yy9EEahAQrPqFw9kRDW4n0qjw-XsjHZBhIgXg5Zu7s_gkDMKKiWjx_V0oQXxv; expires=Thu, 17-Sep-2015 18:47:04 GMT; path=/; domain=.google.co.id; HttpOnly[\r][\n]" 
+[]2015-03-18T18:47:04,223Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-4 << "P3P: CP="This is not a P3P policy! See http://www.google.com/support/accounts/bin/answer.py?hl=en&answer=151657 for more info."[\r][\n]" 
+[]2015-03-18T18:47:04,223Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-4 << "Server: gws[\r][\n]" 
+[]2015-03-18T18:47:04,223Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-4 << "X-XSS-Protection: 1; mode=block[\r][\n]" 
+[]2015-03-18T18:47:04,223Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-4 << "X-Frame-Options: SAMEORIGIN[\r][\n]" 
+[]2015-03-18T18:47:04,223Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-4 << "Alternate-Protocol: 80:quic,p=0.5[\r][\n]" 
+[]2015-03-18T18:47:04,223Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-4 << "Accept-Ranges: none[\r][\n]" 
+[]2015-03-18T18:47:04,223Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-4 << "Vary: Accept-Encoding[\r][\n]" 
+[]2015-03-18T18:47:04,223Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-4 << "Transfer-Encoding: chunked[\r][\n]" 
+[]2015-03-18T18:47:04,223Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-4 << "[\r][\n]" 
+[]2015-03-18T18:47:04,223Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-4 << "4902[\r][\n]" 
+[]2015-03-18T18:47:04,223Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-4 << "<!doctype html><html itemscope="" itemtype="http://schema.org/WebPage" lang="id"><head><meta content="/images/google_favicon_128.png" itemprop="image"><title>Google</title><script>(function(){window.google={kEI:'KMgJVdqRCo6juQSC6oGwCg',kEXPI:'3700260,3700362,3700366,4011559,4020347,4020562,4027916,4028716,4028932,4029044,4029054,4029141,4029478,4029515,4029815,4029862,4029952,4030036,4030155,4030365,4030405,4030440,4031093,4031366,4031608,4031627,4031654,8300096,8300125,8500393,8501183,10200083',authuser:0,kSID:'KMgJVdqRCo6juQSC6oGwCg'};goog" 
+[]2015-03-18T18:47:04,223Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-4 << HTTP/1.1 200 OK 
+[]2015-03-18T18:47:04,224Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-4 << Date: Wed, 18 Mar 2015 18:47:04 GMT 
+[]2015-03-18T18:47:04,224Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-4 << Expires: -1 
+[]2015-03-18T18:47:04,224Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-4 << Cache-Control: private, max-age=0 
+[]2015-03-18T18:47:04,224Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-4 << Content-Type: text/html; charset=ISO-8859-1 
+[]2015-03-18T18:47:04,224Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-4 << Set-Cookie: PREF=ID=56aeca046ab44b90:FF=0:TM=1426704424:LM=1426704424:S=TV8yMXU1rz1hTH7N; expires=Fri, 17-Mar-2017 18:47:04 GMT; path=/; domain=.google.co.id 
+[]2015-03-18T18:47:04,224Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-4 << Set-Cookie: NID=67=q0RsR7p7dh6E9p1F-qnbNq2CcegOV6bHTr8LkabWmua-h3znrPxR1qF1ElObOfgchX8Yy9EEahAQrPqFw9kRDW4n0qjw-XsjHZBhIgXg5Zu7s_gkDMKKiWjx_V0oQXxv; expires=Thu, 17-Sep-2015 18:47:04 GMT; path=/; domain=.google.co.id; HttpOnly 
+[]2015-03-18T18:47:04,224Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-4 << P3P: CP="This is not a P3P policy! See http://www.google.com/support/accounts/bin/answer.py?hl=en&answer=151657 for more info." 
+[]2015-03-18T18:47:04,224Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-4 << Server: gws 
+[]2015-03-18T18:47:04,224Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-4 << X-XSS-Protection: 1; mode=block 
+[]2015-03-18T18:47:04,224Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-4 << X-Frame-Options: SAMEORIGIN 
+[]2015-03-18T18:47:04,224Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-4 << Alternate-Protocol: 80:quic,p=0.5 
+[]2015-03-18T18:47:04,224Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-4 << Accept-Ranges: none 
+[]2015-03-18T18:47:04,224Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-4 << Vary: Accept-Encoding 
+[]2015-03-18T18:47:04,224Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-4 << Transfer-Encoding: chunked 
+[]2015-03-18T18:47:04,224Z DEBUG c.g.c.b.s.o.a.h.i.e.MainClientExec - Connection can be kept alive indefinitely 
+[]2015-03-18T18:47:04,224Z DEBUG c.g.c.b.s.o.a.h.c.p.ResponseProcessCookies - Cookie accepted [PREF="ID=56aeca046ab44b90:FF=0:TM=1426704424:LM=1426704424:S=TV8yMXU1rz1hTH7N", version:0, domain:.google.co.id, path:/, expiry:Sat Mar 18 01:47:04 WIT 2017] 
+[]2015-03-18T18:47:04,225Z DEBUG c.g.c.b.s.o.a.h.c.p.ResponseProcessCookies - Cookie accepted [NID="67=q0RsR7p7dh6E9p1F-qnbNq2CcegOV6bHTr8LkabWmua-h3znrPxR1qF1ElObOfgchX8Yy9EEahAQrPqFw9kRDW4n0qjw-XsjH...", version:0, domain:.google.co.id, path:/, expiry:Fri Sep 18 01:47:04 WIT 2015] 
+[]2015-03-18T18:47:06,043Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestAddCookies - CookieSpec selected: best-match 
+[]2015-03-18T18:47:06,043Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestAuthCache - Auth cache not set in the context 
+[]2015-03-18T18:47:06,043Z DEBUG c.g.c.b.s.o.a.h.i.c.PoolingHttpClientConnectionManager - Connection request: [route: {}->http://www.google.co.id:80][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20] 
+[]2015-03-18T18:47:06,044Z DEBUG c.g.c.b.s.o.a.h.i.c.PoolingHttpClientConnectionManager - Connection leased: [id: 5][route: {}->http://www.google.co.id:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20] 
+[]2015-03-18T18:47:06,044Z DEBUG c.g.c.b.s.o.a.h.i.e.MainClientExec - Opening connection {}->http://www.google.co.id:80 
+[]2015-03-18T18:47:06,044Z DEBUG c.g.c.b.s.o.a.h.i.c.HttpClientConnectionOperator - Connecting to www.google.co.id/173.194.117.15:80 
+[]2015-03-18T18:47:06,082Z DEBUG c.g.c.b.s.o.a.h.i.c.HttpClientConnectionOperator - Connection established 192.168.1.100:51645<->173.194.117.15:80 
+[]2015-03-18T18:47:06,082Z DEBUG c.g.c.b.s.o.a.h.i.e.MainClientExec - Executing request GET / HTTP/1.1 
+[]2015-03-18T18:47:06,082Z DEBUG c.g.c.b.s.o.a.h.i.e.MainClientExec - Target auth state: UNCHALLENGED 
+[]2015-03-18T18:47:06,082Z DEBUG c.g.c.b.s.o.a.h.i.e.MainClientExec - Proxy auth state: UNCHALLENGED 
+[]2015-03-18T18:47:06,083Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-5 >> GET / HTTP/1.1 
+[]2015-03-18T18:47:06,083Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-5 >> accept: application/json 
+[]2015-03-18T18:47:06,083Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-5 >> Host: www.google.co.id 
+[]2015-03-18T18:47:06,083Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-5 >> Connection: Keep-Alive 
+[]2015-03-18T18:47:06,083Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-5 >> User-Agent: Apache-HttpClient/4.3.5 (java 1.5) 
+[]2015-03-18T18:47:06,083Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-5 >> Accept-Encoding: gzip,deflate 
+[]2015-03-18T18:47:06,083Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-5 >> "GET / HTTP/1.1[\r][\n]" 
+[]2015-03-18T18:47:06,083Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-5 >> "accept: application/json[\r][\n]" 
+[]2015-03-18T18:47:06,083Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-5 >> "Host: www.google.co.id[\r][\n]" 
+[]2015-03-18T18:47:06,083Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-5 >> "Connection: Keep-Alive[\r][\n]" 
+[]2015-03-18T18:47:06,083Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-5 >> "User-Agent: Apache-HttpClient/4.3.5 (java 1.5)[\r][\n]" 
+[]2015-03-18T18:47:06,083Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-5 >> "Accept-Encoding: gzip,deflate[\r][\n]" 
+[]2015-03-18T18:47:06,083Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-5 >> "[\r][\n]" 
+[]2015-03-18T18:47:06,235Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-5 << "HTTP/1.1 200 OK[\r][\n]" 
+[]2015-03-18T18:47:06,235Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-5 << "Date: Wed, 18 Mar 2015 18:47:06 GMT[\r][\n]" 
+[]2015-03-18T18:47:06,235Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-5 << "Expires: -1[\r][\n]" 
+[]2015-03-18T18:47:06,235Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-5 << "Cache-Control: private, max-age=0[\r][\n]" 
+[]2015-03-18T18:47:06,235Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-5 << "Content-Type: text/html; charset=ISO-8859-1[\r][\n]" 
+[]2015-03-18T18:47:06,235Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-5 << "Set-Cookie: PREF=ID=a3280503c22b6455:FF=0:TM=1426704426:LM=1426704426:S=UI0xbOF-uqYsGoxe; expires=Fri, 17-Mar-2017 18:47:06 GMT; path=/; domain=.google.co.id[\r][\n]" 
+[]2015-03-18T18:47:06,235Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-5 << "Set-Cookie: NID=67=ZAzu_ewFcyUJLsPgwiuDQlF3CDeZgPShF3WOWmb5KKJGRlv2IQa3Qyur8GaimZmCbnC2JZ2wCVoJ0C9HtZkZZMU8SHLm-iRt791BQPO5Xf91pZJhxMPHSngT370-JHDp; expires=Thu, 17-Sep-2015 18:47:06 GMT; path=/; domain=.google.co.id; HttpOnly[\r][\n]" 
+[]2015-03-18T18:47:06,236Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-5 << "P3P: CP="This is not a P3P policy! See http://www.google.com/support/accounts/bin/answer.py?hl=en&answer=151657 for more info."[\r][\n]" 
+[]2015-03-18T18:47:06,236Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-5 << "Server: gws[\r][\n]" 
+[]2015-03-18T18:47:06,236Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-5 << "X-XSS-Protection: 1; mode=block[\r][\n]" 
+[]2015-03-18T18:47:06,236Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-5 << "X-Frame-Options: SAMEORIGIN[\r][\n]" 
+[]2015-03-18T18:47:06,236Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-5 << "Alternate-Protocol: 80:quic,p=0.5[\r][\n]" 
+[]2015-03-18T18:47:06,236Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-5 << "Accept-Ranges: none[\r][\n]" 
+[]2015-03-18T18:47:06,236Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-5 << "Vary: Accept-Encoding[\r][\n]" 
+[]2015-03-18T18:47:06,236Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-5 << "Transfer-Encoding: chunked[\r][\n]" 
+[]2015-03-18T18:47:06,236Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-5 << "[\r][\n]" 
+[]2015-03-18T18:47:06,236Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-5 << "4910[\r][\n]" 
+[]2015-03-18T18:47:06,236Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-5 << "<!doctype html><html itemscope="" itemtype="http://schema.org/WebPage" lang="id"><head><meta content="/images/google_favicon_128.png" itemprop="image"><title>Google</title><script>(function(){window.google={kEI:'KsgJVbPyCc23uQSXpIKYDA',kEXPI:'18167,3700290,3700362,4003510,4010073,4011559,4020560,4021338,4024600,4026473,4028716,4028932,4029044,4029054,4029141,4029417,4029478,4029515,4029783,4029815,4029862,4029957,4030036,4030155,4030312,4030405,4030440,4031093,4031366,4031608,4031627,8500393,8500973,10200083',authuser:0,kSID:'KsgJVbPyCc23uQS" 
+[]2015-03-18T18:47:06,236Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-5 << HTTP/1.1 200 OK 
+[]2015-03-18T18:47:06,236Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-5 << Date: Wed, 18 Mar 2015 18:47:06 GMT 
+[]2015-03-18T18:47:06,236Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-5 << Expires: -1 
+[]2015-03-18T18:47:06,236Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-5 << Cache-Control: private, max-age=0 
+[]2015-03-18T18:47:06,236Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-5 << Content-Type: text/html; charset=ISO-8859-1 
+[]2015-03-18T18:47:06,236Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-5 << Set-Cookie: PREF=ID=a3280503c22b6455:FF=0:TM=1426704426:LM=1426704426:S=UI0xbOF-uqYsGoxe; expires=Fri, 17-Mar-2017 18:47:06 GMT; path=/; domain=.google.co.id 
+[]2015-03-18T18:47:06,236Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-5 << Set-Cookie: NID=67=ZAzu_ewFcyUJLsPgwiuDQlF3CDeZgPShF3WOWmb5KKJGRlv2IQa3Qyur8GaimZmCbnC2JZ2wCVoJ0C9HtZkZZMU8SHLm-iRt791BQPO5Xf91pZJhxMPHSngT370-JHDp; expires=Thu, 17-Sep-2015 18:47:06 GMT; path=/; domain=.google.co.id; HttpOnly 
+[]2015-03-18T18:47:06,236Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-5 << P3P: CP="This is not a P3P policy! See http://www.google.com/support/accounts/bin/answer.py?hl=en&answer=151657 for more info." 
+[]2015-03-18T18:47:06,236Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-5 << Server: gws 
+[]2015-03-18T18:47:06,236Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-5 << X-XSS-Protection: 1; mode=block 
+[]2015-03-18T18:47:06,236Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-5 << X-Frame-Options: SAMEORIGIN 
+[]2015-03-18T18:47:06,236Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-5 << Alternate-Protocol: 80:quic,p=0.5 
+[]2015-03-18T18:47:06,236Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-5 << Accept-Ranges: none 
+[]2015-03-18T18:47:06,236Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-5 << Vary: Accept-Encoding 
+[]2015-03-18T18:47:06,236Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-5 << Transfer-Encoding: chunked 
+[]2015-03-18T18:47:06,236Z DEBUG c.g.c.b.s.o.a.h.i.e.MainClientExec - Connection can be kept alive indefinitely 
+[]2015-03-18T18:47:06,237Z DEBUG c.g.c.b.s.o.a.h.c.p.ResponseProcessCookies - Cookie accepted [PREF="ID=a3280503c22b6455:FF=0:TM=1426704426:LM=1426704426:S=UI0xbOF-uqYsGoxe", version:0, domain:.google.co.id, path:/, expiry:Sat Mar 18 01:47:06 WIT 2017] 
+[]2015-03-18T18:47:06,238Z DEBUG c.g.c.b.s.o.a.h.c.p.ResponseProcessCookies - Cookie accepted [NID="67=ZAzu_ewFcyUJLsPgwiuDQlF3CDeZgPShF3WOWmb5KKJGRlv2IQa3Qyur8GaimZmCbnC2JZ2wCVoJ0C9HtZkZZMU8SHLm-iRt7...", version:0, domain:.google.co.id, path:/, expiry:Fri Sep 18 01:47:06 WIT 2015] 
+[]2015-03-18T18:47:08,023Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestAddCookies - CookieSpec selected: best-match 
+[]2015-03-18T18:47:08,023Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestAuthCache - Auth cache not set in the context 
+[]2015-03-18T18:47:08,023Z DEBUG c.g.c.b.s.o.a.h.i.c.PoolingHttpClientConnectionManager - Connection request: [route: {}->http://www.google.co.id:80][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20] 
+[]2015-03-18T18:47:08,024Z DEBUG c.g.c.b.s.o.a.h.i.c.PoolingHttpClientConnectionManager - Connection leased: [id: 6][route: {}->http://www.google.co.id:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20] 
+[]2015-03-18T18:47:08,024Z DEBUG c.g.c.b.s.o.a.h.i.e.MainClientExec - Opening connection {}->http://www.google.co.id:80 
+[]2015-03-18T18:47:08,024Z DEBUG c.g.c.b.s.o.a.h.i.c.HttpClientConnectionOperator - Connecting to www.google.co.id/173.194.117.15:80 
+[]2015-03-18T18:47:08,063Z DEBUG c.g.c.b.s.o.a.h.i.c.HttpClientConnectionOperator - Connection established 192.168.1.100:51646<->173.194.117.15:80 
+[]2015-03-18T18:47:08,063Z DEBUG c.g.c.b.s.o.a.h.i.e.MainClientExec - Executing request GET / HTTP/1.1 
+[]2015-03-18T18:47:08,063Z DEBUG c.g.c.b.s.o.a.h.i.e.MainClientExec - Target auth state: UNCHALLENGED 
+[]2015-03-18T18:47:08,063Z DEBUG c.g.c.b.s.o.a.h.i.e.MainClientExec - Proxy auth state: UNCHALLENGED 
+[]2015-03-18T18:47:08,063Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-6 >> GET / HTTP/1.1 
+[]2015-03-18T18:47:08,063Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-6 >> accept: application/json 
+[]2015-03-18T18:47:08,063Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-6 >> Host: www.google.co.id 
+[]2015-03-18T18:47:08,063Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-6 >> Connection: Keep-Alive 
+[]2015-03-18T18:47:08,063Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-6 >> User-Agent: Apache-HttpClient/4.3.5 (java 1.5) 
+[]2015-03-18T18:47:08,063Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-6 >> Accept-Encoding: gzip,deflate 
+[]2015-03-18T18:47:08,063Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-6 >> "GET / HTTP/1.1[\r][\n]" 
+[]2015-03-18T18:47:08,063Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-6 >> "accept: application/json[\r][\n]" 
+[]2015-03-18T18:47:08,063Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-6 >> "Host: www.google.co.id[\r][\n]" 
+[]2015-03-18T18:47:08,063Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-6 >> "Connection: Keep-Alive[\r][\n]" 
+[]2015-03-18T18:47:08,063Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-6 >> "User-Agent: Apache-HttpClient/4.3.5 (java 1.5)[\r][\n]" 
+[]2015-03-18T18:47:08,063Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-6 >> "Accept-Encoding: gzip,deflate[\r][\n]" 
+[]2015-03-18T18:47:08,063Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-6 >> "[\r][\n]" 
+[]2015-03-18T18:47:08,213Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-6 << "HTTP/1.1 200 OK[\r][\n]" 
+[]2015-03-18T18:47:08,213Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-6 << "Date: Wed, 18 Mar 2015 18:47:08 GMT[\r][\n]" 
+[]2015-03-18T18:47:08,213Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-6 << "Expires: -1[\r][\n]" 
+[]2015-03-18T18:47:08,213Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-6 << "Cache-Control: private, max-age=0[\r][\n]" 
+[]2015-03-18T18:47:08,213Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-6 << "Content-Type: text/html; charset=ISO-8859-1[\r][\n]" 
+[]2015-03-18T18:47:08,213Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-6 << "Set-Cookie: PREF=ID=350b52e3c64fc03c:FF=0:TM=1426704428:LM=1426704428:S=rVcpmzeulCPIRzlt; expires=Fri, 17-Mar-2017 18:47:08 GMT; path=/; domain=.google.co.id[\r][\n]" 
+[]2015-03-18T18:47:08,213Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-6 << "Set-Cookie: NID=67=Dg18X2wQ66IduzI9wAqMVBLMOfydVuCbchh-vctZxEQbbXMgfAOQ8Qf30nMP9jBaT3bSQ18bl64rxA2yIHe33DwiN_wHI2iM8pNIvuCu57V-E-PKEfO84d50ElGTuG7i; expires=Thu, 17-Sep-2015 18:47:08 GMT; path=/; domain=.google.co.id; HttpOnly[\r][\n]" 
+[]2015-03-18T18:47:08,213Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-6 << "P3P: CP="This is not a P3P policy! See http://www.google.com/support/accounts/bin/answer.py?hl=en&answer=151657 for more info."[\r][\n]" 
+[]2015-03-18T18:47:08,213Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-6 << "Server: gws[\r][\n]" 
+[]2015-03-18T18:47:08,213Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-6 << "X-XSS-Protection: 1; mode=block[\r][\n]" 
+[]2015-03-18T18:47:08,213Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-6 << "X-Frame-Options: SAMEORIGIN[\r][\n]" 
+[]2015-03-18T18:47:08,213Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-6 << "Alternate-Protocol: 80:quic,p=0.5[\r][\n]" 
+[]2015-03-18T18:47:08,213Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-6 << "Accept-Ranges: none[\r][\n]" 
+[]2015-03-18T18:47:08,213Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-6 << "Vary: Accept-Encoding[\r][\n]" 
+[]2015-03-18T18:47:08,213Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-6 << "Transfer-Encoding: chunked[\r][\n]" 
+[]2015-03-18T18:47:08,213Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-6 << "[\r][\n]" 
+[]2015-03-18T18:47:08,213Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-6 << "4e7b[\r][\n]" 
+[]2015-03-18T18:47:08,214Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-6 << "<!doctype html><html itemscope="" itemtype="http://schema.org/WebPage" lang="id"><head><meta content="/images/google_favicon_128.png" itemprop="image"><title>Google</title><script>(function(){window.google={kEI:'LMgJVbeTCdCXuAShhIKYBQ',kEXPI:'3700307,3700362,3700366,4011559,4020347,4020560,4024681,4028716,4028875,4028932,4029044,4029054,4029141,4029416,4029515,4029815,4029862,4030036,4030366,4030406,4030440,4031366,4031608,4031627,8300096,8500393,8500852,8500972,8501183,10200083',authuser:0,kSID:'LMgJVbeTCdCXuAShhIKYBQ'};google.kHL='id';})()" 
+[]2015-03-18T18:47:08,214Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-6 << HTTP/1.1 200 OK 
+[]2015-03-18T18:47:08,214Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-6 << Date: Wed, 18 Mar 2015 18:47:08 GMT 
+[]2015-03-18T18:47:08,214Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-6 << Expires: -1 
+[]2015-03-18T18:47:08,214Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-6 << Cache-Control: private, max-age=0 
+[]2015-03-18T18:47:08,214Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-6 << Content-Type: text/html; charset=ISO-8859-1 
+[]2015-03-18T18:47:08,214Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-6 << Set-Cookie: PREF=ID=350b52e3c64fc03c:FF=0:TM=1426704428:LM=1426704428:S=rVcpmzeulCPIRzlt; expires=Fri, 17-Mar-2017 18:47:08 GMT; path=/; domain=.google.co.id 
+[]2015-03-18T18:47:08,214Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-6 << Set-Cookie: NID=67=Dg18X2wQ66IduzI9wAqMVBLMOfydVuCbchh-vctZxEQbbXMgfAOQ8Qf30nMP9jBaT3bSQ18bl64rxA2yIHe33DwiN_wHI2iM8pNIvuCu57V-E-PKEfO84d50ElGTuG7i; expires=Thu, 17-Sep-2015 18:47:08 GMT; path=/; domain=.google.co.id; HttpOnly 
+[]2015-03-18T18:47:08,214Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-6 << P3P: CP="This is not a P3P policy! See http://www.google.com/support/accounts/bin/answer.py?hl=en&answer=151657 for more info." 
+[]2015-03-18T18:47:08,214Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-6 << Server: gws 
+[]2015-03-18T18:47:08,214Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-6 << X-XSS-Protection: 1; mode=block 
+[]2015-03-18T18:47:08,214Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-6 << X-Frame-Options: SAMEORIGIN 
+[]2015-03-18T18:47:08,214Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-6 << Alternate-Protocol: 80:quic,p=0.5 
+[]2015-03-18T18:47:08,214Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-6 << Accept-Ranges: none 
+[]2015-03-18T18:47:08,214Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-6 << Vary: Accept-Encoding 
+[]2015-03-18T18:47:08,214Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-6 << Transfer-Encoding: chunked 
+[]2015-03-18T18:47:08,214Z DEBUG c.g.c.b.s.o.a.h.i.e.MainClientExec - Connection can be kept alive indefinitely 
+[]2015-03-18T18:47:08,215Z DEBUG c.g.c.b.s.o.a.h.c.p.ResponseProcessCookies - Cookie accepted [PREF="ID=350b52e3c64fc03c:FF=0:TM=1426704428:LM=1426704428:S=rVcpmzeulCPIRzlt", version:0, domain:.google.co.id, path:/, expiry:Sat Mar 18 01:47:08 WIT 2017] 
+[]2015-03-18T18:47:08,215Z DEBUG c.g.c.b.s.o.a.h.c.p.ResponseProcessCookies - Cookie accepted [NID="67=Dg18X2wQ66IduzI9wAqMVBLMOfydVuCbchh-vctZxEQbbXMgfAOQ8Qf30nMP9jBaT3bSQ18bl64rxA2yIHe33DwiN_wHI2iM8...", version:0, domain:.google.co.id, path:/, expiry:Fri Sep 18 01:47:08 WIT 2015] 
+[]2015-03-18T18:47:10,024Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestAddCookies - CookieSpec selected: best-match 
+[]2015-03-18T18:47:10,024Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestAuthCache - Auth cache not set in the context 
+[]2015-03-18T18:47:10,024Z DEBUG c.g.c.b.s.o.a.h.i.c.PoolingHttpClientConnectionManager - Connection request: [route: {}->http://www.google.co.id:80][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20] 
+[]2015-03-18T18:47:10,024Z DEBUG c.g.c.b.s.o.a.h.i.c.PoolingHttpClientConnectionManager - Connection leased: [id: 7][route: {}->http://www.google.co.id:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20] 
+[]2015-03-18T18:47:10,024Z DEBUG c.g.c.b.s.o.a.h.i.e.MainClientExec - Opening connection {}->http://www.google.co.id:80 
+[]2015-03-18T18:47:10,024Z DEBUG c.g.c.b.s.o.a.h.i.c.HttpClientConnectionOperator - Connecting to www.google.co.id/173.194.117.15:80 
+[]2015-03-18T18:47:10,064Z DEBUG c.g.c.b.s.o.a.h.i.c.HttpClientConnectionOperator - Connection established 192.168.1.100:51647<->173.194.117.15:80 
+[]2015-03-18T18:47:10,064Z DEBUG c.g.c.b.s.o.a.h.i.e.MainClientExec - Executing request GET / HTTP/1.1 
+[]2015-03-18T18:47:10,064Z DEBUG c.g.c.b.s.o.a.h.i.e.MainClientExec - Target auth state: UNCHALLENGED 
+[]2015-03-18T18:47:10,064Z DEBUG c.g.c.b.s.o.a.h.i.e.MainClientExec - Proxy auth state: UNCHALLENGED 
+[]2015-03-18T18:47:10,064Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-7 >> GET / HTTP/1.1 
+[]2015-03-18T18:47:10,064Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-7 >> accept: application/json 
+[]2015-03-18T18:47:10,065Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-7 >> Host: www.google.co.id 
+[]2015-03-18T18:47:10,065Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-7 >> Connection: Keep-Alive 
+[]2015-03-18T18:47:10,065Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-7 >> User-Agent: Apache-HttpClient/4.3.5 (java 1.5) 
+[]2015-03-18T18:47:10,065Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-7 >> Accept-Encoding: gzip,deflate 
+[]2015-03-18T18:47:10,065Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-7 >> "GET / HTTP/1.1[\r][\n]" 
+[]2015-03-18T18:47:10,065Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-7 >> "accept: application/json[\r][\n]" 
+[]2015-03-18T18:47:10,065Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-7 >> "Host: www.google.co.id[\r][\n]" 
+[]2015-03-18T18:47:10,065Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-7 >> "Connection: Keep-Alive[\r][\n]" 
+[]2015-03-18T18:47:10,065Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-7 >> "User-Agent: Apache-HttpClient/4.3.5 (java 1.5)[\r][\n]" 
+[]2015-03-18T18:47:10,065Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-7 >> "Accept-Encoding: gzip,deflate[\r][\n]" 
+[]2015-03-18T18:47:10,065Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-7 >> "[\r][\n]" 
+[]2015-03-18T18:47:10,213Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-7 << "HTTP/1.1 200 OK[\r][\n]" 
+[]2015-03-18T18:47:10,213Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-7 << "Date: Wed, 18 Mar 2015 18:47:10 GMT[\r][\n]" 
+[]2015-03-18T18:47:10,213Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-7 << "Expires: -1[\r][\n]" 
+[]2015-03-18T18:47:10,213Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-7 << "Cache-Control: private, max-age=0[\r][\n]" 
+[]2015-03-18T18:47:10,213Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-7 << "Content-Type: text/html; charset=ISO-8859-1[\r][\n]" 
+[]2015-03-18T18:47:10,213Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-7 << "Set-Cookie: PREF=ID=d28abd5efca2cef1:FF=0:TM=1426704430:LM=1426704430:S=5DEW6-qBFIjH1-O8; expires=Fri, 17-Mar-2017 18:47:10 GMT; path=/; domain=.google.co.id[\r][\n]" 
+[]2015-03-18T18:47:10,213Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-7 << "Set-Cookie: NID=67=vFY7RnW81VbQtJ1YP-jGJY6b05wKZ2Oux4Z-CKEfpCw63uI79AQSlELrPXa6khbqxqlfYCMj_YBdzICq7usNb8VR223teuKEa0_a7bj2s39mWiPh19YhAHW7LarPknsS; expires=Thu, 17-Sep-2015 18:47:10 GMT; path=/; domain=.google.co.id; HttpOnly[\r][\n]" 
+[]2015-03-18T18:47:10,213Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-7 << "P3P: CP="This is not a P3P policy! See http://www.google.com/support/accounts/bin/answer.py?hl=en&answer=151657 for more info."[\r][\n]" 
+[]2015-03-18T18:47:10,213Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-7 << "Server: gws[\r][\n]" 
+[]2015-03-18T18:47:10,213Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-7 << "X-XSS-Protection: 1; mode=block[\r][\n]" 
+[]2015-03-18T18:47:10,213Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-7 << "X-Frame-Options: SAMEORIGIN[\r][\n]" 
+[]2015-03-18T18:47:10,213Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-7 << "Alternate-Protocol: 80:quic,p=0.5[\r][\n]" 
+[]2015-03-18T18:47:10,213Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-7 << "Accept-Ranges: none[\r][\n]" 
+[]2015-03-18T18:47:10,213Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-7 << "Vary: Accept-Encoding[\r][\n]" 
+[]2015-03-18T18:47:10,213Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-7 << "Transfer-Encoding: chunked[\r][\n]" 
+[]2015-03-18T18:47:10,213Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-7 << "[\r][\n]" 
+[]2015-03-18T18:47:10,214Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-7 << "491a[\r][\n]" 
+[]2015-03-18T18:47:10,214Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-7 << "<!doctype html><html itemscope="" itemtype="http://schema.org/WebPage" lang="id"><head><meta content="/images/google_favicon_128.png" itemprop="image"><title>Google</title><script>(function(){window.google={kEI:'LsgJVeLUCMeuuQSagoGIDA',kEXPI:'3700268,3700362,3700366,4011559,4017578,4020347,4020562,4021338,4026240,4026241,4027557,4028717,4028932,4029044,4029054,4029141,4029515,4029815,4029860,4029957,4030036,4030366,4030405,4030440,4031240,4031342,4031561,4031566,4031627,8300125,8500394,8500572,8500947,8500973,10200083',authuser:0,kSID:'LsgJV" 
+[]2015-03-18T18:47:10,214Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-7 << HTTP/1.1 200 OK 
+[]2015-03-18T18:47:10,214Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-7 << Date: Wed, 18 Mar 2015 18:47:10 GMT 
+[]2015-03-18T18:47:10,214Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-7 << Expires: -1 
+[]2015-03-18T18:47:10,214Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-7 << Cache-Control: private, max-age=0 
+[]2015-03-18T18:47:10,214Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-7 << Content-Type: text/html; charset=ISO-8859-1 
+[]2015-03-18T18:47:10,214Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-7 << Set-Cookie: PREF=ID=d28abd5efca2cef1:FF=0:TM=1426704430:LM=1426704430:S=5DEW6-qBFIjH1-O8; expires=Fri, 17-Mar-2017 18:47:10 GMT; path=/; domain=.google.co.id 
+[]2015-03-18T18:47:10,214Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-7 << Set-Cookie: NID=67=vFY7RnW81VbQtJ1YP-jGJY6b05wKZ2Oux4Z-CKEfpCw63uI79AQSlELrPXa6khbqxqlfYCMj_YBdzICq7usNb8VR223teuKEa0_a7bj2s39mWiPh19YhAHW7LarPknsS; expires=Thu, 17-Sep-2015 18:47:10 GMT; path=/; domain=.google.co.id; HttpOnly 
+[]2015-03-18T18:47:10,214Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-7 << P3P: CP="This is not a P3P policy! See http://www.google.com/support/accounts/bin/answer.py?hl=en&answer=151657 for more info." 
+[]2015-03-18T18:47:10,214Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-7 << Server: gws 
+[]2015-03-18T18:47:10,214Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-7 << X-XSS-Protection: 1; mode=block 
+[]2015-03-18T18:47:10,214Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-7 << X-Frame-Options: SAMEORIGIN 
+[]2015-03-18T18:47:10,214Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-7 << Alternate-Protocol: 80:quic,p=0.5 
+[]2015-03-18T18:47:10,214Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-7 << Accept-Ranges: none 
+[]2015-03-18T18:47:10,214Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-7 << Vary: Accept-Encoding 
+[]2015-03-18T18:47:10,214Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-7 << Transfer-Encoding: chunked 
+[]2015-03-18T18:47:10,214Z DEBUG c.g.c.b.s.o.a.h.i.e.MainClientExec - Connection can be kept alive indefinitely 
+[]2015-03-18T18:47:10,215Z DEBUG c.g.c.b.s.o.a.h.c.p.ResponseProcessCookies - Cookie accepted [PREF="ID=d28abd5efca2cef1:FF=0:TM=1426704430:LM=1426704430:S=5DEW6-qBFIjH1-O8", version:0, domain:.google.co.id, path:/, expiry:Sat Mar 18 01:47:10 WIT 2017] 
+[]2015-03-18T18:47:10,216Z DEBUG c.g.c.b.s.o.a.h.c.p.ResponseProcessCookies - Cookie accepted [NID="67=vFY7RnW81VbQtJ1YP-jGJY6b05wKZ2Oux4Z-CKEfpCw63uI79AQSlELrPXa6khbqxqlfYCMj_YBdzICq7usNb8VR223teuKEa...", version:0, domain:.google.co.id, path:/, expiry:Fri Sep 18 01:47:10 WIT 2015] 
+[]2015-03-18T18:47:12,042Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestAddCookies - CookieSpec selected: best-match 
+[]2015-03-18T18:47:12,042Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestAuthCache - Auth cache not set in the context 
+[]2015-03-18T18:47:12,042Z DEBUG c.g.c.b.s.o.a.h.i.c.PoolingHttpClientConnectionManager - Connection request: [route: {}->http://www.google.co.id:80][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20] 
+[]2015-03-18T18:47:12,043Z DEBUG c.g.c.b.s.o.a.h.i.c.PoolingHttpClientConnectionManager - Connection leased: [id: 8][route: {}->http://www.google.co.id:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20] 
+[]2015-03-18T18:47:12,043Z DEBUG c.g.c.b.s.o.a.h.i.e.MainClientExec - Opening connection {}->http://www.google.co.id:80 
+[]2015-03-18T18:47:12,043Z DEBUG c.g.c.b.s.o.a.h.i.c.HttpClientConnectionOperator - Connecting to www.google.co.id/173.194.117.15:80 
+[]2015-03-18T18:47:12,082Z DEBUG c.g.c.b.s.o.a.h.i.c.HttpClientConnectionOperator - Connection established 192.168.1.100:51648<->173.194.117.15:80 
+[]2015-03-18T18:47:12,082Z DEBUG c.g.c.b.s.o.a.h.i.e.MainClientExec - Executing request GET / HTTP/1.1 
+[]2015-03-18T18:47:12,082Z DEBUG c.g.c.b.s.o.a.h.i.e.MainClientExec - Target auth state: UNCHALLENGED 
+[]2015-03-18T18:47:12,082Z DEBUG c.g.c.b.s.o.a.h.i.e.MainClientExec - Proxy auth state: UNCHALLENGED 
+[]2015-03-18T18:47:12,082Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-8 >> GET / HTTP/1.1 
+[]2015-03-18T18:47:12,082Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-8 >> accept: application/json 
+[]2015-03-18T18:47:12,082Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-8 >> Host: www.google.co.id 
+[]2015-03-18T18:47:12,083Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-8 >> Connection: Keep-Alive 
+[]2015-03-18T18:47:12,083Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-8 >> User-Agent: Apache-HttpClient/4.3.5 (java 1.5) 
+[]2015-03-18T18:47:12,083Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-8 >> Accept-Encoding: gzip,deflate 
+[]2015-03-18T18:47:12,083Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-8 >> "GET / HTTP/1.1[\r][\n]" 
+[]2015-03-18T18:47:12,083Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-8 >> "accept: application/json[\r][\n]" 
+[]2015-03-18T18:47:12,083Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-8 >> "Host: www.google.co.id[\r][\n]" 
+[]2015-03-18T18:47:12,083Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-8 >> "Connection: Keep-Alive[\r][\n]" 
+[]2015-03-18T18:47:12,083Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-8 >> "User-Agent: Apache-HttpClient/4.3.5 (java 1.5)[\r][\n]" 
+[]2015-03-18T18:47:12,083Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-8 >> "Accept-Encoding: gzip,deflate[\r][\n]" 
+[]2015-03-18T18:47:12,083Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-8 >> "[\r][\n]" 
+[]2015-03-18T18:47:12,247Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-8 << "HTTP/1.1 200 OK[\r][\n]" 
+[]2015-03-18T18:47:12,247Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-8 << "Date: Wed, 18 Mar 2015 18:47:12 GMT[\r][\n]" 
+[]2015-03-18T18:47:12,247Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-8 << "Expires: -1[\r][\n]" 
+[]2015-03-18T18:47:12,247Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-8 << "Cache-Control: private, max-age=0[\r][\n]" 
+[]2015-03-18T18:47:12,247Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-8 << "Content-Type: text/html; charset=ISO-8859-1[\r][\n]" 
+[]2015-03-18T18:47:12,247Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-8 << "Set-Cookie: PREF=ID=4af787218234c38c:FF=0:TM=1426704432:LM=1426704432:S=jDRxZfzEP0YCxIAs; expires=Fri, 17-Mar-2017 18:47:12 GMT; path=/; domain=.google.co.id[\r][\n]" 
+[]2015-03-18T18:47:12,247Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-8 << "Set-Cookie: NID=67=N83Wi7GZj1K-6eCckn9kF7mI-RC7E8l12XCAnPnNBLpbhCR2YiOul5aT12bA2QBEtkH4hnCcS3hMyopEMToyxfduf6boR4kHQTHLkMGzEdQ-Zg-lEd0LaBEqTeleChhx; expires=Thu, 17-Sep-2015 18:47:12 GMT; path=/; domain=.google.co.id; HttpOnly[\r][\n]" 
+[]2015-03-18T18:47:12,247Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-8 << "P3P: CP="This is not a P3P policy! See http://www.google.com/support/accounts/bin/answer.py?hl=en&answer=151657 for more info."[\r][\n]" 
+[]2015-03-18T18:47:12,247Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-8 << "Server: gws[\r][\n]" 
+[]2015-03-18T18:47:12,247Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-8 << "X-XSS-Protection: 1; mode=block[\r][\n]" 
+[]2015-03-18T18:47:12,247Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-8 << "X-Frame-Options: SAMEORIGIN[\r][\n]" 
+[]2015-03-18T18:47:12,247Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-8 << "Alternate-Protocol: 80:quic,p=0.5[\r][\n]" 
+[]2015-03-18T18:47:12,247Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-8 << "Accept-Ranges: none[\r][\n]" 
+[]2015-03-18T18:47:12,247Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-8 << "Vary: Accept-Encoding[\r][\n]" 
+[]2015-03-18T18:47:12,247Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-8 << "Transfer-Encoding: chunked[\r][\n]" 
+[]2015-03-18T18:47:12,247Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-8 << "[\r][\n]" 
+[]2015-03-18T18:47:12,247Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-8 << "491a[\r][\n]" 
+[]2015-03-18T18:47:12,247Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-8 << "<!doctype html><html itemscope="" itemtype="http://schema.org/WebPage" lang="id"><head><meta content="/images/google_favicon_128.png" itemprop="image"><title>Google</title><script>(function(){window.google={kEI:'MMgJVfn-CoP_ugSC8oKoDQ',kEXPI:'3700273,3700362,3700366,4010073,4011559,4017578,4020346,4020560,4021338,4024207,4024681,4028716,4028794,4028932,4029042,4029054,4029141,4029478,4029515,4029783,4029803,4029815,4029861,4029952,4029957,4030036,4030406,4030440,4031390,4031608,4031627,8300096,8500393,8500852,10200083',authuser:0,kSID:'MMgJV" 
+[]2015-03-18T18:47:12,247Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-8 << HTTP/1.1 200 OK 
+[]2015-03-18T18:47:12,247Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-8 << Date: Wed, 18 Mar 2015 18:47:12 GMT 
+[]2015-03-18T18:47:12,247Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-8 << Expires: -1 
+[]2015-03-18T18:47:12,247Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-8 << Cache-Control: private, max-age=0 
+[]2015-03-18T18:47:12,248Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-8 << Content-Type: text/html; charset=ISO-8859-1 
+[]2015-03-18T18:47:12,248Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-8 << Set-Cookie: PREF=ID=4af787218234c38c:FF=0:TM=1426704432:LM=1426704432:S=jDRxZfzEP0YCxIAs; expires=Fri, 17-Mar-2017 18:47:12 GMT; path=/; domain=.google.co.id 
+[]2015-03-18T18:47:12,248Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-8 << Set-Cookie: NID=67=N83Wi7GZj1K-6eCckn9kF7mI-RC7E8l12XCAnPnNBLpbhCR2YiOul5aT12bA2QBEtkH4hnCcS3hMyopEMToyxfduf6boR4kHQTHLkMGzEdQ-Zg-lEd0LaBEqTeleChhx; expires=Thu, 17-Sep-2015 18:47:12 GMT; path=/; domain=.google.co.id; HttpOnly 
+[]2015-03-18T18:47:12,248Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-8 << P3P: CP="This is not a P3P policy! See http://www.google.com/support/accounts/bin/answer.py?hl=en&answer=151657 for more info." 
+[]2015-03-18T18:47:12,248Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-8 << Server: gws 
+[]2015-03-18T18:47:12,248Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-8 << X-XSS-Protection: 1; mode=block 
+[]2015-03-18T18:47:12,248Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-8 << X-Frame-Options: SAMEORIGIN 
+[]2015-03-18T18:47:12,248Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-8 << Alternate-Protocol: 80:quic,p=0.5 
+[]2015-03-18T18:47:12,248Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-8 << Accept-Ranges: none 
+[]2015-03-18T18:47:12,248Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-8 << Vary: Accept-Encoding 
+[]2015-03-18T18:47:12,248Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-8 << Transfer-Encoding: chunked 
+[]2015-03-18T18:47:12,248Z DEBUG c.g.c.b.s.o.a.h.i.e.MainClientExec - Connection can be kept alive indefinitely 
+[]2015-03-18T18:47:12,249Z DEBUG c.g.c.b.s.o.a.h.c.p.ResponseProcessCookies - Cookie accepted [PREF="ID=4af787218234c38c:FF=0:TM=1426704432:LM=1426704432:S=jDRxZfzEP0YCxIAs", version:0, domain:.google.co.id, path:/, expiry:Sat Mar 18 01:47:12 WIT 2017] 
+[]2015-03-18T18:47:12,249Z DEBUG c.g.c.b.s.o.a.h.c.p.ResponseProcessCookies - Cookie accepted [NID="67=N83Wi7GZj1K-6eCckn9kF7mI-RC7E8l12XCAnPnNBLpbhCR2YiOul5aT12bA2QBEtkH4hnCcS3hMyopEMToyxfduf6boR4kHQ...", version:0, domain:.google.co.id, path:/, expiry:Fri Sep 18 01:47:12 WIT 2015] 
+[]2015-03-18T18:47:14,036Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestAddCookies - CookieSpec selected: best-match 
+[]2015-03-18T18:47:14,036Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestAuthCache - Auth cache not set in the context 
+[]2015-03-18T18:47:14,036Z DEBUG c.g.c.b.s.o.a.h.i.c.PoolingHttpClientConnectionManager - Connection request: [route: {}->http://www.google.co.id:80][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20] 
+[]2015-03-18T18:47:14,036Z DEBUG c.g.c.b.s.o.a.h.i.c.PoolingHttpClientConnectionManager - Connection leased: [id: 9][route: {}->http://www.google.co.id:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20] 
+[]2015-03-18T18:47:14,036Z DEBUG c.g.c.b.s.o.a.h.i.e.MainClientExec - Opening connection {}->http://www.google.co.id:80 
+[]2015-03-18T18:47:14,036Z DEBUG c.g.c.b.s.o.a.h.i.c.HttpClientConnectionOperator - Connecting to www.google.co.id/173.194.117.15:80 
+[]2015-03-18T18:47:14,072Z DEBUG c.g.c.b.s.o.a.h.i.c.HttpClientConnectionOperator - Connection established 192.168.1.100:51649<->173.194.117.15:80 
+[]2015-03-18T18:47:14,072Z DEBUG c.g.c.b.s.o.a.h.i.e.MainClientExec - Executing request GET / HTTP/1.1 
+[]2015-03-18T18:47:14,072Z DEBUG c.g.c.b.s.o.a.h.i.e.MainClientExec - Target auth state: UNCHALLENGED 
+[]2015-03-18T18:47:14,072Z DEBUG c.g.c.b.s.o.a.h.i.e.MainClientExec - Proxy auth state: UNCHALLENGED 
+[]2015-03-18T18:47:14,073Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-9 >> GET / HTTP/1.1 
+[]2015-03-18T18:47:14,073Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-9 >> accept: application/json 
+[]2015-03-18T18:47:14,073Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-9 >> Host: www.google.co.id 
+[]2015-03-18T18:47:14,073Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-9 >> Connection: Keep-Alive 
+[]2015-03-18T18:47:14,073Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-9 >> User-Agent: Apache-HttpClient/4.3.5 (java 1.5) 
+[]2015-03-18T18:47:14,073Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-9 >> Accept-Encoding: gzip,deflate 
+[]2015-03-18T18:47:14,073Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-9 >> "GET / HTTP/1.1[\r][\n]" 
+[]2015-03-18T18:47:14,073Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-9 >> "accept: application/json[\r][\n]" 
+[]2015-03-18T18:47:14,073Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-9 >> "Host: www.google.co.id[\r][\n]" 
+[]2015-03-18T18:47:14,073Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-9 >> "Connection: Keep-Alive[\r][\n]" 
+[]2015-03-18T18:47:14,073Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-9 >> "User-Agent: Apache-HttpClient/4.3.5 (java 1.5)[\r][\n]" 
+[]2015-03-18T18:47:14,073Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-9 >> "Accept-Encoding: gzip,deflate[\r][\n]" 
+[]2015-03-18T18:47:14,073Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-9 >> "[\r][\n]" 
+[]2015-03-18T18:47:14,233Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-9 << "HTTP/1.1 200 OK[\r][\n]" 
+[]2015-03-18T18:47:14,233Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-9 << "Date: Wed, 18 Mar 2015 18:47:14 GMT[\r][\n]" 
+[]2015-03-18T18:47:14,233Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-9 << "Expires: -1[\r][\n]" 
+[]2015-03-18T18:47:14,233Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-9 << "Cache-Control: private, max-age=0[\r][\n]" 
+[]2015-03-18T18:47:14,233Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-9 << "Content-Type: text/html; charset=ISO-8859-1[\r][\n]" 
+[]2015-03-18T18:47:14,233Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-9 << "Set-Cookie: PREF=ID=da839b48c7dc0bb3:FF=0:TM=1426704434:LM=1426704434:S=T46ybaPtBih8va2I; expires=Fri, 17-Mar-2017 18:47:14 GMT; path=/; domain=.google.co.id[\r][\n]" 
+[]2015-03-18T18:47:14,233Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-9 << "Set-Cookie: NID=67=DqIgj5nYTtfT1uTu0NFuZwd6arhyUeMaeaChgS1GXzb9OKZYVI8Fe6vxTuMtBTZxvKjwK-he1CNSH7QztA5xI-CzeB03m4su6DKeJ0gcc1noAHcH4c5YGsSS8m8LOhtc; expires=Thu, 17-Sep-2015 18:47:14 GMT; path=/; domain=.google.co.id; HttpOnly[\r][\n]" 
+[]2015-03-18T18:47:14,233Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-9 << "P3P: CP="This is not a P3P policy! See http://www.google.com/support/accounts/bin/answer.py?hl=en&answer=151657 for more info."[\r][\n]" 
+[]2015-03-18T18:47:14,233Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-9 << "Server: gws[\r][\n]" 
+[]2015-03-18T18:47:14,233Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-9 << "X-XSS-Protection: 1; mode=block[\r][\n]" 
+[]2015-03-18T18:47:14,233Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-9 << "X-Frame-Options: SAMEORIGIN[\r][\n]" 
+[]2015-03-18T18:47:14,233Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-9 << "Alternate-Protocol: 80:quic,p=0.5[\r][\n]" 
+[]2015-03-18T18:47:14,233Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-9 << "Accept-Ranges: none[\r][\n]" 
+[]2015-03-18T18:47:14,233Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-9 << "Vary: Accept-Encoding[\r][\n]" 
+[]2015-03-18T18:47:14,233Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-9 << "Transfer-Encoding: chunked[\r][\n]" 
+[]2015-03-18T18:47:14,233Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-9 << "[\r][\n]" 
+[]2015-03-18T18:47:14,233Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-9 << "48e2[\r][\n]" 
+[]2015-03-18T18:47:14,233Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-9 << "<!doctype html><html itemscope="" itemtype="http://schema.org/WebPage" lang="id"><head><meta content="/images/google_favicon_128.png" itemprop="image"><title>Google</title><script>(function(){window.google={kEI:'MsgJVY6fCsKhugSVjoLoBg',kEXPI:'3700333,3700362,4011559,4017578,4020347,4020560,4024600,4028716,4028793,4028932,4029043,4029054,4029141,4029477,4029515,4029815,4029862,4029952,4030036,4030405,4030440,4031342,4031366,4031608,8500394,8500572,8500972,10200083',authuser:0,kSID:'MsgJVY6fCsKhugSVjoLoBg'};google.kHL='id';})();(function(){goo" 
+[]2015-03-18T18:47:14,233Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-9 << HTTP/1.1 200 OK 
+[]2015-03-18T18:47:14,233Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-9 << Date: Wed, 18 Mar 2015 18:47:14 GMT 
+[]2015-03-18T18:47:14,233Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-9 << Expires: -1 
+[]2015-03-18T18:47:14,234Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-9 << Cache-Control: private, max-age=0 
+[]2015-03-18T18:47:14,234Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-9 << Content-Type: text/html; charset=ISO-8859-1 
+[]2015-03-18T18:47:14,234Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-9 << Set-Cookie: PREF=ID=da839b48c7dc0bb3:FF=0:TM=1426704434:LM=1426704434:S=T46ybaPtBih8va2I; expires=Fri, 17-Mar-2017 18:47:14 GMT; path=/; domain=.google.co.id 
+[]2015-03-18T18:47:14,234Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-9 << Set-Cookie: NID=67=DqIgj5nYTtfT1uTu0NFuZwd6arhyUeMaeaChgS1GXzb9OKZYVI8Fe6vxTuMtBTZxvKjwK-he1CNSH7QztA5xI-CzeB03m4su6DKeJ0gcc1noAHcH4c5YGsSS8m8LOhtc; expires=Thu, 17-Sep-2015 18:47:14 GMT; path=/; domain=.google.co.id; HttpOnly 
+[]2015-03-18T18:47:14,234Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-9 << P3P: CP="This is not a P3P policy! See http://www.google.com/support/accounts/bin/answer.py?hl=en&answer=151657 for more info." 
+[]2015-03-18T18:47:14,234Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-9 << Server: gws 
+[]2015-03-18T18:47:14,234Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-9 << X-XSS-Protection: 1; mode=block 
+[]2015-03-18T18:47:14,234Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-9 << X-Frame-Options: SAMEORIGIN 
+[]2015-03-18T18:47:14,234Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-9 << Alternate-Protocol: 80:quic,p=0.5 
+[]2015-03-18T18:47:14,234Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-9 << Accept-Ranges: none 
+[]2015-03-18T18:47:14,234Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-9 << Vary: Accept-Encoding 
+[]2015-03-18T18:47:14,234Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-9 << Transfer-Encoding: chunked 
+[]2015-03-18T18:47:14,234Z DEBUG c.g.c.b.s.o.a.h.i.e.MainClientExec - Connection can be kept alive indefinitely 
+[]2015-03-18T18:47:14,235Z DEBUG c.g.c.b.s.o.a.h.c.p.ResponseProcessCookies - Cookie accepted [PREF="ID=da839b48c7dc0bb3:FF=0:TM=1426704434:LM=1426704434:S=T46ybaPtBih8va2I", version:0, domain:.google.co.id, path:/, expiry:Sat Mar 18 01:47:14 WIT 2017] 
+[]2015-03-18T18:47:14,235Z DEBUG c.g.c.b.s.o.a.h.c.p.ResponseProcessCookies - Cookie accepted [NID="67=DqIgj5nYTtfT1uTu0NFuZwd6arhyUeMaeaChgS1GXzb9OKZYVI8Fe6vxTuMtBTZxvKjwK-he1CNSH7QztA5xI-CzeB03m4su6...", version:0, domain:.google.co.id, path:/, expiry:Fri Sep 18 01:47:14 WIT 2015] 
+[]2015-03-18T18:47:16,024Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestAddCookies - CookieSpec selected: best-match 
+[]2015-03-18T18:47:16,024Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestAuthCache - Auth cache not set in the context 
+[]2015-03-18T18:47:16,024Z DEBUG c.g.c.b.s.o.a.h.i.c.PoolingHttpClientConnectionManager - Connection request: [route: {}->http://www.google.co.id:80][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20] 
+[]2015-03-18T18:47:16,024Z DEBUG c.g.c.b.s.o.a.h.i.c.PoolingHttpClientConnectionManager - Connection leased: [id: 10][route: {}->http://www.google.co.id:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20] 
+[]2015-03-18T18:47:16,024Z DEBUG c.g.c.b.s.o.a.h.i.e.MainClientExec - Opening connection {}->http://www.google.co.id:80 
+[]2015-03-18T18:47:16,025Z DEBUG c.g.c.b.s.o.a.h.i.c.HttpClientConnectionOperator - Connecting to www.google.co.id/173.194.117.15:80 
+[]2015-03-18T18:47:16,062Z DEBUG c.g.c.b.s.o.a.h.i.c.HttpClientConnectionOperator - Connection established 192.168.1.100:51650<->173.194.117.15:80 
+[]2015-03-18T18:47:16,062Z DEBUG c.g.c.b.s.o.a.h.i.e.MainClientExec - Executing request GET / HTTP/1.1 
+[]2015-03-18T18:47:16,062Z DEBUG c.g.c.b.s.o.a.h.i.e.MainClientExec - Target auth state: UNCHALLENGED 
+[]2015-03-18T18:47:16,062Z DEBUG c.g.c.b.s.o.a.h.i.e.MainClientExec - Proxy auth state: UNCHALLENGED 
+[]2015-03-18T18:47:16,062Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-10 >> GET / HTTP/1.1 
+[]2015-03-18T18:47:16,062Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-10 >> accept: application/json 
+[]2015-03-18T18:47:16,062Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-10 >> Host: www.google.co.id 
+[]2015-03-18T18:47:16,062Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-10 >> Connection: Keep-Alive 
+[]2015-03-18T18:47:16,062Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-10 >> User-Agent: Apache-HttpClient/4.3.5 (java 1.5) 
+[]2015-03-18T18:47:16,062Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-10 >> Accept-Encoding: gzip,deflate 
+[]2015-03-18T18:47:16,063Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-10 >> "GET / HTTP/1.1[\r][\n]" 
+[]2015-03-18T18:47:16,063Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-10 >> "accept: application/json[\r][\n]" 
+[]2015-03-18T18:47:16,063Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-10 >> "Host: www.google.co.id[\r][\n]" 
+[]2015-03-18T18:47:16,063Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-10 >> "Connection: Keep-Alive[\r][\n]" 
+[]2015-03-18T18:47:16,063Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-10 >> "User-Agent: Apache-HttpClient/4.3.5 (java 1.5)[\r][\n]" 
+[]2015-03-18T18:47:16,063Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-10 >> "Accept-Encoding: gzip,deflate[\r][\n]" 
+[]2015-03-18T18:47:16,063Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-10 >> "[\r][\n]" 
+[]2015-03-18T18:47:16,213Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-10 << "HTTP/1.1 200 OK[\r][\n]" 
+[]2015-03-18T18:47:16,213Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-10 << "Date: Wed, 18 Mar 2015 18:47:16 GMT[\r][\n]" 
+[]2015-03-18T18:47:16,213Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-10 << "Expires: -1[\r][\n]" 
+[]2015-03-18T18:47:16,213Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-10 << "Cache-Control: private, max-age=0[\r][\n]" 
+[]2015-03-18T18:47:16,213Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-10 << "Content-Type: text/html; charset=ISO-8859-1[\r][\n]" 
+[]2015-03-18T18:47:16,213Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-10 << "Set-Cookie: PREF=ID=694fb742a5514aaf:FF=0:TM=1426704436:LM=1426704436:S=DZtyNZtrXA1lxNZy; expires=Fri, 17-Mar-2017 18:47:16 GMT; path=/; domain=.google.co.id[\r][\n]" 
+[]2015-03-18T18:47:16,213Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-10 << "Set-Cookie: NID=67=iZRbMw3BzExqyOF5G77wyibjDWchcKK3dprxqlsyLubEG3Pngb9RVPuzzHGis2eXTFipeEQUchc3Eai1u6zvXcO5TIThs-yiijK-uI2fdpn9WhxtE2-qVZj7EOazQ9lH; expires=Thu, 17-Sep-2015 18:47:16 GMT; path=/; domain=.google.co.id; HttpOnly[\r][\n]" 
+[]2015-03-18T18:47:16,213Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-10 << "P3P: CP="This is not a P3P policy! See http://www.google.com/support/accounts/bin/answer.py?hl=en&answer=151657 for more info."[\r][\n]" 
+[]2015-03-18T18:47:16,213Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-10 << "Server: gws[\r][\n]" 
+[]2015-03-18T18:47:16,213Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-10 << "X-XSS-Protection: 1; mode=block[\r][\n]" 
+[]2015-03-18T18:47:16,213Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-10 << "X-Frame-Options: SAMEORIGIN[\r][\n]" 
+[]2015-03-18T18:47:16,213Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-10 << "Alternate-Protocol: 80:quic,p=0.5[\r][\n]" 
+[]2015-03-18T18:47:16,213Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-10 << "Accept-Ranges: none[\r][\n]" 
+[]2015-03-18T18:47:16,213Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-10 << "Vary: Accept-Encoding[\r][\n]" 
+[]2015-03-18T18:47:16,213Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-10 << "Transfer-Encoding: chunked[\r][\n]" 
+[]2015-03-18T18:47:16,213Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-10 << "[\r][\n]" 
+[]2015-03-18T18:47:16,213Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-10 << "491c[\r][\n]" 
+[]2015-03-18T18:47:16,213Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-10 << "<!doctype html><html itemscope="" itemtype="http://schema.org/WebPage" lang="id"><head><meta content="/images/google_favicon_128.png" itemprop="image"><title>Google</title><script>(function(){window.google={kEI:'NMgJVcK0CYy3uASO_IGoBA',kEXPI:'3700242,3700362,4011559,4014789,4020347,4020562,4020726,4021338,4024600,4028716,4028932,4029043,4029054,4029141,4029515,4029666,4029815,4029862,4029952,4029957,4030036,4030405,4030440,4031367,4031389,4031498,4031608,4031653,8300096,8500394,8500852,8501183,10200083,10200980,10201031',authuser:0,kSID:'NMg" 
+[]2015-03-18T18:47:16,214Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-10 << HTTP/1.1 200 OK 
+[]2015-03-18T18:47:16,214Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-10 << Date: Wed, 18 Mar 2015 18:47:16 GMT 
+[]2015-03-18T18:47:16,214Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-10 << Expires: -1 
+[]2015-03-18T18:47:16,214Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-10 << Cache-Control: private, max-age=0 
+[]2015-03-18T18:47:16,214Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-10 << Content-Type: text/html; charset=ISO-8859-1 
+[]2015-03-18T18:47:16,214Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-10 << Set-Cookie: PREF=ID=694fb742a5514aaf:FF=0:TM=1426704436:LM=1426704436:S=DZtyNZtrXA1lxNZy; expires=Fri, 17-Mar-2017 18:47:16 GMT; path=/; domain=.google.co.id 
+[]2015-03-18T18:47:16,214Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-10 << Set-Cookie: NID=67=iZRbMw3BzExqyOF5G77wyibjDWchcKK3dprxqlsyLubEG3Pngb9RVPuzzHGis2eXTFipeEQUchc3Eai1u6zvXcO5TIThs-yiijK-uI2fdpn9WhxtE2-qVZj7EOazQ9lH; expires=Thu, 17-Sep-2015 18:47:16 GMT; path=/; domain=.google.co.id; HttpOnly 
+[]2015-03-18T18:47:16,214Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-10 << P3P: CP="This is not a P3P policy! See http://www.google.com/support/accounts/bin/answer.py?hl=en&answer=151657 for more info." 
+[]2015-03-18T18:47:16,214Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-10 << Server: gws 
+[]2015-03-18T18:47:16,214Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-10 << X-XSS-Protection: 1; mode=block 
+[]2015-03-18T18:47:16,214Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-10 << X-Frame-Options: SAMEORIGIN 
+[]2015-03-18T18:47:16,214Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-10 << Alternate-Protocol: 80:quic,p=0.5 
+[]2015-03-18T18:47:16,214Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-10 << Accept-Ranges: none 
+[]2015-03-18T18:47:16,214Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-10 << Vary: Accept-Encoding 
+[]2015-03-18T18:47:16,214Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-10 << Transfer-Encoding: chunked 
+[]2015-03-18T18:47:16,214Z DEBUG c.g.c.b.s.o.a.h.i.e.MainClientExec - Connection can be kept alive indefinitely 
+[]2015-03-18T18:47:16,215Z DEBUG c.g.c.b.s.o.a.h.c.p.ResponseProcessCookies - Cookie accepted [PREF="ID=694fb742a5514aaf:FF=0:TM=1426704436:LM=1426704436:S=DZtyNZtrXA1lxNZy", version:0, domain:.google.co.id, path:/, expiry:Sat Mar 18 01:47:16 WIT 2017] 
+[]2015-03-18T18:47:16,215Z DEBUG c.g.c.b.s.o.a.h.c.p.ResponseProcessCookies - Cookie accepted [NID="67=iZRbMw3BzExqyOF5G77wyibjDWchcKK3dprxqlsyLubEG3Pngb9RVPuzzHGis2eXTFipeEQUchc3Eai1u6zvXcO5TIThs-yii...", version:0, domain:.google.co.id, path:/, expiry:Fri Sep 18 01:47:16 WIT 2015] 
+[]2015-03-18T18:47:18,045Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestAddCookies - CookieSpec selected: best-match 
+[]2015-03-18T18:47:18,045Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestAuthCache - Auth cache not set in the context 
+[]2015-03-18T18:47:18,045Z DEBUG c.g.c.b.s.o.a.h.i.c.PoolingHttpClientConnectionManager - Connection request: [route: {}->http://www.google.co.id:80][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20] 
+[]2015-03-18T18:47:18,045Z DEBUG c.g.c.b.s.o.a.h.i.c.PoolingHttpClientConnectionManager - Connection leased: [id: 11][route: {}->http://www.google.co.id:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20] 
+[]2015-03-18T18:47:18,045Z DEBUG c.g.c.b.s.o.a.h.i.e.MainClientExec - Opening connection {}->http://www.google.co.id:80 
+[]2015-03-18T18:47:18,046Z DEBUG c.g.c.b.s.o.a.h.i.c.HttpClientConnectionOperator - Connecting to www.google.co.id/173.194.117.15:80 
+[]2015-03-18T18:47:18,082Z DEBUG c.g.c.b.s.o.a.h.i.c.HttpClientConnectionOperator - Connection established 192.168.1.100:51651<->173.194.117.15:80 
+[]2015-03-18T18:47:18,083Z DEBUG c.g.c.b.s.o.a.h.i.e.MainClientExec - Executing request GET / HTTP/1.1 
+[]2015-03-18T18:47:18,083Z DEBUG c.g.c.b.s.o.a.h.i.e.MainClientExec - Target auth state: UNCHALLENGED 
+[]2015-03-18T18:47:18,083Z DEBUG c.g.c.b.s.o.a.h.i.e.MainClientExec - Proxy auth state: UNCHALLENGED 
+[]2015-03-18T18:47:18,083Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-11 >> GET / HTTP/1.1 
+[]2015-03-18T18:47:18,083Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-11 >> accept: application/json 
+[]2015-03-18T18:47:18,083Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-11 >> Host: www.google.co.id 
+[]2015-03-18T18:47:18,083Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-11 >> Connection: Keep-Alive 
+[]2015-03-18T18:47:18,083Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-11 >> User-Agent: Apache-HttpClient/4.3.5 (java 1.5) 
+[]2015-03-18T18:47:18,083Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-11 >> Accept-Encoding: gzip,deflate 
+[]2015-03-18T18:47:18,083Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-11 >> "GET / HTTP/1.1[\r][\n]" 
+[]2015-03-18T18:47:18,083Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-11 >> "accept: application/json[\r][\n]" 
+[]2015-03-18T18:47:18,083Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-11 >> "Host: www.google.co.id[\r][\n]" 
+[]2015-03-18T18:47:18,083Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-11 >> "Connection: Keep-Alive[\r][\n]" 
+[]2015-03-18T18:47:18,083Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-11 >> "User-Agent: Apache-HttpClient/4.3.5 (java 1.5)[\r][\n]" 
+[]2015-03-18T18:47:18,083Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-11 >> "Accept-Encoding: gzip,deflate[\r][\n]" 
+[]2015-03-18T18:47:18,083Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-11 >> "[\r][\n]" 
+[]2015-03-18T18:47:18,254Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-11 << "HTTP/1.1 200 OK[\r][\n]" 
+[]2015-03-18T18:47:18,254Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-11 << "Date: Wed, 18 Mar 2015 18:47:18 GMT[\r][\n]" 
+[]2015-03-18T18:47:18,254Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-11 << "Expires: -1[\r][\n]" 
+[]2015-03-18T18:47:18,254Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-11 << "Cache-Control: private, max-age=0[\r][\n]" 
+[]2015-03-18T18:47:18,254Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-11 << "Content-Type: text/html; charset=ISO-8859-1[\r][\n]" 
+[]2015-03-18T18:47:18,254Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-11 << "Set-Cookie: PREF=ID=69232000f79e5494:FF=0:TM=1426704438:LM=1426704438:S=JA8KJq5Zhugs8W78; expires=Fri, 17-Mar-2017 18:47:18 GMT; path=/; domain=.google.co.id[\r][\n]" 
+[]2015-03-18T18:47:18,254Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-11 << "Set-Cookie: NID=67=HDJdOKaHFWGhOk-o-vyXlQL2udEqrYOj8p4IHj8oJ33KjaSV7cIbHMopukioYpRcqJY3bnARz1FWLRc4gg6kez4fMoU3l2hlf5ROR_4_hyAFvFJ5yAMQvjwcZb8GA86C; expires=Thu, 17-Sep-2015 18:47:18 GMT; path=/; domain=.google.co.id; HttpOnly[\r][\n]" 
+[]2015-03-18T18:47:18,254Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-11 << "P3P: CP="This is not a P3P policy! See http://www.google.com/support/accounts/bin/answer.py?hl=en&answer=151657 for more info."[\r][\n]" 
+[]2015-03-18T18:47:18,254Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-11 << "Server: gws[\r][\n]" 
+[]2015-03-18T18:47:18,254Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-11 << "X-XSS-Protection: 1; mode=block[\r][\n]" 
+[]2015-03-18T18:47:18,254Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-11 << "X-Frame-Options: SAMEORIGIN[\r][\n]" 
+[]2015-03-18T18:47:18,254Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-11 << "Alternate-Protocol: 80:quic,p=0.5[\r][\n]" 
+[]2015-03-18T18:47:18,254Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-11 << "Accept-Ranges: none[\r][\n]" 
+[]2015-03-18T18:47:18,254Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-11 << "Vary: Accept-Encoding[\r][\n]" 
+[]2015-03-18T18:47:18,254Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-11 << "Transfer-Encoding: chunked[\r][\n]" 
+[]2015-03-18T18:47:18,254Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-11 << "[\r][\n]" 
+[]2015-03-18T18:47:18,254Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-11 << "4912[\r][\n]" 
+[]2015-03-18T18:47:18,254Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-11 << "<!doctype html><html itemscope="" itemtype="http://schema.org/WebPage" lang="id"><head><meta content="/images/google_favicon_128.png" itemprop="image"><title>Google</title><script>(function(){window.google={kEI:'NsgJVdqgC8S6uAT4vYLICA',kEXPI:'3700297,3700362,4011559,4020562,4020726,4026240,4026473,4028445,4028717,4028932,4029042,4029054,4029141,4029402,4029478,4029515,4029815,4029862,4029957,4030036,4030155,4030365,4030406,4030440,4030504,4031393,4031485,4031498,8300096,8500394,8500851,8500973,8501183,10200083',authuser:0,kSID:'NsgJVdqgC8S6u" 
+[]2015-03-18T18:47:18,255Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-11 << HTTP/1.1 200 OK 
+[]2015-03-18T18:47:18,255Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-11 << Date: Wed, 18 Mar 2015 18:47:18 GMT 
+[]2015-03-18T18:47:18,255Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-11 << Expires: -1 
+[]2015-03-18T18:47:18,255Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-11 << Cache-Control: private, max-age=0 
+[]2015-03-18T18:47:18,255Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-11 << Content-Type: text/html; charset=ISO-8859-1 
+[]2015-03-18T18:47:18,255Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-11 << Set-Cookie: PREF=ID=69232000f79e5494:FF=0:TM=1426704438:LM=1426704438:S=JA8KJq5Zhugs8W78; expires=Fri, 17-Mar-2017 18:47:18 GMT; path=/; domain=.google.co.id 
+[]2015-03-18T18:47:18,255Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-11 << Set-Cookie: NID=67=HDJdOKaHFWGhOk-o-vyXlQL2udEqrYOj8p4IHj8oJ33KjaSV7cIbHMopukioYpRcqJY3bnARz1FWLRc4gg6kez4fMoU3l2hlf5ROR_4_hyAFvFJ5yAMQvjwcZb8GA86C; expires=Thu, 17-Sep-2015 18:47:18 GMT; path=/; domain=.google.co.id; HttpOnly 
+[]2015-03-18T18:47:18,255Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-11 << P3P: CP="This is not a P3P policy! See http://www.google.com/support/accounts/bin/answer.py?hl=en&answer=151657 for more info." 
+[]2015-03-18T18:47:18,255Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-11 << Server: gws 
+[]2015-03-18T18:47:18,255Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-11 << X-XSS-Protection: 1; mode=block 
+[]2015-03-18T18:47:18,255Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-11 << X-Frame-Options: SAMEORIGIN 
+[]2015-03-18T18:47:18,255Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-11 << Alternate-Protocol: 80:quic,p=0.5 
+[]2015-03-18T18:47:18,255Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-11 << Accept-Ranges: none 
+[]2015-03-18T18:47:18,255Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-11 << Vary: Accept-Encoding 
+[]2015-03-18T18:47:18,255Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-11 << Transfer-Encoding: chunked 
+[]2015-03-18T18:47:18,255Z DEBUG c.g.c.b.s.o.a.h.i.e.MainClientExec - Connection can be kept alive indefinitely 
+[]2015-03-18T18:47:18,256Z DEBUG c.g.c.b.s.o.a.h.c.p.ResponseProcessCookies - Cookie accepted [PREF="ID=69232000f79e5494:FF=0:TM=1426704438:LM=1426704438:S=JA8KJq5Zhugs8W78", version:0, domain:.google.co.id, path:/, expiry:Sat Mar 18 01:47:18 WIT 2017] 
+[]2015-03-18T18:47:18,257Z DEBUG c.g.c.b.s.o.a.h.c.p.ResponseProcessCookies - Cookie accepted [NID="67=HDJdOKaHFWGhOk-o-vyXlQL2udEqrYOj8p4IHj8oJ33KjaSV7cIbHMopukioYpRcqJY3bnARz1FWLRc4gg6kez4fMoU3l2hlf...", version:0, domain:.google.co.id, path:/, expiry:Fri Sep 18 01:47:18 WIT 2015] 
+[]2015-03-18T18:47:20,024Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestAddCookies - CookieSpec selected: best-match 
+[]2015-03-18T18:47:20,024Z DEBUG c.g.c.b.s.o.a.h.c.p.RequestAuthCache - Auth cache not set in the context 
+[]2015-03-18T18:47:20,024Z DEBUG c.g.c.b.s.o.a.h.i.c.PoolingHttpClientConnectionManager - Connection request: [route: {}->http://www.google.co.id:80][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20] 
+[]2015-03-18T18:47:20,024Z DEBUG c.g.c.b.s.o.a.h.i.c.PoolingHttpClientConnectionManager - Connection leased: [id: 12][route: {}->http://www.google.co.id:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20] 
+[]2015-03-18T18:47:20,024Z DEBUG c.g.c.b.s.o.a.h.i.e.MainClientExec - Opening connection {}->http://www.google.co.id:80 
+[]2015-03-18T18:47:20,024Z DEBUG c.g.c.b.s.o.a.h.i.c.HttpClientConnectionOperator - Connecting to www.google.co.id/173.194.117.15:80 
+[]2015-03-18T18:47:20,072Z DEBUG c.g.c.b.s.o.a.h.i.c.HttpClientConnectionOperator - Connection established 192.168.1.100:51652<->173.194.117.15:80 
+[]2015-03-18T18:47:20,072Z DEBUG c.g.c.b.s.o.a.h.i.e.MainClientExec - Executing request GET / HTTP/1.1 
+[]2015-03-18T18:47:20,072Z DEBUG c.g.c.b.s.o.a.h.i.e.MainClientExec - Target auth state: UNCHALLENGED 
+[]2015-03-18T18:47:20,072Z DEBUG c.g.c.b.s.o.a.h.i.e.MainClientExec - Proxy auth state: UNCHALLENGED 
+[]2015-03-18T18:47:20,073Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-12 >> GET / HTTP/1.1 
+[]2015-03-18T18:47:20,073Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-12 >> accept: application/json 
+[]2015-03-18T18:47:20,073Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-12 >> Host: www.google.co.id 
+[]2015-03-18T18:47:20,073Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-12 >> Connection: Keep-Alive 
+[]2015-03-18T18:47:20,073Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-12 >> User-Agent: Apache-HttpClient/4.3.5 (java 1.5) 
+[]2015-03-18T18:47:20,073Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-12 >> Accept-Encoding: gzip,deflate 
+[]2015-03-18T18:47:20,073Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-12 >> "GET / HTTP/1.1[\r][\n]" 
+[]2015-03-18T18:47:20,073Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-12 >> "accept: application/json[\r][\n]" 
+[]2015-03-18T18:47:20,073Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-12 >> "Host: www.google.co.id[\r][\n]" 
+[]2015-03-18T18:47:20,073Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-12 >> "Connection: Keep-Alive[\r][\n]" 
+[]2015-03-18T18:47:20,073Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-12 >> "User-Agent: Apache-HttpClient/4.3.5 (java 1.5)[\r][\n]" 
+[]2015-03-18T18:47:20,073Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-12 >> "Accept-Encoding: gzip,deflate[\r][\n]" 
+[]2015-03-18T18:47:20,073Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-12 >> "[\r][\n]" 
+[]2015-03-18T18:47:20,223Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-12 << "HTTP/1.1 200 OK[\r][\n]" 
+[]2015-03-18T18:47:20,223Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-12 << "Date: Wed, 18 Mar 2015 18:47:20 GMT[\r][\n]" 
+[]2015-03-18T18:47:20,223Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-12 << "Expires: -1[\r][\n]" 
+[]2015-03-18T18:47:20,223Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-12 << "Cache-Control: private, max-age=0[\r][\n]" 
+[]2015-03-18T18:47:20,223Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-12 << "Content-Type: text/html; charset=ISO-8859-1[\r][\n]" 
+[]2015-03-18T18:47:20,223Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-12 << "Set-Cookie: PREF=ID=deba72c30bd9ae8e:FF=0:TM=1426704440:LM=1426704440:S=cMD7WCF-UDqrb5EQ; expires=Fri, 17-Mar-2017 18:47:20 GMT; path=/; domain=.google.co.id[\r][\n]" 
+[]2015-03-18T18:47:20,223Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-12 << "Set-Cookie: NID=67=OnrgYzOzeJtX_xPSW4kWedAW5_2eoQ6pEHn1bgJrTqDOGBrZLIb_Q5KD5KEFutpCc1cfOwY0n4IOlPb_ysbQKpbFP3D0uYA4dG7jnZZXitrqM-MCeTTMewl_9GAlNe-M; expires=Thu, 17-Sep-2015 18:47:20 GMT; path=/; domain=.google.co.id; HttpOnly[\r][\n]" 
+[]2015-03-18T18:47:20,223Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-12 << "P3P: CP="This is not a P3P policy! See http://www.google.com/support/accounts/bin/answer.py?hl=en&answer=151657 for more info."[\r][\n]" 
+[]2015-03-18T18:47:20,223Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-12 << "Server: gws[\r][\n]" 
+[]2015-03-18T18:47:20,223Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-12 << "X-XSS-Protection: 1; mode=block[\r][\n]" 
+[]2015-03-18T18:47:20,223Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-12 << "X-Frame-Options: SAMEORIGIN[\r][\n]" 
+[]2015-03-18T18:47:20,223Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-12 << "Alternate-Protocol: 80:quic,p=0.5[\r][\n]" 
+[]2015-03-18T18:47:20,223Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-12 << "Accept-Ranges: none[\r][\n]" 
+[]2015-03-18T18:47:20,223Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-12 << "Vary: Accept-Encoding[\r][\n]" 
+[]2015-03-18T18:47:20,223Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-12 << "Transfer-Encoding: chunked[\r][\n]" 
+[]2015-03-18T18:47:20,223Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-12 << "[\r][\n]" 
+[]2015-03-18T18:47:20,224Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-12 << "492a[\r][\n]" 
+[]2015-03-18T18:47:20,224Z DEBUG c.g.c.b.shade.org.apache.http.wire - http-outgoing-12 << "<!doctype html><html itemscope="" itemtype="http://schema.org/WebPage" lang="id"><head><meta content="/images/google_favicon_128.png" itemprop="image"><title>Google</title><script>(function(){window.google={kEI:'OMgJVfmSCsTnuQTTuoKQBQ',kEXPI:'3700259,3700362,4011559,4020347,4020562,4021338,4024600,4027557,4028716,4028794,4028875,4028932,4029042,4029054,4029141,4029515,4029803,4029815,4029862,4029952,4030036,4030155,4030365,4030406,4030440,4031366,4031527,4031531,4031561,4031566,8300125,8500394,8500851,8500947,8500972,8501183,10200083',authus" 
+[]2015-03-18T18:47:20,224Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-12 << HTTP/1.1 200 OK 
+[]2015-03-18T18:47:20,224Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-12 << Date: Wed, 18 Mar 2015 18:47:20 GMT 
+[]2015-03-18T18:47:20,224Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-12 << Expires: -1 
+[]2015-03-18T18:47:20,224Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-12 << Cache-Control: private, max-age=0 
+[]2015-03-18T18:47:20,224Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-12 << Content-Type: text/html; charset=ISO-8859-1 
+[]2015-03-18T18:47:20,224Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-12 << Set-Cookie: PREF=ID=deba72c30bd9ae8e:FF=0:TM=1426704440:LM=1426704440:S=cMD7WCF-UDqrb5EQ; expires=Fri, 17-Mar-2017 18:47:20 GMT; path=/; domain=.google.co.id 
+[]2015-03-18T18:47:20,224Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-12 << Set-Cookie: NID=67=OnrgYzOzeJtX_xPSW4kWedAW5_2eoQ6pEHn1bgJrTqDOGBrZLIb_Q5KD5KEFutpCc1cfOwY0n4IOlPb_ysbQKpbFP3D0uYA4dG7jnZZXitrqM-MCeTTMewl_9GAlNe-M; expires=Thu, 17-Sep-2015 18:47:20 GMT; path=/; domain=.google.co.id; HttpOnly 
+[]2015-03-18T18:47:20,224Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-12 << P3P: CP="This is not a P3P policy! See http://www.google.com/support/accounts/bin/answer.py?hl=en&answer=151657 for more info." 
+[]2015-03-18T18:47:20,224Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-12 << Server: gws 
+[]2015-03-18T18:47:20,224Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-12 << X-XSS-Protection: 1; mode=block 
+[]2015-03-18T18:47:20,224Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-12 << X-Frame-Options: SAMEORIGIN 
+[]2015-03-18T18:47:20,224Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-12 << Alternate-Protocol: 80:quic,p=0.5 
+[]2015-03-18T18:47:20,224Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-12 << Accept-Ranges: none 
+[]2015-03-18T18:47:20,224Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-12 << Vary: Accept-Encoding 
+[]2015-03-18T18:47:20,224Z DEBUG c.g.c.b.s.org.apache.http.headers - http-outgoing-12 << Transfer-Encoding: chunked 
+[]2015-03-18T18:47:20,224Z DEBUG c.g.c.b.s.o.a.h.i.e.MainClientExec - Connection can be kept alive indefinitely 
+[]2015-03-18T18:47:20,225Z DEBUG c.g.c.b.s.o.a.h.c.p.ResponseProcessCookies - Cookie accepted [PREF="ID=deba72c30bd9ae8e:FF=0:TM=1426704440:LM=1426704440:S=cMD7WCF-UDqrb5EQ", version:0, domain:.google.co.id, path:/, expiry:Sat Mar 18 01:47:20 WIT 2017] 
+[]2015-03-18T18:47:20,226Z DEBUG c.g.c.b.s.o.a.h.c.p.ResponseProcessCookies - Cookie accepted [NID="67=OnrgYzOzeJtX_xPSW4kWedAW5_2eoQ6pEHn1bgJrTqDOGBrZLIb_Q5KD5KEFutpCc1cfOwY0n4IOlPb_ysbQKpbFP3D0uYA4d...", version:0, domain:.google.co.id, path:/, expiry:Fri Sep 18 01:47:20 WIT 2015] 
