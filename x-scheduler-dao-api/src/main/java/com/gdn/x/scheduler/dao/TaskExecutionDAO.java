@@ -18,7 +18,7 @@ import com.gdn.x.scheduler.model.TaskExecution;
 public interface TaskExecutionDAO extends CrudRepository<TaskExecution, String> {
 	
 	public static final String FIND_RUNNING_TASK 
-		= "FROM TaskExecution te WHERE te.task.id = :taskId AND te.end != NULL order by te.end desc";
+		= "FROM TaskExecution te WHERE te.task.id = :taskId AND te.end IS NULL order by te.end desc";
 
 	public TaskExecution findById(String id);
 	

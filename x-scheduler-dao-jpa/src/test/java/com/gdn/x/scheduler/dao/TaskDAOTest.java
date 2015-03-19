@@ -6,6 +6,8 @@ import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 import org.junit.Test;
@@ -13,6 +15,7 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import com.gdn.x.scheduler.constant.ThreadState;
 import com.gdn.x.scheduler.model.Task;
 
 /**
@@ -81,7 +84,7 @@ public class TaskDAOTest extends BaseDAOTest {
 	}
 	
 	@Test(timeout = 1000)
-	public void findByTaskName_severalRecordFound_moreThanOneRecordReturned() {
+	public void findByTaskNameLike_severalRecordFound_moreThanOneRecordReturned() {
 		List<Task> task = taskDAO.findByTaskNameLike("%task%");
 		assertTrue(task.size() > 1);
 	}
@@ -122,5 +125,34 @@ public class TaskDAOTest extends BaseDAOTest {
 		taskDAO.deleteTask("3");
 		taskDAO.deleteTask("4");
 		assertTrue(taskDAO.countExclDelete() == 2);
+	}
+	
+	@Test(timeout = 1000)
+	public void updateTaskState_updateToScheduled_taskStateChangedToScheduled() {
+		taskDAO.updateTaskState(ThreadState.SCHEDULED, "1");
+		Task task = taskDAO.findById("1");
+		assertEquals(ThreadState.SCHEDULED, task.getState());
+	}
+	
+	@Test(timeout = 1000)
+	public void updateTaskMachineId_setMachineIdIntoTux_machineIdChangedToTux() {
+		taskDAO.updateTaskMachineId("TUX", "2");
+		Task task = taskDAO.findById("2");
+		assertEquals("TUX", task.getMachineId());
+	}
+	
+	@Test(timeout = 1000)
+	public void deleteExpiredTasks_noTaskWithExpiryDateLessThanProvidedDate_noRecordsDeleted() {
+		Calendar cal = Calendar.getInstance();
+		cal.set(Calendar.DAY_OF_MONTH, 1);
+		cal.set(Calendar.MONTH, 1);
+		cal.set(Calendar.YEAR, 2013);
+		int affected = taskDAO.deleteExpiredTasks(cal.getTime());
+		assertTrue(affected == 0);
+	}
+	
+	@Test(timeout = 1000)
+	public void deleteExpiredTasks_oneTaskWithExpiryDateLessThanProvidedDate_oneRecordDeleted() {
+		assertTrue(taskDAO.deleteExpiredTasks(new Date()) == 1);
 	}
 }

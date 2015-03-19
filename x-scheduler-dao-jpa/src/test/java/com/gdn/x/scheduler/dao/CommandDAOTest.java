@@ -123,4 +123,15 @@ public class CommandDAOTest extends BaseDAOTest {
 		commandDAO.restoreCommand("2");
 		assertFalse(commandDAO.findById("2").isMarkForDelete());
 	}	
+	
+	@Test(timeout = 1000)
+	public void exists_idExists_trueIsReturned() {
+		assertTrue(commandDAO.exists("1"));
+	}
+	
+	@Test(timeout = 1000)
+	public void exists_existingRecordTemporaryDeleted_recordStillExists() {
+		commandDAO.deleteCommand("2");
+		assertTrue(commandDAO.exists("2"));
+	}
 }
