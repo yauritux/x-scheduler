@@ -13,7 +13,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 import java.util.ArrayList;
-import java.util.Date;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -179,7 +178,6 @@ public class TaskControllerTest {
 		request.setCommandId(id);
 		request.setStoreId(STORE_ID);
 		request.setSubmittedBy("yauritux");
-		request.setSubmittedOn(new Date());
 		request.setTaskName("Fraud Checking");
 		
 		return request;

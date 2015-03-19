@@ -296,7 +296,6 @@ public class TaskCommandServiceImplTest {
 		//taskRequest.setThreadRunningPolicy(task.getThreadRunningPolicy().name());
 		taskRequest.setStoreId(task.getStoreId());
 		taskRequest.setSubmittedBy(task.getCreatedBy());
-		taskRequest.setSubmittedOn(new Date());
 		taskRequest.setTaskName(task.getTaskName());
 		return taskRequest;
 	}

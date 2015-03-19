@@ -230,7 +230,7 @@ public class TaskCommandServiceImpl implements TaskCommandService {
 		task.setCommand(commandQueryService.findById(request.getCommandId()));
 		
 		//TODO: use decorator pattern later
-		if (request.getIntervalUnit().equalsIgnoreCase(SchedulerIntervalUnit.SECONDS.name())) {
+		if (SchedulerIntervalUnit.SECONDS.name().equalsIgnoreCase(request.getIntervalUnit())) {
 			task.setSeconds(request.getSeconds() + "/" + request.getInterval());
 		} else {
 			task.setSeconds(request.getSeconds());
@@ -269,7 +269,7 @@ public class TaskCommandServiceImpl implements TaskCommandService {
 		
 		//task.setThreadRunningPolicy(ThreadRunningPolicy.valueOf(request.getThreadRunningPolicy()));
 		task.setCreatedBy(request.getSubmittedBy());
-		task.setCreatedDate(request.getSubmittedOn() == null ? new Date() : request.getSubmittedOn());
+		task.setCreatedDate(new Date());
 		task.setMarkForDelete(false);
 		task.setStoreId(request.getStoreId());
 		try {

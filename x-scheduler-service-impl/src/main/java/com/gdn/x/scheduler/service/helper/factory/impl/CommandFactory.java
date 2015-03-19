@@ -40,11 +40,11 @@ public class CommandFactory {
 	}
 	
 	/**
-	 * Build specific command object (i.e. WebService, ClientSDK) 
+	 * Build specific command helper object (i.e. WebService, ClientSDK) 
 	 * based on the CommandRequest object.
 	 * 
 	 * @param request
-	 * @return specific command object
+	 * @return specific command helper 
 	 */
 	public static final Command getCommandFromEntity(CommandRequest request) {
 		try {

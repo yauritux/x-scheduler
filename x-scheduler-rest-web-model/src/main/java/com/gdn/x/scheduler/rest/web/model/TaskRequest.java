@@ -1,7 +1,5 @@
 package com.gdn.x.scheduler.rest.web.model;
 
-import java.util.Date;
-
 import org.hibernate.validator.constraints.NotEmpty;
 
 import com.gdn.common.web.wrapper.request.SimpleRequestHolder;
@@ -31,16 +29,12 @@ public class TaskRequest extends SimpleRequestHolder {
 	private String month;
 	private String dayOfWeek;
 	private String year;
-	private String threadRunningPolicy;
+	//private String threadRunningPolicy;
 	private String startDate;
 	private String expiryDate;	
 	private int priority;
-	
-	/**
-	 * TODO: use enum instead of String
-	 * 
-	 * @return
-	 */
+
+	/*
 	public String getThreadRunningPolicy() {
 		return threadRunningPolicy;
 	}
@@ -48,13 +42,9 @@ public class TaskRequest extends SimpleRequestHolder {
 	public void setThreadRunningPolicy(String threadRunningPolicy) {
 		this.threadRunningPolicy = threadRunningPolicy;
 	}
-
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
+	*/
 
 	private String submittedBy;
-	private Date submittedOn;		
 	
 	public TaskRequest() {
 		super();
@@ -68,10 +58,6 @@ public class TaskRequest extends SimpleRequestHolder {
 		this.interval = interval;
 	}
 
-	/**
-	 * TODO: use enum value later instead of plain String.
-	 * @return
-	 */
 	public String getIntervalUnit() {
 		return intervalUnit;
 	}
@@ -168,14 +154,6 @@ public class TaskRequest extends SimpleRequestHolder {
 		this.submittedBy = submittedBy;
 	}
 
-	public Date getSubmittedOn() {
-		return submittedOn;
-	}
-
-	public void setSubmittedOn(Date submittedOn) {
-		this.submittedOn = submittedOn;
-	}
-	
 	public String getStartDate() {
 		return startDate;
 	}

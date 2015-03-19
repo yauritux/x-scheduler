@@ -1,6 +1,7 @@
 package com.gdn.x.scheduler.service.helper.receiver.impl;
 
 import java.io.IOException;
+import java.util.Date;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,7 +22,11 @@ import com.gdn.x.scheduler.rest.web.model.CommandRequest;
 import com.gdn.x.scheduler.rest.web.model.CommandResponse;
 import com.gdn.x.scheduler.service.common.helper.impl.CommonUtil;
 import com.gdn.x.scheduler.service.domain.CommandQueryService;
+import com.gdn.x.scheduler.service.helper.executor.BashExecutor;
+import com.gdn.x.scheduler.service.helper.executor.ClientSDKExecutor;
+import com.gdn.x.scheduler.service.helper.executor.JarExecutor;
 import com.gdn.x.scheduler.service.helper.receiver.CommandReceiver;
+import com.gdn.x.scheduler.wrapper.ProcessResponse;
 
 /**
  * 
@@ -107,11 +112,11 @@ public class CSCommandReceiverImpl implements CommandReceiver {
 		csCommand.setCommand("{\"" + ClientSDKRequestField.ENTRY_POINT.label()
 				+ "\":\""
 				+ uploadedDir + "/"  								
-				+ csCommandRequest.getEntryPoint() 
+				+ csCommandRequest.getSdkName()
 				+ "\"}");
 		csCommand.setCommandType(CommandType.CLIENT_SDK);
 		csCommand.setCreatedBy(csCommandRequest.getSubmittedBy());
-		csCommand.setCreatedDate(csCommandRequest.getSubmittedOn());
+		csCommand.setCreatedDate(new Date());
 		csCommand.setMarkForDelete(false);
 		csCommand.setStoreId(csCommandRequest.getStoreId());
 		
@@ -127,27 +132,28 @@ public class CSCommandReceiverImpl implements CommandReceiver {
 			
 			String[] fileParts = clientSDK.getEntryPoint().split("\\.");
 			String extension = fileParts[fileParts.length - 1];
-			Process p = null;
+			ClientSDKExecutor executor = null;
+			ProcessResponse response = null;
 			
 			if (extension.equalsIgnoreCase(ClientSDKExtension.JAR.extension())) {
-				p = Runtime.getRuntime().exec("java -jar " + clientSDK.getEntryPoint());
+				executor = new JarExecutor(clientSDK.getEntryPoint());
+				response = executor.execute(900);
 			} else if (extension.equalsIgnoreCase(ClientSDKExtension.SHELL_SCRIPT.extension())) {
-				p = Runtime.getRuntime().exec("bash " + clientSDK.getEntryPoint());
+				executor = new BashExecutor(clientSDK.getEntryPoint());
+				response = executor.execute(900);
 			} else {
 				throw new Exception("Unrecognized Task's Command.");
 			}
-			p.waitFor();
-			int exitCode = p.exitValue();
-			System.out.println("Done with exit code = " + exitCode);
 			
-			if (exitCode != 0) {
-				throw new RuntimeException("Failed to execute ClientSDK. Exit Code: "
-						+ exitCode);
-			}	
+			if (!"0".equals(response.getCode())) {
+				throw new RuntimeException(response.toString());
+			}
+			
+			System.out.println("Done with exit code = " + response.getCode());
 		} catch (Exception e) {
 			LOG.error(e.getMessage(), e);
 			e.printStackTrace();
 			throw e;
 		}
-	}
+	}	
 }

@@ -37,16 +37,13 @@ public class CommonUtil {
 	}
 
 	public static String getMachineId() {
-		System.out.println("getMachineID");
 		if (propLoaded) {
-			System.out.println("propLoaded");
 			return properties.getProperty(XSchedulerProperties.MACHINE_ID.key());
 		} 
 		if (System.getenv(TaskCommandService.MACHINE_ID) != null) {
 			return System.getenv(TaskCommandService.MACHINE_ID);
 		} 			
 		
-		System.out.println("MACHINE IS NOT SET");
 		return "NOT-SET";
 	}
 	

@@ -140,7 +140,6 @@ public class CommandController {
 		PageMetaData pageMetaData = null;
 		
 		try {		
-			//Page<Command> pageList = commandQueryService.fetchAll(pageNumber, pageSize);
 			Page<Command> pageList = commandQueryService.findByCommandType(CommandType.WEB_SERVICE, pageNumber, pageSize);
 		
 			List<Command> commands = pageList.getContent();
@@ -182,7 +181,6 @@ public class CommandController {
 		PageMetaData pageMetaData = null;
 		
 		try {		
-			//Page<Command> pageList = commandQueryService.fetchAll(pageNumber, pageSize);
 			Page<Command> pageList = commandQueryService.findByCommandType(CommandType.CLIENT_SDK, pageNumber, pageSize);
 		
 			List<Command> commands = pageList.getContent();
@@ -235,7 +233,7 @@ public class CommandController {
 		
 		if (result.hasErrors()) {
 			return errorValidation(result);
-		}				
+		}		
 		
 		ClientSDKCommand csCommand = (ClientSDKCommand) commandActionService.buildCommandFromRequest(csCommandRequest);
 				

@@ -1,7 +1,5 @@
 package com.gdn.x.scheduler.rest.web.model;
 
-import java.util.Date;
-
 import org.hibernate.validator.constraints.NotEmpty;
 
 import com.gdn.common.web.wrapper.request.SimpleRequestHolder;
@@ -25,7 +23,6 @@ public class CommandRequest extends SimpleRequestHolder {
 	@NotEmpty(message = "store id cannot be empty")
 	private String storeId;
 	private String submittedBy;
-	private Date submittedOn;
 	
 	public CommandRequest() {
 		super();
@@ -53,13 +50,5 @@ public class CommandRequest extends SimpleRequestHolder {
 	
 	public void setSubmittedBy(String submittedBy) {
 		this.submittedBy = submittedBy;
-	}
-	
-	public Date getSubmittedOn() {
-		return submittedOn;
-	}
-	
-	public void setSubmittedOn(Date submittedOn) {
-		this.submittedOn = submittedOn;
-	}
+	}	
 }

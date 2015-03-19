@@ -1,6 +1,7 @@
 package com.gdn.x.scheduler.service.helper.receiver.impl;
 
 import java.io.IOException;
+import java.util.Date;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -10,9 +11,11 @@ import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.gdn.common.base.shade.org.apache.http.HttpHeaders;
 import com.gdn.common.base.shade.org.apache.http.client.config.RequestConfig;
 import com.gdn.common.base.shade.org.apache.http.client.methods.CloseableHttpResponse;
 import com.gdn.common.base.shade.org.apache.http.client.methods.HttpGet;
+import com.gdn.common.base.shade.org.apache.http.client.methods.HttpRequestBase;
 import com.gdn.common.base.shade.org.apache.http.impl.client.CloseableHttpClient;
 import com.gdn.common.base.shade.org.apache.http.impl.client.HttpClientBuilder;
 import com.gdn.x.scheduler.constant.CommandType;
@@ -121,7 +124,7 @@ public class WSCommandReceiverImpl implements CommandReceiver {
 		wsCommand.setContents(wsCommandRequest.getContents());
 		wsCommand.setParameters(wsCommandRequest.getParameters());		
 		wsCommand.setCreatedBy(wsCommandRequest.getSubmittedBy());
-		wsCommand.setCreatedDate(wsCommandRequest.getSubmittedOn());
+		wsCommand.setCreatedDate(new Date());
 		wsCommand.setMarkForDelete(false);
 		wsCommand.setStoreId(wsCommandRequest.getStoreId());
 		
@@ -133,8 +136,8 @@ public class WSCommandReceiverImpl implements CommandReceiver {
 		System.out.println("Calling web service...");
 		
 		CloseableHttpClient httpClient = null;
-		HttpGet getRequest = null;
 		CloseableHttpResponse response = null;
+		HttpRequestBase request = null;
 		
 		try {
 			WSCommandResponse webService = (WSCommandResponse) commandQueryService.wrapCommand(command);
@@ -143,15 +146,16 @@ public class WSCommandReceiverImpl implements CommandReceiver {
 				StringBuilder strRequest = new StringBuilder();
 				strRequest.append(webService.getEndPoint());
 				if (webService.getParameters() != null && !webService.getParameters().isEmpty()) {
-					strRequest.append("?" + webService.getParameters());
+					strRequest.append("?").append(webService.getParameters());
 				}
 				RequestConfig requestConfig = RequestConfig.custom().setConnectionRequestTimeout(11000)
 						.setConnectTimeout(11000).setSocketTimeout(11000).build();
-				getRequest = new HttpGet(strRequest.toString());
-				getRequest.addHeader("accept", "application/json");
-				getRequest.setConfig(requestConfig);
+				request = new HttpGet(strRequest.toString());
+				request.addHeader(HttpHeaders.ACCEPT, "application/json");
+				request.setConfig(requestConfig);
+				//((HttpPost) request).setEntity(new StringEntity(webService.getContents(), ContentType.create("application/json")));
 				
-				response = httpClient.execute(getRequest);
+				response = httpClient.execute(request);
 				
 				System.out.println("Response Code = " + response.getStatusLine().getStatusCode());
 				
@@ -162,8 +166,8 @@ public class WSCommandReceiverImpl implements CommandReceiver {
 			}	
 		} catch (Exception e) {
 			try {
-				if (getRequest != null) {
-					getRequest.releaseConnection();
+				if (request != null) {
+					request.releaseConnection();
 				}
 				if (response != null) {
 					response.close();

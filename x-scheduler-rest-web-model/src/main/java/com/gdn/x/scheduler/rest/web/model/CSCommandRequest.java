@@ -13,17 +13,17 @@ public class CSCommandRequest extends CommandRequest {
 
 	private static final long serialVersionUID = 1859897177734304258L;
 
-	private String entryPoint;
+	private String sdkName;
 	
 	public CSCommandRequest() {
 		super();
 	}
 	
-	public String getEntryPoint() {
-		return entryPoint;
+	public String getSdkName() {
+		return sdkName;
 	}
 	
-	public void setEntryPoint(String entryPoint) {
-		this.entryPoint = entryPoint;
+	public void setSdkName(String sdkName) {
+		this.sdkName = sdkName;
 	}
 }

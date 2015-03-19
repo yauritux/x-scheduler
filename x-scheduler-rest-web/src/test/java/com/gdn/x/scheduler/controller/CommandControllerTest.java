@@ -263,7 +263,6 @@ public class CommandControllerTest {
 		).andDo(print())
 		.andExpect(jsonPath("requestId", equalTo(REQUEST_ID)));
 		//@formatter:on
-		//@formatter:on
 	}
 	
 	private WebServiceCommand buildWSCommand(String id, String URL) {
@@ -289,7 +288,6 @@ public class CommandControllerTest {
 		request.setEndpoint(URL[0]);
 		request.setWsMethod(WSMethod.GET.name());
 		request.setSubmittedBy("yauritux");
-		request.setSubmittedOn(new Date());
 		request.setCommandType(command.getCommandType().name());
 		request.setContents(((WebServiceCommand) command).getContents());
 		request.setId(command.getId());

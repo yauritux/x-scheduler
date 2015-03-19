@@ -48,9 +48,9 @@ public class MethodInvokingEngine implements CoreEngine<Task>, BeanFactoryAware 
 			 * from the scope of this class (which is singleton by default)
 			 * then we need to force the DI here (that's why i made this class implement BeanFactoryAware) , otherwise the prototype bean 
 			 * won't be acting as it should. 
-			 * see my comment on linkedIn discussion group 
-			 * at https://www.linkedin.com/groupItem?view=&gid=46964&type=member&item=212949099&commentID=5971684518195658753
-			 * &report.success=8ULbKyXO6NDvmoK7o030UNOYGZKrvdhBhypZ_w8EpQrrQI-BBjkmxwkEOwBjLE28YyDIxcyEO7_TA_giuRN#commentID_5971684518195658753 
+			 * see my comment on linkedIn discussion group at 
+			   https://www.linkedin.com/groupItem?view=&gid=46964&type=member&item=212949099&commentID=5971684518195658753
+			   &report.success=8ULbKyXO6NDvmoK7o030UNOYGZKrvdhBhypZ_w8EpQrrQI-BBjkmxwkEOwBjLE28YyDIxcyEO7_TA_giuRN#commentID_5971684518195658753 
 			 * regarding this matter.
 			 *  
 			 */

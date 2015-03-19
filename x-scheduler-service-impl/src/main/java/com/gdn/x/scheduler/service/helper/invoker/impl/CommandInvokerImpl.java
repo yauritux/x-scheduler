@@ -16,7 +16,10 @@ import com.gdn.x.scheduler.service.helper.invoker.CommandInvoker;
  * that can be used as an HTTP response object.
  * Invoker term came from <a href="http://en.wikipedia.org/wiki/Command_pattern">Command Pattern</a>.
  * Basically, the main job of this invoker is to wrapping the request from the user/system 
- * and mapping it into the appropriate command to be invoked later by the receiver.   
+ * and mapping it into the appropriate command to be invoked later by the receiver. 
+ * notice that the pattern that you might found here is a bit different with the one from GoF. 
+ * I have modified the original pattern to my own version in order to make it suitable with CQRS pattern 
+ * which already implemented in the service layer.    
  *
  */
 public class CommandInvokerImpl implements CommandInvoker {
@@ -41,7 +44,7 @@ public class CommandInvokerImpl implements CommandInvoker {
 	
 	/**
 	 * retrieves CommandResponse object as a wrapper/DTO for one of the command type 
-	 * defined in the system (i.e. WebService, ClientSDK, or ShellScript). 
+	 * defined in the system (i.e. WebService, ClientSDK). 
 	 * 
 	 */
 	@Override
@@ -51,6 +54,13 @@ public class CommandInvokerImpl implements CommandInvoker {
 		return schedulerCommand.buildCommandResponse();
 	}
 
+	/**
+	 * build and retrieve specific command helper (either WEB_SERVICE or CLIENT_SDK) based 
+	 * on the commandRequest provided as argument.
+	 * 
+	 * @param request commandRequest
+	 * @return command helper
+	 */
 	@Override
 	public Command buildFromCommandRequest(CommandRequest request) {
 		com.gdn.x.scheduler.service.helper.command.Command schedulerCommand

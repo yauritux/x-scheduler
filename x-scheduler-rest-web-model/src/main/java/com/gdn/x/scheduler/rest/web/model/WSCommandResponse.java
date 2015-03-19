@@ -16,6 +16,7 @@ public class WSCommandResponse extends CommandResponse {
 	private String endPoint;
 	private String httpMethod;
 	private String parameters;
+	private String contents;
 	
 	public WSCommandResponse() {}
 	
@@ -23,10 +24,20 @@ public class WSCommandResponse extends CommandResponse {
 		return endPoint;
 	}
 	
+	/**
+	 * the endpoint (URL) of this particular WebService.
+	 * 
+	 * @param endPoint
+	 */
 	public void setEndPoint(String endPoint) {
 		this.endPoint = endPoint;
 	}
 	
+	/**
+	 * WebService method (GET|POST|PUT|DELETE). 
+	 * 
+	 * @return webservice method
+	 */
 	public String getHttpMethod() {
 		return httpMethod;
 	}
@@ -41,5 +52,19 @@ public class WSCommandResponse extends CommandResponse {
 	
 	public void setParameters(String parameters) {
 		this.parameters = parameters;
+	}
+	
+	/**
+	 * WebService's payload. Please note that only JSON is supported as payload 
+	 * on this version.  
+	 * 
+	 * @return string represents payload in JSON format.
+	 */
+	public String getContents() {
+		return contents;
+	}
+	
+	public void setContents(String contents) {
+		this.contents = contents;
 	}
 }
