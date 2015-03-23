@@ -268,7 +268,6 @@ public class TaskCommandServiceImplTest {
 		task.setMonth("*");
 		task.setDayOfWeek("L");
 		task.setYear("*");
-		//task.setThreadRunningPolicy(ThreadRunningPolicy.SERIAL);
 		task.setCreatedBy("yauritux");
 		task.setCreatedDate(new Date());
 		task.setMarkForDelete(false);
@@ -293,7 +292,6 @@ public class TaskCommandServiceImplTest {
 		taskRequest.setMonth(task.getMonth());
 		taskRequest.setDayOfWeek(task.getDayOfWeek());
 		taskRequest.setYear(task.getYear());
-		//taskRequest.setThreadRunningPolicy(task.getThreadRunningPolicy().name());
 		taskRequest.setStoreId(task.getStoreId());
 		taskRequest.setSubmittedBy(task.getCreatedBy());
 		taskRequest.setTaskName(task.getTaskName());

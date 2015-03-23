@@ -15,7 +15,10 @@ import com.gdn.common.base.shade.org.apache.http.HttpHeaders;
 import com.gdn.common.base.shade.org.apache.http.client.config.RequestConfig;
 import com.gdn.common.base.shade.org.apache.http.client.methods.CloseableHttpResponse;
 import com.gdn.common.base.shade.org.apache.http.client.methods.HttpGet;
+import com.gdn.common.base.shade.org.apache.http.client.methods.HttpPost;
 import com.gdn.common.base.shade.org.apache.http.client.methods.HttpRequestBase;
+import com.gdn.common.base.shade.org.apache.http.entity.ContentType;
+import com.gdn.common.base.shade.org.apache.http.entity.StringEntity;
 import com.gdn.common.base.shade.org.apache.http.impl.client.CloseableHttpClient;
 import com.gdn.common.base.shade.org.apache.http.impl.client.HttpClientBuilder;
 import com.gdn.x.scheduler.constant.CommandType;
@@ -153,7 +156,6 @@ public class WSCommandReceiverImpl implements CommandReceiver {
 				request = new HttpGet(strRequest.toString());
 				request.addHeader(HttpHeaders.ACCEPT, "application/json");
 				request.setConfig(requestConfig);
-				//((HttpPost) request).setEntity(new StringEntity(webService.getContents(), ContentType.create("application/json")));
 				
 				response = httpClient.execute(request);
 				
@@ -163,7 +165,30 @@ public class WSCommandReceiverImpl implements CommandReceiver {
 					throw new RuntimeException("Failed to execute WS. Status Code: "
 							+ response.getStatusLine().getStatusCode());
 				}
-			}	
+			} else if (webService.getHttpMethod().equalsIgnoreCase(WSMethod.POST.name())) {
+				StringBuilder strRequest = new StringBuilder();
+				strRequest.append(webService.getEndPoint());
+				if (webService.getParameters() != null && !webService.getParameters().isEmpty()) {
+					strRequest.append("?").append(webService.getParameters());
+				}
+				RequestConfig requestConfig = RequestConfig.custom().setConnectionRequestTimeout(11000)
+						.setConnectTimeout(11000).setSocketTimeout(11000).build();
+				request = new HttpPost(strRequest.toString());
+				request.addHeader(HttpHeaders.CONTENT_TYPE, "application/json");
+				request.addHeader(HttpHeaders.ACCEPT, "application/json");
+				request.setConfig(requestConfig);
+				
+				((HttpPost) request).setEntity(new StringEntity(webService.getContents(), ContentType.create("application/json")));
+				
+				response = httpClient.execute(request);
+				
+				System.out.println("Response Code = " + response.getStatusLine().getStatusCode());
+				
+				if (response.getStatusLine().getStatusCode() != 200) {
+					throw new RuntimeException("Failed to execute WS. Status Code: "
+							+ response.getStatusLine().getStatusCode());
+				}
+			}
 		} catch (Exception e) {
 			try {
 				if (request != null) {
