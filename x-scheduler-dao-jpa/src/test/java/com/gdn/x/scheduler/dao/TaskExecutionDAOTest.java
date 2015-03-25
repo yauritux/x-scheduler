@@ -4,10 +4,16 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
+import java.util.Calendar;
+import java.util.Date;
+import java.util.List;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+import com.gdn.x.scheduler.model.TaskExecution;
 
 /**
  * 
@@ -35,5 +41,25 @@ public class TaskExecutionDAOTest extends BaseDAOTest {
 	@Test(timeout = 1000)
 	public void findRunningTask_taskIdOneAlreadyFinished_noRunningTaskFound() {
 		assertEquals(0, taskExecutionDAO.findRunningTask("1").size());
-	}	
+	}		
+	
+	@Test(timeout = 1000)
+	public void findObsoleteTaskExecutions_greaterThanOneMonthIsConsideredAsObsolete_oneRecordFound() {
+		Calendar calendar = Calendar.getInstance();
+		calendar.set(2015, 2, 25);
+		calendar.add(Calendar.MONTH, -1); 
+		Date dateToLookBackAfter = calendar.getTime();
+		List<TaskExecution> list = taskExecutionDAO.findObsoleteTaskExecutions(dateToLookBackAfter);
+		assertEquals(1, list.size());
+	}
+	
+	@Test(timeout = 1000)
+	public void deleteObsoleteTaskExecutions_greaterThanOneMonthIsConsideredAsObsolete_oneRecordDeleted() {
+		Calendar calendar = Calendar.getInstance();
+		calendar.set(2015, 2, 25);
+		calendar.add(Calendar.MONTH, -1);
+		Date dateToLookBackAfter = calendar.getTime();
+		int affectedRows = taskExecutionDAO.deleteObsoleteTaskExecutions(dateToLookBackAfter);
+		assertEquals(1, affectedRows);
+	}
 }

@@ -14,4 +14,5 @@ public interface TaskExecutionCommandService extends BaseCommandService<TaskExec
 	String MACHINE_ID = "MACHINE_ID";
 	
 	public TaskExecution createTaskExecutionFromTask(Task task, boolean persist);
+	public int deleteObsoleteTasks(int interval, int calendarField);
 }

@@ -1,5 +1,6 @@
 package com.gdn.x.scheduler.service.domain.impl;
 
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
@@ -27,14 +28,12 @@ import com.gdn.x.scheduler.service.domain.TaskExecutionCommandService;
  */
 @Service("taskExecutionCommandService")
 @Transactional(readOnly = false, propagation = Propagation.REQUIRED)
-public class TaskExecutionCommandServiceImpl implements
-		TaskExecutionCommandService {
+public class TaskExecutionCommandServiceImpl implements TaskExecutionCommandService {
 		
 	private TaskExecutionDAO taskExecutionDAO;
 	
 	@Autowired
-	public TaskExecutionCommandServiceImpl(
-			TaskExecutionDAO taskExecutionDAO) {
+	public TaskExecutionCommandServiceImpl(TaskExecutionDAO taskExecutionDAO) {
 		this.taskExecutionDAO = taskExecutionDAO;
 	}
 
@@ -48,6 +47,9 @@ public class TaskExecutionCommandServiceImpl implements
 	
 	@Override
 	public TaskExecution createTaskExecutionFromTask(Task task, boolean persist) {
+		if (task == null) {
+			return null;
+		}
 		TaskExecution taskExecution = new TaskExecution();
 		taskExecution.setCreatedBy(task.getCreatedBy());
 		taskExecution.setCreatedDate(new Date());
@@ -63,6 +65,15 @@ public class TaskExecutionCommandServiceImpl implements
 		}
 		
 		return taskExecution;
+	}
+	
+	@Override
+	public int deleteObsoleteTasks(int interval, int calendarField) {
+		Calendar calendar = Calendar.getInstance();
+		calendar.setTime(new Date());
+		calendar.add(calendarField, -(interval));
+		Date dateToLookBackAfter = calendar.getTime();
+		return taskExecutionDAO.deleteObsoleteTaskExecutions(dateToLookBackAfter);
 	}
 
 	@Override

@@ -17,7 +17,6 @@ import java.util.Date;
 import java.util.List;
 
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.powermock.core.classloader.annotations.PowerMockIgnore;
@@ -26,13 +25,11 @@ import org.powermock.core.classloader.annotations.SuppressStaticInitializationFo
 import org.powermock.modules.junit4.PowerMockRunner;
 
 import com.gdn.x.scheduler.constant.CommandType;
-import com.gdn.x.scheduler.constant.SchedulerIntervalUnit;
 import com.gdn.x.scheduler.constant.WSMethod;
 import com.gdn.x.scheduler.constant.WSRequestHeader;
 import com.gdn.x.scheduler.dao.TaskDAO;
 import com.gdn.x.scheduler.model.Task;
 import com.gdn.x.scheduler.model.WebServiceCommand;
-import com.gdn.x.scheduler.rest.web.model.TaskRequest;
 import com.gdn.x.scheduler.service.domain.CommandQueryService;
 import com.gdn.x.scheduler.service.domain.TaskCommandService;
 import com.gdn.x.scheduler.service.domain.impl.CommandQueryServiceImpl;
@@ -60,9 +57,10 @@ public class TaskCommandServiceImplTest {
 	
 	//Collaborators
 	private CommandQueryService commandQueryService;
-	private CoreEngine coreEngine;
+	private CoreEngine<Task> coreEngine;
 	private TaskDAO taskDAO;
 	
+	@SuppressWarnings("unchecked")
 	@Before
 	public void setup() {
 		commandQueryService = mock(CommandQueryServiceImpl.class, withSettings().name("Command Query Service").verboseLogging());
@@ -72,13 +70,11 @@ public class TaskCommandServiceImplTest {
 		taskService = spy(new TaskCommandServiceImpl(commandQueryService, coreEngine, taskDAO));
 	}
 	
-	@Ignore
 	@Test(timeout = 1000)
 	public void save_taskIsNull_nullIsReturned() {
 		assertNull(taskService.save(buildTaskSample("1")));
 	}
 	
-	@Ignore
 	@Test(timeout = 1000)
 	public void save_everythingNormal_newTaskIsReturned() {
 		Task task = buildTaskSample("1");
@@ -272,30 +268,10 @@ public class TaskCommandServiceImplTest {
 		task.setCreatedDate(new Date());
 		task.setMarkForDelete(false);
 		task.setStoreId(STORE_ID);
-		task.setTaskName("MD5 Generateor");
+		task.setTaskName("MD5 Generator");
 		task.setUpdatedBy("yauritux");
 		task.setUpdatedDate(new Date());
 		return task;
-	}
-	
-	private TaskRequest buildTaskRequestSample(Task task) {
-		TaskRequest taskRequest = new TaskRequest();
-		taskRequest.setCommandId(task.getCommand().getId());
-		taskRequest.setId(task.getId());
-		String[] attrValues = task.getSeconds().split("/");
-		taskRequest.setInterval(attrValues[1]);
-		taskRequest.setIntervalUnit(SchedulerIntervalUnit.SECONDS.name());
-		taskRequest.setSeconds(attrValues[0]);
-		taskRequest.setMinutes(task.getMinutes());
-		taskRequest.setHour(task.getHours());
-		taskRequest.setDayOfMonth(task.getDayOfMonth());
-		taskRequest.setMonth(task.getMonth());
-		taskRequest.setDayOfWeek(task.getDayOfWeek());
-		taskRequest.setYear(task.getYear());
-		taskRequest.setStoreId(task.getStoreId());
-		taskRequest.setSubmittedBy(task.getCreatedBy());
-		taskRequest.setTaskName(task.getTaskName());
-		return taskRequest;
 	}
 	
 	private WebServiceCommand buildWSCommandSample(String id) {
