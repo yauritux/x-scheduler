@@ -1,17 +1,21 @@
 package com.gdn.x.scheduler.service.impl;
 
-import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
 import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.atLeastOnce;
 import static org.mockito.Mockito.never;
-import static org.mockito.Mockito.withSettings;
 import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.withSettings;
 import static org.powermock.api.mockito.PowerMockito.mock;
 import static org.powermock.api.mockito.PowerMockito.spy;
 import static org.powermock.api.mockito.PowerMockito.when;
+import static org.powermock.api.mockito.PowerMockito.whenNew;
+import static org.powermock.api.mockito.PowerMockito.verifyNew;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -90,6 +94,36 @@ public class TaskExecutionCommandServiceImplTest {
 	public void createTaskExecutionFromTask_createTaskExecutionWithPersisted_taskExecutionDAOSaveShouldGetCalledOnce() {
 		taskExecutionCommandService.createTaskExecutionFromTask(buildTaskSample("1"), true);
 		verify(taskExecutionDAO, atLeastOnce()).save(any(TaskExecution.class));
+	}
+	
+	@Test(timeout = 1000)
+	public void createTaskExecutionFromTask_everythingNormal_taskExecutionConstructorGetCalledAtLeastOnce() throws Exception {
+		TaskExecution mockTaskExecution = mock(TaskExecution.class);
+		whenNew(TaskExecution.class).withNoArguments().thenReturn(mockTaskExecution);
+		taskExecutionCommandService.createTaskExecutionFromTask(any(Task.class), any(Boolean.class));
+		verifyNew(TaskExecution.class, atLeastOnce());
+	}
+	
+	@Test(timeout = 1000, expected = UnsupportedOperationException.class)
+	public void delete() {
+		taskExecutionCommandService.delete(any(TaskExecution.class));
+	}
+	
+	@Test(timeout = 1000, expected = UnsupportedOperationException.class)
+	public void restore() {
+		taskExecutionCommandService.restore(any(TaskExecution.class));
+	}
+	
+	@Test(timeout = 1000, expected = UnsupportedOperationException.class)
+	public void batchDelete() {
+		List<TaskExecution> list = new ArrayList<>();
+		taskExecutionCommandService.batchDelete(list);
+	}
+	
+	@Test(timeout = 1000, expected = UnsupportedOperationException.class)
+	public void batchRestore() {
+		List<TaskExecution> list = new ArrayList<>();
+		taskExecutionCommandService.batchRestore(list);
 	}
 	
 	private TaskExecution buildTaskExecutionSample(String id) {

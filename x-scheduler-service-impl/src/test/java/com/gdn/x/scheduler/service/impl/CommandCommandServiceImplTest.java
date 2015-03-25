@@ -224,6 +224,7 @@ public class CommandCommandServiceImplTest {
 		throws Exception {	
 		CommandInvokerImpl mockCommandInvoker = mock(CommandInvokerImpl.class);
 		whenNew(CommandInvokerImpl.class).withNoArguments().thenReturn(mockCommandInvoker);
+		commandService.buildCommandFromRequest(any(CommandRequest.class));
 		verifyNew(CommandInvokerImpl.class, atLeastOnce());
 	}
 	
