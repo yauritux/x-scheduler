@@ -19,9 +19,15 @@ public interface TaskExecutionDAO extends CrudRepository<TaskExecution, String> 
 	
 	public static final String FIND_RUNNING_TASK 
 		= "FROM TaskExecution te WHERE te.task.id = :taskId AND te.end IS NULL order by te.end desc";
-
+	
+	public static final String FIND_OBSOLETE_TASK_EXECUTION
+		= "FROM TaskExecution te WHERE abs(MONTH(CURRENT_DATE) - MONTH(te.end)) = 1";
+	
 	public TaskExecution findById(String id);
 	
 	@Query(FIND_RUNNING_TASK)
 	public List<TaskExecution> findRunningTask(@Param("taskId") String taskId);
+	
+	@Query(FIND_OBSOLETE_TASK_EXECUTION)
+	public List<TaskExecution> findObsoleteTasks();
 }

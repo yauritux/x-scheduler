@@ -64,6 +64,7 @@ public class BaseDAOTest {
 			.columns("ID", "CREATED_BY", "CREATED_DATE", "MARK_FOR_DELETE", "STORE_ID", "UPDATED_BY", "UPDATED_DATE", "OPTLOCK", "END_TIME", "START_TIME", "STATUS", "TASK_ID", "MACHINE_ID")
 			.values("1", "yauritux", "2015-01-02 00:00:00", false, "store-123", "yauritux", "2015-01-02 00:00:00", 0, null, "2015-01-02 00:00:00", ProcessStatus.IN_PROGRESS.name(), "2", "test-machine")
 			.values("2", "yauritux", "2015-01-05 00:00:00", false, "store-123", "yauritux", "2015-01-05 00:00:00", 0, "2015-01-05 01:30:00", "2015-01-05 00:00:00", ProcessStatus.FINISHED, "3", "test-machine")
+			.values("3", "yauritux", "2014-12-01 00:00:00", false, "store-123", "yauritux", "2014-12-01 00:00:00", 0, "2014-12-01 01:30:00", "2014-12-01 00:00:00", ProcessStatus.FINISHED, "3", "test-machine")
 			.build();
 		
 	@Autowired

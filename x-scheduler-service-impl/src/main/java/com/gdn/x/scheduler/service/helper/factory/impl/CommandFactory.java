@@ -1,10 +1,15 @@
 package com.gdn.x.scheduler.service.helper.factory.impl;
 
 import com.gdn.x.scheduler.constant.CommandType;
+import com.gdn.x.scheduler.constant.WSMethod;
 import com.gdn.x.scheduler.rest.web.model.CommandRequest;
+import com.gdn.x.scheduler.rest.web.model.WSCommandResponse;
 import com.gdn.x.scheduler.service.helper.command.Command;
 import com.gdn.x.scheduler.service.helper.command.impl.ClientSDKCommand;
 import com.gdn.x.scheduler.service.helper.command.impl.WSCommand;
+import com.gdn.x.scheduler.service.helper.executor.WSGetExecutor;
+import com.gdn.x.scheduler.service.helper.executor.WSPostExecutor;
+import com.gdn.x.scheduler.service.helper.executor.WebServiceExecutor;
 import com.gdn.x.scheduler.service.helper.receiver.CommandReceiver;
 import com.gdn.x.scheduler.service.helper.receiver.impl.CSCommandReceiverImpl;
 import com.gdn.x.scheduler.service.helper.receiver.impl.WSCommandReceiverImpl;
@@ -74,6 +79,17 @@ public class CommandFactory {
 				return new CSCommandReceiverImpl(command);
 			}
 		} catch (NullPointerException ignored) {}
+		
+		return null;
+	}
+	
+	public static final WebServiceExecutor getExecutorFromWSCommand(WSCommandResponse wsCommand) {
+		if (WSMethod.GET.name().equalsIgnoreCase(wsCommand.getHttpMethod())) {
+			return new WSGetExecutor();
+		}
+		if (WSMethod.POST.name().equalsIgnoreCase(wsCommand.getHttpMethod())) {
+			return new WSPostExecutor();
+		}
 		
 		return null;
 	}

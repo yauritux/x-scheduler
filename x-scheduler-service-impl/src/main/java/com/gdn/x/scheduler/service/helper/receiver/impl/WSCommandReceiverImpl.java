@@ -11,16 +11,6 @@ import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.gdn.common.base.shade.org.apache.http.HttpHeaders;
-import com.gdn.common.base.shade.org.apache.http.client.config.RequestConfig;
-import com.gdn.common.base.shade.org.apache.http.client.methods.CloseableHttpResponse;
-import com.gdn.common.base.shade.org.apache.http.client.methods.HttpGet;
-import com.gdn.common.base.shade.org.apache.http.client.methods.HttpPost;
-import com.gdn.common.base.shade.org.apache.http.client.methods.HttpRequestBase;
-import com.gdn.common.base.shade.org.apache.http.entity.ContentType;
-import com.gdn.common.base.shade.org.apache.http.entity.StringEntity;
-import com.gdn.common.base.shade.org.apache.http.impl.client.CloseableHttpClient;
-import com.gdn.common.base.shade.org.apache.http.impl.client.HttpClientBuilder;
 import com.gdn.x.scheduler.constant.CommandType;
 import com.gdn.x.scheduler.constant.WSMethod;
 import com.gdn.x.scheduler.constant.WSRequestHeader;
@@ -31,7 +21,9 @@ import com.gdn.x.scheduler.rest.web.model.CommandResponse;
 import com.gdn.x.scheduler.rest.web.model.WSCommandRequest;
 import com.gdn.x.scheduler.rest.web.model.WSCommandResponse;
 import com.gdn.x.scheduler.service.domain.CommandQueryService;
+import com.gdn.x.scheduler.service.helper.factory.impl.CommandFactory;
 import com.gdn.x.scheduler.service.helper.receiver.CommandReceiver;
+import com.gdn.x.scheduler.wrapper.ProcessResponse;
 
 /**
  * 
@@ -138,73 +130,16 @@ public class WSCommandReceiverImpl implements CommandReceiver {
 	public void executeCommand() throws Exception {
 		System.out.println("Calling web service...");
 		
-		CloseableHttpClient httpClient = null;
-		CloseableHttpResponse response = null;
-		HttpRequestBase request = null;
-		
 		try {
 			WSCommandResponse webService = (WSCommandResponse) commandQueryService.wrapCommand(command);
-			httpClient = HttpClientBuilder.create().build();
-			if (webService.getHttpMethod().equalsIgnoreCase(WSMethod.GET.name())) {
-				StringBuilder strRequest = new StringBuilder();
-				strRequest.append(webService.getEndPoint());
-				if (webService.getParameters() != null && !webService.getParameters().isEmpty()) {
-					strRequest.append("?").append(webService.getParameters());
-				}
-				RequestConfig requestConfig = RequestConfig.custom().setConnectionRequestTimeout(11000)
-						.setConnectTimeout(11000).setSocketTimeout(11000).build();
-				request = new HttpGet(strRequest.toString());
-				request.addHeader(HttpHeaders.ACCEPT, "application/json");
-				request.setConfig(requestConfig);
-				
-				response = httpClient.execute(request);
-				
-				System.out.println("Response Code = " + response.getStatusLine().getStatusCode());
-				
-				if (response.getStatusLine().getStatusCode() != 200) {
-					throw new RuntimeException("Failed to execute WS. Status Code: "
-							+ response.getStatusLine().getStatusCode());
-				}
-			} else if (webService.getHttpMethod().equalsIgnoreCase(WSMethod.POST.name())) {
-				StringBuilder strRequest = new StringBuilder();
-				strRequest.append(webService.getEndPoint());
-				if (webService.getParameters() != null && !webService.getParameters().isEmpty()) {
-					strRequest.append("?").append(webService.getParameters());
-				}
-				RequestConfig requestConfig = RequestConfig.custom().setConnectionRequestTimeout(11000)
-						.setConnectTimeout(11000).setSocketTimeout(11000).build();
-				request = new HttpPost(strRequest.toString());
-				request.addHeader(HttpHeaders.CONTENT_TYPE, "application/json");
-				request.addHeader(HttpHeaders.ACCEPT, "application/json");
-				request.setConfig(requestConfig);
-				
-				((HttpPost) request).setEntity(new StringEntity(webService.getContents(), ContentType.create("application/json")));
-				
-				response = httpClient.execute(request);
-				
-				System.out.println("Response Code = " + response.getStatusLine().getStatusCode());
-				
-				if (response.getStatusLine().getStatusCode() != 200) {
-					throw new RuntimeException("Failed to execute WS. Status Code: "
-							+ response.getStatusLine().getStatusCode());
-				}
-			}
-		} catch (Exception e) {
-			try {
-				if (request != null) {
-					request.releaseConnection();
-				}
-				if (response != null) {
-					response.close();
-				}
-			} catch (IOException ioe) {
-				LOG.error(ioe.getMessage(), ioe);
-				ioe.printStackTrace();
-			} catch (Exception e1) {
-				LOG.error(e.getMessage(), e1);
-				e1.printStackTrace();
-			}	
+			ProcessResponse processResponse = CommandFactory.getExecutorFromWSCommand(webService).callWS(webService, 11000);
 			
+			if (!"200".equals(processResponse.getCode())) {
+				throw new RuntimeException("Failed to execute WS. Status Code: "
+						+ processResponse.getCode() + ", message: " + processResponse.getMessage());				
+			}			
+		} catch (Exception e) {	
+			LOG.error(e.getMessage(), e);
 			throw e;
 		}		
 	}

@@ -35,5 +35,5 @@ public class TaskExecutionDAOTest extends BaseDAOTest {
 	@Test(timeout = 1000)
 	public void findRunningTask_taskIdOneAlreadyFinished_noRunningTaskFound() {
 		assertEquals(0, taskExecutionDAO.findRunningTask("1").size());
-	}
+	}	
 }
