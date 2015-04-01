@@ -207,7 +207,6 @@ public class TaskCommandServiceImpl implements TaskCommandService {
 				schedulerException.printStackTrace();
 			} catch (Exception e) {
 				LOG.error(e.getMessage(), e);
-				e.printStackTrace();
 			}
 		}
 		
@@ -229,43 +228,34 @@ public class TaskCommandServiceImpl implements TaskCommandService {
 		task.setTaskName(request.getTaskName());
 		task.setCommand(commandQueryService.findById(request.getCommandId()));
 		
-		//TODO: use decorator pattern later
-		if (SchedulerIntervalUnit.SECONDS.name().equalsIgnoreCase(request.getIntervalUnit())) {
-			task.setSeconds(request.getSeconds() + "/" + request.getInterval());
-		} else {
-			task.setSeconds(request.getSeconds());
-		}
-		if (request.getIntervalUnit().equalsIgnoreCase(SchedulerIntervalUnit.MINUTES.name())) {
-			task.setMinutes(request.getMinutes() + "/" + request.getInterval());
-		} else {
-			task.setMinutes(request.getMinutes());
-		}
-		if (request.getIntervalUnit().equalsIgnoreCase(SchedulerIntervalUnit.HOUR.name())) {
-			task.setHours(request.getHour() + "/" + request.getInterval());
-		} else {
-			task.setHours(request.getHour());
-		}		
-		if (request.getIntervalUnit().equalsIgnoreCase(SchedulerIntervalUnit.DAY_OF_MONTH.name())) {
-			task.setDayOfMonth(request.getDayOfMonth() + "/" + request.getInterval());
-		} else {
-			task.setDayOfMonth(request.getDayOfMonth());
-		}				
-		if (request.getIntervalUnit().equalsIgnoreCase(SchedulerIntervalUnit.MONTH.name())) {
-			task.setMonth(request.getMonth() + "/" + request.getInterval());
-		} else {
-			task.setMonth(request.getMonth());
-		}						
-		if (request.getIntervalUnit().equalsIgnoreCase(SchedulerIntervalUnit.DAY_OF_WEEK.name())) {
-			task.setDayOfWeek(request.getDayOfWeek() + "/" + request.getInterval());
-		} else {
-			task.setDayOfWeek(request.getDayOfWeek());
-		}						
-		if (request.getIntervalUnit().equalsIgnoreCase(SchedulerIntervalUnit.YEAR.name())) {
-			task.setYear(request.getYear() + "/" + request.getInterval());
-		} else {
-			task.setYear(request.getYear());
-		}						
-		//end of TODO
+		task.setSeconds(request.getSeconds() 
+				+ (SchedulerIntervalUnit.SECONDS.name().equalsIgnoreCase(request.getIntervalUnit()) 
+						? ("/" + request.getInterval()) : "")
+		);
+		task.setMinutes(request.getMinutes()
+				+ (SchedulerIntervalUnit.MINUTES.name().equalsIgnoreCase(request.getIntervalUnit())
+						? ("/" + request.getInterval()) : "")
+		);
+		task.setHours(request.getHour()
+				+ (SchedulerIntervalUnit.HOUR.name().equalsIgnoreCase(request.getIntervalUnit())
+						? ("/" + request.getInterval()) : "")
+		);
+		task.setDayOfMonth(request.getDayOfMonth()
+				+ (SchedulerIntervalUnit.DAY_OF_MONTH.name().equalsIgnoreCase(request.getIntervalUnit())
+						? ("/" + request.getInterval()) : "")
+		);
+		task.setMonth(request.getMonth()
+				+ (SchedulerIntervalUnit.MONTH.name().equalsIgnoreCase(request.getIntervalUnit())
+						? ("/" + request.getInterval()) : "")
+		);
+		task.setDayOfWeek(request.getDayOfWeek()
+				+ (SchedulerIntervalUnit.DAY_OF_WEEK.name().equalsIgnoreCase(request.getIntervalUnit())
+						? ("/" + request.getInterval()) : "")
+		);
+		task.setYear(request.getYear()
+				+ (SchedulerIntervalUnit.YEAR.name().equalsIgnoreCase(request.getIntervalUnit())
+						? ("/" + request.getInterval()) : "")
+		);
 		
 		//task.setThreadRunningPolicy(ThreadRunningPolicy.valueOf(request.getThreadRunningPolicy()));
 		task.setCreatedBy(request.getSubmittedBy());
@@ -285,7 +275,6 @@ public class TaskCommandServiceImpl implements TaskCommandService {
 			}
 		} catch (java.text.ParseException pe) {
 			LOG.error(pe.getMessage(), pe);
-			pe.printStackTrace();
 			task.setStartDate(new Date());
 			task.setExpiryDate(null);
 		}
