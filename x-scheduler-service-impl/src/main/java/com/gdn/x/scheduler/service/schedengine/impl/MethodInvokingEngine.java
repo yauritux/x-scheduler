@@ -40,7 +40,7 @@ public class MethodInvokingEngine implements CoreEngine<Task>, BeanFactoryAware 
 	}
 
 	@Override
-	public void scheduleJob(Task task) {		
+	public void scheduleJob(Task task) {
 		try {
 			// set the task to run
 			/* 
@@ -74,6 +74,7 @@ public class MethodInvokingEngine implements CoreEngine<Task>, BeanFactoryAware 
 			cronTrigger.setGroup(task.getCommand().getCommandType().name());
 			cronTrigger.setCronExpression(getCronExpressionFromTask(task));
 			cronTrigger.setPriority(task.getPriority());
+			
 			if (task.getStartDate() != null) {
 				cronTrigger.setStartTime(task.getStartDate()); // activate scheduler on specific date
 			}
@@ -86,8 +87,8 @@ public class MethodInvokingEngine implements CoreEngine<Task>, BeanFactoryAware 
 				scheduler.start();
 			}
 			
-			scheduler.scheduleJob(jobDetail.getObject(), cronTrigger.getObject());									
-						
+			scheduler.scheduleJob(jobDetail.getObject(), cronTrigger.getObject());
+			
 		} catch (NoSuchMethodException e) {
 			LOG.error(e.getMessage(), e);		
 		} catch (ClassNotFoundException e) {

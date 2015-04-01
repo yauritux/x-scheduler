@@ -259,7 +259,7 @@ public class TaskCommandServiceImplTest {
 		task.setCommand(buildWSCommandSample(id));
 		task.setSeconds("0/15");
 		task.setMinutes("*");
-		task.setHours("?");
+		task.setHours("*");
 		task.setDayOfMonth("*");
 		task.setMonth("*");
 		task.setDayOfWeek("L");

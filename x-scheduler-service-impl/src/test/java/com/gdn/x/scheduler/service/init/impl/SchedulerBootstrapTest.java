@@ -1,8 +1,8 @@
 package com.gdn.x.scheduler.service.init.impl;
 
 import static org.mockito.Matchers.any;
-import static org.mockito.Mockito.atMost;
 import static org.mockito.Mockito.atLeastOnce;
+import static org.mockito.Mockito.atMost;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.withSettings;
@@ -18,15 +18,12 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.powermock.core.classloader.annotations.PowerMockIgnore;
-import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.core.classloader.annotations.SuppressStaticInitializationFor;
 import org.powermock.modules.junit4.PowerMockRunner;
 import org.springframework.context.event.ContextRefreshedEvent;
 
 import com.gdn.x.scheduler.model.Task;
 import com.gdn.x.scheduler.service.domain.TaskQueryService;
-import com.gdn.x.scheduler.service.helper.factory.impl.CommandFactory;
-import com.gdn.x.scheduler.service.helper.invoker.impl.CommandInvokerImpl;
 import com.gdn.x.scheduler.service.schedengine.CoreEngine;
 
 /**
@@ -37,7 +34,6 @@ import com.gdn.x.scheduler.service.schedengine.CoreEngine;
  *
  */
 @RunWith(PowerMockRunner.class)
-@PrepareForTest({CommandFactory.class, CommandInvokerImpl.class})
 @PowerMockIgnore("org.slf4j.Logger")
 @SuppressStaticInitializationFor("org.slf4j.Logger")
 public class SchedulerBootstrapTest {
