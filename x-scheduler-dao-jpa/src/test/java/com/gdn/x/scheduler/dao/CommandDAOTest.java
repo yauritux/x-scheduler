@@ -61,7 +61,7 @@ public class CommandDAOTest extends BaseDAOTest {
 		assertTrue(commandDAO.count() == 2);
 	}
 	
-	@Test(timeout = 1000)
+	@Test
 	public void countExclDelete_2RecordsDeleted_0RecordFound() {
 		commandDAO.deleteCommand("2");
 		commandDAO.deleteCommand("1");

@@ -1,0 +1,18 @@
+rootProject.name = 'x-scheduler'
+include ':x-scheduler-model'
+include ':x-scheduler-dao-api'
+include ':x-scheduler-dao-jpa'
+include ':x-scheduler-service-api'
+include ':x-scheduler-service-impl'
+include ':x-scheduler-rest-web-model'
+include ':x-scheduler-rest-web'
+include ':x-scheduler-service-client-sdk'
+
+project(':x-scheduler-model').projectDir = "$rootDir/x-scheduler-model" as File
+project(':x-scheduler-dao-api').projectDir = "$rootDir/x-scheduler-dao-api" as File
+project(':x-scheduler-dao-jpa').projectDir = "$rootDir/x-scheduler-dao-jpa" as File
+project(':x-scheduler-service-api').projectDir = "$rootDir/x-scheduler-service-api" as File
+project(':x-scheduler-service-impl').projectDir = "$rootDir/x-scheduler-service-impl" as File
+project(':x-scheduler-rest-web-model').projectDir = "$rootDir/x-scheduler-rest-web-model" as File
+project(':x-scheduler-rest-web').projectDir = "$rootDir/x-scheduler-rest-web" as File
+project(':x-scheduler-service-client-sdk').projectDir = "$rootDir/x-scheduler-client-sdk" as File

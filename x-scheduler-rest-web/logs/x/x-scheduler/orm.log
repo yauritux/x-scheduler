@@ -1,516 +1,164 @@
-[]2015-03-31T23:00:13,595Z INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.2.Final 
-[]2015-03-31T23:00:13,635Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
-[]2015-03-31T23:00:13,637Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
-[]2015-03-31T23:00:14,361Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
-[]2015-03-31T23:00:14,361Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
-[]2015-03-31T23:00:14,760Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
-[]2015-03-31T23:00:14,760Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
-[]2015-03-31T23:00:15,074Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
-[]2015-03-31T23:00:15,074Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
-[]2015-03-31T23:00:15,150Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
-[]2015-03-31T23:00:15,151Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
-[]2015-03-31T23:00:15,241Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
-[]2015-03-31T23:00:15,241Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
-[]2015-03-31T23:00:15,344Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
-[]2015-03-31T23:00:15,344Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
-[]2015-03-31T23:00:15,486Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
-[]2015-03-31T23:00:15,486Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
-[]2015-03-31T23:00:15,574Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
-[]2015-03-31T23:00:15,574Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
-[]2015-03-31T23:00:15,653Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
-[]2015-03-31T23:00:15,654Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
-[]2015-03-31T23:00:15,723Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
-[]2015-03-31T23:00:15,723Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
-[]2015-03-31T23:00:15,808Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
-[]2015-03-31T23:00:15,809Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
-[]2015-03-31T23:00:15,877Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
-[]2015-03-31T23:00:15,878Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
-[]2015-03-31T23:00:16,031Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
-[]2015-03-31T23:00:16,031Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
-[]2015-03-31T23:00:16,081Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
-[]2015-03-31T23:00:16,081Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
-[]2015-03-31T23:00:16,129Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
-[]2015-03-31T23:00:16,129Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
-[]2015-03-31T23:00:16,177Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
-[]2015-03-31T23:00:16,178Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
-[]2015-03-31T23:00:16,362Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
-[]2015-03-31T23:00:16,362Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
-[]2015-03-31T23:00:16,413Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
-[]2015-03-31T23:00:16,413Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
-[]2015-03-31T23:00:16,476Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
-[]2015-03-31T23:00:16,477Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
-[]2015-03-31T23:19:34,143Z INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.2.Final 
-[]2015-03-31T23:19:34,205Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
-[]2015-03-31T23:19:34,206Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
-[]2015-03-31T23:19:34,854Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
-[]2015-03-31T23:19:34,854Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
-[]2015-03-31T23:19:35,366Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
-[]2015-03-31T23:19:35,366Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
-[]2015-03-31T23:19:35,646Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
-[]2015-03-31T23:19:35,647Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
-[]2015-03-31T23:19:35,707Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
-[]2015-03-31T23:19:35,708Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
-[]2015-03-31T23:19:35,784Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
-[]2015-03-31T23:19:35,784Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
-[]2015-03-31T23:19:35,865Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
-[]2015-03-31T23:19:35,865Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
-[]2015-03-31T23:19:36,005Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
-[]2015-03-31T23:19:36,005Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
-[]2015-03-31T23:19:36,065Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
-[]2015-03-31T23:19:36,065Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
-[]2015-03-31T23:19:36,128Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
-[]2015-03-31T23:19:36,128Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
-[]2015-03-31T23:19:36,191Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
-[]2015-03-31T23:19:36,191Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
-[]2015-03-31T23:19:36,259Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
-[]2015-03-31T23:19:36,259Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
-[]2015-03-31T23:19:36,324Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
-[]2015-03-31T23:19:36,325Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
-[]2015-03-31T23:19:36,428Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
-[]2015-03-31T23:19:36,429Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
-[]2015-03-31T23:19:36,487Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
-[]2015-03-31T23:19:36,487Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
-[]2015-03-31T23:19:36,720Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
-[]2015-03-31T23:19:36,720Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
-[]2015-03-31T23:19:36,985Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
-[]2015-03-31T23:19:36,985Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
-[]2015-03-31T23:19:37,103Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
-[]2015-03-31T23:19:37,103Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
-[]2015-03-31T23:19:37,138Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
-[]2015-03-31T23:19:37,138Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
-[]2015-03-31T23:19:37,183Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
-[]2015-03-31T23:19:37,183Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
-[]2015-04-01T03:04:20,742Z INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.2.Final 
-[]2015-04-01T03:04:20,801Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
-[]2015-04-01T03:04:20,803Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
-[]2015-04-01T03:04:21,417Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
-[]2015-04-01T03:04:21,417Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
-[]2015-04-01T03:04:21,871Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
-[]2015-04-01T03:04:21,871Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
-[]2015-04-01T03:04:22,326Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
-[]2015-04-01T03:04:22,326Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
-[]2015-04-01T03:04:22,387Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
-[]2015-04-01T03:04:22,387Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
-[]2015-04-01T03:04:22,462Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
-[]2015-04-01T03:04:22,462Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
-[]2015-04-01T03:04:22,545Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
-[]2015-04-01T03:04:22,545Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
-[]2015-04-01T03:04:22,644Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
-[]2015-04-01T03:04:22,645Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
-[]2015-04-01T03:04:22,698Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
-[]2015-04-01T03:04:22,698Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
-[]2015-04-01T03:04:22,756Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
-[]2015-04-01T03:04:22,756Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
-[]2015-04-01T03:04:22,811Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
-[]2015-04-01T03:04:22,811Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
-[]2015-04-01T03:04:22,877Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
-[]2015-04-01T03:04:22,878Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
-[]2015-04-01T03:04:22,928Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
-[]2015-04-01T03:04:22,928Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
-[]2015-04-01T03:04:23,018Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
-[]2015-04-01T03:04:23,018Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
-[]2015-04-01T03:04:23,058Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
-[]2015-04-01T03:04:23,058Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
-[]2015-04-01T03:04:23,092Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
-[]2015-04-01T03:04:23,092Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
-[]2015-04-01T03:04:23,127Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
-[]2015-04-01T03:04:23,127Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
-[]2015-04-01T03:04:23,203Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
-[]2015-04-01T03:04:23,203Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
-[]2015-04-01T03:04:23,233Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
-[]2015-04-01T03:04:23,233Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
-[]2015-04-01T03:04:23,275Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
-[]2015-04-01T03:04:23,275Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
-[]2015-04-01T03:05:38,023Z DEBUG o.h.jpa.internal.util.LogHelper - PersistenceUnitInfo [
-	name: default
-	persistence provider classname: null
-	classloader: WebAppClassLoader=1275193189@4c01e765
-	excludeUnlistedClasses: true
-	JTA datasource: null
-	Non JTA datasource: org.apache.tomcat.jdbc.pool.DataSource@76e09ad4{ConnectionPool[defaultAutoCommit=false; defaultReadOnly=null; defaultTransactionIsolation=-1; defaultCatalog=null; driverClassName=org.h2.Driver; maxActive=100; maxIdle=100; minIdle=10; initialSize=10; maxWait=30000; testOnBorrow=true; testOnReturn=true; timeBetweenEvictionRunsMillis=5000; numTestsPerEvictionRun=0; minEvictableIdleTimeMillis=60000; testWhileIdle=true; testOnConnect=false; password=********; url=jdbc:h2:mem:resthub;DB_CLOSE_DELAY=-1;MVCC=TRUE; username=sa; validationQuery=/* ping*/ SELECT 1; validationQueryTimeout=5; validatorClassName=null; validationInterval=30000; accessToUnderlyingConnectionAllowed=true; removeAbandoned=true; removeAbandonedTimeout=60; logAbandoned=true; connectionProperties=null; initSQL=null; jdbcInterceptors=org.apache.tomcat.jdbc.pool.interceptor.ConnectionState;org.apache.tomcat.jdbc.pool.interceptor.StatementFinalizer;org.apache.tomcat.jdbc.pool.interceptor.SlowQueryReportJmx;org.apache.tomcat.jdbc.pool.interceptor.ResetAbandonedTimer; jmxEnabled=true; fairQueue=true; useEquals=true; abandonWhenPercentageFull=0; maxAge=0; useLock=false; dataSource=null; dataSourceJNDI=null; suspectTimeout=0; alternateUsernameAllowed=false; commitOnReturn=false; rollbackOnReturn=true; useDisposableConnectionFacade=true; logValidationErrors=true; propagateInterruptState=false; ignoreExceptionOnPreLoad=false; }
-	Transaction type: RESOURCE_LOCAL
-	PU root URL: file:/Users/apple/Projects/GDN/X/x-scheduler/x-scheduler-rest-web/target/classes/
-	Shared Cache Mode: UNSPECIFIED
-	Validation Mode: AUTO
-	Jar files URLs []
-	Managed classes names []
-	Mapping files names []
-	Properties [] 
-[]2015-04-01T03:05:38,077Z DEBUG o.h.i.i.IntegratorServiceImpl - Adding Integrator [org.hibernate.cfg.beanvalidation.BeanValidationIntegrator]. 
-[]2015-04-01T03:05:38,078Z DEBUG o.h.i.i.IntegratorServiceImpl - Adding Integrator [org.hibernate.secure.spi.JaccIntegrator]. 
-[]2015-04-01T03:05:38,099Z DEBUG o.h.i.i.IntegratorServiceImpl - Adding Integrator [org.hibernate.cache.internal.CollectionCacheInvalidator]. 
-[]2015-04-01T03:05:38,099Z DEBUG o.h.i.i.IntegratorServiceImpl - Adding Integrator [org.hibernate.jpa.event.spi.JpaIntegrator]. 
-[]2015-04-01T03:05:38,120Z DEBUG o.h.b.r.s.i.StrategySelectorImpl - Registering named strategy selector [org.hibernate.dialect.Dialect] : [MySQL5] -> [org.hibernate.dialect.MySQL5Dialect] (replacing [org.hibernate.dialect.MySQL5Dialect]) 
-[]2015-04-01T03:05:38,120Z DEBUG o.h.b.r.s.i.StrategySelectorImpl - Registering named strategy selector [org.hibernate.dialect.Dialect] : [MySQL5InnoDB] -> [org.hibernate.dialect.MySQL5InnoDBDialect] (replacing [org.hibernate.dialect.MySQL5InnoDBDialect]) 
-[]2015-04-01T03:05:38,161Z INFO  org.hibernate.Version - HHH000412: Hibernate Core {4.3.6.Final} 
-[]2015-04-01T03:05:38,164Z INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found 
-[]2015-04-01T03:05:38,166Z INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist 
-[]2015-04-01T03:05:38,233Z DEBUG o.h.service.spi.ServiceBinding - Overriding existing service binding [org.hibernate.secure.spi.JaccService] 
-[]2015-04-01T03:05:38,258Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration boolean -> org.hibernate.type.BooleanType@11122dce 
-[]2015-04-01T03:05:38,259Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration boolean -> org.hibernate.type.BooleanType@11122dce 
-[]2015-04-01T03:05:38,259Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@11122dce 
-[]2015-04-01T03:05:38,260Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@1b2f0045 
-[]2015-04-01T03:05:38,261Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration true_false -> org.hibernate.type.TrueFalseType@1521bef 
-[]2015-04-01T03:05:38,262Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration yes_no -> org.hibernate.type.YesNoType@7a23a5e6 
-[]2015-04-01T03:05:38,263Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration byte -> org.hibernate.type.ByteType@1ab8c3bf 
-[]2015-04-01T03:05:38,263Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration byte -> org.hibernate.type.ByteType@1ab8c3bf 
-[]2015-04-01T03:05:38,263Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@1ab8c3bf 
-[]2015-04-01T03:05:38,264Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration character -> org.hibernate.type.CharacterType@22cf230 
-[]2015-04-01T03:05:38,264Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration char -> org.hibernate.type.CharacterType@22cf230 
-[]2015-04-01T03:05:38,264Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@22cf230 
-[]2015-04-01T03:05:38,265Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration short -> org.hibernate.type.ShortType@7df6a23f 
-[]2015-04-01T03:05:38,265Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration short -> org.hibernate.type.ShortType@7df6a23f 
-[]2015-04-01T03:05:38,265Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Short -> org.hibernate.type.ShortType@7df6a23f 
-[]2015-04-01T03:05:38,266Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration integer -> org.hibernate.type.IntegerType@71ff2f9b 
-[]2015-04-01T03:05:38,266Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration int -> org.hibernate.type.IntegerType@71ff2f9b 
-[]2015-04-01T03:05:38,266Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@71ff2f9b 
-[]2015-04-01T03:05:38,268Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration long -> org.hibernate.type.LongType@20704adf 
-[]2015-04-01T03:05:38,268Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration long -> org.hibernate.type.LongType@20704adf 
-[]2015-04-01T03:05:38,268Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Long -> org.hibernate.type.LongType@20704adf 
-[]2015-04-01T03:05:38,269Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration float -> org.hibernate.type.FloatType@5fbb364 
-[]2015-04-01T03:05:38,269Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration float -> org.hibernate.type.FloatType@5fbb364 
-[]2015-04-01T03:05:38,269Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Float -> org.hibernate.type.FloatType@5fbb364 
-[]2015-04-01T03:05:38,270Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration double -> org.hibernate.type.DoubleType@487b456f 
-[]2015-04-01T03:05:38,271Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration double -> org.hibernate.type.DoubleType@487b456f 
-[]2015-04-01T03:05:38,271Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@487b456f 
-[]2015-04-01T03:05:38,272Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@125f6fe4 
-[]2015-04-01T03:05:38,272Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@125f6fe4 
-[]2015-04-01T03:05:38,273Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration big_integer -> org.hibernate.type.BigIntegerType@1853875f 
-[]2015-04-01T03:05:38,273Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@1853875f 
-[]2015-04-01T03:05:38,274Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration string -> org.hibernate.type.StringType@44ac8bca 
-[]2015-04-01T03:05:38,274Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.String -> org.hibernate.type.StringType@44ac8bca 
-[]2015-04-01T03:05:38,275Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration nstring -> org.hibernate.type.StringNVarcharType@55a3798c 
-[]2015-04-01T03:05:38,276Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@11cd7671 
-[]2015-04-01T03:05:38,277Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration url -> org.hibernate.type.UrlType@7116a40e 
-[]2015-04-01T03:05:38,277Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration java.net.URL -> org.hibernate.type.UrlType@7116a40e 
-[]2015-04-01T03:05:38,278Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration date -> org.hibernate.type.DateType@6e692c07 
-[]2015-04-01T03:05:38,278Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Date -> org.hibernate.type.DateType@6e692c07 
-[]2015-04-01T03:05:38,279Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration time -> org.hibernate.type.TimeType@6353bff9 
-[]2015-04-01T03:05:38,280Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Time -> org.hibernate.type.TimeType@6353bff9 
-[]2015-04-01T03:05:38,281Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration timestamp -> org.hibernate.type.TimestampType@7c46b752 
-[]2015-04-01T03:05:38,281Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@7c46b752 
-[]2015-04-01T03:05:38,281Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration java.util.Date -> org.hibernate.type.TimestampType@7c46b752 
-[]2015-04-01T03:05:38,283Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@c34d251 
-[]2015-04-01T03:05:38,284Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration calendar -> org.hibernate.type.CalendarType@552d8945 
-[]2015-04-01T03:05:38,284Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@552d8945 
-[]2015-04-01T03:05:38,324Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@552d8945 
-[]2015-04-01T03:05:38,325Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@72c1de01 
-[]2015-04-01T03:05:38,325Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration locale -> org.hibernate.type.LocaleType@6cd4c925 
-[]2015-04-01T03:05:38,326Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@6cd4c925 
-[]2015-04-01T03:05:38,326Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration currency -> org.hibernate.type.CurrencyType@37a0f1d 
-[]2015-04-01T03:05:38,326Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@37a0f1d 
-[]2015-04-01T03:05:38,327Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration timezone -> org.hibernate.type.TimeZoneType@314392a3 
-[]2015-04-01T03:05:38,327Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@314392a3 
-[]2015-04-01T03:05:38,328Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration class -> org.hibernate.type.ClassType@5dde0a75 
-[]2015-04-01T03:05:38,328Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Class -> org.hibernate.type.ClassType@5dde0a75 
-[]2015-04-01T03:05:38,329Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@109ae828 
-[]2015-04-01T03:05:38,329Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@109ae828 
-[]2015-04-01T03:05:38,329Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@690a0d36 
-[]2015-04-01T03:05:38,330Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration pg-uuid -> org.hibernate.type.PostgresUUIDType@2653b8ff 
-[]2015-04-01T03:05:38,331Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration binary -> org.hibernate.type.BinaryType@5208c07e 
-[]2015-04-01T03:05:38,331Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration byte[] -> org.hibernate.type.BinaryType@5208c07e 
-[]2015-04-01T03:05:38,331Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration [B -> org.hibernate.type.BinaryType@5208c07e 
-[]2015-04-01T03:05:38,332Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@5c68531f 
-[]2015-04-01T03:05:38,332Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@5c68531f 
-[]2015-04-01T03:05:38,332Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@5c68531f 
-[]2015-04-01T03:05:38,332Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration image -> org.hibernate.type.ImageType@6be8e25f 
-[]2015-04-01T03:05:38,333Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration characters -> org.hibernate.type.CharArrayType@5d7ea18 
-[]2015-04-01T03:05:38,333Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration char[] -> org.hibernate.type.CharArrayType@5d7ea18 
-[]2015-04-01T03:05:38,333Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration [C -> org.hibernate.type.CharArrayType@5d7ea18 
-[]2015-04-01T03:05:38,334Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@28acd680 
-[]2015-04-01T03:05:38,334Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@28acd680 
-[]2015-04-01T03:05:38,334Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@28acd680 
-[]2015-04-01T03:05:38,335Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration text -> org.hibernate.type.TextType@7f5b52bb 
-[]2015-04-01T03:05:38,335Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration ntext -> org.hibernate.type.NTextType@1f98e673 
-[]2015-04-01T03:05:38,339Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration blob -> org.hibernate.type.BlobType@10197de9 
-[]2015-04-01T03:05:38,339Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@10197de9 
-[]2015-04-01T03:05:38,339Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@6c204b0c 
-[]2015-04-01T03:05:38,342Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration clob -> org.hibernate.type.ClobType@773efe31 
-[]2015-04-01T03:05:38,342Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@773efe31 
-[]2015-04-01T03:05:38,344Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration nclob -> org.hibernate.type.NClobType@4535ab0d 
-[]2015-04-01T03:05:38,344Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@4535ab0d 
-[]2015-04-01T03:05:38,344Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@58e38c3d 
-[]2015-04-01T03:05:38,345Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@7d53b06 
-[]2015-04-01T03:05:38,346Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration serializable -> org.hibernate.type.SerializableType@f7351e4 
-[]2015-04-01T03:05:38,348Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration object -> org.hibernate.type.ObjectType@bf4cbf0 
-[]2015-04-01T03:05:38,348Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@bf4cbf0 
-[]2015-04-01T03:05:38,349Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@2cbdfed5 
-[]2015-04-01T03:05:38,349Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@6da568e5 
-[]2015-04-01T03:05:38,349Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@689caa0 
-[]2015-04-01T03:05:38,349Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@4055d1ba 
-[]2015-04-01T03:05:38,349Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@423c2b55 
-[]2015-04-01T03:05:38,349Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@7c40fb6b 
-[]2015-04-01T03:05:38,349Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@e3a6d88 
-[]2015-04-01T03:05:38,349Z DEBUG o.hibernate.type.BasicTypeRegistry - Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@1ded0304 
-[]2015-04-01T03:05:38,366Z INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.5.Final} 
-[]2015-04-01T03:05:38,380Z DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [uuid2] -> [org.hibernate.id.UUIDGenerator] 
-[]2015-04-01T03:05:38,380Z DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [guid] -> [org.hibernate.id.GUIDGenerator] 
-[]2015-04-01T03:05:38,381Z DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [uuid] -> [org.hibernate.id.UUIDHexGenerator] 
-[]2015-04-01T03:05:38,381Z DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [uuid.hex] -> [org.hibernate.id.UUIDHexGenerator] 
-[]2015-04-01T03:05:38,382Z DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [hilo] -> [org.hibernate.id.TableHiLoGenerator] 
-[]2015-04-01T03:05:38,382Z DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [assigned] -> [org.hibernate.id.Assigned] 
-[]2015-04-01T03:05:38,383Z DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [identity] -> [org.hibernate.id.IdentityGenerator] 
-[]2015-04-01T03:05:38,383Z DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [select] -> [org.hibernate.id.SelectGenerator] 
-[]2015-04-01T03:05:38,384Z DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [sequence] -> [org.hibernate.id.SequenceGenerator] 
-[]2015-04-01T03:05:38,384Z DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [seqhilo] -> [org.hibernate.id.SequenceHiLoGenerator] 
-[]2015-04-01T03:05:38,384Z DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [increment] -> [org.hibernate.id.IncrementGenerator] 
-[]2015-04-01T03:05:38,385Z DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [foreign] -> [org.hibernate.id.ForeignGenerator] 
-[]2015-04-01T03:05:38,385Z DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [sequence-identity] -> [org.hibernate.id.SequenceIdentityGenerator] 
-[]2015-04-01T03:05:38,386Z DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [enhanced-sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator] 
-[]2015-04-01T03:05:38,386Z DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [enhanced-table] -> [org.hibernate.id.enhanced.TableGenerator] 
-[]2015-04-01T03:05:38,389Z DEBUG org.hibernate.cfg.Configuration - Preparing to build session factory with filters : {} 
-[]2015-04-01T03:05:38,691Z WARN  o.h.e.j.internal.JdbcServicesImpl - HHH000342: Could not obtain connection to query metadata : org.h2.Driver 
-[]2015-04-01T03:05:38,701Z INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect 
-[]2015-04-01T03:05:38,710Z WARN  org.hibernate.dialect.H2Dialect - HHH000431: Unable to determine H2 database version, certain features may not work 
-[]2015-04-01T03:05:38,713Z INFO  o.h.e.j.internal.LobCreatorBuilder - HHH000422: Disabling contextual LOB creation as connection was null 
-[]2015-04-01T03:05:38,741Z DEBUG org.hibernate.cfg.Configuration - Processing hbm.xml files 
-[]2015-04-01T03:05:38,741Z DEBUG org.hibernate.cfg.Configuration - Process annotated classes 
-[]2015-04-01T03:05:38,742Z DEBUG org.hibernate.cfg.Configuration - Processing fk mappings (*ToOne and JoinedSubclass) 
-[]2015-04-01T03:05:38,742Z DEBUG org.hibernate.cfg.Configuration - Processing extends queue 
-[]2015-04-01T03:05:38,742Z DEBUG org.hibernate.cfg.Configuration - Processing extends queue 
-[]2015-04-01T03:05:38,742Z DEBUG org.hibernate.cfg.Configuration - Processing collection mappings 
-[]2015-04-01T03:05:38,742Z DEBUG org.hibernate.cfg.Configuration - Processing native query and ResultSetMapping mappings 
-[]2015-04-01T03:05:38,742Z DEBUG org.hibernate.cfg.Configuration - Processing association property references 
-[]2015-04-01T03:05:38,742Z DEBUG org.hibernate.cfg.Configuration - Creating tables' unique integer identifiers 
-[]2015-04-01T03:05:38,742Z DEBUG org.hibernate.cfg.Configuration - Processing foreign key constraints 
-[]2015-04-01T03:05:38,744Z DEBUG o.h.e.t.j.p.i.JtaPlatformInitiator - No JtaPlatform was specified, checking resolver 
-[]2015-04-01T03:05:38,744Z DEBUG o.h.e.t.j.p.i.JtaPlatformResolverInitiator - No JtaPlatformResolver was specified, using default [org.hibernate.engine.transaction.jta.platform.internal.StandardJtaPlatformResolver] 
-[]2015-04-01T03:05:38,753Z DEBUG o.h.e.t.j.p.i.StandardJtaPlatformResolver - Could not resolve JtaPlatform, using default [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform] 
-[]2015-04-01T03:05:38,757Z DEBUG org.hibernate.cfg.SettingsFactory - Automatic flush during beforeCompletion(): disabled 
-[]2015-04-01T03:05:38,757Z DEBUG org.hibernate.cfg.SettingsFactory - Automatic session close at end of transaction: disabled 
-[]2015-04-01T03:05:38,757Z DEBUG org.hibernate.cfg.SettingsFactory - Scrollable result sets: disabled 
-[]2015-04-01T03:05:38,757Z DEBUG org.hibernate.cfg.SettingsFactory - Wrap result sets: disabled 
-[]2015-04-01T03:05:38,757Z DEBUG org.hibernate.cfg.SettingsFactory - JDBC3 getGeneratedKeys(): disabled 
-[]2015-04-01T03:05:38,757Z DEBUG org.hibernate.cfg.SettingsFactory - multi-tenancy strategy : NONE 
-[]2015-04-01T03:05:38,757Z DEBUG org.hibernate.cfg.SettingsFactory - Connection release mode: auto 
-[]2015-04-01T03:05:38,759Z DEBUG org.hibernate.cfg.SettingsFactory - Using BatchFetchStyle : LEGACY 
-[]2015-04-01T03:05:38,759Z DEBUG org.hibernate.cfg.SettingsFactory - Default batch fetch size: 1 
-[]2015-04-01T03:05:38,759Z DEBUG org.hibernate.cfg.SettingsFactory - Generate SQL with comments: disabled 
-[]2015-04-01T03:05:38,759Z DEBUG org.hibernate.cfg.SettingsFactory - Order SQL updates by primary key: disabled 
-[]2015-04-01T03:05:38,759Z DEBUG org.hibernate.cfg.SettingsFactory - Order SQL inserts for batching: disabled 
-[]2015-04-01T03:05:38,760Z DEBUG org.hibernate.cfg.SettingsFactory - Default null ordering: none 
-[]2015-04-01T03:05:38,760Z DEBUG org.hibernate.cfg.SettingsFactory - Query translator: org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory 
-[]2015-04-01T03:05:38,762Z INFO  o.h.h.i.a.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory 
-[]2015-04-01T03:05:38,762Z DEBUG org.hibernate.cfg.SettingsFactory - Query language substitutions: {} 
-[]2015-04-01T03:05:38,763Z DEBUG org.hibernate.cfg.SettingsFactory - JPA-QL strict compliance: disabled 
-[]2015-04-01T03:05:38,763Z DEBUG org.hibernate.cfg.SettingsFactory - Second-level cache: enabled 
-[]2015-04-01T03:05:38,763Z DEBUG org.hibernate.cfg.SettingsFactory - Query cache: disabled 
-[]2015-04-01T03:05:38,763Z DEBUG o.h.c.i.RegionFactoryInitiator - Cache region factory : org.hibernate.cache.internal.NoCachingRegionFactory 
-[]2015-04-01T03:05:38,765Z DEBUG org.hibernate.cfg.SettingsFactory - Optimize cache for minimal puts: disabled 
-[]2015-04-01T03:05:38,766Z DEBUG org.hibernate.cfg.SettingsFactory - Structured second-level cache entries: disabled 
-[]2015-04-01T03:05:38,766Z DEBUG org.hibernate.cfg.SettingsFactory - Second-level cache direct-reference entries: disabled 
-[]2015-04-01T03:05:38,766Z DEBUG org.hibernate.cfg.SettingsFactory - Automatic eviction of collection cache: disabled 
-[]2015-04-01T03:05:38,766Z DEBUG org.hibernate.cfg.SettingsFactory - Statistics: disabled 
-[]2015-04-01T03:05:38,766Z DEBUG org.hibernate.cfg.SettingsFactory - Deleted entity synthetic identifier rollback: disabled 
-[]2015-04-01T03:05:38,766Z DEBUG org.hibernate.cfg.SettingsFactory - Default entity-mode: pojo 
-[]2015-04-01T03:05:38,766Z DEBUG org.hibernate.cfg.SettingsFactory - Named query checking : enabled 
-[]2015-04-01T03:05:38,766Z DEBUG org.hibernate.cfg.SettingsFactory - Check Nullability in Core (should be disabled when Bean Validation is on): enabled 
-[]2015-04-01T03:05:38,766Z DEBUG org.hibernate.cfg.SettingsFactory - Allow initialization of lazy state outside session : : disabled 
-[]2015-04-01T03:05:38,766Z DEBUG org.hibernate.cfg.SettingsFactory - JTA Track by Thread: enabled 
-[]2015-04-01T03:05:38,775Z DEBUG o.h.internal.SessionFactoryImpl - Building session factory 
-[]2015-04-01T03:05:38,785Z DEBUG o.h.internal.SessionFactoryImpl - Session factory constructed with filter configurations : {} 
-[]2015-04-01T03:05:38,786Z DEBUG o.h.internal.SessionFactoryImpl - Instantiating session factory with properties: {hibernate.id.new_generator_mappings=true, java.runtime.name=Java(TM) SE Runtime Environment, hibernate.cache.provider_class=net.sf.ehcache.hibernate.EhCacheRegionFactory, sun.boot.library.path=/Library/Java/JavaVirtualMachines/jdk1.7.0_40.jdk/Contents/Home/jre/lib, java.vm.version=24.0-b56, user.country.format=ID, gopherProxySet=false, java.vm.vendor=Oracle Corporation, java.vendor.url=http://java.oracle.com/, path.separator=:, guice.disable.misplaced.annotation.check=true, java.vm.name=Java HotSpot(TM) 64-Bit Server VM, file.encoding.pkg=sun.io, user.country=US, sun.java.launcher=SUN_STANDARD, sun.os.patch.level=unknown, java.vm.specification.name=Java Virtual Machine Specification, user.dir=/Users/apple/Projects/GDN/X/x-scheduler/x-scheduler-rest-web, javax.persistence.sharedCache.mode=UNSPECIFIED, java.runtime.version=1.7.0_40-b43, java.awt.graphicsenv=sun.awt.CGraphicsEnvironment, java.endorsed.dirs=/Library/Java/JavaVirtualMachines/jdk1.7.0_40.jdk/Contents/Home/jre/lib/endorsed, os.arch=x86_64, java.io.tmpdir=/var/folders/24/msb_n_8d7vj67mmf2mjpgqgc0000gn/T/, line.separator=
-, java.vm.specification.vendor=Oracle Corporation, os.name=Mac OS X, hibernate.cache.use_second_level_cache=true, classworlds.conf=/usr/share/maven/bin/m2.conf, sun.jnu.encoding=UTF-8, java.library.path=/Users/apple/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:., hibernate.ejb.persistenceUnitName=default, java.specification.name=Java Platform API Specification, java.class.version=51.0, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, os.version=10.8.5, http.nonProxyHosts=local|*.local|169.254/16|*.169.254/16, user.home=/Users/apple, user.timezone=Asia/Jakarta, java.awt.printerjob=sun.lwawt.macosx.CPrinterJob, java.specification.version=1.7, file.encoding=UTF-8, javax.persistence.nonJtaDataSource=org.apache.tomcat.jdbc.pool.DataSource@76e09ad4{ConnectionPool[defaultAutoCommit=false; defaultReadOnly=null; defaultTransactionIsolation=-1; defaultCatalog=null; driverClassName=org.h2.Driver; maxActive=100; maxIdle=100; minIdle=10; initialSize=10; maxWait=30000; testOnBorrow=true; testOnReturn=true; timeBetweenEvictionRunsMillis=5000; numTestsPerEvictionRun=0; minEvictableIdleTimeMillis=60000; testWhileIdle=true; testOnConnect=false; password=********; url=jdbc:h2:mem:resthub;DB_CLOSE_DELAY=-1;MVCC=TRUE; username=sa; validationQuery=/* ping*/ SELECT 1; validationQueryTimeout=5; validatorClassName=null; validationInterval=30000; accessToUnderlyingConnectionAllowed=true; removeAbandoned=true; removeAbandonedTimeout=60; logAbandoned=true; connectionProperties=null; initSQL=null; jdbcInterceptors=org.apache.tomcat.jdbc.pool.interceptor.ConnectionState;org.apache.tomcat.jdbc.pool.interceptor.StatementFinalizer;org.apache.tomcat.jdbc.pool.interceptor.SlowQueryReportJmx;org.apache.tomcat.jdbc.pool.interceptor.ResetAbandonedTimer; jmxEnabled=true; fairQueue=true; useEquals=true; abandonWhenPercentageFull=0; maxAge=0; useLock=false; dataSource=null; dataSourceJNDI=null; suspectTimeout=0; alternateUsernameAllowed=false; commitOnReturn=false; rollbackOnReturn=true; useDisposableConnectionFacade=true; logValidationErrors=true; propagateInterruptState=false; ignoreExceptionOnPreLoad=false; }, hibernate.format_sql=true, user.name=apple, java.class.path=/usr/share/maven/boot/plexus-classworlds-2.4.jar, hibernate.bytecode.use_reflection_optimizer=false, javax.persistence.validation.mode=AUTO, java.vm.specification.version=1.7, sun.arch.data.model=64, java.home=/Library/Java/JavaVirtualMachines/jdk1.7.0_40.jdk/Contents/Home/jre, sun.java.command=org.codehaus.plexus.classworlds.launcher.Launcher jetty:run, hibernate.dialect=org.hibernate.dialect.H2Dialect, java.specification.vendor=Oracle Corporation, user.language=en, awt.toolkit=sun.lwawt.macosx.LWCToolkit, java.vm.info=mixed mode, java.version=1.7.0_40, java.ext.dirs=/Users/apple/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.7.0_40.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java, sun.boot.class.path=/Library/Java/JavaVirtualMachines/jdk1.7.0_40.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_40.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_40.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_40.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_40.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_40.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_40.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_40.jdk/Contents/Home/jre/lib/JObjC.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_40.jdk/Contents/Home/jre/classes, java.vendor=Oracle Corporation, maven.home=/usr/share/maven, file.separator=/, java.vendor.url.bug=http://bugreport.sun.com/bugreport/, hibernate.hbm2ddl.auto=update, sun.cpu.endian=little, sun.io.unicode.encoding=UnicodeBig, socksNonProxyHosts=local|*.local|169.254/16|*.169.254/16, ftp.nonProxyHosts=local|*.local|169.254/16|*.169.254/16, sun.cpu.isalist=} 
-[]2015-04-01T03:05:38,821Z INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.2.Final 
-[]2015-04-01T03:05:38,834Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
-[]2015-04-01T03:05:38,836Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
-[]2015-04-01T03:05:38,868Z DEBUG o.h.v.i.xml.ValidationXmlParser - Trying to load META-INF/validation.xml for XML based Validator configuration. 
-[]2015-04-01T03:05:38,877Z DEBUG o.h.v.i.xml.ValidationXmlParser - No META-INF/validation.xml found. Using annotation based configuration only. 
-[]2015-04-01T03:05:38,975Z DEBUG o.h.secure.spi.JaccIntegrator - Skipping JACC integration as it was not enabled 
-[]2015-04-01T03:05:38,978Z DEBUG o.h.engine.spi.CascadeStyles - External cascade style regsitration [persist : STYLE_PERSIST_SKIPLAZY] overrode base registration [STYLE_PERSIST] 
-[]2015-04-01T03:05:38,991Z DEBUG o.h.internal.SessionFactoryRegistry - Initializing SessionFactoryRegistry : org.hibernate.internal.SessionFactoryRegistry@68ab638b 
-[]2015-04-01T03:05:38,991Z DEBUG o.h.internal.SessionFactoryRegistry - Registering SessionFactory: 8d67a77b-7cb7-4cc3-b30d-e89b9051c6b6 (<unnamed>) 
-[]2015-04-01T03:05:38,991Z DEBUG o.h.internal.SessionFactoryRegistry - Not binding SessionFactory to JNDI, no JNDI name configured 
-[]2015-04-01T03:05:38,991Z DEBUG o.h.internal.SessionFactoryImpl - Instantiated session factory 
-[]2015-04-01T03:05:38,996Z INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000228: Running hbm2ddl schema update 
-[]2015-04-01T03:05:38,996Z INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000102: Fetching database metadata 
-[]2015-04-01T03:05:39,010Z ERROR o.h.tool.hbm2ddl.SchemaUpdate - HHH000319: Could not get database metadata 
-java.sql.SQLException: org.h2.Driver
-	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:254) ~[tomcat-jdbc-7.0.47.jar:na]
-	at org.apache.tomcat.jdbc.pool.PooledConnection.connect(PooledConnection.java:182) ~[tomcat-jdbc-7.0.47.jar:na]
-	at org.apache.tomcat.jdbc.pool.ConnectionPool.createConnection(ConnectionPool.java:701) ~[tomcat-jdbc-7.0.47.jar:na]
-	at org.apache.tomcat.jdbc.pool.ConnectionPool.borrowConnection(ConnectionPool.java:635) ~[tomcat-jdbc-7.0.47.jar:na]
-	at org.apache.tomcat.jdbc.pool.ConnectionPool.init(ConnectionPool.java:486) ~[tomcat-jdbc-7.0.47.jar:na]
-	at org.apache.tomcat.jdbc.pool.ConnectionPool.<init>(ConnectionPool.java:144) ~[tomcat-jdbc-7.0.47.jar:na]
-	at org.apache.tomcat.jdbc.pool.DataSourceProxy.pCreatePool(DataSourceProxy.java:116) ~[tomcat-jdbc-7.0.47.jar:na]
-	at org.apache.tomcat.jdbc.pool.DataSourceProxy.createPool(DataSourceProxy.java:103) ~[tomcat-jdbc-7.0.47.jar:na]
-	at org.apache.tomcat.jdbc.pool.DataSourceProxy.getConnection(DataSourceProxy.java:127) ~[tomcat-jdbc-7.0.47.jar:na]
-	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:139) ~[hibernate-core-4.3.6.Final.jar:4.3.6.Final]
-	at org.hibernate.tool.hbm2ddl.SuppliedConnectionProviderConnectionHelper.prepare(SuppliedConnectionProviderConnectionHelper.java:51) ~[hibernate-core-4.3.6.Final.jar:4.3.6.Final]
-	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:194) ~[hibernate-core-4.3.6.Final.jar:4.3.6.Final]
-	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:178) ~[hibernate-core-4.3.6.Final.jar:4.3.6.Final]
-	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:522) ~[hibernate-core-4.3.6.Final.jar:4.3.6.Final]
-	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1857) ~[hibernate-core-4.3.6.Final.jar:4.3.6.Final]
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl$4.perform(EntityManagerFactoryBuilderImpl.java:850) [hibernate-entitymanager-4.3.6.Final.jar:4.3.6.Final]
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl$4.perform(EntityManagerFactoryBuilderImpl.java:843) [hibernate-entitymanager-4.3.6.Final.jar:4.3.6.Final]
-	at org.hibernate.boot.registry.classloading.internal.ClassLoaderServiceImpl.withTccl(ClassLoaderServiceImpl.java:398) [hibernate-core-4.3.6.Final.jar:4.3.6.Final]
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:842) [hibernate-entitymanager-4.3.6.Final.jar:4.3.6.Final]
-	at org.hibernate.jpa.HibernatePersistenceProvider.createContainerEntityManagerFactory(HibernatePersistenceProvider.java:152) [hibernate-entitymanager-4.3.6.Final.jar:4.3.6.Final]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:341) [spring-orm-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:318) [spring-orm-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1627) [spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1564) [spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:540) [spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476) [spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:302) [spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:229) [spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:298) [spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193) [spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:956) [spring-context-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:747) [spring-context-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480) [spring-context-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403) [spring-web-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306) [spring-web-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106) [spring-web-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.eclipse.jetty.server.handler.ContextHandler.callContextInitialized(ContextHandler.java:782) [jetty-server-8.1.15.v20140411.jar:8.1.15.v20140411]
-	at org.eclipse.jetty.servlet.ServletContextHandler.callContextInitialized(ServletContextHandler.java:424) [jetty-servlet-8.1.15.v20140411.jar:8.1.15.v20140411]
-	at org.eclipse.jetty.server.handler.ContextHandler.startContext(ContextHandler.java:774) [jetty-server-8.1.15.v20140411.jar:8.1.15.v20140411]
-	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:249) [jetty-servlet-8.1.15.v20140411.jar:8.1.15.v20140411]
-	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1242) [jetty-webapp-8.1.15.v20140411.jar:8.1.15.v20140411]
-	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:717) [jetty-server-8.1.15.v20140411.jar:8.1.15.v20140411]
-	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:494) [jetty-webapp-8.1.15.v20140411.jar:8.1.15.v20140411]
-	at org.mortbay.jetty.plugin.JettyWebAppContext.doStart(JettyWebAppContext.java:298) [jetty-maven-plugin-8.1.15.v20140411.jar:8.1.15.v20140411]
-	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64) [jetty-util-8.1.15.v20140411.jar:8.1.15.v20140411]
-	at org.eclipse.jetty.server.handler.HandlerCollection.doStart(HandlerCollection.java:229) [jetty-server-8.1.15.v20140411.jar:8.1.15.v20140411]
-	at org.eclipse.jetty.server.handler.ContextHandlerCollection.doStart(ContextHandlerCollection.java:172) [jetty-server-8.1.15.v20140411.jar:8.1.15.v20140411]
-	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64) [jetty-util-8.1.15.v20140411.jar:8.1.15.v20140411]
-	at org.eclipse.jetty.server.handler.HandlerCollection.doStart(HandlerCollection.java:229) [jetty-server-8.1.15.v20140411.jar:8.1.15.v20140411]
-	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64) [jetty-util-8.1.15.v20140411.jar:8.1.15.v20140411]
-	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:95) [jetty-server-8.1.15.v20140411.jar:8.1.15.v20140411]
-	at org.eclipse.jetty.server.Server.doStart(Server.java:282) [jetty-server-8.1.15.v20140411.jar:8.1.15.v20140411]
-	at org.mortbay.jetty.plugin.JettyServer.doStart(JettyServer.java:65) [jetty-maven-plugin-8.1.15.v20140411.jar:8.1.15.v20140411]
-	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64) [jetty-util-8.1.15.v20140411.jar:8.1.15.v20140411]
-	at org.mortbay.jetty.plugin.AbstractJettyMojo.startJetty(AbstractJettyMojo.java:520) [jetty-maven-plugin-8.1.15.v20140411.jar:8.1.15.v20140411]
-	at org.mortbay.jetty.plugin.AbstractJettyMojo.execute(AbstractJettyMojo.java:365) [jetty-maven-plugin-8.1.15.v20140411.jar:8.1.15.v20140411]
-	at org.mortbay.jetty.plugin.JettyRunMojo.execute(JettyRunMojo.java:523) [jetty-maven-plugin-8.1.15.v20140411.jar:8.1.15.v20140411]
-	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:101) [maven-core-3.0.3.jar:3.0.3]
-	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:209) [maven-core-3.0.3.jar:3.0.3]
-	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153) [maven-core-3.0.3.jar:3.0.3]
-	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145) [maven-core-3.0.3.jar:3.0.3]
-	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:84) [maven-core-3.0.3.jar:3.0.3]
-	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:59) [maven-core-3.0.3.jar:3.0.3]
-	at org.apache.maven.lifecycle.internal.LifecycleStarter.singleThreadedBuild(LifecycleStarter.java:183) [maven-core-3.0.3.jar:3.0.3]
-	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:161) [maven-core-3.0.3.jar:3.0.3]
-	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:319) [maven-core-3.0.3.jar:3.0.3]
-	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:156) [maven-core-3.0.3.jar:3.0.3]
-	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:537) [maven-embedder-3.0.3.jar:3.0.3]
-	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:196) [maven-embedder-3.0.3.jar:3.0.3]
-	at org.apache.maven.cli.MavenCli.main(MavenCli.java:141) [maven-embedder-3.0.3.jar:3.0.3]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.7.0_40]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57) ~[na:1.7.0_40]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.7.0_40]
-	at java.lang.reflect.Method.invoke(Method.java:606) ~[na:1.7.0_40]
-	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:290) [plexus-classworlds-2.4.jar:na]
-	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:230) [plexus-classworlds-2.4.jar:na]
-	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:409) [plexus-classworlds-2.4.jar:na]
-	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:352) [plexus-classworlds-2.4.jar:na]
-Caused by: java.lang.ClassNotFoundException: org.h2.Driver
-	at org.codehaus.plexus.classworlds.strategy.SelfFirstStrategy.loadClass(SelfFirstStrategy.java:50) ~[plexus-classworlds-2.4.jar:na]
-	at org.codehaus.plexus.classworlds.realm.ClassRealm.loadClass(ClassRealm.java:244) ~[plexus-classworlds-2.4.jar:na]
-	at org.codehaus.plexus.classworlds.realm.ClassRealm.loadClass(ClassRealm.java:230) ~[plexus-classworlds-2.4.jar:na]
-	at org.eclipse.jetty.webapp.WebAppClassLoader.loadClass(WebAppClassLoader.java:430) ~[na:na]
-	at org.eclipse.jetty.webapp.WebAppClassLoader.loadClass(WebAppClassLoader.java:383) ~[na:na]
-	at java.lang.Class.forName0(Native Method) ~[na:1.7.0_40]
-	at java.lang.Class.forName(Class.java:270) ~[na:1.7.0_40]
-	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:246) ~[tomcat-jdbc-7.0.47.jar:na]
-	... 77 common frames omitted
-[]2015-04-01T03:05:39,014Z ERROR o.h.tool.hbm2ddl.SchemaUpdate - HHH000299: Could not complete schema update 
-java.sql.SQLException: org.h2.Driver
-	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:254) ~[tomcat-jdbc-7.0.47.jar:na]
-	at org.apache.tomcat.jdbc.pool.PooledConnection.connect(PooledConnection.java:182) ~[tomcat-jdbc-7.0.47.jar:na]
-	at org.apache.tomcat.jdbc.pool.ConnectionPool.createConnection(ConnectionPool.java:701) ~[tomcat-jdbc-7.0.47.jar:na]
-	at org.apache.tomcat.jdbc.pool.ConnectionPool.borrowConnection(ConnectionPool.java:635) ~[tomcat-jdbc-7.0.47.jar:na]
-	at org.apache.tomcat.jdbc.pool.ConnectionPool.init(ConnectionPool.java:486) ~[tomcat-jdbc-7.0.47.jar:na]
-	at org.apache.tomcat.jdbc.pool.ConnectionPool.<init>(ConnectionPool.java:144) ~[tomcat-jdbc-7.0.47.jar:na]
-	at org.apache.tomcat.jdbc.pool.DataSourceProxy.pCreatePool(DataSourceProxy.java:116) ~[tomcat-jdbc-7.0.47.jar:na]
-	at org.apache.tomcat.jdbc.pool.DataSourceProxy.createPool(DataSourceProxy.java:103) ~[tomcat-jdbc-7.0.47.jar:na]
-	at org.apache.tomcat.jdbc.pool.DataSourceProxy.getConnection(DataSourceProxy.java:127) ~[tomcat-jdbc-7.0.47.jar:na]
-	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:139) ~[hibernate-core-4.3.6.Final.jar:4.3.6.Final]
-	at org.hibernate.tool.hbm2ddl.SuppliedConnectionProviderConnectionHelper.prepare(SuppliedConnectionProviderConnectionHelper.java:51) ~[hibernate-core-4.3.6.Final.jar:4.3.6.Final]
-	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:194) ~[hibernate-core-4.3.6.Final.jar:4.3.6.Final]
-	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:178) ~[hibernate-core-4.3.6.Final.jar:4.3.6.Final]
-	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:522) ~[hibernate-core-4.3.6.Final.jar:4.3.6.Final]
-	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1857) ~[hibernate-core-4.3.6.Final.jar:4.3.6.Final]
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl$4.perform(EntityManagerFactoryBuilderImpl.java:850) [hibernate-entitymanager-4.3.6.Final.jar:4.3.6.Final]
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl$4.perform(EntityManagerFactoryBuilderImpl.java:843) [hibernate-entitymanager-4.3.6.Final.jar:4.3.6.Final]
-	at org.hibernate.boot.registry.classloading.internal.ClassLoaderServiceImpl.withTccl(ClassLoaderServiceImpl.java:398) [hibernate-core-4.3.6.Final.jar:4.3.6.Final]
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:842) [hibernate-entitymanager-4.3.6.Final.jar:4.3.6.Final]
-	at org.hibernate.jpa.HibernatePersistenceProvider.createContainerEntityManagerFactory(HibernatePersistenceProvider.java:152) [hibernate-entitymanager-4.3.6.Final.jar:4.3.6.Final]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:341) [spring-orm-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:318) [spring-orm-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1627) [spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1564) [spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:540) [spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476) [spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:302) [spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:229) [spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:298) [spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193) [spring-beans-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:956) [spring-context-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:747) [spring-context-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480) [spring-context-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403) [spring-web-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306) [spring-web-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106) [spring-web-4.1.0.RELEASE.jar:4.1.0.RELEASE]
-	at org.eclipse.jetty.server.handler.ContextHandler.callContextInitialized(ContextHandler.java:782) [jetty-server-8.1.15.v20140411.jar:8.1.15.v20140411]
-	at org.eclipse.jetty.servlet.ServletContextHandler.callContextInitialized(ServletContextHandler.java:424) [jetty-servlet-8.1.15.v20140411.jar:8.1.15.v20140411]
-	at org.eclipse.jetty.server.handler.ContextHandler.startContext(ContextHandler.java:774) [jetty-server-8.1.15.v20140411.jar:8.1.15.v20140411]
-	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:249) [jetty-servlet-8.1.15.v20140411.jar:8.1.15.v20140411]
-	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1242) [jetty-webapp-8.1.15.v20140411.jar:8.1.15.v20140411]
-	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:717) [jetty-server-8.1.15.v20140411.jar:8.1.15.v20140411]
-	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:494) [jetty-webapp-8.1.15.v20140411.jar:8.1.15.v20140411]
-	at org.mortbay.jetty.plugin.JettyWebAppContext.doStart(JettyWebAppContext.java:298) [jetty-maven-plugin-8.1.15.v20140411.jar:8.1.15.v20140411]
-	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64) [jetty-util-8.1.15.v20140411.jar:8.1.15.v20140411]
-	at org.eclipse.jetty.server.handler.HandlerCollection.doStart(HandlerCollection.java:229) [jetty-server-8.1.15.v20140411.jar:8.1.15.v20140411]
-	at org.eclipse.jetty.server.handler.ContextHandlerCollection.doStart(ContextHandlerCollection.java:172) [jetty-server-8.1.15.v20140411.jar:8.1.15.v20140411]
-	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64) [jetty-util-8.1.15.v20140411.jar:8.1.15.v20140411]
-	at org.eclipse.jetty.server.handler.HandlerCollection.doStart(HandlerCollection.java:229) [jetty-server-8.1.15.v20140411.jar:8.1.15.v20140411]
-	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64) [jetty-util-8.1.15.v20140411.jar:8.1.15.v20140411]
-	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:95) [jetty-server-8.1.15.v20140411.jar:8.1.15.v20140411]
-	at org.eclipse.jetty.server.Server.doStart(Server.java:282) [jetty-server-8.1.15.v20140411.jar:8.1.15.v20140411]
-	at org.mortbay.jetty.plugin.JettyServer.doStart(JettyServer.java:65) [jetty-maven-plugin-8.1.15.v20140411.jar:8.1.15.v20140411]
-	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64) [jetty-util-8.1.15.v20140411.jar:8.1.15.v20140411]
-	at org.mortbay.jetty.plugin.AbstractJettyMojo.startJetty(AbstractJettyMojo.java:520) [jetty-maven-plugin-8.1.15.v20140411.jar:8.1.15.v20140411]
-	at org.mortbay.jetty.plugin.AbstractJettyMojo.execute(AbstractJettyMojo.java:365) [jetty-maven-plugin-8.1.15.v20140411.jar:8.1.15.v20140411]
-	at org.mortbay.jetty.plugin.JettyRunMojo.execute(JettyRunMojo.java:523) [jetty-maven-plugin-8.1.15.v20140411.jar:8.1.15.v20140411]
-	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:101) [maven-core-3.0.3.jar:3.0.3]
-	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:209) [maven-core-3.0.3.jar:3.0.3]
-	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153) [maven-core-3.0.3.jar:3.0.3]
-	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145) [maven-core-3.0.3.jar:3.0.3]
-	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:84) [maven-core-3.0.3.jar:3.0.3]
-	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:59) [maven-core-3.0.3.jar:3.0.3]
-	at org.apache.maven.lifecycle.internal.LifecycleStarter.singleThreadedBuild(LifecycleStarter.java:183) [maven-core-3.0.3.jar:3.0.3]
-	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:161) [maven-core-3.0.3.jar:3.0.3]
-	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:319) [maven-core-3.0.3.jar:3.0.3]
-	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:156) [maven-core-3.0.3.jar:3.0.3]
-	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:537) [maven-embedder-3.0.3.jar:3.0.3]
-	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:196) [maven-embedder-3.0.3.jar:3.0.3]
-	at org.apache.maven.cli.MavenCli.main(MavenCli.java:141) [maven-embedder-3.0.3.jar:3.0.3]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.7.0_40]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57) ~[na:1.7.0_40]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.7.0_40]
-	at java.lang.reflect.Method.invoke(Method.java:606) ~[na:1.7.0_40]
-	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:290) [plexus-classworlds-2.4.jar:na]
-	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:230) [plexus-classworlds-2.4.jar:na]
-	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:409) [plexus-classworlds-2.4.jar:na]
-	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:352) [plexus-classworlds-2.4.jar:na]
-Caused by: java.lang.ClassNotFoundException: org.h2.Driver
-	at org.codehaus.plexus.classworlds.strategy.SelfFirstStrategy.loadClass(SelfFirstStrategy.java:50) ~[plexus-classworlds-2.4.jar:na]
-	at org.codehaus.plexus.classworlds.realm.ClassRealm.loadClass(ClassRealm.java:244) ~[plexus-classworlds-2.4.jar:na]
-	at org.codehaus.plexus.classworlds.realm.ClassRealm.loadClass(ClassRealm.java:230) ~[plexus-classworlds-2.4.jar:na]
-	at org.eclipse.jetty.webapp.WebAppClassLoader.loadClass(WebAppClassLoader.java:430) ~[na:na]
-	at org.eclipse.jetty.webapp.WebAppClassLoader.loadClass(WebAppClassLoader.java:383) ~[na:na]
-	at java.lang.Class.forName0(Native Method) ~[na:1.7.0_40]
-	at java.lang.Class.forName(Class.java:270) ~[na:1.7.0_40]
-	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:246) ~[tomcat-jdbc-7.0.47.jar:na]
-	... 77 common frames omitted
-[]2015-04-01T03:05:39,015Z DEBUG o.h.internal.NamedQueryRepository - Checking 0 named HQL queries 
-[]2015-04-01T03:05:39,015Z DEBUG o.h.internal.NamedQueryRepository - Checking 0 named SQL queries 
-[]2015-04-01T03:05:39,021Z DEBUG o.h.s.internal.StatisticsInitiator - Statistics initialized [enabled=false] 
-[]2015-04-01T03:05:39,024Z DEBUG o.h.j.i.s.JpaSchemaGenerator - No actions specified; doing nothing 
-[]2015-04-01T03:05:39,064Z DEBUG o.h.j.i.EntityManagerFactoryRegistry - Initializing EntityManagerFactoryRegistry : org.hibernate.jpa.internal.EntityManagerFactoryRegistry@14b5dfef 
-[]2015-04-01T03:05:39,064Z DEBUG o.h.j.i.EntityManagerFactoryRegistry - Registering EntityManagerFactory: default  
-[]2015-04-01T03:05:39,079Z DEBUG o.h.internal.SessionFactoryImpl - HHH000031: Closing 
-[]2015-04-01T03:05:39,080Z DEBUG o.h.s.i.AbstractServiceRegistryImpl - Implicitly destroying ServiceRegistry on de-registration of all child ServiceRegistries 
-[]2015-04-01T03:05:39,080Z DEBUG o.h.b.r.i.BootstrapServiceRegistryImpl - Implicitly destroying Boot-strap registry on de-registration of all child ServiceRegistries 
-[]2015-04-01T03:05:39,080Z DEBUG o.h.j.i.EntityManagerFactoryRegistry - Remove: name=default 
+[]2015-04-28T23:07:12,986Z INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.2.Final 
+[]2015-04-28T23:07:13,086Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:07:13,089Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:07:13,818Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:07:13,818Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:07:14,250Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:07:14,250Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:07:14,624Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:07:14,624Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:07:14,682Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:07:14,682Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:07:14,748Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:07:14,749Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:07:14,816Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:07:14,816Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:07:14,895Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:07:14,896Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:07:14,960Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:07:14,960Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:07:15,046Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:07:15,046Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:07:15,110Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:07:15,110Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:07:15,178Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:07:15,178Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:07:15,236Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:07:15,236Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:07:15,358Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:07:15,358Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:07:15,412Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:07:15,413Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:07:15,460Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:07:15,461Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:07:15,503Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:07:15,503Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:07:15,593Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:07:15,594Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:07:15,641Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:07:15,641Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:07:15,689Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:07:15,689Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:08:21,703Z INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.2.Final 
+[]2015-04-28T23:08:21,729Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:08:21,730Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:08:22,130Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:08:22,130Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:08:22,373Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:08:22,374Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:08:22,568Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:08:22,568Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:08:22,638Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:08:22,639Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:08:22,726Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:08:22,727Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:08:22,810Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:08:22,810Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:08:22,911Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:08:22,911Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:08:22,978Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:08:22,979Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:08:23,112Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:08:23,113Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:08:23,186Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:08:23,186Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:08:23,246Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:08:23,246Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:08:23,305Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:08:23,305Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:08:23,462Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:08:23,462Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:08:23,500Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:08:23,500Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:08:23,537Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:08:23,538Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:08:23,569Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:08:23,569Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:08:23,619Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:08:23,619Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:08:23,650Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:08:23,650Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:08:23,691Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:08:23,691Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:09:43,413Z INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.2.Final 
+[]2015-04-28T23:09:43,453Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:09:43,455Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:09:43,935Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:09:43,935Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:09:44,248Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:09:44,249Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:09:44,500Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:09:44,500Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:09:44,575Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:09:44,575Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:09:44,662Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:09:44,663Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:09:44,748Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:09:44,748Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:09:44,869Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:09:44,869Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:09:44,942Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:09:44,942Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:09:45,044Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:09:45,044Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:09:45,132Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:09:45,132Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:09:45,226Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:09:45,226Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:09:45,442Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:09:45,533Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:09:45,782Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:09:45,782Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:09:45,844Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:09:45,845Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:09:45,888Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:09:45,888Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:09:45,926Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:09:45,927Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:09:45,998Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:09:45,998Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:09:46,038Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:09:46,039Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:09:46,089Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:09:46,090Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:11:05,777Z INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.2.Final 
+[]2015-04-28T23:11:05,791Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:11:05,792Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:11:06,292Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:11:06,292Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:11:06,583Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:11:06,583Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:11:06,796Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:11:06,796Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:11:06,878Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:11:06,878Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:11:06,973Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:11:06,973Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:11:07,065Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:11:07,065Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:11:07,192Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:11:07,192Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:11:07,260Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:11:07,260Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:11:07,328Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:11:07,328Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:11:07,391Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:11:07,391Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:11:07,464Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:11:07,464Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:11:07,534Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:11:07,535Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:11:07,692Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:11:07,692Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:11:07,747Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:11:07,747Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:11:07,802Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:11:07,802Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:11:07,848Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:11:07,848Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:11:07,936Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:11:07,936Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:11:07,983Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:11:07,984Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 
+[]2015-04-28T23:11:08,036Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver 
+[]2015-04-28T23:11:08,037Z DEBUG o.h.v.i.e.r.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver. 

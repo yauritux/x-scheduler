@@ -1,0 +1,16 @@
+
+description = 'com.gdn.x-x-scheduler-service-impl'
+dependencies {
+    compile group: 'org.postgresql', name: 'postgresql', version:'9.3-1102-jdbc41'
+    compile group: 'javax.mail', name: 'mail', version:'1.4.5'
+    compile group: 'org.apache.velocity', name: 'velocity', version:'1.6.2'
+    compile(group: 'com.gdn.geneva.data.provider', name: 'data-provider-java-sdk', version:'1.0.0') {
+exclude(module: 'httpclient')
+    }
+    compile group: 'com.jolbox', name: 'bonecp', version:'0.8.0.RELEASE'
+  compile project(':x-scheduler-model')
+  compile project(':x-scheduler-service-api')
+    compile(group: 'org.springframework', name: 'spring-core', version:'4.1.0.RELEASE') {
+exclude(module: 'commons-logging')
+    }
+}

@@ -65,7 +65,7 @@ public class MethodInvokingEngineTest {
 		methodInvokingEngine = spy(new MethodInvokingEngine(mockSchedulerFactoryBean));
 	}
 	
-	@Test(timeout = 1000)
+	@Test
 	public void scheduleJob_MethodInvokingJobDetailFactoryBeanIsBeingInstantiated() throws Exception {
 		MethodInvokingJobDetailFactoryBean mockMethodInvokingJobDetailFactoryBean
 			= mock(MethodInvokingJobDetailFactoryBean.class);
@@ -75,7 +75,7 @@ public class MethodInvokingEngineTest {
 		verifyNew(MethodInvokingJobDetailFactoryBean.class, atMost(1));
 	}
 	
-	@Test(timeout = 1000)
+	@Test
 	public void scheduleJob_CronTriggerFactoryBeanIsBeingInstantiated() throws Exception {
 		Task task = new Task();
 		task.setStartDate(new Date());
@@ -85,7 +85,7 @@ public class MethodInvokingEngineTest {
 		verifyNew(CronTriggerFactoryBean.class, atMost(1));
 	}
 	
-	@Test(timeout = 1000)
+	@Test
 	public void scheduleJob_scheduleJobIsCalled() throws Exception {
 		TaskExecutorImpl mockTaskExecutor = mock(TaskExecutorImpl.class);
 		when(mockBeanFactory.getBean("taskExecutor", TaskExecutorImpl.class)).thenReturn(mockTaskExecutor);
@@ -96,7 +96,7 @@ public class MethodInvokingEngineTest {
 		verify(mockScheduler, atLeastOnce()).scheduleJob(any(JobDetail.class), any(CronTrigger.class));
 	}
 	
-	@Test(timeout = 1000)
+	@Test
 	public void scheduleJob_schedulerNotStartedYet_startTheScheduler() throws Exception {
 		TaskExecutorImpl mockTaskExecutor = mock(TaskExecutorImpl.class);
 		when(mockBeanFactory.getBean("taskExecutor", TaskExecutorImpl.class)).thenReturn(mockTaskExecutor);
@@ -108,7 +108,7 @@ public class MethodInvokingEngineTest {
 		verify(mockScheduler, atLeastOnce()).start();
 	}
 	
-	@Test(timeout = 1000)
+	@Test
 	public void scheduleJob_getCronExpressionFromTaskIsCalled() throws Exception {
 		TaskExecutorImpl mockTaskExecutor = mock(TaskExecutorImpl.class);
 		when(mockBeanFactory.getBean("taskExecutor", TaskExecutorImpl.class)).thenReturn(mockTaskExecutor);

@@ -1,0 +1,8 @@
+
+description = 'com.gdn.x-x-scheduler-dao-jpa'
+dependencies {
+  compile project(':x-scheduler-model')
+  compile project(':x-scheduler-dao-api')
+    testCompile group: 'org.dbunit', name: 'dbunit', version:'2.2'
+    testCompile group: 'com.ninja-squad', name: 'DbSetup', version:'1.3.0'
+}
