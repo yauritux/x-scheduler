@@ -1,0 +1,12 @@
+/logs
+/target
+.settings
+.classpath
+.project
+/Server
+.metadata/
+/**/*.class
+/**/*.log
+/x-scheduler-rest-web/logs/x/archive/x-scheduler/*.log
+/x-scheduler-rest-web/logs/x/x-scheduler/*.log
+x-scheduler-rest-web/logs/x/x-scheduler/*.log

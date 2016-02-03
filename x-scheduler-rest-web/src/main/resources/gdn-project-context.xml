@@ -3,20 +3,22 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:jpa="http://www.springframework.org/schema/data/jpa" xmlns:cache="http://www.springframework.org/schema/cache"
 	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:task="http://www.springframework.org/schema/task"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
         http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa.xsd
         http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
+        http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd
         http://www.springframework.org/schema/cache http://www.springframework.org/schema/cache/spring-cache.xsd">
         
 	<context:property-placeholder
-		location="file:///${X_CONF_DIR}/x-scheduler/db.properties"
+		location="file:///${X_CONF_DIR}/x-scheduler.properties"
 		properties-ref="applicationDefaultProperties" 
 		ignore-resource-not-found="true"
 		ignore-unresolvable="true" />
 
 	<util:properties 
-		location="file:///${X_CONF_DIR}/x-scheduler/db.properties"
+		location="file:///${X_CONF_DIR}/x-scheduler.properties"
 		id="xSchedulerCacheProperties" />
 
 	<import resource="classpath*:gdn-jpa-configuration.xml" />
@@ -25,30 +27,33 @@
 
 	<context:component-scan base-package="com.gdn.x.scheduler" />
 
-	<bean id="dataProviderClient" class="com.gdn.geneva.data.provider.client.DataProviderClient">
-		<constructor-arg ref="clientConfiguration" />
-	</bean>
-
-	<bean id="clientConfiguration" class="com.gdn.geneva.data.provider.client.ClientConfiguration">
-		<constructor-arg value="${geneva.uri.location}" />
-	</bean>
-
-	<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
-		<property name="host" value="${mail.smtp.host}" />
-		<property name="port" value="${mail.smtp.port}" />
-		<property name="username" value="${mail.username}" />
-		<property name="password" value="${mail.password}" />
-	</bean>
-
-	<bean id="velocityEngine"
-		class="org.springframework.ui.velocity.VelocityEngineFactoryBean">
-		<property name="velocityProperties">
-			<value>
-				resource.loader=class
-				class.resource.loader.class=org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-			</value>
+	<!-- Scheduler Bean for Quartz --> 
+	<bean id="schedulerFactory" class="org.springframework.scheduling.quartz.SchedulerFactoryBean" scope="singleton"> 
+	<!-- <bean id="schedulerFactory" class="com.gdn.x.scheduler.service.schedengine.AutoRegisteringSchedulerFactoryBean" scope="singleton"> -->
+		<property name="quartzProperties">
+			<props>
+				<prop key="org.quartz.jobStore.class">org.quartz.simpl.RAMJobStore</prop>
+				<prop key="org.quartz.threadPool.class">org.quartz.simpl.SimpleThreadPool</prop>
+				<prop key="org.quartz.threadPool.threadCount">${org.quartz.threadPool.threadCount}</prop>
+			</props>
 		</property>
+		<property name="schedulerName" value="cronScheduler"/>		
+		<property name="autoStartup" value="true"/>
 	</bean>
-
-
+	
+	<!-- Task Executor Thread -->
+	<bean id="taskExecutorThread" class="org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor">
+		<property name="corePoolSize" value="${taskExecutor.corePoolSize}"/>
+		<property name="maxPoolSize" value="${taskExecutor.maxPoolSize}"/>
+		<property name="waitForTasksToCompleteOnShutdown" value="true"/>
+	</bean>
+	
+	<!-- Task Scheduler -->
+	<task:scheduler id="maintenanceService" pool-size="${maintenanceService.poolSize}"/>
+	
+	<task:scheduled-tasks scheduler="maintenanceService">
+		<task:scheduled ref="taskMaintenanceService" method="run" 
+			fixed-delay="${maintenanceService.fixedDelay}" initial-delay="${maintenanceService.initialDelay}"/>
+	</task:scheduled-tasks>
+	
 </beans>

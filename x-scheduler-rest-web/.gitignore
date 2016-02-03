@@ -1,1 +1,8 @@
 /target
+hello.jar
+helloworld.jar
+/logs/x/x-scheduler/all.log
+/logs/x/x-scheduler/*.log
+/logs/**/app.log
+/logs/**/orm.log
+/logs/**/spring.log

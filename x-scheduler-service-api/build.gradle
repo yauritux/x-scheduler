@@ -1,0 +1,10 @@
+
+description = 'com.gdn.x-x-scheduler-service-api'
+dependencies {
+  compile project(':x-scheduler-rest-web-model')
+  compile project(':x-scheduler-model')
+  compile project(':x-scheduler-dao-api')
+    compile(group: 'org.springframework', name: 'spring-core', version:'4.1.0.RELEASE') {
+exclude(module: 'commons-logging')
+    }
+}

@@ -1,0 +1,6 @@
+
+description = 'com.gdn.x-x-scheduler-service-client-sdk'
+dependencies {
+  compile project(':x-scheduler-rest-web-model')
+    compile group: 'org.apache.httpcomponents', name: 'httpclient', version:'4.3.5'
+}
